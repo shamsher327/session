@@ -16,10 +16,12 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/admin_toolbar": "^3.0",
         "drupal/core-composer-scaffold": "^8.2",
         "drupal/core-project-message": "^8.2",
         "drupal/core-recommended": "^8.2",
         "drupal/features": "^3.12",
+        "drupal/image_slider": "^1.3",
         "drush/drush": "^9.5",
         "rusticisoftware/tincan": "~1.0"
     },
