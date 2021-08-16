@@ -1,0 +1,25 @@
+name: "Srishty Theme"
+type: theme
+description: "Custom Theme Example"
+package: srishty
+core: 8.x
+base theme: false
+core_version_requirement: ^8|| ^9
+
+regions:
+  srishty_header: "Srishty Header"
+  content: content
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+  srishty_footer: "srishty Footer"
+
+libraries:
+  - srishtytheme/srishtytheme-assets
+
+

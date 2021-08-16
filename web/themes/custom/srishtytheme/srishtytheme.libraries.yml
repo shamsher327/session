@@ -1,0 +1,6 @@
+srishtytheme-assets:
+  version: 1
+  header: true
+  css:
+    theme:
+      assets/css/custom.css: {}
