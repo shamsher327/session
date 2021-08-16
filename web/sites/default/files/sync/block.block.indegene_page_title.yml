@@ -1,0 +1,20 @@
+uuid: 0d499abb-6d67-42d0-824e-c03849bfb3c9
+langcode: en
+status: false
+dependencies:
+  theme:
+    - indegene
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: indegene_page_title
+theme: indegene
+region: header
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

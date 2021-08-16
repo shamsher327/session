@@ -1,0 +1,6 @@
+name: Indegene Custom module
+type: module
+description: Indegene one custom module.
+package: indegene
+core: 8.x
+core_version_requirement: ^8 || ^9

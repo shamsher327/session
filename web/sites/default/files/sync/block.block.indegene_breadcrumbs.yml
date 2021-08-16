@@ -1,0 +1,22 @@
+uuid: 685e91a6-31c7-448b-98ab-c21491453b93
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - indegene
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: indegene_breadcrumbs
+theme: indegene
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
