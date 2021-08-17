@@ -8,7 +8,11 @@
     "content-hash": "22a71dac2051e8e87ef82ee7996eea1e",
 =======
     "content-hash": "a550e69fd17c9fd301bc6bc308dd0ec2",
+<<<<<<< HEAD
 >>>>>>> c0128527440103d5e6126b4be4aca405c1f45d34
+=======
+>>>>>>> main
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1754,7 +1758,11 @@
                 "url": "https://ftp.drupal.org/files/projects/blazy-8.x-2.4.zip",
                 "reference": "8.x-2.4",
                 "shasum": "6915ae64881510c253c72ae3d01f0a66472d4462"
+<<<<<<< HEAD
 >>>>>>> c0128527440103d5e6126b4be4aca405c1f45d34
+=======
+>>>>>>> main
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -1768,7 +1776,11 @@
 =======
                     "version": "8.x-2.4",
                     "datestamp": "1624001330",
+<<<<<<< HEAD
 >>>>>>> c0128527440103d5e6126b4be4aca405c1f45d34
+=======
+>>>>>>> main
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1836,7 +1848,11 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/blazy",
                 "issues": "https://drupal.org/project/issues/blazy"
+<<<<<<< HEAD
 >>>>>>> c0128527440103d5e6126b4be4aca405c1f45d34
+=======
+>>>>>>> main
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
             }
         },
         {

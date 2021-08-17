@@ -11,10 +11,6 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-<<<<<<< HEAD
-/* themes/custom/indegene/templates/field/field--text-with-summary.html.twig */
-class __TwigTemplate_e7d63bc2f362eabb713db1f5a201a9081a4d7458069c5b8f8f14a84a2511ac07 extends \Twig\Template
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text-long.html.twi_1NNBt_KnuQnSg4laqxNZFBAyv/_XGj3Ea58C_M4T-ZR1qPxV1hZLjoH2PU1WAW8kEtkQQ.php
 /* themes/custom/srishtytheme/templates/field/field--text-long.html.twig */
 class __TwigTemplate_90e02b8282354067f72dfd8a63c2aca652eb4b3416c4abe6b332e27d3eecb50d extends \Twig\Template
@@ -22,7 +18,6 @@ class __TwigTemplate_90e02b8282354067f72dfd8a63c2aca652eb4b3416c4abe6b332e27d3ee
 /* themes/custom/indegene/templates/field/field--text-with-summary.html.twig */
 class __TwigTemplate_e7d63bc2f362eabb713db1f5a201a9081a4d7458069c5b8f8f14a84a2511ac07 extends \Twig\Template
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--text-with-summary._qhKbWK7VG6bO7bIXPp8M1MmTP/AcY6FSp-ZrRaU7cxU3DpABm9HH8IPT69ldiwhdLhA6Y.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
@@ -65,29 +60,21 @@ class __TwigTemplate_e7d63bc2f362eabb713db1f5a201a9081a4d7458069c5b8f8f14a84a251
 
     protected function doDisplay(array $context, array $blocks = [])
     {
-<<<<<<< HEAD
-        $this->parent = $this->loadTemplate("field--text.html.twig", "themes/custom/indegene/templates/field/field--text-with-summary.html.twig", 1);
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text-long.html.twi_1NNBt_KnuQnSg4laqxNZFBAyv/_XGj3Ea58C_M4T-ZR1qPxV1hZLjoH2PU1WAW8kEtkQQ.php
         $this->parent = $this->loadTemplate("field--text.html.twig", "themes/custom/srishtytheme/templates/field/field--text-long.html.twig", 1);
 =======
         $this->parent = $this->loadTemplate("field--text.html.twig", "themes/custom/indegene/templates/field/field--text-with-summary.html.twig", 1);
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--text-with-summary._qhKbWK7VG6bO7bIXPp8M1MmTP/AcY6FSp-ZrRaU7cxU3DpABm9HH8IPT69ldiwhdLhA6Y.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
     public function getTemplateName()
     {
-<<<<<<< HEAD
-        return "themes/custom/indegene/templates/field/field--text-with-summary.html.twig";
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text-long.html.twi_1NNBt_KnuQnSg4laqxNZFBAyv/_XGj3Ea58C_M4T-ZR1qPxV1hZLjoH2PU1WAW8kEtkQQ.php
         return "themes/custom/srishtytheme/templates/field/field--text-long.html.twig";
 =======
         return "themes/custom/indegene/templates/field/field--text-with-summary.html.twig";
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--text-with-summary._qhKbWK7VG6bO7bIXPp8M1MmTP/AcY6FSp-ZrRaU7cxU3DpABm9HH8IPT69ldiwhdLhA6Y.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 
     public function isTraitable()
@@ -110,14 +97,10 @@ class __TwigTemplate_e7d63bc2f362eabb713db1f5a201a9081a4d7458069c5b8f8f14a84a251
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "themes/custom/indegene/templates/field/field--text-with-summary.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/field--text-with-summary.html.twig");
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text-long.html.twi_1NNBt_KnuQnSg4laqxNZFBAyv/_XGj3Ea58C_M4T-ZR1qPxV1hZLjoH2PU1WAW8kEtkQQ.php
         return new Source("", "themes/custom/srishtytheme/templates/field/field--text-long.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\themes\\custom\\srishtytheme\\templates\\field\\field--text-long.html.twig");
 =======
         return new Source("", "themes/custom/indegene/templates/field/field--text-with-summary.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/field--text-with-summary.html.twig");
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--text-with-summary._qhKbWK7VG6bO7bIXPp8M1MmTP/AcY6FSp-ZrRaU7cxU3DpABm9HH8IPT69ldiwhdLhA6Y.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }

@@ -12,15 +12,11 @@ use Twig\Source;
 use Twig\Template;
 
 /* core/modules/system/templates/off-canvas-page-wrapper.html.twig */
-<<<<<<< HEAD
-class __TwigTemplate_73e355a98985d12e0deb4d2a9aa724b71e87bfa1b20da0d646cfbf1b9de6af3f extends \Twig\Template
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_off-canvas-page-wrapper.h_1m6MbvX6gmg7B0RAylNUszt57/-2sf_3mAfMEM7wzZB1bIAJO_4a3cJTK9J_bauELYlXo.php
 class __TwigTemplate_628e7ee1a91efaa8dc653050719c425e4089ae17fb87f4adf1a1eec64fd0e844 extends \Twig\Template
 =======
 class __TwigTemplate_73e355a98985d12e0deb4d2a9aa724b71e87bfa1b20da0d646cfbf1b9de6af3f extends \Twig\Template
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_off-canvas-page-wrapper.h_NBFK5WoxeM6B1pA0p7071Lywo/J6S2HnmSaK1ya3g1BuwUTa-h0b3pJ0C199QHOko0c-w.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
@@ -97,14 +93,10 @@ class __TwigTemplate_73e355a98985d12e0deb4d2a9aa724b71e87bfa1b20da0d646cfbf1b9de
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "core/modules/system/templates/off-canvas-page-wrapper.html.twig", "/var/www/html/web/core/modules/system/templates/off-canvas-page-wrapper.html.twig");
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_off-canvas-page-wrapper.h_1m6MbvX6gmg7B0RAylNUszt57/-2sf_3mAfMEM7wzZB1bIAJO_4a3cJTK9J_bauELYlXo.php
         return new Source("", "core/modules/system/templates/off-canvas-page-wrapper.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\core\\modules\\system\\templates\\off-canvas-page-wrapper.html.twig");
 =======
         return new Source("", "core/modules/system/templates/off-canvas-page-wrapper.html.twig", "/var/www/html/web/core/modules/system/templates/off-canvas-page-wrapper.html.twig");
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_off-canvas-page-wrapper.h_NBFK5WoxeM6B1pA0p7071Lywo/J6S2HnmSaK1ya3g1BuwUTa-h0b3pJ0C199QHOko0c-w.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }

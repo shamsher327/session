@@ -11,10 +11,6 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-<<<<<<< HEAD
-/* themes/custom/indegene/templates/user/user.html.twig */
-class __TwigTemplate_dafbaedf87159111c9749c1ec705f97febfeb6db8b5f41a23b706e681127be56 extends \Twig\Template
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_user.html.twig_vZnWPWcoMGxS7etx5W8-sG4Gv/9qZrSNSGBehO9lecG3psCn3aBzTxTTfzemP-ZatI6qY.php
 /* themes/custom/srishtytheme/templates/user/user.html.twig */
 class __TwigTemplate_b8c12e1c6a935c44aa84e2935778f11a988bc3091e4cbfea0aa37298a32b39bd extends \Twig\Template
@@ -22,7 +18,6 @@ class __TwigTemplate_b8c12e1c6a935c44aa84e2935778f11a988bc3091e4cbfea0aa37298a32
 /* themes/custom/indegene/templates/user/user.html.twig */
 class __TwigTemplate_dafbaedf87159111c9749c1ec705f97febfeb6db8b5f41a23b706e681127be56 extends \Twig\Template
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_user.html.twig_xHt0ApOnhvSiacnOvN-e6yfFL/j17vOnpL3giKKzL83DncAjYsEX9imDD53J9rD2XdhTw.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
@@ -78,15 +73,11 @@ class __TwigTemplate_dafbaedf87159111c9749c1ec705f97febfeb6db8b5f41a23b706e68112
 
     public function getTemplateName()
     {
-<<<<<<< HEAD
-        return "themes/custom/indegene/templates/user/user.html.twig";
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_user.html.twig_vZnWPWcoMGxS7etx5W8-sG4Gv/9qZrSNSGBehO9lecG3psCn3aBzTxTTfzemP-ZatI6qY.php
         return "themes/custom/srishtytheme/templates/user/user.html.twig";
 =======
         return "themes/custom/indegene/templates/user/user.html.twig";
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_user.html.twig_xHt0ApOnhvSiacnOvN-e6yfFL/j17vOnpL3giKKzL83DncAjYsEX9imDD53J9rD2XdhTw.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 
     public function isTraitable()
@@ -109,14 +100,10 @@ class __TwigTemplate_dafbaedf87159111c9749c1ec705f97febfeb6db8b5f41a23b706e68112
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "themes/custom/indegene/templates/user/user.html.twig", "/var/www/html/web/themes/custom/indegene/templates/user/user.html.twig");
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_user.html.twig_vZnWPWcoMGxS7etx5W8-sG4Gv/9qZrSNSGBehO9lecG3psCn3aBzTxTTfzemP-ZatI6qY.php
         return new Source("", "themes/custom/srishtytheme/templates/user/user.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\themes\\custom\\srishtytheme\\templates\\user\\user.html.twig");
 =======
         return new Source("", "themes/custom/indegene/templates/user/user.html.twig", "/var/www/html/web/themes/custom/indegene/templates/user/user.html.twig");
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_user.html.twig_xHt0ApOnhvSiacnOvN-e6yfFL/j17vOnpL3giKKzL83DncAjYsEX9imDD53J9rD2XdhTw.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }

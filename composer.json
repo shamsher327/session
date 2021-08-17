@@ -39,7 +39,11 @@
         "drush/drush": "^9.5",
 =======
         "drush/drush": "^10.6",
+<<<<<<< HEAD
 >>>>>>> c0128527440103d5e6126b4be4aca405c1f45d34
+=======
+>>>>>>> main
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
         "rusticisoftware/tincan": "~1.0"
     },
     "conflict": {

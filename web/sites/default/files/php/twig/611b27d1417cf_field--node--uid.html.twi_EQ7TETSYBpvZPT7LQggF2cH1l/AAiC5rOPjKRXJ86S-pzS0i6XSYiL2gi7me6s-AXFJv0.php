@@ -11,18 +11,13 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-<<<<<<< HEAD
-/* themes/custom/indegene/templates/field/field--node--created.html.twig */
-class __TwigTemplate_e6252b27b5b0d249c393689f404df95a71a0de845de6668b91f3cdae9aa438c5 extends \Twig\Template
+<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--uid.html.twi_EQ7TETSYBpvZPT7LQggF2cH1l/AAiC5rOPjKRXJ86S-pzS0i6XSYiL2gi7me6s-AXFJv0.php
+/* themes/custom/srishtytheme/templates/field/field--node--uid.html.twig */
+class __TwigTemplate_ff92bfe647c9d8592a635dee96ad2b0c2a673413f1d935c0fb5d20c4da9fad8f extends \Twig\Template
 =======
-<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--created.html_ubEeHikXwlE57wfyR5i9hSNz1/egZ0NiI0hjbcg0u1De5lVgX_CLAygwXNdLJEJDVBn6U.php
-/* themes/custom/srishtytheme/templates/field/field--node--created.html.twig */
-class __TwigTemplate_8993cff726f01d96bb230d2b15a9ea8e9cd4fa282ed83a379d2ea3ba1596c37a extends \Twig\Template
-=======
-/* themes/custom/indegene/templates/field/field--node--created.html.twig */
-class __TwigTemplate_e6252b27b5b0d249c393689f404df95a71a0de845de6668b91f3cdae9aa438c5 extends \Twig\Template
->>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--created.html_KtmBaSd7r_-MkvH43yVmZM4AA/izaL8_KXnPy3gDNWuDDIn8RKY6Ie9Nh4Yss0QDUFwpA.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
+/* themes/custom/indegene/templates/field/field--node--uid.html.twig */
+class __TwigTemplate_b07b5455a752f6eefb5607747ff76298c11336f4a9b5c5442f89d16ec1f62f8c extends \Twig\Template
+>>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--uid.html.twi_JtqsmXjhBiuG0axB9gpVuXTY4/QxCBTvLIcFfzXmYLf5i5jyY29_jUbM97AZwJqB0om7w.php
 {
     public function __construct(Environment $env)
     {
@@ -87,15 +82,11 @@ class __TwigTemplate_e6252b27b5b0d249c393689f404df95a71a0de845de6668b91f3cdae9aa
 
     public function getTemplateName()
     {
-<<<<<<< HEAD
-        return "themes/custom/indegene/templates/field/field--node--created.html.twig";
+<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--uid.html.twi_EQ7TETSYBpvZPT7LQggF2cH1l/AAiC5rOPjKRXJ86S-pzS0i6XSYiL2gi7me6s-AXFJv0.php
+        return "themes/custom/srishtytheme/templates/field/field--node--uid.html.twig";
 =======
-<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--created.html_ubEeHikXwlE57wfyR5i9hSNz1/egZ0NiI0hjbcg0u1De5lVgX_CLAygwXNdLJEJDVBn6U.php
-        return "themes/custom/srishtytheme/templates/field/field--node--created.html.twig";
-=======
-        return "themes/custom/indegene/templates/field/field--node--created.html.twig";
->>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--created.html_KtmBaSd7r_-MkvH43yVmZM4AA/izaL8_KXnPy3gDNWuDDIn8RKY6Ie9Nh4Yss0QDUFwpA.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
+        return "themes/custom/indegene/templates/field/field--node--uid.html.twig";
+>>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--uid.html.twi_JtqsmXjhBiuG0axB9gpVuXTY4/QxCBTvLIcFfzXmYLf5i5jyY29_jUbM97AZwJqB0om7w.php
     }
 
     public function isTraitable()
@@ -118,14 +109,10 @@ class __TwigTemplate_e6252b27b5b0d249c393689f404df95a71a0de845de6668b91f3cdae9aa
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "themes/custom/indegene/templates/field/field--node--created.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/field--node--created.html.twig");
+<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--uid.html.twi_EQ7TETSYBpvZPT7LQggF2cH1l/AAiC5rOPjKRXJ86S-pzS0i6XSYiL2gi7me6s-AXFJv0.php
+        return new Source("", "themes/custom/srishtytheme/templates/field/field--node--uid.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\themes\\custom\\srishtytheme\\templates\\field\\field--node--uid.html.twig");
 =======
-<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--created.html_ubEeHikXwlE57wfyR5i9hSNz1/egZ0NiI0hjbcg0u1De5lVgX_CLAygwXNdLJEJDVBn6U.php
-        return new Source("", "themes/custom/srishtytheme/templates/field/field--node--created.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\themes\\custom\\srishtytheme\\templates\\field\\field--node--created.html.twig");
-=======
-        return new Source("", "themes/custom/indegene/templates/field/field--node--created.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/field--node--created.html.twig");
->>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--created.html_KtmBaSd7r_-MkvH43yVmZM4AA/izaL8_KXnPy3gDNWuDDIn8RKY6Ie9Nh4Yss0QDUFwpA.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
+        return new Source("", "themes/custom/indegene/templates/field/field--node--uid.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/field--node--uid.html.twig");
+>>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--uid.html.twi_JtqsmXjhBiuG0axB9gpVuXTY4/QxCBTvLIcFfzXmYLf5i5jyY29_jUbM97AZwJqB0om7w.php
     }
 }

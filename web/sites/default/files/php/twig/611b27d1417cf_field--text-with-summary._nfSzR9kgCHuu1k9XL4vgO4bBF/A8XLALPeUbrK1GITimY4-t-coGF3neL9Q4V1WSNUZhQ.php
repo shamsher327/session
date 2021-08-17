@@ -11,10 +11,6 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-<<<<<<< HEAD
-/* themes/custom/indegene/templates/field/image-style.html.twig */
-class __TwigTemplate_7e70a96a7f0b272e1e960146b088b452a6ddaa8089e151856d1bc6cacd841ba3 extends \Twig\Template
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text-with-summary._nfSzR9kgCHuu1k9XL4vgO4bBF/A8XLALPeUbrK1GITimY4-t-coGF3neL9Q4V1WSNUZhQ.php
 /* themes/custom/srishtytheme/templates/field/field--text-with-summary.html.twig */
 class __TwigTemplate_1bffc3d100df93eb557b0d346921d3c01eff844402c284c3c8099795dac879fb extends \Twig\Template
@@ -22,25 +18,22 @@ class __TwigTemplate_1bffc3d100df93eb557b0d346921d3c01eff844402c284c3c8099795dac
 /* themes/custom/indegene/templates/field/image-style.html.twig */
 class __TwigTemplate_7e70a96a7f0b272e1e960146b088b452a6ddaa8089e151856d1bc6cacd841ba3 extends \Twig\Template
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_image-style.html.twig_9_rdN3PG8aShnEEhB8K78qrn-/ViQ2cLsoUHCWon6cW3a4PbOFKY1Vh9W-q92b6B5f2qI.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = [];
-        $filters = ["escape" => 18];
+        $filters = [];
         $functions = [];
 
         try {
             $this->sandbox->checkSecurity(
                 [],
-                ['escape'],
+                [],
                 []
             );
         } catch (SecurityError $e) {
@@ -59,25 +52,25 @@ class __TwigTemplate_7e70a96a7f0b272e1e960146b088b452a6ddaa8089e151856d1bc6cacd8
 
     }
 
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "field--text.html.twig";
+    }
+
     protected function doDisplay(array $context, array $blocks = [])
     {
-        // line 18
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["image"] ?? null)), "html", null, true);
-        echo "
-";
+        $this->parent = $this->loadTemplate("field--text.html.twig", "themes/custom/srishtytheme/templates/field/field--text-with-summary.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
     public function getTemplateName()
     {
-<<<<<<< HEAD
-        return "themes/custom/indegene/templates/field/image-style.html.twig";
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text-with-summary._nfSzR9kgCHuu1k9XL4vgO4bBF/A8XLALPeUbrK1GITimY4-t-coGF3neL9Q4V1WSNUZhQ.php
         return "themes/custom/srishtytheme/templates/field/field--text-with-summary.html.twig";
 =======
         return "themes/custom/indegene/templates/field/image-style.html.twig";
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_image-style.html.twig_9_rdN3PG8aShnEEhB8K78qrn-/ViQ2cLsoUHCWon6cW3a4PbOFKY1Vh9W-q92b6B5f2qI.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 
     public function isTraitable()
@@ -87,7 +80,7 @@ class __TwigTemplate_7e70a96a7f0b272e1e960146b088b452a6ddaa8089e151856d1bc6cacd8
 
     public function getDebugInfo()
     {
-        return array (  55 => 18,);
+        return array (  53 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -100,14 +93,10 @@ class __TwigTemplate_7e70a96a7f0b272e1e960146b088b452a6ddaa8089e151856d1bc6cacd8
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "themes/custom/indegene/templates/field/image-style.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/image-style.html.twig");
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text-with-summary._nfSzR9kgCHuu1k9XL4vgO4bBF/A8XLALPeUbrK1GITimY4-t-coGF3neL9Q4V1WSNUZhQ.php
         return new Source("", "themes/custom/srishtytheme/templates/field/field--text-with-summary.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\themes\\custom\\srishtytheme\\templates\\field\\field--text-with-summary.html.twig");
 =======
         return new Source("", "themes/custom/indegene/templates/field/image-style.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/image-style.html.twig");
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_image-style.html.twig_9_rdN3PG8aShnEEhB8K78qrn-/ViQ2cLsoUHCWon6cW3a4PbOFKY1Vh9W-q92b6B5f2qI.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }

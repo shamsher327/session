@@ -12,15 +12,11 @@ use Twig\Source;
 use Twig\Template;
 
 /* field--text.html.twig */
-<<<<<<< HEAD
-class __TwigTemplate_70e34647e3c0162057c65512b11bb9ef224765b85dfed24a452254087585f68d extends \Twig\Template
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text.html.twig_BYjUtLVe5k1r2uZhorhBKjv6o/MTVudNqODD7MdI8CakvWphErpRJndwn351Vp47ggEm8.php
 class __TwigTemplate_5f8ea0ac3e05071c19ee239a2392f19996fcfd6132d9e7f3c53a9e57eb07f744 extends \Twig\Template
 =======
 class __TwigTemplate_70e34647e3c0162057c65512b11bb9ef224765b85dfed24a452254087585f68d extends \Twig\Template
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--text.html.twig_u8raBgxo2T2-wUmI5JStjTZnz/ihvjr9YqU5mXj4OF75vLxEeUH9xBf8UBJ5i2y22I-Rc.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
@@ -95,14 +91,10 @@ class __TwigTemplate_70e34647e3c0162057c65512b11bb9ef224765b85dfed24a45225408758
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "field--text.html.twig", "themes/custom/indegene/templates/field/field--text.html.twig");
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--text.html.twig_BYjUtLVe5k1r2uZhorhBKjv6o/MTVudNqODD7MdI8CakvWphErpRJndwn351Vp47ggEm8.php
         return new Source("", "field--text.html.twig", "themes/custom/srishtytheme/templates/field/field--text.html.twig");
 =======
         return new Source("", "field--text.html.twig", "themes/custom/indegene/templates/field/field--text.html.twig");
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--text.html.twig_u8raBgxo2T2-wUmI5JStjTZnz/ihvjr9YqU5mXj4OF75vLxEeUH9xBf8UBJ5i2y22I-Rc.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }

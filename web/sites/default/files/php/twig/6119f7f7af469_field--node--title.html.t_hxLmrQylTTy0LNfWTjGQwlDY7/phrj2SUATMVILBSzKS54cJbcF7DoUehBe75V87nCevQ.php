@@ -11,8 +11,18 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
+<<<<<<< HEAD
 /* themes/custom/indegene/templates/field/field--node--title.html.twig */
 class __TwigTemplate_29ed468e10a292836968b98a03e3d54f252ccd069ea79ccf7667cfada420e67a extends \Twig\Template
+=======
+<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--title.html.t_07CaZ1dKFkeEQeUf3blBKReb7/rsTZFSQztqVQ1MidCKz-46af6JjzqvGaROH6MPs1aPk.php
+/* themes/custom/srishtytheme/templates/field/field--node--title.html.twig */
+class __TwigTemplate_b893cdec8b32d20d963d57fedcebe093fc53625f474e647a199153cee76cae49 extends \Twig\Template
+=======
+/* themes/custom/indegene/templates/field/field--node--title.html.twig */
+class __TwigTemplate_29ed468e10a292836968b98a03e3d54f252ccd069ea79ccf7667cfada420e67a extends \Twig\Template
+>>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--title.html.t_hxLmrQylTTy0LNfWTjGQwlDY7/phrj2SUATMVILBSzKS54cJbcF7DoUehBe75V87nCevQ.php
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
@@ -77,7 +87,15 @@ class __TwigTemplate_29ed468e10a292836968b98a03e3d54f252ccd069ea79ccf7667cfada42
 
     public function getTemplateName()
     {
+<<<<<<< HEAD
         return "themes/custom/indegene/templates/field/field--node--title.html.twig";
+=======
+<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--title.html.t_07CaZ1dKFkeEQeUf3blBKReb7/rsTZFSQztqVQ1MidCKz-46af6JjzqvGaROH6MPs1aPk.php
+        return "themes/custom/srishtytheme/templates/field/field--node--title.html.twig";
+=======
+        return "themes/custom/indegene/templates/field/field--node--title.html.twig";
+>>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--title.html.t_hxLmrQylTTy0LNfWTjGQwlDY7/phrj2SUATMVILBSzKS54cJbcF7DoUehBe75V87nCevQ.php
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 
     public function isTraitable()
@@ -100,6 +118,14 @@ class __TwigTemplate_29ed468e10a292836968b98a03e3d54f252ccd069ea79ccf7667cfada42
 
     public function getSourceContext()
     {
+<<<<<<< HEAD
         return new Source("", "themes/custom/indegene/templates/field/field--node--title.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/field--node--title.html.twig");
+=======
+<<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_field--node--title.html.t_07CaZ1dKFkeEQeUf3blBKReb7/rsTZFSQztqVQ1MidCKz-46af6JjzqvGaROH6MPs1aPk.php
+        return new Source("", "themes/custom/srishtytheme/templates/field/field--node--title.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\themes\\custom\\srishtytheme\\templates\\field\\field--node--title.html.twig");
+=======
+        return new Source("", "themes/custom/indegene/templates/field/field--node--title.html.twig", "/var/www/html/web/themes/custom/indegene/templates/field/field--node--title.html.twig");
+>>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_field--node--title.html.t_hxLmrQylTTy0LNfWTjGQwlDY7/phrj2SUATMVILBSzKS54cJbcF7DoUehBe75V87nCevQ.php
+>>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }

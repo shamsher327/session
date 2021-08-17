@@ -12,15 +12,11 @@ use Twig\Source;
 use Twig\Template;
 
 /* links.html.twig */
-<<<<<<< HEAD
-class __TwigTemplate_dd114edec57ff483caf6da433c5c4ed5c8cc940cb588a44011180d460826f5af extends \Twig\Template
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_links.html.twig_Q0kJL-v-o73f8ge2pMgxAdWxz/McOm6UFRqvDVNjNyWzL7bjHd_50U81-Quj5x2dOEQTU.php
 class __TwigTemplate_cae5a72a6e91eae25887c357651c4893ce017224b84d1428d26ae32361cbf7f8 extends \Twig\Template
 =======
 class __TwigTemplate_dd114edec57ff483caf6da433c5c4ed5c8cc940cb588a44011180d460826f5af extends \Twig\Template
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_links.html.twig_mfPkIWlXg8RcD_LeHEuk3t1UY/Yrsb_cmd_m6fvT8D2M00n9_Or6T5Eh5ItG9ymeW4MRs.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
@@ -147,14 +143,10 @@ $context["item"], "text_attributes", [])) {
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "links.html.twig", "themes/custom/indegene/templates/navigation/links.html.twig");
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_links.html.twig_Q0kJL-v-o73f8ge2pMgxAdWxz/McOm6UFRqvDVNjNyWzL7bjHd_50U81-Quj5x2dOEQTU.php
         return new Source("", "links.html.twig", "themes/custom/srishtytheme/templates/navigation/links.html.twig");
 =======
         return new Source("", "links.html.twig", "themes/custom/indegene/templates/navigation/links.html.twig");
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_links.html.twig_mfPkIWlXg8RcD_LeHEuk3t1UY/Yrsb_cmd_m6fvT8D2M00n9_Or6T5Eh5ItG9ymeW4MRs.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }

@@ -11,10 +11,6 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-<<<<<<< HEAD
-/* themes/custom/indegene/templates/layout/html.html.twig */
-class __TwigTemplate_996bf642cc55b7235ee45fb8e866bef768f77e2b531e07073021b56676787dd0 extends \Twig\Template
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_html.html.twig_VSxQvKjtBdZJxZB_EsZtbvWTY/nZNrIq4dlOsL76Z9UnndKubpdRZ2pnuowctc8vTnnYY.php
 /* themes/custom/srishtytheme/templates/layout/html.html.twig */
 class __TwigTemplate_a55367ccb6de4a72fd81d1937adadcdadafaddfb6a6cfeabc55b54e2c2a3ad73 extends \Twig\Template
@@ -22,7 +18,6 @@ class __TwigTemplate_a55367ccb6de4a72fd81d1937adadcdadafaddfb6a6cfeabc55b54e2c2a
 /* themes/custom/indegene/templates/layout/html.html.twig */
 class __TwigTemplate_996bf642cc55b7235ee45fb8e866bef768f77e2b531e07073021b56676787dd0 extends \Twig\Template
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_html.html.twig_FxalAv08NBwwyCor5_MR7RKjL/DaOg8SH8WeeKmJ0QDKm2NGtDHwXqsiMz3ngg6ZZiNmQ.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
 {
     public function __construct(Environment $env)
     {
@@ -103,20 +98,42 @@ class __TwigTemplate_996bf642cc55b7235ee45fb8e866bef768f77e2b531e07073021b566767
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Skip to main content"));
         echo "
     </a>
+
+    <button id=\"myBtn\">Open Modal</button>
+
+<!-- The Modal -->
+<div id=\"myModal\" class=\"modal\">
+
+  <!-- Modal content -->
+  <div class=\"modal-content\">
+    <div class=\"modal-header\">
+      <span class=\"close\">&times;</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class=\"modal-body\">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class=\"modal-footer\">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
     ";
-        // line 50
+        // line 72
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["page_top"] ?? null)), "html", null, true);
         echo "
     ";
-        // line 51
+        // line 73
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["page"] ?? null)), "html", null, true);
         echo "
     ";
-        // line 52
+        // line 74
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["page_bottom"] ?? null)), "html", null, true);
         echo "
     <js-bottom-placeholder token=\"";
-        // line 53
+        // line 75
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["placeholder_token"] ?? null)), "html", null, true);
         echo "\">
   </body>
@@ -126,15 +143,11 @@ class __TwigTemplate_996bf642cc55b7235ee45fb8e866bef768f77e2b531e07073021b566767
 
     public function getTemplateName()
     {
-<<<<<<< HEAD
-        return "themes/custom/indegene/templates/layout/html.html.twig";
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_html.html.twig_VSxQvKjtBdZJxZB_EsZtbvWTY/nZNrIq4dlOsL76Z9UnndKubpdRZ2pnuowctc8vTnnYY.php
         return "themes/custom/srishtytheme/templates/layout/html.html.twig";
 =======
         return "themes/custom/indegene/templates/layout/html.html.twig";
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_html.html.twig_FxalAv08NBwwyCor5_MR7RKjL/DaOg8SH8WeeKmJ0QDKm2NGtDHwXqsiMz3ngg6ZZiNmQ.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 
     public function isTraitable()
@@ -144,7 +157,7 @@ class __TwigTemplate_996bf642cc55b7235ee45fb8e866bef768f77e2b531e07073021b566767
 
     public function getDebugInfo()
     {
-        return array (  110 => 53,  106 => 52,  102 => 51,  98 => 50,  93 => 48,  90 => 47,  86 => 42,  81 => 40,  77 => 39,  73 => 38,  69 => 37,  64 => 35,  61 => 34,  59 => 31,  58 => 30,  57 => 29,  56 => 28,  55 => 27,);
+        return array (  132 => 75,  128 => 74,  124 => 73,  120 => 72,  93 => 48,  90 => 47,  86 => 42,  81 => 40,  77 => 39,  73 => 38,  69 => 37,  64 => 35,  61 => 34,  59 => 31,  58 => 30,  57 => 29,  56 => 28,  55 => 27,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -157,14 +170,10 @@ class __TwigTemplate_996bf642cc55b7235ee45fb8e866bef768f77e2b531e07073021b566767
 
     public function getSourceContext()
     {
-<<<<<<< HEAD
-        return new Source("", "themes/custom/indegene/templates/layout/html.html.twig", "/var/www/html/web/themes/custom/indegene/templates/layout/html.html.twig");
-=======
 <<<<<<< HEAD:web/sites/default/files/php/twig/611b27d1417cf_html.html.twig_VSxQvKjtBdZJxZB_EsZtbvWTY/nZNrIq4dlOsL76Z9UnndKubpdRZ2pnuowctc8vTnnYY.php
         return new Source("", "themes/custom/srishtytheme/templates/layout/html.html.twig", "C:\\xampp\\htdocs\\drupal_training\\session\\web\\themes\\custom\\srishtytheme\\templates\\layout\\html.html.twig");
 =======
         return new Source("", "themes/custom/indegene/templates/layout/html.html.twig", "/var/www/html/web/themes/custom/indegene/templates/layout/html.html.twig");
 >>>>>>> main:web/sites/default/files/php/twig/6119f7f7af469_html.html.twig_FxalAv08NBwwyCor5_MR7RKjL/DaOg8SH8WeeKmJ0QDKm2NGtDHwXqsiMz3ngg6ZZiNmQ.php
->>>>>>> 80fb8e5f6453eedb93f9a3d6b75b3f89f586592f
     }
 }
