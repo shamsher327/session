@@ -1,4 +1,4 @@
-uuid: df8287c4-6f84-4773-9885-61e79dcd0cd6
+uuid: f51b2f09-8d46-455b-b21c-c52c5c307fc7
 langcode: en
 status: true
 dependencies:
@@ -30,6 +30,13 @@ content:
     type: image_image
     weight: 0
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

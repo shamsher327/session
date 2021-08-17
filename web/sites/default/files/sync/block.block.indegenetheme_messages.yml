@@ -1,0 +1,22 @@
+uuid: 27e6db87-ffa8-4515-a7ae-3f1a3e6afe2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - indegenetheme
+_core:
+  default_config_hash: tZtWC6EKIYALVtpV4mPz79GsLZD6IFWb7Wk1B7Rd8Go
+id: indegenetheme_messages
+theme: indegenetheme
+region: header
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

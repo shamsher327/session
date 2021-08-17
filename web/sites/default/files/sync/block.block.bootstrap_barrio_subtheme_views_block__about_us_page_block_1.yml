@@ -1,0 +1,24 @@
+uuid: 941453ff-0580-4c37-9f06-f81a01d9bbc8
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.about_us_page
+  module:
+    - views
+  theme:
+    - bootstrap_barrio_subtheme
+id: bootstrap_barrio_subtheme_views_block__about_us_page_block_1
+theme: bootstrap_barrio_subtheme
+region: top_header
+weight: -7
+provider: null
+plugin: 'views_block:about_us_page-block_1'
+settings:
+  id: 'views_block:about_us_page-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: 0704bb04-b295-4931-adcd-120ff6acdb2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.contact_type
+id: taxonomy_term.contact_type
+target_entity_type_id: taxonomy_term
+target_bundle: contact_type
+default_langcode: site_default
+language_alterable: false

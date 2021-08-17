@@ -1,0 +1,13 @@
+indegenetheme-assets:
+  version: 1
+  header: true
+  js:
+    assets/js/jquery-3.3.1.slim.min.js: {}
+    assets/js/popper.min.js: {}
+    assets/js/bootstrap.min.js: {}
+    assets/js/bootstrap.bundle.min.js: {}
+    assets/js/cs.js: {}
+  css:
+    theme:
+      assets/css/bootstrap.css: {}
+      assets/css/cs.css: {}

@@ -1,0 +1,24 @@
+uuid: 2ef71ca9-85bf-414a-a4e6-48e84a81c9ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.about_us_page
+  module:
+    - views
+  theme:
+    - indegenetheme
+id: indegenetheme_views_block__about_us_page_block_1
+theme: indegenetheme
+region: header
+weight: -7
+provider: null
+plugin: 'views_block:about_us_page-block_1'
+settings:
+  id: 'views_block:about_us_page-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

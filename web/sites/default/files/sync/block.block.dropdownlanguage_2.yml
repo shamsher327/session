@@ -1,0 +1,21 @@
+uuid: 859009b7-7551-4dee-b4d2-283e498c36db
+langcode: en
+status: true
+dependencies:
+  module:
+    - dropdown_language
+  theme:
+    - bartik
+id: dropdownlanguage_2
+theme: bartik
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'dropdown_language:language_interface'
+settings:
+  id: 'dropdown_language:language_interface'
+  label: 'Dropdown Language'
+  provider: dropdown_language
+  label_display: '0'
+  labels: null
+visibility: {  }

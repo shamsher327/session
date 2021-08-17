@@ -1,0 +1,22 @@
+uuid: f88bb656-dfb1-42c8-a847-295b69e6ff4d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - srishtytheme
+_core:
+  default_config_hash: aJ6ps0sJm9MtQffqINgRms1JaSQgjsg68REaPdN-BGk
+id: srishtytheme_content
+theme: srishtytheme
+region: srishty_header
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

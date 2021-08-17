@@ -1,15 +1,15 @@
-uuid: b2b63255-02f7-4e4a-89bd-f00b26647fbf
+uuid: c71947dd-c6b3-4f76-b8a1-42d996fe2d10
 langcode: en
 status: true
 dependencies:
   theme:
     - bootstrap_barrio
 _core:
-  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+  default_config_hash: rKurRLaH08AjwE5wsNzeL2fa77rF5pXKSR9WopsFYyI
 id: bootstrap_barrio_local_actions
 theme: bootstrap_barrio
 region: content
-weight: -20
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:

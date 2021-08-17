@@ -1,0 +1,21 @@
+uuid: e7973dff-dac6-4fd5-a685-8ee72a80eafe
+langcode: en
+status: true
+dependencies:
+  module:
+    - dropdown_language
+  theme:
+    - indegenetheme
+id: indegenetheme_dropdownlanguage_3
+theme: indegenetheme
+region: header
+weight: -6
+provider: null
+plugin: 'dropdown_language:language_interface'
+settings:
+  id: 'dropdown_language:language_interface'
+  label: Language
+  provider: dropdown_language
+  label_display: '0'
+  labels: null
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: ebf93dfd-d580-499e-aa96-ea2d40344b59
+langcode: en
+status: false
+dependencies:
+  theme:
+    - srishtytheme
+_core:
+  default_config_hash: IzSbK3zk-Gon9y7WLEWop15Wn__7LeKzBJIXqajlb00
+id: srishtytheme_local_tasks
+theme: srishtytheme
+region: srishty_header
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

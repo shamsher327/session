@@ -1,6 +1,6 @@
-uuid: b436fc9f-e6c3-4031-8b46-d740b069ae03
+uuid: c3bee5b6-b85d-4676-96cf-b4a92bd75741
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -9,11 +9,11 @@ dependencies:
   theme:
     - bootstrap_barrio_subtheme
 _core:
-  default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
+  default_config_hash: bSenKfxHQ1-_DHnPlsMsap_D6fif7bbe3kh9k31LkdU
 id: bootstrap_barrio_subtheme_account_menu
 theme: bootstrap_barrio_subtheme
-region: secondary_menu
-weight: 0
+region: top_header
+weight: -6
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -22,6 +22,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
   expand_all_items: false
 visibility: {  }

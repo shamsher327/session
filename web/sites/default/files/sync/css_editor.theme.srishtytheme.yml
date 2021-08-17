@@ -1,0 +1,5 @@
+enabled: null
+plaintext_enabled: false
+autopreview_enabled: false
+css: ''
+path: 'public://css_editor\srishtytheme.css'

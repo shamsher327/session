@@ -1,10 +1,10 @@
 module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
+  admin_toolbar_search: 0
   admin_toolbar_tools: 0
   automated_cron: 0
   big_pipe: 0
-  blazy: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -12,14 +12,19 @@ module:
   color: 0
   comment: 0
   config: 0
+  config_update: 0
   contact: 0
   contextual: 0
+  css_editor: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   devel: 0
   devel_generate: 0
+  dropdown_language: 0
   dynamic_page_cache: 0
   editor: 0
+  features: 0
   field: 0
   field_ui: 0
   file: 0
@@ -27,8 +32,11 @@ module:
   help: 0
   history: 0
   image: 0
+  image_slider: 0
+  language: 0
   link: 0
   media: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
@@ -40,18 +48,36 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
-  slick: 0
-  slick_ui: 0
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
   views_slideshow: 0
   views_slideshow_cycle: 0
+  views_taxonomy_term_name_depth: 0
   views_ui: 0
+  webform: 0
+  webform_access: 0
+  webform_attachment: 0
+  webform_devel: 0
+  webform_image_select: 0
+  webform_node: 0
+  webform_options_custom: 0
+  webform_options_limit: 0
+  webform_scheduled_email: 0
+  webform_share: 0
+  webform_shortcuts: 0
+  webform_submission_export_import: 0
+  webform_submission_log: 0
+  webform_templates: 0
+  webform_toggles: 0
+  webform_ui: 0
+  pathauto: 1
+  webform_bootstrap: 1
   views: 10
   standard: 1000
 theme:
@@ -59,9 +85,12 @@ theme:
   classy: 0
   bartik: 0
   seven: 0
+  bootstrap: 0
   bootstrap_barrio: 0
+  srishtytheme: 0
   bootstrap_barrio_subtheme: 0
-  indegene: 0
+  bootstrap4: 0
+  indegenetheme: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

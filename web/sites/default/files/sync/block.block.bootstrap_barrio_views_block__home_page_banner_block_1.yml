@@ -1,0 +1,30 @@
+uuid: 2807e493-433c-4a77-8d76-20e7a6f59f14
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.home_page_banner
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_views_block__home_page_banner_block_1
+theme: bootstrap_barrio
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:home_page_banner-block_1'
+settings:
+  id: 'views_block:home_page_banner-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

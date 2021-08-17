@@ -1,4 +1,4 @@
-uuid: 0a16851a-2b16-4954-97ad-253bf1ad9bbc
+uuid: b725602f-7206-4521-a31c-eda90a499932
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - bootstrap_barrio
 _core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+  default_config_hash: JPtjio142VL7z1Y-K1aWkTXu5wId7r4-zNUHozwLqf0
 id: bootstrap_barrio_help
 theme: bootstrap_barrio
 region: content
-weight: -30
+weight: -5
 provider: null
 plugin: help_block
 settings:

@@ -1,0 +1,30 @@
+uuid: e4ea7f19-9197-4a08-bf51-426fb2dc052f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.services_block
+  module:
+    - system
+    - views
+  theme:
+    - indegenetheme
+id: indegenetheme_views_block__services_block_block_1
+theme: indegenetheme
+region: header
+weight: -1
+provider: null
+plugin: 'views_block:services_block-block_1'
+settings:
+  id: 'views_block:services_block-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

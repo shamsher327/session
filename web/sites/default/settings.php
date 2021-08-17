@@ -670,7 +670,11 @@ if ($settings['hash_salt']) {
 # $config['system.performance']['fast_404']['exclude_paths'] = '/\/(?:styles)|(?:system\/files)\//';
 # $config['system.performance']['fast_404']['paths'] = '/\.(?:txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i';
 # $config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
+# $config['system.performance']['fast_404']['exclude_paths'] = '/\/(?:styles)|(?:system\/files)\//';
 
+
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
 /**
  * Load services definition file.
  */
@@ -809,12 +813,12 @@ if (empty(getenv('DDEV_PHP_VERSION') && getenv('IS_DDEV_PROJECT') == 'true')) {
 }
 
 $databases['default']['default'] = array(
-  'database' => "db",
-  'username' => "db",
-  'password' => "db",
-  'host' => $host,
+  'database' => "session",
+  'username' => "root",
+  'password' => "",
+  'host' => "localhost",
   'driver' => "mysql",
-  'port' => $port,
+  'port' => "3306",
   'prefix' => "",
 );
 

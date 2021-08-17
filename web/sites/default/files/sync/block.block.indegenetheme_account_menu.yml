@@ -1,0 +1,27 @@
+uuid: 6ef06347-acc0-4991-905b-d77b80410b66
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - indegenetheme
+_core:
+  default_config_hash: bSenKfxHQ1-_DHnPlsMsap_D6fif7bbe3kh9k31LkdU
+id: indegenetheme_account_menu
+theme: indegenetheme
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

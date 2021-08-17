@@ -1,0 +1,23 @@
+uuid: 11b6e7c4-6fe6-4b99-af25-31cf3ad5fef4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - indegenetheme
+id: sitebranding
+theme: indegenetheme
+region: top_srishty_header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: visible
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

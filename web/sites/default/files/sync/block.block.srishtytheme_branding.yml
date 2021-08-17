@@ -1,0 +1,25 @@
+uuid: 78ecc46a-8a5a-4785-bf9a-547b2ba40e6f
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - srishtytheme
+_core:
+  default_config_hash: 0XmTH5dbJRl-fsDBgX10MzeFMarkhKpzU7ZGdGPfAMU
+id: srishtytheme_branding
+theme: srishtytheme
+region: srishty_header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

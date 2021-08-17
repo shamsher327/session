@@ -1,0 +1,5 @@
+enabled: null
+plaintext_enabled: false
+autopreview_enabled: false
+css: ".aboutus.views-row {\r\n    margin: 8px;\r\n    border: 7px solid whitesmoke;\r\n    border-radius: 21px;\r\n}"
+path: 'public://css_editor\bootstrap.css'

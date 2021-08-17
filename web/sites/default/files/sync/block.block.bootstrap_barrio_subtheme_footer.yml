@@ -1,6 +1,6 @@
-uuid: 8ef2178e-d6ff-43c3-88e9-afb7d9958703
+uuid: 2bef70e7-32aa-4f0b-aa12-71a08d160856
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -9,16 +9,16 @@ dependencies:
   theme:
     - bootstrap_barrio_subtheme
 _core:
-  default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
+  default_config_hash: aFKksJmiEhSztWNw-j-SbfzO88axvjNIZsjFBcNtI6o
 id: bootstrap_barrio_subtheme_footer
 theme: bootstrap_barrio_subtheme
-region: footer_fifth
-weight: 0
+region: top_header
+weight: -7
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: 'Footer menu'
+  label: Footer
   provider: system
   label_display: '0'
   level: 1

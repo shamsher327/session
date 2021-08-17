@@ -1,0 +1,31 @@
+uuid: f69d3b36-a51d-459e-a9e4-a0717ac44194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.post_category.field_post_category
+    - taxonomy.vocabulary.post_category
+  module:
+    - text
+id: taxonomy_term.post_category.default
+targetEntityType: taxonomy_term
+bundle: post_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_post_category:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

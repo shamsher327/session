@@ -1,0 +1,10 @@
+uuid: 9f880afc-6cfc-4219-b48a-99f481dac34a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.content_view_mode
+label: 'Content view mode'
+targetEntityType: node
+cache: true
