@@ -1,0 +1,33 @@
+name: Indegene Theme
+type: theme
+description: 'Theme with Indegene css library'
+package: indegene
+core_version_requirement: ^8.9 || ^9
+
+libraries:
+  - indegene/indegene-styling
+
+
+regions:
+ top_header_first: ‘Top Header First’
+ top_header_second: ‘Top Header Second’
+ top_header_third: ‘Top Header Third’
+ top_header_fourth: ‘Top Header Fourth’
+ header: ‘Header’
+ logo: ‘Logo’
+ primary_menu: ‘Primary Menu’
+ page_title: ‘Page Title’
+ breadcrumb: ‘Breadcrumb’
+ slider: ‘Slider’
+ front_block: ‘Front Block’
+ front_block_first: ‘Front Block First’
+ front_block_second: ‘Front Block Second’
+ front_block_third: ‘Front Block Third’
+ content: ‘Content’
+ sidebar_right: ‘Sidebar Right’
+ footer_first: ‘Footer First’
+ footer_second: ‘Footer Second’
+ footer_third: ‘Footer Third’
+ footer_fourth: ‘Footer Fourth’
+ footer_fifth: ‘Footer Fifth’
+ footer_sixth: ‘Footer Sixth’
