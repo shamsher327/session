@@ -1,0 +1,17 @@
+indegene-assets:
+  version: 1.x
+  header: true
+  css:
+    theme:
+      assets/css/indegene-custom.css: { }
+  js:
+    js/indegene-custom.js: { }
+
+indegene-custom:
+  version: 1.x
+  header: true
+  css:
+    theme:
+      css/indegene-custom.css: { }
+  js:
+    js/indegene-custom.js: { }

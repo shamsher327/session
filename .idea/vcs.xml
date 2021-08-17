@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web/libraries/blazy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web/libraries/slick" vcs="Git" />
   </component>
 </project>

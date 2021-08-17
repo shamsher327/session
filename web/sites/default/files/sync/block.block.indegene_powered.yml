@@ -1,0 +1,22 @@
+uuid: a7c443ed-9ffe-4421-b7fd-54ede02bb197
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - indegene
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: indegene_powered
+theme: indegene
+region: header
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

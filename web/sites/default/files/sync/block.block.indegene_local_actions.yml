@@ -1,0 +1,20 @@
+uuid: 431269e1-156c-4254-a045-fb2d5a581dae
+langcode: en
+status: false
+dependencies:
+  theme:
+    - indegene
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: indegene_local_actions
+theme: indegene
+region: header
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
