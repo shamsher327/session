@@ -1,0 +1,24 @@
+uuid: ce6e6152-6a46-4c2d-a7e3-d4ad39858e9d
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.about_us_page
+  module:
+    - views
+  theme:
+    - srishtytheme
+id: srishtytheme_views_block__about_us_page_block_1
+theme: srishtytheme
+region: srishty_header
+weight: -7
+provider: null
+plugin: 'views_block:about_us_page-block_1'
+settings:
+  id: 'views_block:about_us_page-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

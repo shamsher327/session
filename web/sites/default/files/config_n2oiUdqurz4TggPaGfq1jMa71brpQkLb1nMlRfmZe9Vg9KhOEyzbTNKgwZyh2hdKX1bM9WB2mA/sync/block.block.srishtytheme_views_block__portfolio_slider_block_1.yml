@@ -1,0 +1,30 @@
+uuid: e69da159-1a8d-4759-94a4-35a24aec8525
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.portfolio_slider
+  module:
+    - system
+    - views
+  theme:
+    - srishtytheme
+id: srishtytheme_views_block__portfolio_slider_block_1
+theme: srishtytheme
+region: srishty_header
+weight: 0
+provider: null
+plugin: 'views_block:portfolio_slider-block_1'
+settings:
+  id: 'views_block:portfolio_slider-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

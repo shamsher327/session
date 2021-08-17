@@ -1,0 +1,11 @@
+uuid: d8254535-1bb8-4253-bfe6-992da451e373
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.team_members
+id: node.team_members
+target_entity_type_id: node
+target_bundle: team_members
+default_langcode: site_default
+language_alterable: false

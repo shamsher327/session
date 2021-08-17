@@ -1,0 +1,11 @@
+uuid: ec9fd24b-8cbe-4e28-8008-ee130950cf0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.services
+id: taxonomy_term.services
+target_entity_type_id: taxonomy_term
+target_bundle: services
+default_langcode: site_default
+language_alterable: false

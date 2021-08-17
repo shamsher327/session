@@ -1,0 +1,26 @@
+uuid: 9ecd739e-fdff-4c3a-869c-3cf9b1d00f49
+langcode: en
+status: false
+dependencies:
+  module:
+    - image_slider
+    - system
+  theme:
+    - bootstrap_barrio_subtheme
+id: bootstrap_barrio_subtheme_portfolioimageslider
+theme: bootstrap_barrio_subtheme
+region: top_header
+weight: -9
+provider: null
+plugin: 'slider_block:1'
+settings:
+  id: 'slider_block:1'
+  label: 'Portfolio  IMage Slider'
+  provider: image_slider
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

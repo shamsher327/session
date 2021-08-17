@@ -1,0 +1,12 @@
+uuid: 5dd42b74-e717-42e7-a99a-939a74b32547
+langcode: en
+status: true
+dependencies: {  }
+id: contact_us
+label: 'COntact Us'
+recipients:
+  - ebmaster@example.com
+reply: 'THank You! We will Respond You Back Soon.'
+weight: 4
+message: 'THank You! We will Respond You Back Soon.'
+redirect: ''

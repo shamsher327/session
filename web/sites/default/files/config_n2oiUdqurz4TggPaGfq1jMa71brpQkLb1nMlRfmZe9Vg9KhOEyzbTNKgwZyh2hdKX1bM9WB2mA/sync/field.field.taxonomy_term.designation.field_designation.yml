@@ -1,0 +1,19 @@
+uuid: c7c3831c-c3d1-4e41-9732-ac597662302e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_designation
+    - taxonomy.vocabulary.designation
+id: taxonomy_term.designation.field_designation
+field_name: field_designation
+entity_type: taxonomy_term
+bundle: designation
+label: Designation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

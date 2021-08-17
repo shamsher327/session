@@ -9,6 +9,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/custom.css: {}
 
 drupal.nav-tabs:
   version: VERSION

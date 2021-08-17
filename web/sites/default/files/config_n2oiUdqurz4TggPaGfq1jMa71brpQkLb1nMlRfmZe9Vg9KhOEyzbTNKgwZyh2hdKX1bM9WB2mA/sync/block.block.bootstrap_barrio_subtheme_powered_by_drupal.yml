@@ -1,0 +1,22 @@
+uuid: 70f43790-1dc9-4ecb-82eb-4fd2958af303
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_barrio_subtheme
+_core:
+  default_config_hash: pCYcyBIVbwKUmraga_6Ycz5P-bhQJLJS_8HtOFpMq-o
+id: bootstrap_barrio_subtheme_powered_by_drupal
+theme: bootstrap_barrio_subtheme
+region: top_header
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

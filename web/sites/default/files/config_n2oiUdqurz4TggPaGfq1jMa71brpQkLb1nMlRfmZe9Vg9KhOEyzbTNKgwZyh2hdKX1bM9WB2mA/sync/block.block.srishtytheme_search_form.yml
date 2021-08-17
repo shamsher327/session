@@ -1,0 +1,23 @@
+uuid: e6e5fefa-bdbb-4b1f-b894-258733f87746
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - srishtytheme
+_core:
+  default_config_hash: Ja6tDzYId0ZPQE1SEJTQNb0ZNv5ttB1iO5xv6hIToQ8
+id: srishtytheme_search_form
+theme: srishtytheme
+region: srishty_header
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }
