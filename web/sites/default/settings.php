@@ -675,6 +675,7 @@ if ($settings['hash_salt']) {
 
 $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
+$config['system.logging']['error_level'] = 'all';
 /**
  * Load services definition file.
  */

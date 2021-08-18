@@ -1,6 +1,6 @@
 uuid: bd016138-06f2-403e-ade5-b39deb9c0408
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - help
@@ -10,8 +10,8 @@ _core:
   default_config_hash: JPtjio142VL7z1Y-K1aWkTXu5wId7r4-zNUHozwLqf0
 id: indegenetheme_help
 theme: indegenetheme
-region: header
-weight: -5
+region: logo_region
+weight: 2
 provider: null
 plugin: help_block
 settings:

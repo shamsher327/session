@@ -1,6 +1,6 @@
 uuid: e7973dff-dac6-4fd5-a685-8ee72a80eafe
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - dropdown_language
@@ -8,8 +8,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_dropdownlanguage_3
 theme: indegenetheme
-region: header
-weight: -6
+region: logo_region
+weight: -10
 provider: null
 plugin: 'dropdown_language:language_interface'
 settings:

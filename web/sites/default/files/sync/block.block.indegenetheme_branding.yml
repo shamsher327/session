@@ -1,6 +1,6 @@
 uuid: 7a218d1c-a5c5-40f4-9f6a-62afacb12ae7
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: 0XmTH5dbJRl-fsDBgX10MzeFMarkhKpzU7ZGdGPfAMU
 id: indegenetheme_branding
 theme: indegenetheme
-region: header
-weight: -7
+region: logo_region
+weight: -4
 provider: null
 plugin: system_branding_block
 settings:

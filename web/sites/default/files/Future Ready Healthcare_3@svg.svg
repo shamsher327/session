@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="110px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Future Ready Healthcare_3@svg</title>
+    <g id="Future-Ready-Healthcare_3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gaps" transform="translate(18.000000, 0.000000)" fill="#0A4CA4" fill-rule="nonzero">
+            <path d="M67.8394108,41 L66.8380157,41 C62.8881281,41.0115419 59.6889828,44.2067011 59.6774264,48.151667 L59.6774264,65.9688266 L15.3225157,65.9688266 L15.3225157,48.4285948 C15.3105273,44.3308695 11.9875023,41.0119798 7.88466477,41 L7.4377931,41 C3.3349782,41.0120115 0.0119882244,44.330892 0,48.4285948 L0,74.0233021 L0.0357913781,74.0233021 C0.410477123,78.1192579 3.84270459,81.2587254 7.96082845,81.2723543 L20.4636568,81.2723543 L20.4636568,110 L54.5362853,110 L54.5362853,81.2723774 L67.039241,81.2723774 C71.4305234,81.259503 74.9871479,77.7072791 75,73.3214682 L75,48.151667 C74.988469,44.2066906 71.7893088,41.0115167 67.8394108,41 Z" id="Path"></path>
+            <circle id="Oval" transform="translate(37.118497, 44.480941) rotate(-13.282500) translate(-37.118497, -44.480941) " cx="37.1184965" cy="44.4809409" r="13.3191011"></circle>
+            <rect id="Rectangle" x="32" y="0" width="14" height="14"></rect>
+            <circle id="Oval" transform="translate(63.015543, 18.299538) rotate(-45.000000) translate(-63.015543, -18.299538) " cx="63.0155426" cy="18.2995383" r="7.03826316"></circle>
+            <polygon id="Path" points="10.9994242 12 4 24 18 24"></polygon>
+        </g>
+    </g>
+</svg>

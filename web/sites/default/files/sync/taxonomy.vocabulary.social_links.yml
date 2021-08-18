@@ -1,0 +1,8 @@
+uuid: b7e38f0c-c0ef-46de-b728-c65dfa5be2b5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Social Links'
+vid: social_links
+description: 'Social LInks'
+weight: 0

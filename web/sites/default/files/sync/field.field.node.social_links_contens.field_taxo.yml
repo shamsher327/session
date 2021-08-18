@@ -1,0 +1,33 @@
+uuid: 457cd8e8-6fc9-48a0-858d-b3595f332407
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taxo
+    - node.type.social_links_contens
+    - taxonomy.vocabulary.pages_list
+  content:
+    - 'taxonomy_term:pages_list:eec553f9-aa88-4f39-b3b2-0f21252fd815'
+id: node.social_links_contens.field_taxo
+field_name: field_taxo
+entity_type: node
+bundle: social_links_contens
+label: taxo
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: eec553f9-aa88-4f39-b3b2-0f21252fd815
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pages_list: pages_list
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

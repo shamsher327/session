@@ -1,0 +1,11 @@
+uuid: e8dd528a-3776-47cf-98e1-ebed680c85d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.social_links_contens
+id: node.social_links_contens
+target_entity_type_id: node
+target_bundle: social_links_contens
+default_langcode: site_default
+language_alterable: false

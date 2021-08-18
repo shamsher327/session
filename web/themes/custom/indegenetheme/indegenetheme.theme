@@ -1,0 +1,28 @@
+<?php
+
+function indegenetheme_preprocess_page(&$variables) {
+  // die;
+    $site_config = \Drupal::config('system.site');
+    $variables['site_name'] = $site_config->get('name');
+    $variables['site_slogan'] = $site_config->get('slogan');
+    $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+    $request = \Drupal::request();
+    $title = "";
+    if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+    }
+    $variables['page_title'] = $title;
+
+  }
+
+  function template_preprocess_views_view_unformatted(&$variables){
+    $title = "";
+    if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+    }
+    $variables['page_title'] = $title;
+    $variables['path_uri']  = \Drupal::request()->getRequestUri();
+
+  }
+
+?>

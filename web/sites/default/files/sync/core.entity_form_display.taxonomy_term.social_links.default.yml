@@ -1,0 +1,72 @@
+uuid: 59189153-baeb-4c78-bb78-44bf95835d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.social_links.field_image
+    - field.field.taxonomy_term.social_links.field_link
+    - image.style.thumbnail
+    - taxonomy.vocabulary.social_links
+  module:
+    - image
+    - link
+    - path
+    - text
+id: taxonomy_term.social_links.default
+targetEntityType: taxonomy_term
+bundle: social_links
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    weight: 102
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 101
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

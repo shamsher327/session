@@ -1,0 +1,47 @@
+uuid: 663e4563-cebb-4281-90c6-efc3ac97519b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.social_links.field_image
+    - field.field.taxonomy_term.social_links.field_link
+    - taxonomy.vocabulary.social_links
+  module:
+    - image
+    - link
+    - text
+id: taxonomy_term.social_links.default
+targetEntityType: taxonomy_term
+bundle: social_links
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

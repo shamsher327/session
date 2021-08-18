@@ -1,0 +1,21 @@
+uuid: b754f538-be9c-4536-b05a-b02cf7a6a7ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_menu_link
+    - taxonomy.vocabulary.pages_list
+id: taxonomy_term.pages_list.field_menu_link
+field_name: field_menu_link
+entity_type: taxonomy_term
+bundle: pages_list
+label: 'Menu Link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: about-us
+default_value_callback: ''
+settings: {  }
+field_type: string

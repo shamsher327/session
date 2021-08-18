@@ -1,6 +1,6 @@
 uuid: 2731c3f1-a701-47c6-993c-a7d9f7d9d854
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - indegenetheme
@@ -8,8 +8,8 @@ _core:
   default_config_hash: IzSbK3zk-Gon9y7WLEWop15Wn__7LeKzBJIXqajlb00
 id: indegenetheme_local_tasks
 theme: indegenetheme
-region: header
-weight: -6
+region: logo_region
+weight: -1
 provider: null
 plugin: local_tasks_block
 settings:

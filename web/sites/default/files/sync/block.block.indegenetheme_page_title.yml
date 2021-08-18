@@ -1,6 +1,6 @@
 uuid: f7fd48ee-51c5-49ab-bf35-075f4b67e314
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - indegenetheme
@@ -8,8 +8,8 @@ _core:
   default_config_hash: _0ZyPKUqcQMu9FlcCoa_Y-No4zdv-wUNF4hlSj60yi0
 id: indegenetheme_page_title
 theme: indegenetheme
-region: header
-weight: -7
+region: logo_region
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

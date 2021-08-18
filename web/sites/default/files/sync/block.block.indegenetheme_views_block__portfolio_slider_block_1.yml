@@ -1,6 +1,6 @@
 uuid: 6e71fb53-031c-4e54-995d-1d64d7bb0657
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.portfolio_slider
@@ -11,8 +11,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_views_block__portfolio_slider_block_1
 theme: indegenetheme
-region: header
-weight: 0
+region: logo_region
+weight: 8
 provider: null
 plugin: 'views_block:portfolio_slider-block_1'
 settings:

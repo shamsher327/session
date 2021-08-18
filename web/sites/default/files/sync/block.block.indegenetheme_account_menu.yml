@@ -1,6 +1,6 @@
 uuid: 6ef06347-acc0-4991-905b-d77b80410b66
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -12,8 +12,8 @@ _core:
   default_config_hash: bSenKfxHQ1-_DHnPlsMsap_D6fif7bbe3kh9k31LkdU
 id: indegenetheme_account_menu
 theme: indegenetheme
-region: header
-weight: -6
+region: logo_region
+weight: 1
 provider: null
 plugin: 'system_menu_block:account'
 settings:

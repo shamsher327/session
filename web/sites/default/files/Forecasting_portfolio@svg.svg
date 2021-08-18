@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="110px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Forecasting_portfolio@svg</title>
+    <g id="Forecasting_portfolio" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="volume-level" transform="translate(0.000000, 7.000000)" fill="#0a4ca4" fill-rule="nonzero">
+            <path d="M94.1677722,0 L11.8369626,0 C5.30059185,0 0,5.3712 0,12 C0,18.6288 5.30059185,24 11.8369626,24 L94.1630374,24 C100.701776,24 106,18.6288 106,12 C106,5.3712 100.704143,0 94.1677722,0 Z" id="Path"></path>
+            <path d="M66.1054462,36 L11.8993135,36 C5.32851259,36 0,41.3712 0,48 C0,54.6288 5.32851259,60 11.8993135,60 L66.1006865,60 C72.6738673,60 78,54.6288 78,48 C78,41.3688 72.6762471,36 66.1054462,36 Z" id="Path"></path>
+            <path d="M35.119286,71 L11.8830906,71 C5.32124798,71 0,76.3712 0,83 C0,89.6288 5.32124798,95 11.8830906,95 L35.1169094,95 C41.678752,95 47,89.6288 47,83 C47,76.3712 41.6811286,71 35.119286,71 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

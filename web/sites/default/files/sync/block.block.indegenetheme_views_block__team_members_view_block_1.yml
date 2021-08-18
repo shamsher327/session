@@ -1,6 +1,6 @@
 uuid: ae68d0d0-54e8-4179-a97a-ebfcbdd55c80
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.team_members_view
@@ -11,8 +11,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_views_block__team_members_view_block_1
 theme: indegenetheme
-region: header
-weight: -2
+region: logo_region
+weight: 5
 provider: null
 plugin: 'views_block:team_members_view-block_1'
 settings:

@@ -3,11 +3,36 @@ indegenetheme-assets:
   header: true
   js:
     assets/js/jquery-3.3.1.slim.min.js: {}
-    assets/js/popper.min.js: {}
-    assets/js/bootstrap.min.js: {}
-    assets/js/bootstrap.bundle.min.js: {}
+    assets/js/jsfile1.js: {}
+    assets/js/jsfile2.js: {}
+    assets/js/jsfile3.js: {}
+    assets/js/jsfile4.js: {}
+    assets/js/jsfile5.js: {}
+    assets/js/jsfile6.js: {}
+    assets/js/jsfile7.js: {}
+    assets/js/jsfile8.js: {}
+    assets/js/jsfile9.js: {}
+    assets/js/jsfile10.js: {}
+    assets/js/jsfile11.js: {}
+    assets/js/jsfile12.js: {}
+    assets/js/jsfile13.js: {}
+    assets/js/jsfile14.js: {}
+    assets/js/jsfile15.js: {}
+    assets/js/jsfile16.js: {}
     assets/js/cs.js: {}
   css:
     theme:
-      assets/css/bootstrap.css: {}
+      assets/css/jsfile1.css: {}
+      assets/css/jsfile2.css: {}
+      assets/css/jsfile3.css: {}
+      assets/css/jsfile4.css: {}
+      assets/css/jsfile5.css: {}
+      assets/css/jsfile6.css: {}
+      assets/css/jsfile7.css: {}
+      assets/css/jsfile8.css: {}
+      assets/css/jsfile9.css: {}
+      assets/css/jsfile10.css: {}
+      assets/css/jsfile11.css: {}
+      assets/css/jsfile12.css: {}
+      assets/css/jsfile13.css: {}
       assets/css/cs.css: {}

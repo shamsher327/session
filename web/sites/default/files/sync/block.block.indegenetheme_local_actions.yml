@@ -1,6 +1,6 @@
 uuid: 70bc17f5-2ec5-4c82-bb9b-94c50e2341e2
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - indegenetheme
@@ -8,8 +8,8 @@ _core:
   default_config_hash: rKurRLaH08AjwE5wsNzeL2fa77rF5pXKSR9WopsFYyI
 id: indegenetheme_local_actions
 theme: indegenetheme
-region: header
-weight: -4
+region: logo_region
+weight: 3
 provider: null
 plugin: local_actions_block
 settings:

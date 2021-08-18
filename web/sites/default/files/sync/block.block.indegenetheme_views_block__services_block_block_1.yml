@@ -1,6 +1,6 @@
 uuid: e4ea7f19-9197-4a08-bf51-426fb2dc052f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.services_block
@@ -11,8 +11,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_views_block__services_block_block_1
 theme: indegenetheme
-region: header
-weight: -1
+region: logo_region
+weight: 6
 provider: null
 plugin: 'views_block:services_block-block_1'
 settings:

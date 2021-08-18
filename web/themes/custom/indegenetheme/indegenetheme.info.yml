@@ -8,14 +8,11 @@ libraries:
   - indegenetheme/indegenetheme-assets
 
 regions:
-  top_srishty_header: "Notice Bar"
-  social_links: "Social Links"
-  header: Header
-  nav_branding: 'Navigation branding region'
-  nav_main: 'Main navigation region'
-  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
-  breadcrumb: Breadcrumbs
-  content: 'Main content'
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
-  footer: Footer
+  logo_region: 'Logo Region'
+  page_slider: 'Page SLider'
+  navigation: 'Main Navigation region'
+  content: 'Main Content'
+  about_footer: "About Footer"
+  bottom_footer_region1: "Bootom Section1"
+  bottom_footer_region2: "Bootom Section2"
+  bottom_footer_region3: "Bootom Section3"

@@ -1,0 +1,27 @@
+uuid: 6b3d8432-6585-4e18-bda9-44ad86e7249f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.page_slider
+  module:
+    - text
+id: node.page_slider.body
+field_name: body
+entity_type: node
+bundle: page_slider
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p>The default value for this field, used when creating new content.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

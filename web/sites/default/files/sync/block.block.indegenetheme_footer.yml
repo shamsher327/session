@@ -1,6 +1,6 @@
 uuid: 2096f0fd-86db-4576-9455-2371227a80fa
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: aFKksJmiEhSztWNw-j-SbfzO88axvjNIZsjFBcNtI6o
 id: indegenetheme_footer
 theme: indegenetheme
-region: header
-weight: -7
+region: logo_region
+weight: -6
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

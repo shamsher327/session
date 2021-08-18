@@ -1,0 +1,18 @@
+uuid: e22c630d-2485-4d58-b363-6609499698c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page_slider
+id: node.page_slider.title
+field_name: title
+entity_type: node
+bundle: page_slider
+label: 'Page Slider'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

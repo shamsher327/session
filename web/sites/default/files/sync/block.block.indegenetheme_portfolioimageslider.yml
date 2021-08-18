@@ -1,6 +1,6 @@
 uuid: 815f3a9f-b478-438d-9e54-cc7dcbff77f3
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - image_slider
@@ -9,7 +9,7 @@ dependencies:
     - indegenetheme
 id: indegenetheme_portfolioimageslider
 theme: indegenetheme
-region: header
+region: logo_region
 weight: -9
 provider: null
 plugin: 'slider_block:1'

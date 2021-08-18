@@ -1,0 +1,11 @@
+uuid: 6510ec7f-f9f7-41eb-8edd-e304b670482b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.social_links
+id: taxonomy_term.social_links
+target_entity_type_id: taxonomy_term
+target_bundle: social_links
+default_langcode: site_default
+language_alterable: false

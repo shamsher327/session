@@ -14,24 +14,21 @@
  */
 #}
 {% block content %}
-<div class="navbar-brand d-flex align-items-center">
 
   {% if site_logo %}
-  <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo d-block">
-    <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-  </a>
-  {% endif %}
-
-  <div>
-    {% if site_name %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-title">
-      {{ site_name }}
+    <a href="{{ path('<front>') }}" rel="home" class="logo">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}"  title=" {{ site_name }}" />
     </a>
-    {% endif %}
-
-    {% if site_slogan %}
+  {% endif %}
+  {% if site_name %}
+    <div class="site-name">
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+    </div>
+  {% endif %}
+  {% if site_slogan %}
     <div class="site-slogan">{{ site_slogan }}</div>
-    {% endif %}
-  </div>
-</div>
+  {% endif %}
+  
+
 {% endblock %}
+

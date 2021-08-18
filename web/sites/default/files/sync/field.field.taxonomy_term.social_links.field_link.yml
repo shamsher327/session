@@ -1,0 +1,23 @@
+uuid: 73a14495-5b3d-4cb1-b806-0d6c7d058658
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_link
+    - taxonomy.vocabulary.social_links
+  module:
+    - link
+id: taxonomy_term.social_links.field_link
+field_name: field_link
+entity_type: taxonomy_term
+bundle: social_links
+label: LInk
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

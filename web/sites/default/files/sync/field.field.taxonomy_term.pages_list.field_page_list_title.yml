@@ -1,0 +1,19 @@
+uuid: 1f7592db-731d-4715-a6e6-a3e940a20e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_page_list_title
+    - taxonomy.vocabulary.pages_list
+id: taxonomy_term.pages_list.field_page_list_title
+field_name: field_page_list_title
+entity_type: taxonomy_term
+bundle: pages_list
+label: 'Page List Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

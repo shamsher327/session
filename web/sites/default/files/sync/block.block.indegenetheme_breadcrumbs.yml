@@ -1,6 +1,6 @@
 uuid: b1b21fc0-6389-4df3-b3cb-acbff99ab676
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: B4RbOEFqUHi5Wx38pRiZzYXo1hhKzCpF50HCAvpOYf4
 id: indegenetheme_breadcrumbs
 theme: indegenetheme
-region: header
-weight: 0
+region: logo_region
+weight: 7
 provider: null
 plugin: system_breadcrumb_block
 settings:

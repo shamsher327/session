@@ -1,0 +1,49 @@
+uuid: fb46051c-0771-4f5c-ae8d-ecec60d34d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pages_list.field_menu_link
+    - field.field.taxonomy_term.pages_list.field_page_list_title
+    - field.field.taxonomy_term.pages_list.field_parent
+    - taxonomy.vocabulary.pages_list
+  module:
+    - text
+id: taxonomy_term.pages_list.default
+targetEntityType: taxonomy_term
+bundle: pages_list
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_menu_link:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_page_list_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_parent:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true

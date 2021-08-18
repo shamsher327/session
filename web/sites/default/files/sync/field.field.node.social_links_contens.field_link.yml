@@ -1,0 +1,33 @@
+uuid: 90f7fafa-8b5d-49e6-8585-3edc133fba11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.social_links_contens
+  module:
+    - link
+id: node.social_links_contens.field_link
+field_name: field_link
+entity_type: node
+bundle: social_links_contens
+label: link
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://facebook.com/'
+    title: Facebook
+    options: {  }
+  -
+    attributes: {  }
+    uri: 'internal:/'
+    title: 'front page'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

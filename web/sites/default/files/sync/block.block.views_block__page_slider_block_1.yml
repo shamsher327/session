@@ -1,0 +1,25 @@
+uuid: 8df47b84-798e-4da0-aa8c-53c361908ae5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.page_slider
+  module:
+    - views
+  theme:
+    - indegenetheme
+id: views_block__page_slider_block_1
+theme: indegenetheme
+region: page_slider
+weight: -11
+provider: null
+plugin: 'views_block:page_slider-block_1'
+settings:
+  id: 'views_block:page_slider-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

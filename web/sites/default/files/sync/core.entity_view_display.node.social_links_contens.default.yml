@@ -1,0 +1,54 @@
+uuid: be9448c3-8684-415c-9ca5-3f6d051a9cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.social_links_contens.field_icon
+    - field.field.node.social_links_contens.field_link
+    - field.field.node.social_links_contens.field_taxo
+    - node.type.social_links_contens
+  module:
+    - image
+    - link
+    - user
+id: node.social_links_contens.default
+targetEntityType: node
+bundle: social_links_contens
+mode: default
+content:
+  field_icon:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_taxo:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

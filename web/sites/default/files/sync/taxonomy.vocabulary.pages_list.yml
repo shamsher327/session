@@ -1,0 +1,8 @@
+uuid: c0142c7b-ea82-438d-b242-3cf99977fa0e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pages List'
+vid: pages_list
+description: ''
+weight: 0
