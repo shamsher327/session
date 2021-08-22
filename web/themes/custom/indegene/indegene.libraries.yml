@@ -1,5 +1,19 @@
-indegene-styling:
+indegene-assests:
   version: 1.x
   css:
-    base:
-      css/base/elements.css: {}
+    theme:
+      assests/css/css_1SL42UdLzA4ICQToJljLZF9cZbETOeENB9vVpAYp1Mc.css: { }
+      assests/css/css_3UCeMC83UohvYpN4MXTUxSGA-Ef98I5B2UbBANY_g5c.css: { }
+      assests/css/css_8DaobTsXU9dqCSiFEOkXelAEjJSQ1_2dAk0rKW9AhVE.css: { }
+      assests/css/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css: { }
+      assests/css/css_e8tCi4y6ytuI7aYYCKIiekALdoXiE8BdAQSASkSpgwA.css: { }
+      assests/css/css_FYUHDsRdpPj1npIpBpBRG9fisBKAObJ2wU-B5JNoHlc.css: { }
+      assests/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css: { }
+      assests/css/css_N-4XRYJpQHTJITdYzGh73keXJynR0Anivm8a7_c4Mb8.css: { }
+      assests/css/css_olJC63bSOIOi257CfvxoN5VQbD9u3RyW1P8_iiNecN4.css: { }
+      assests/css/css_Pdy2BuSxl9l0BQfGObQUWcEPQsT_XqFElLWXhEq32d8.css: { }
+      assests/css/css_qprjhQTOkYVibLIUKRXbZe7sp8PXH9lMmbHorEA0mls.css: { }
+      assests/css/css_v8cDhkbrHcBb1DhrEr_hmTZH5Blu19WYLkvazUIhTPc.css: { }
+      assests/css/css_zd2_KgxyDRohahD-yEPvI3Hj5QYs8wkwI2jCXPChwMg.css: { }
+  js:
+    js/custom.js: {}

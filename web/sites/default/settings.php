@@ -1,5 +1,5 @@
 <?php
-
+$settings['rebuild_access'] = TRUE;
 // @codingStandardsIgnoreFile
 
 /**

@@ -31,18 +31,6 @@
  * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
  */
 #}
-{%
-  set classes = [
-    'block',
-    'block-menu',
-    'navigation',
-    'menu--' ~ derivative_plugin_id|clean_class,
-  ]
-%}
-{% set heading_id = attributes.id ~ '-menu'|clean_id %}
-{% set show_anchor = "show-" ~ attributes.id|clean_id %}
-{% set hide_anchor = "hide-" ~ attributes.id|clean_id %}
-
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
@@ -52,15 +40,4 @@
   <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
   {{ title_suffix }}
 
-  {# Menu. #}
-  {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
-      {# When rendering a menu without label, render a menu toggle. #}
-      <div class="menu-toggle-target menu-toggle-target-show" id="{{ show_anchor }}"></div>
-      <div class="menu-toggle-target" id="{{ hide_anchor }}"></div>
-      <a class="menu-toggle" href="#{{ show_anchor }}">{% trans %} Show &mdash; {{ configuration.label }}{% endtrans %}</a>
-      <a class="menu-toggle menu-toggle--hide" href="#{{ hide_anchor }}">{% trans %} Hide &mdash; {{ configuration.label }}{% endtrans %}</a>
-      {{ content }}
-    </div>
-  {% endblock %}
 </nav>
