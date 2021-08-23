@@ -1,7 +1,0 @@
-uuid: 2e70e696-ee2a-46e5-b2b4-0280ca26d049
-langcode: en
-status: true
-dependencies: {  }
-name: responsive_image
-label: 'Responsive Image'
-effects: {  }

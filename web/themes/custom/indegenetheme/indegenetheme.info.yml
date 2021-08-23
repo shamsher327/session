@@ -4,15 +4,10 @@ description: 'Indegene Theme'
 core_version_requirement: ^8.8 || ^9
 base theme: classy
 
-libraries:
-  - indegenetheme/indegenetheme-assets
+# libraries:
+#   - indegenetheme/indegenetheme-assets
 
 regions:
-  logo_region: 'Logo Region'
-  page_slider: 'Page SLider'
-  navigation: 'Main Navigation region'
+  top: 'Header Region'
   content: 'Main Content'
-  about_footer: "About Footer"
-  bottom_footer_region1: "Bootom Section1"
-  bottom_footer_region2: "Bootom Section2"
-  bottom_footer_region3: "Bootom Section3"
+  footer: "Footer"

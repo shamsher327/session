@@ -1,0 +1,33 @@
+uuid: 32cebd0e-bc2d-4a7f-81a7-42e08bd3b55e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_capabilities_icon
+    - media.type.image
+    - taxonomy.vocabulary.capabilities
+  content:
+    - 'media:image:ab96aac4-52f8-43bc-a094-dba900839508'
+id: taxonomy_term.capabilities.field_capabilities_icon
+field_name: field_capabilities_icon
+entity_type: taxonomy_term
+bundle: capabilities
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    weight: '0'
+    target_uuid: ab96aac4-52f8-43bc-a094-dba900839508
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

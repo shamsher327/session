@@ -1,0 +1,30 @@
+uuid: d0ada53d-a6c9-435e-a1c4-246fd8eab709
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_top
+    - media.type.image
+    - media.type.video
+    - paragraphs.paragraphs_type.page_top_section
+id: paragraph.page_top_section.field_media_top
+field_name: field_media_top
+entity_type: paragraph
+bundle: page_top_section
+label: 'Media Page Top'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

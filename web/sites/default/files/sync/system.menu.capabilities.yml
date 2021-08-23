@@ -1,0 +1,8 @@
+uuid: 6c93af8d-dacf-4b4c-bb73-0753746286e4
+langcode: en
+status: true
+dependencies: {  }
+id: capabilities
+label: Capabilities
+description: ''
+locked: false

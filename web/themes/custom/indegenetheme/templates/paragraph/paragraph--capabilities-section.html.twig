@@ -1,0 +1,37 @@
+{% block paragraph %}
+	<section class=" page-section bg-scroll homepage-capabilities text-black" style="background-color: #ffffff;">
+		<div class=" fadeInUp container  wow">
+			<h3 class=" align-center font-alt black fw-700 mb-20" style="margin-top: 0px;">{{ capability_section_heading }}
+			</h3>
+			{% block content %}
+				<div class=" row mt-50">
+					{% for i in range(0, (count_capabilities-1)) %}
+						{% set tid = content.field_capabilities[i]['#taxonomy_term'].tid.value %}
+
+						{% if tid %}
+							{% set break = true %}
+						{% endif %}
+
+						<div class=" col-md-4">
+
+							{# {{kint(content.field_capabilities[i]['#taxonomy_term'])}} #}
+
+							{# {{ path('entity.taxonomy_term.canonical', {'taxonomy_term': tid }) }} #}
+
+								<a href="/web/taxonomy/term/{{tid}}"> <span class="home-content">
+									<span class=" home-text pi-text-center" style="margin-bottom: 15px; text-align:center;">
+										<span class=" image-align text-align-center" align="center"><img style="" src="{{file_url(content.field_capabilities[i]['#taxonomy_term'].field_capabilities_icon.entity.field_media_image.entity.fileuri)}}" alt="" title="" width="70" height="70"></span>
+										<h4 class=" align-center font-alt black mt-20 mb-20 fw-500">{{(content.field_capabilities[i]['#taxonomy_term'].field_name.value)}}
+										</h4>
+										<p>{{content.field_capabilities[i]['#taxonomy_term'].field_description.value}}</p>
+									</span>
+								</span>
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+			{% endblock %}
+		</div>
+	</section>
+
+{% endblock paragraph %}

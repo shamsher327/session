@@ -8,8 +8,8 @@ _core:
   default_config_hash: rKurRLaH08AjwE5wsNzeL2fa77rF5pXKSR9WopsFYyI
 id: indegenetheme_local_actions
 theme: indegenetheme
-region: logo_region
-weight: 3
+region: top
+weight: 5
 provider: null
 plugin: local_actions_block
 settings:

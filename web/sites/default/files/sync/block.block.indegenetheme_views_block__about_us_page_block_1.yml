@@ -10,8 +10,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_views_block__about_us_page_block_1
 theme: indegenetheme
-region: logo_region
-weight: -7
+region: top
+weight: -5
 provider: null
 plugin: 'views_block:about_us_page-block_1'
 settings:

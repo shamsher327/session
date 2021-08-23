@@ -1,0 +1,43 @@
+uuid: 9c114fd8-4611-41f6-a448-d719193227de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.career_short_link_section.field_cta_link
+    - field.field.paragraph.career_short_link_section.field_media_for_career_short
+    - field.field.paragraph.career_short_link_section.field_section_
+    - paragraphs.paragraphs_type.career_short_link_section
+  module:
+    - link
+    - media_library
+id: paragraph.career_short_link_section.default
+targetEntityType: paragraph
+bundle: career_short_link_section
+mode: default
+content:
+  field_cta_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_media_for_career_short:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_section_:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

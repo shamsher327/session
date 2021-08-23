@@ -3,23 +3,28 @@ indegenetheme-assets:
   header: true
   js:
     assets/js/jquery-3.3.1.slim.min.js: {}
-    assets/js/jsfile1.js: {}
-    assets/js/jsfile2.js: {}
-    assets/js/jsfile3.js: {}
-    assets/js/jsfile4.js: {}
-    assets/js/jsfile5.js: {}
-    assets/js/jsfile6.js: {}
-    assets/js/jsfile7.js: {}
-    assets/js/jsfile8.js: {}
-    assets/js/jsfile9.js: {}
-    assets/js/jsfile10.js: {}
-    assets/js/jsfile11.js: {}
-    assets/js/jsfile12.js: {}
-    assets/js/jsfile13.js: {}
-    assets/js/jsfile14.js: {}
-    assets/js/jsfile15.js: {}
-    assets/js/jsfile16.js: {}
+    # assets/js/jsfile1.js: {}
+    # assets/js/jsfile2.js: {}
+    # assets/js/jsfile3.js: {}
+    # assets/js/jsfile4.js: {}
+    # assets/js/jsfile5.js: {}
+    # assets/js/jsfile6.js: {}
+    # assets/js/jsfile7.js: {}
+    # assets/js/jsfile8.js: {}
+    # assets/js/jsfile9.js: {}
+    # assets/js/jsfile10.js: {}
+    # assets/js/jsfile11.js: {}
+    # assets/js/jsfile12.js: {}
+    # assets/js/jsfile13.js: {}
+    # assets/js/jsfile14.js: {}
+    # assets/js/jsfile15.js: {}
+    # assets/js/jsfile16.js: {}
+    assets/js/popper.min.js: {}
     assets/js/cs.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+
   css:
     theme:
       assets/css/jsfile1.css: {}

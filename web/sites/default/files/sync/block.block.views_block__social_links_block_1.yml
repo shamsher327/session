@@ -2,16 +2,12 @@ uuid: 0c7283e5-b109-4561-8c04-e8892532cd95
 langcode: en
 status: false
 dependencies:
-  config:
-    - views.view.social_links
-  module:
-    - views
   theme:
     - indegenetheme
 id: views_block__social_links_block_1
 theme: indegenetheme
-region: logo_region
-weight: 0
+region: top
+weight: 2
 provider: null
 plugin: 'views_block:social_links-block_1'
 settings:

@@ -1,0 +1,70 @@
+uuid: 0a9fca48-ab1e-4e2e-b954-8d72ffa33ac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block_structure
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.footer_block_structure.body
+    - field.field.block_content.footer_block_structure.field_copyright_text
+    - field.field.block_content.footer_block_structure.field_form_heading
+    - field.field.block_content.footer_block_structure.field_social
+    - field.field.block_content.footer_block_structure.field_subscription_form
+    - field.field.block_content.footer_block_structure.field_title_for_about
+  module:
+    - text
+    - webform
+id: block_content.footer_block_structure.full
+targetEntityType: block_content
+bundle: footer_block_structure
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_copyright_text:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_form_heading:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_social:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_subscription_form:
+    weight: 3
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_title_for_about:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

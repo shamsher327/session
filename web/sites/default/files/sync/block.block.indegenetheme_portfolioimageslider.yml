@@ -9,8 +9,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_portfolioimageslider
 theme: indegenetheme
-region: logo_region
-weight: -9
+region: top
+weight: -7
 provider: null
 plugin: 'slider_block:1'
 settings:

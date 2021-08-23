@@ -1,0 +1,21 @@
+uuid: a4bf609a-1fc9-4ad5-9a9d-8748f40e4b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.page_top_section
+id: paragraph.page_top_section.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: page_top_section
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '[current-page:title]'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -11,8 +11,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_views_block__home_page_banner_block_1
 theme: indegenetheme
-region: logo_region
-weight: -11
+region: top
+weight: -10
 provider: null
 plugin: 'views_block:home_page_banner-block_1'
 settings:

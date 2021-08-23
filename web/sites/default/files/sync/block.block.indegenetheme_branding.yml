@@ -10,8 +10,8 @@ _core:
   default_config_hash: 0XmTH5dbJRl-fsDBgX10MzeFMarkhKpzU7ZGdGPfAMU
 id: indegenetheme_branding
 theme: indegenetheme
-region: logo_region
-weight: -4
+region: top
+weight: -2
 provider: null
 plugin: system_branding_block
 settings:

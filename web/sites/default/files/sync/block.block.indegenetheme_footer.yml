@@ -12,8 +12,8 @@ _core:
   default_config_hash: aFKksJmiEhSztWNw-j-SbfzO88axvjNIZsjFBcNtI6o
 id: indegenetheme_footer
 theme: indegenetheme
-region: logo_region
-weight: -6
+region: top
+weight: -4
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

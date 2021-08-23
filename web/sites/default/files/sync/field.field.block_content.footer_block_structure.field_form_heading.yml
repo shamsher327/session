@@ -1,0 +1,21 @@
+uuid: da40f4f0-b88a-41de-9e18-01ac2ef70e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block_structure
+    - field.storage.block_content.field_form_heading
+id: block_content.footer_block_structure.field_form_heading
+field_name: field_form_heading
+entity_type: block_content
+bundle: footer_block_structure
+label: 'Form Heading'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Stay connected '
+default_value_callback: ''
+settings: {  }
+field_type: string

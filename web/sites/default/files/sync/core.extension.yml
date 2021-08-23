@@ -21,15 +21,18 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  draggableviews: 0
   dropdown_language: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   features: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
   help: 0
+  helper: 0
   history: 0
   image: 0
   image_slider: 0
@@ -48,18 +51,23 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
+  simplify_menu: 0
+  social_media_links: 0
   system: 0
   taxonomy: 0
+  tb_megamenu: 0
   text: 0
   token: 0
   toolbar: 0
   tour: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_slideshow: 0
   views_slideshow_cycle: 0
   views_taxonomy_term_name_depth: 0
   views_ui: 0
+  we_megamenu: 0
   webform: 0
   webform_access: 0
   webform_attachment: 0
@@ -79,6 +87,7 @@ module:
   pathauto: 1
   webform_bootstrap: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0

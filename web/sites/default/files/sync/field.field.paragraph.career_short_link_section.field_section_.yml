@@ -1,0 +1,21 @@
+uuid: 7f9a6ce9-f04a-4221-9366-48fbf903528a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_
+    - paragraphs.paragraphs_type.career_short_link_section
+id: paragraph.career_short_link_section.field_section_
+field_name: field_section_
+entity_type: paragraph
+bundle: career_short_link_section
+label: 'Career Section Heading'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Careers
+default_value_callback: ''
+settings: {  }
+field_type: string

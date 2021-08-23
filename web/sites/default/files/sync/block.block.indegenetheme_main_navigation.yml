@@ -1,6 +1,6 @@
 uuid: 4dd75a6c-1c01-4155-b593-225dba965c0a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -12,8 +12,8 @@ _core:
   default_config_hash: 35BFwuaW_wb2mnnYk1tNg7T9Ro9RaewrCqOTtyQ7VJE
 id: indegenetheme_main_navigation
 theme: indegenetheme
-region: navigation
-weight: -11
+region: top
+weight: -9
 provider: null
 plugin: 'system_menu_block:main'
 settings:

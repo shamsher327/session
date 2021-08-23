@@ -1,0 +1,51 @@
+uuid: 3e781025-bfd1-4c1b-91a9-cf4b2f49f20d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.what_we_offer_home_section.field_featured_technology
+    - field.field.paragraph.what_we_offer_home_section.field_image_section_
+    - field.field.paragraph.what_we_offer_home_section.field_solutions_list
+    - field.field.paragraph.what_we_offer_home_section.field_what_we_offer_section_head
+    - paragraphs.paragraphs_type.what_we_offer_home_section
+id: paragraph.what_we_offer_home_section.default
+targetEntityType: paragraph
+bundle: what_we_offer_home_section
+mode: default
+content:
+  field_featured_technology:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_image_section_:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_solutions_list:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_what_we_offer_section_head:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

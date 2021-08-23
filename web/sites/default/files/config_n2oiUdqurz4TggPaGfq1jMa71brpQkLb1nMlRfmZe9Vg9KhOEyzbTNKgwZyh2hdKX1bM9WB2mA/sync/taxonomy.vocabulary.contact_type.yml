@@ -1,8 +1,0 @@
-uuid: 6ae1bdf7-60d2-4b6f-9062-df02b556f024
-langcode: en
-status: true
-dependencies: {  }
-name: 'Contact Type'
-vid: contact_type
-description: ''
-weight: 0

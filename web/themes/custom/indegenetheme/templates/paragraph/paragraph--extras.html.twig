@@ -1,0 +1,70 @@
+{# {{kint(content)}} #}
+
+{% block paragraph %}
+
+<section class=" page-section bg-scroll text-black" style="background-color: #ffffff;">
+	<div class=" container" id="news_div">
+		<div>
+        {% block content %}
+			{# <div class="view view-custom-homepage view-id-custom_homepage view-display-id-attachment_3 blog-carousel-view gray-carousel view-dom-id-9b2e82ce4bc60bd5a9f6f56dd5757989"> #}
+
+
+				{# <div class="clearfix"></div> #}
+
+
+				<div class="view-content">
+					<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+						<div class="views-field views-field-nothing">
+							<span class="field-content">
+								<div class="row">
+                                {% if c_align == 'Left' %}
+									<div class="col-sm-6 col-md-6">
+										{{content.field_media_extras}}
+									</div>
+									<div class="col-sm-6 col-md-6 bg-gray black">
+										<div class="p-15p">
+
+
+											<span class="blue-meta">
+												<a href="#">{{c_title}}</a>
+											</span>
+											<h3 class="font-alt black fw-600 mt-10 mb-20">
+												<a href="/insights/video/gilles-marrache-svp-amgen-europe-shares-thoughts-how-indegene-enables-amgen-deliver">{{c_content}}</a>
+											</h3>
+
+										</div>
+									</div>
+                                {% else %}
+
+									<div class="col-sm-6 col-md-6 bg-gray black">
+										<div class="p-15p">
+
+
+											<span class="blue-meta">
+												<a href="#">{{c_title}}</a>
+											</span>
+											<h3 class="font-alt black fw-600 mt-10 mb-20">
+												<a href="/insights/video/gilles-marrache-svp-amgen-europe-shares-thoughts-how-indegene-enables-amgen-deliver">{{c_content}}</a>
+											</h3>
+
+										</div>
+									</div>
+                                    <div class="col-sm-6 col-md-6">
+										{{content.field_media_extras}}
+									</div>
+                                {% endif %}
+								</div>
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+			{# </div> #}
+        {% endblock content %}
+		</div>
+
+	</div>
+</section>
+{% endblock paragraph %}

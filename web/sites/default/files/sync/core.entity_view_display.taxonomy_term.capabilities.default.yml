@@ -1,0 +1,50 @@
+uuid: 4e232a7e-17ed-42c6-8eaf-ea3738524c92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.capabilities.field_capabilities_icon
+    - field.field.taxonomy_term.capabilities.field_description
+    - field.field.taxonomy_term.capabilities.field_name
+    - taxonomy.vocabulary.capabilities
+  module:
+    - text
+id: taxonomy_term.capabilities.default
+targetEntityType: taxonomy_term
+bundle: capabilities
+mode: default
+content:
+  description:
+    label: above
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_capabilities_icon:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

@@ -8,8 +8,8 @@ _core:
   default_config_hash: _0ZyPKUqcQMu9FlcCoa_Y-No4zdv-wUNF4hlSj60yi0
 id: indegenetheme_page_title
 theme: indegenetheme
-region: logo_region
-weight: -5
+region: top
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

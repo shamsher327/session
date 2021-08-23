@@ -10,8 +10,8 @@ _core:
   default_config_hash: B4RbOEFqUHi5Wx38pRiZzYXo1hhKzCpF50HCAvpOYf4
 id: indegenetheme_breadcrumbs
 theme: indegenetheme
-region: logo_region
-weight: 7
+region: top
+weight: 9
 provider: null
 plugin: system_breadcrumb_block
 settings:

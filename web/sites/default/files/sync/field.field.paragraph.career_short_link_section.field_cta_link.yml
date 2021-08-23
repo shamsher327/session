@@ -1,0 +1,33 @@
+uuid: 95b6f4d1-938a-43db-b9c0-dc80a2157515
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_link
+    - paragraphs.paragraphs_type.career_short_link_section
+  module:
+    - link
+id: paragraph.career_short_link_section.field_cta_link
+field_name: field_cta_link
+entity_type: paragraph
+bundle: career_short_link_section
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://www.indegene.com/careers/life-indegene'
+    title: 'Learn About Our Cutlture'
+    options: {  }
+  -
+    attributes: {  }
+    uri: 'https://careers.indegene.com/'
+    title: 'Explore Exciting Opportunity'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

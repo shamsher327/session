@@ -1,0 +1,10 @@
+uuid: d23a6905-1ecb-459d-9dd4-c81fee01377f
+langcode: en
+status: true
+dependencies: {  }
+id: career_short_link_section
+label: 'Career Short Link Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

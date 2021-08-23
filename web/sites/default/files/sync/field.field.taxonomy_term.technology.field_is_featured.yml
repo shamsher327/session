@@ -1,0 +1,23 @@
+uuid: 8f82dd35-d301-4130-9a6c-fddb09ecadb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_is_featured
+    - taxonomy.vocabulary.technology
+id: taxonomy_term.technology.field_is_featured
+field_name: field_is_featured
+entity_type: taxonomy_term
+bundle: technology
+label: is_featured
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

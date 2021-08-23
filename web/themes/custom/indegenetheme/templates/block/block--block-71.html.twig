@@ -1,0 +1,99 @@
+
+{% block content %}
+
+<div id="block-block-71" class="block block-block ">
+	<div class="block-content clearfix">
+		<section class=" page-section bg-scroll mob-mt-20" style="background-color: #0a4ca4;">
+			<div class=" container">
+				<div class=" row">
+					<div class=" col-md-7 mob-mb-30">
+						<h3 class="font-alt white" style="margin-top: 0px; margin-bottom: 20px;">{{content.field_title_for_about[0]}}
+						</h3>
+						<div class=" large-text blue">
+							<p>{{content.body}}</p>
+						</div>
+					</div>
+					<div class=" col-md-1"></div>
+					<div class=" col-md-4">
+						<h2 class=" font-alt white fw-700" style="margin-top: 0px; margin-bottom: 20px;">
+                            {{content.field_form_heading[0]}}
+						</h2>
+						<div id="block-simplenews-75" class="block block-simplenews ">
+                            <div class="block-content clearfix">
+                                {{content.field_subscription_form[0]}}
+
+							    <h5 class="font-alt mb-sm-40  widget-title">| newsletter</h5>
+
+
+
+							</div>
+
+						</div>
+						<!-- /.block -->
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class=" page-section bg-scroll text-white" style="padding-top: 40px; padding-bottom: 40px; background-color: #000000;">
+			<div class=" container">
+				<div class=" row">
+					<div class=" col-md-2">
+						<div class=" small-text white">
+							<p>{{ content.field_copyright_text[0] }}</p>
+						</div>
+					</div>
+					<div class=" col-md-6">
+						<div id="block-menu-menu-footer-menu" class="block block-menu ">
+
+							<h5 class="font-alt mb-sm-40  widget-title">Footer Menu</h5>
+
+							<div class="block-content clearfix">
+								{# <ul class="default-menu">
+									<li>
+										<a href="/contact-us">Contact us</a>
+									</li>
+									<li>
+										<a href="/privacy-policy">Privacy Policy</a>
+									</li>
+									<li>
+										<a href="/corporate-social-responsibility-policy">CSR Policy</a>
+									</li>
+								</ul> #}
+
+			<div class="inner-nav desktop-nav">
+				<ul class="clearlist">
+                {% set items = simplify_menu('footer') %}
+                {% set default_level = 1 %}
+                {% for menu_item in items.menu_tree %}
+                    {% set active = (menu_item.active_trail) ? ' active-trail' : '' %}
+                    <li class="tb-megamenu-item level-{{default_level}} {{active}} mega mega-align-justify dropdown align-menu-justify" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0">
+                        <a href="{{menu_item.url}}" class="" style="height: 75px; line-height: 75px;">
+                            {{menu_item.text}}
+                        </a>
+                    </li>
+                    {% endfor %}
+					<li>
+						<a style="height: 75px; line-height: 75px;">&nbsp;</a>
+					</li>
+				</ul>
+			</div>
+							</div>
+
+						</div>
+						<!-- /.block -->
+
+					</div>
+					<div class=" col-md-4 social-media-icons">
+
+						{{ content.field_social }}
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</div>
+
+{% endblock %}

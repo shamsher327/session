@@ -1,0 +1,20 @@
+uuid: 7edaf72c-f8df-4676-a739-931fe3284945
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: taxonomy_term.field_capabilities_icon
+field_name: field_capabilities_icon
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

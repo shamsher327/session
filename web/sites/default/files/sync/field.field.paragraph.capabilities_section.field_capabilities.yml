@@ -1,0 +1,39 @@
+uuid: aad1ee29-8e5a-4613-84f9-7183dbbd371f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_capabilities
+    - paragraphs.paragraphs_type.capabilities_section
+    - taxonomy.vocabulary.capabilities
+  content:
+    - 'taxonomy_term:capabilities:575ac91f-5b31-4d36-b537-be81be88b246'
+    - 'taxonomy_term:capabilities:6e6b5bb4-b684-409f-9f6d-437b71ed58e5'
+    - 'taxonomy_term:capabilities:a88ccbaa-8bb8-4480-b6ca-64bb01a65392'
+id: paragraph.capabilities_section.field_capabilities
+field_name: field_capabilities
+entity_type: paragraph
+bundle: capabilities_section
+label: Capabilities
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 575ac91f-5b31-4d36-b537-be81be88b246
+  -
+    target_uuid: 6e6b5bb4-b684-409f-9f6d-437b71ed58e5
+  -
+    target_uuid: a88ccbaa-8bb8-4480-b6ca-64bb01a65392
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      capabilities: capabilities
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

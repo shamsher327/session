@@ -1,0 +1,8 @@
+uuid: 0845cf65-9bc8-4d56-b104-924376e6e0e2
+langcode: en
+status: true
+dependencies: {  }
+name: capabilities
+vid: capabilities
+description: ''
+weight: 0

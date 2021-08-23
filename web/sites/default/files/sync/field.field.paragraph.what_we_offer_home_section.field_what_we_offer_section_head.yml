@@ -1,0 +1,21 @@
+uuid: 372dc7ff-1c33-47a3-aeca-84dd24973f84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_what_we_offer_section_head
+    - paragraphs.paragraphs_type.what_we_offer_home_section
+id: paragraph.what_we_offer_home_section.field_what_we_offer_section_head
+field_name: field_what_we_offer_section_head
+entity_type: paragraph
+bundle: what_we_offer_home_section
+label: 'What We offer Section Heading'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'What We offer'
+default_value_callback: ''
+settings: {  }
+field_type: string

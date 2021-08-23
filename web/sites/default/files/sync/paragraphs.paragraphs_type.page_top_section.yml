@@ -1,0 +1,10 @@
+uuid: 3194188e-abca-496a-af57-176e759644a2
+langcode: en
+status: true
+dependencies: {  }
+id: page_top_section
+label: 'Page Top Section'
+icon_uuid: null
+icon_default: null
+description: 'Page TOp Section'
+behavior_plugins: {  }

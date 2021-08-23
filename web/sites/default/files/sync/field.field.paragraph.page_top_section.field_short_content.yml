@@ -1,0 +1,19 @@
+uuid: 1ee56b5c-b5b9-4750-a526-f036622c2483
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_short_content
+    - paragraphs.paragraphs_type.page_top_section
+id: paragraph.page_top_section.field_short_content
+field_name: field_short_content
+entity_type: paragraph
+bundle: page_top_section
+label: 'Short Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

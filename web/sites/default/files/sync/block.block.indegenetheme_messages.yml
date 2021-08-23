@@ -10,8 +10,8 @@ _core:
   default_config_hash: tZtWC6EKIYALVtpV4mPz79GsLZD6IFWb7Wk1B7Rd8Go
 id: indegenetheme_messages
 theme: indegenetheme
-region: logo_region
-weight: -8
+region: top
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

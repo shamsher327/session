@@ -1,0 +1,20 @@
+uuid: ae74c714-bedb-4402-92b4-2edcdbf819a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_featured_technology
+field_name: field_featured_technology
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

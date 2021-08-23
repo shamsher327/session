@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Main file for the Helper module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Url;
+use Drupal\layout_builder\Entity\LayoutEntityDisplayInterface;
+
+/**
+ * Implements hook_entity_operation().
+ */
+function helper_entity_operation(EntityInterface $entity) {
+  $operations = [];
+
+  if ($entity instanceof FieldableEntityInterface && \Drupal::moduleHandler()->moduleExists('layout_builder')) {
+    $entity_type_id = $entity->getEntityTypeId();
+    $url = Url::fromRoute(
+      'layout_builder.overrides.' . $entity_type_id . '.view',
+      [$entity_type_id => $entity->id()]
+    );
+    if ($url->access()) {
+      $operations['layout'] = [
+        'title' => t('Layout'),
+        'weight' => 50,
+        'url' => $url,
+      ];
+    }
+  }
+
+  return $operations;
+}

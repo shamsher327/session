@@ -1,1 +1,39 @@
 {% extends "block.html.twig" %}
+<div class=" row">
+	<div class=" col-md-7 mob-mb-30">
+		<h3 class="font-alt white" style="margin-top: 0px; margin-bottom: 20px;">{{content.field_title_for_about}}
+		</h3>
+		<div class=" large-text blue">
+			<p>{{content.body}}</p>
+		</div>
+	</div>
+	<div class=" col-md-1"></div>
+	<div class=" col-md-4">
+		<h2 class=" align-left font-alt white fw-700" style="margin-top: 0px; margin-bottom: 20px;">Stay connected
+		</h2>
+		<div id="block-simplenews-75" class="block block-simplenews ">
+
+			<h5 class="font-alt mb-sm-40  widget-title">| newsletter</h5>
+
+			<div class="block-content clearfix">
+
+				<div id="clientsidevalidation-simplenews-block-form-75-errors" class="messages error clientside-error" style="display: none;">
+					<ul></ul>
+				</div>
+        		{{content.field_subscription_form}}
+				<form class="simplenews-subscribe form" action="/solutions" method="post" id="simplenews-block-form-75" accept-charset="UTF-8" novalidate="novalidate">
+					<div>
+						<div class="form-item form-type-textfield form-item-mail">
+							<input placeholder="E-mail" class="input-md form-control round" type="text" id="edit-mail" name="mail" value="" size="20" maxlength="128">
+						</div>
+						<input class="btn-medium btn btn-mod btn-round form-submit" type="submit" id="edit-submit" name="op" value="Subscribe"><input type="hidden" name="form_build_id" value="form-8oDaVI74_nvHq5OXU6CMMMsCXSdajOvlvKm0qBA508Q">
+						<input type="hidden" name="form_id" value="simplenews_block_form_75">
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+		<!-- /.block -->
+	</div>
+</div>

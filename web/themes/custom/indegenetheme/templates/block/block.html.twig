@@ -23,15 +23,23 @@
  *   displayed after the main title tag that appears in the template.
  *
  * @see template_preprocess_block()
+  set classes = [
+    'block',
+    ' block-block'
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
  */
 #}
 {%
   set classes = [
     'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
+    ' block-block'
   ]
+
 %}
+
+{# {{kint(attributes)}} #}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}

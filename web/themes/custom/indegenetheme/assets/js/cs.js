@@ -1,10 +1,24 @@
-// $(document).ready(function(){
+// // (function ($, Drupal, drupalSettings) {
+// //     alert("sdsd");
+// //     // Drupal.behaviors.MyModuleBehavior = {
+// //     //   attach: function (context, settings) {
+// //     //     // get color_body value with "drupalSettings.mymodule.color_body"
+// //     //     var color_body = drupalSettings.mymodule.color_body;
+// //     //     alert(color_body);
+// //     //   }
+// //     // };
+// //   })(jQuery, Drupal, drupalSettings);
 
-//     $('.text,h1,h2,h3,h4,h5').html(function(i, html) {
-//         var chars = $.trim(html).split("");
-//         return '<span>' + chars.join('</span><span>') + '</span>';
-//       });
+// alert("sads")
 
-//   });
+(function ($, Drupal, drupalSettings) {
+    var username = drupalSettings.indegenetheme.username;
+        // console.log(color_body);
+        alert("Hi, "+username)
+    // Drupal.behaviors.MyModuleBehavior = {
+    //   attach: function (context, settings) {
+    //     // get color_body value with "drupalSettings.mymodule.color_body"
 
-var Drupal = Drupal || { 'settings': {}, 'behaviors': {}, 'locale': {} };
+    //   }
+    // };
+  })(jQuery, Drupal, drupalSettings);

@@ -1,0 +1,34 @@
+{# {{kint(content)}} #}
+{% block paragraph %}
+
+<div class=" fadeInUp container  wow mt-100 mb-100">
+	<section class=" bg-dark page-section bg-scroll" style="background-color: #f9f9f9; padding-top: 0px; padding-bottom: 0px;" id="career_div">
+		<div class=" row  homecareer_div">
+			<div class=" col-sm-6 col-md-6 small-section-2 f-right">
+				<h3 class="font-alt black fw-700" style="margin-top: 0px; margin-bottom: 15px;">{{career_section_heading }}
+				</h3>
+
+
+				{# {% set k = 1 %} #}
+            	{% for i in range(0, k) %}
+
+				{# {{ kint(content['field_cta_link'][i]['#url']) }} #}
+
+
+				<a class=" btn btn-mod btn-gray btn-small btn-round" target="_blank" style="margin-top: 10px; margin-right: 40px;" href="{{data_list[i]['uri']}}">
+					<i class="fa fa-caret-right"></i>
+					{{data_list[i]['title']}}</a>
+				{% endfor %}
+
+					{# {{content.field_cta_link}} #}
+					{# {{kint(content['field_media_for_career_short'].entity.field_media_image.entity.fileuri)}} #}
+			</div>
+			<div class=" col-sm-6 col-md-6 hwd_img_2" style="background-image: url({{background_url}});"></div>
+		</div>
+	</section>
+</div>
+
+{% endblock paragraph %}
+
+
+

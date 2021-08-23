@@ -1,0 +1,33 @@
+uuid: c044b2ce-1024-4e4e-b7b7-28eaa805fc6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: image_left
+      label: 'Image Left'
+    -
+      value: image_right
+      label: 'Image Right'
+    -
+      value: video_left
+      label: 'Video Left'
+    -
+      value: video_right
+      label: 'Video Righ'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

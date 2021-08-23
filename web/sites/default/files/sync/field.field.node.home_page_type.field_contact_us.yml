@@ -1,0 +1,46 @@
+uuid: 1efd4cf0-aa6f-405a-9b5a-5ceaf9a675cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_us
+    - node.type.home_page_type
+    - paragraphs.paragraphs_type.contact_us_link_section
+  module:
+    - entity_reference_revisions
+id: node.home_page_type.field_contact_us
+field_name: field_contact_us
+entity_type: node
+bundle: home_page_type
+label: 'Contact Us'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contact_us_link_section: contact_us_link_section
+    target_bundles_drag_drop:
+      capabilities_section:
+        weight: 7
+        enabled: false
+      career_short_link_section:
+        weight: 8
+        enabled: false
+      contact_us_link_section:
+        enabled: true
+        weight: 9
+      home_page:
+        weight: 10
+        enabled: false
+      page_top_section:
+        weight: 11
+        enabled: false
+      what_we_offer_home_section:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

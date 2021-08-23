@@ -1,8 +1,0 @@
-uuid: d7ee390a-4d97-4b64-9d76-cbd3ea561807
-langcode: en
-status: true
-dependencies: {  }
-name: 'Coffee Category'
-vid: category
-description: ''
-weight: 0

@@ -1,0 +1,88 @@
+uuid: b3acd796-472a-42aa-ab1b-74bf8ce8da7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block_structure
+    - field.field.block_content.footer_block_structure.body
+    - field.field.block_content.footer_block_structure.field_copyright_text
+    - field.field.block_content.footer_block_structure.field_form_heading
+    - field.field.block_content.footer_block_structure.field_social
+    - field.field.block_content.footer_block_structure.field_subscription_form
+    - field.field.block_content.footer_block_structure.field_title_for_about
+  module:
+    - text
+    - webform
+id: block_content.footer_block_structure.default
+targetEntityType: block_content
+bundle: footer_block_structure
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_copyright_text:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_form_heading:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_subscription_form:
+    weight: 29
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  field_title_for_about:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

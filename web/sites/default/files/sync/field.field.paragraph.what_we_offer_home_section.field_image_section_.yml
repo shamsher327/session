@@ -1,0 +1,28 @@
+uuid: 860eb420-8e79-4ab7-98ed-6f44567c62ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_section_
+    - media.type.image
+    - paragraphs.paragraphs_type.what_we_offer_home_section
+id: paragraph.what_we_offer_home_section.field_image_section_
+field_name: field_image_section_
+entity_type: paragraph
+bundle: what_we_offer_home_section
+label: 'Image Section '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

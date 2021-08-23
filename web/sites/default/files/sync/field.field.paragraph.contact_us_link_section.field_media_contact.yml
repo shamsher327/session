@@ -1,0 +1,35 @@
+uuid: b265e7f2-3424-45d5-b405-e6c0801ada5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_contact
+    - media.type.image
+    - media.type.video
+    - paragraphs.paragraphs_type.contact_us_link_section
+  content:
+    - 'media:image:53f142c3-6b6c-4b8e-a4a5-456371632823'
+id: paragraph.contact_us_link_section.field_media_contact
+field_name: field_media_contact
+entity_type: paragraph
+bundle: contact_us_link_section
+label: Media_COntact
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    weight: '0'
+    target_uuid: 53f142c3-6b6c-4b8e-a4a5-456371632823
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

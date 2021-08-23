@@ -1,0 +1,49 @@
+uuid: 8ed4a931-e3c2-4b89-9b10-f4c05fdd559d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_extras_section
+    - node.type.home_page_type
+    - paragraphs.paragraphs_type.extras
+  module:
+    - entity_reference_revisions
+id: node.home_page_type.field_extras_section
+field_name: field_extras_section
+entity_type: node
+bundle: home_page_type
+label: 'Extras Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      extras: extras
+    target_bundles_drag_drop:
+      capabilities_section:
+        weight: 9
+        enabled: false
+      career_short_link_section:
+        weight: 10
+        enabled: false
+      contact_us_link_section:
+        weight: 11
+        enabled: false
+      extras:
+        enabled: true
+        weight: 8
+      home_page:
+        weight: 12
+        enabled: false
+      page_top_section:
+        weight: 13
+        enabled: false
+      what_we_offer_home_section:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

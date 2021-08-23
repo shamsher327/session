@@ -8,8 +8,8 @@ _core:
   default_config_hash: IzSbK3zk-Gon9y7WLEWop15Wn__7LeKzBJIXqajlb00
 id: indegenetheme_local_tasks
 theme: indegenetheme
-region: logo_region
-weight: -1
+region: top
+weight: 1
 provider: null
 plugin: local_tasks_block
 settings:

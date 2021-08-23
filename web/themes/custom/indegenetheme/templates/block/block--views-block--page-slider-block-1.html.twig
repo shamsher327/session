@@ -1,0 +1,26 @@
+{% block content %}
+{# {{kint(content)}} #}
+
+{% for row in content['#view'].result %}
+<section class=" bg-dark page-section bg-scroll banner-section page-head" style="background-color: #0a4ca4; background-image: url({{page_slider_url}});" data-background="{{page_slider_url}}" data-uri="{{page_slider_url}}">
+	<div class=" row">
+		<div class=" fadeInUp col-md-4 wow">
+			<h2 class="font-alt white hs-line-14 mb-30 fw-800 blue" style="margin-top: 0px;">
+                {{ content['#view'].field['field_page_title'].value(row) }}
+			</h2>
+			<div class=" white">
+				{{ content['#view'].field['body'].value(row)  | raw }}
+			</div>
+		</div>
+        <div class="col-md-8">
+
+            {% set nodeid = content['#view'].field['body'].value(row) %}
+            {# {{ content }} #}
+        </div>
+	</div>
+</section>
+
+{% endfor %}
+
+
+{% endblock %}

@@ -8,8 +8,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_dropdownlanguage_3
 theme: indegenetheme
-region: logo_region
-weight: -10
+region: top
+weight: -8
 provider: null
 plugin: 'dropdown_language:language_interface'
 settings:

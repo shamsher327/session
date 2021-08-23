@@ -1,0 +1,21 @@
+uuid: 1dc6fc06-7aae-4093-aa42-a30355a2217c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_1
+    - paragraphs.paragraphs_type.contact_us_link_section
+id: paragraph.contact_us_link_section.field_text_1
+field_name: field_text_1
+entity_type: paragraph
+bundle: contact_us_link_section
+label: 'Text 1'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Let''s chat about'
+default_value_callback: ''
+settings: {  }
+field_type: string

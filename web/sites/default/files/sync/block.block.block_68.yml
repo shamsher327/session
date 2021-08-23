@@ -1,0 +1,25 @@
+uuid: 53057207-4c35-4773-864d-effd828940f9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:381265e8-ecc2-44d3-aa9b-ba9cfc20771e'
+  module:
+    - block_content
+  theme:
+    - indegenetheme
+id: block_68
+theme: indegenetheme
+region: top
+weight: -11
+provider: null
+plugin: 'block_content:381265e8-ecc2-44d3-aa9b-ba9cfc20771e'
+settings:
+  id: 'block_content:381265e8-ecc2-44d3-aa9b-ba9cfc20771e'
+  label: 'Header Block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

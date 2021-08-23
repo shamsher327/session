@@ -1,0 +1,10 @@
+uuid: 9b0040f2-1737-4fa3-a714-a1b341b1148c
+langcode: en
+status: true
+dependencies: {  }
+id: what_we_offer_home_section
+label: 'What we offer Home Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

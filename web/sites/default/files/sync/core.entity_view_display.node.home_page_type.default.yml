@@ -1,0 +1,90 @@
+uuid: 07f6e99a-cd05-4a3a-9fb0-0e6497417531
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_page_type.body
+    - field.field.node.home_page_type.field_capabilities_section
+    - field.field.node.home_page_type.field_careers
+    - field.field.node.home_page_type.field_contact_us
+    - field.field.node.home_page_type.field_extras_section
+    - field.field.node.home_page_type.field_para
+    - field.field.node.home_page_type.field_what_we_offer
+    - node.type.home_page_type
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.home_page_type.default
+targetEntityType: node
+bundle: home_page_type
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_capabilities_section:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_careers:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_contact_us:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_extras_section:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_para:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_what_we_offer:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -187,7 +187,7 @@ class TypedConfigManager extends TypedDataManager implements TypedConfigManagerI
     // Add type and default definition class.
     $definition += [
       'definition_class' => '\Drupal\Core\TypedData\DataDefinition',
-      'type' => $type,
+      'type' => 'undefined',
       'unwrap_for_canonical_representation' => TRUE,
     ];
     return $definition;

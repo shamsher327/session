@@ -1,0 +1,25 @@
+uuid: 0c242e00-adbe-4505-817a-c5f090ad4526
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_block_structure:9e7e9883-0343-4e3a-80cd-b88203801d0a'
+  module:
+    - block_content
+  theme:
+    - indegenetheme
+id: block_71
+theme: indegenetheme
+region: footer
+weight: -12
+provider: null
+plugin: 'block_content:9e7e9883-0343-4e3a-80cd-b88203801d0a'
+settings:
+  id: 'block_content:9e7e9883-0343-4e3a-80cd-b88203801d0a'
+  label: 'Footer Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

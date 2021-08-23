@@ -1,0 +1,34 @@
+uuid: 285ea101-6557-4d9a-9c33-d7ac95ed0f3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.capabilities_section.field_capabilities
+    - field.field.paragraph.capabilities_section.field_section_heading
+    - paragraphs.paragraphs_type.capabilities_section
+id: paragraph.capabilities_section.default
+targetEntityType: paragraph
+bundle: capabilities_section
+mode: default
+content:
+  field_capabilities:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_section_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

@@ -10,8 +10,8 @@ _core:
   default_config_hash: JPtjio142VL7z1Y-K1aWkTXu5wId7r4-zNUHozwLqf0
 id: indegenetheme_help
 theme: indegenetheme
-region: logo_region
-weight: 2
+region: top
+weight: 4
 provider: null
 plugin: help_block
 settings:

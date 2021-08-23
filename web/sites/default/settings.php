@@ -1,4 +1,8 @@
 <?php
+$settings['rebuild_access'] = FALSE;
+
+// $settings [‘cache’] [‘bins’] [‘render’] = ‘cache.backend.null;
+
 
 // @codingStandardsIgnoreFile
 
@@ -89,6 +93,9 @@
  * @endcode
  */
 $databases = [];
+
+
+
 
 /**
  * Customizing database settings.
@@ -290,7 +297,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '_8WZg-apOVenAmedOZEsYaodNhGjT5sPDkMnGycePn9SZYYM28uoVUXCLqq6rBCOzWHN9uXACg';
+$settings['hash_salt'] = 'opyyMQLC23ww8qtFARwU08lBLYEgZL2s7xUMHx4B-cgMR24GI6Hg_kTv2U4jReiaeQ1GYK17VQ';
 
 /**
  * Deployment identifier.
@@ -681,6 +688,7 @@ $config['system.logging']['error_level'] = 'all';
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
+
 /**
  * Override the default service container class.
  *
@@ -797,9 +805,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+   include $app_root . '/' . $site_path . '/settings.local.php';
+ }
 
 $config['system.logging']['error_level'] = 'verbose';
 
@@ -808,21 +816,21 @@ $port = 3306;
 
 // If DDEV_PHP_VERSION is not set but IS_DDEV_PROJECT *is*, it means we're running (drush) on the host,
 // so use the host-side bind port on docker IP
-if (empty(getenv('DDEV_PHP_VERSION') && getenv('IS_DDEV_PROJECT') == 'true')) {
-  $host = "127.0.0.1";
-  $port = 56920;
-}
+// if (empty(getenv('DDEV_PHP_VERSION') && getenv('IS_DDEV_PROJECT') == 'true')) {
+//   $host = "127.0.0.1";
+//   $port = 56920;
+// }
 
-$databases['default']['default'] = array(
-  'database' => "session",
-  'username' => "root",
-  'password' => "",
-  'host' => "localhost",
-  'driver' => "mysql",
-  'port' => "3306",
-  'prefix' => "",
-);
-
+// $databases['default']['default'] = array(
+//   'database' => "session",
+//   'username' => "root",
+//   'password' => "",
+//   'host' => "localhost",
+//   'driver' => "mysql",
+//   'port' => "3306",
+//   'prefix' => "",
+// );
+$settings['twig_tweak_enable_php_filter'] = TRUE;
 $settings['hash_salt'] = 'CnZsgMpGYtnpFpmFSprhksjkoFJhiHHalFQyttkZDqCuoWaYARLRwqxgfGXDXCSy';
 
 // This will prevent Drupal from setting read-only permissions on sites/default.
@@ -854,4 +862,13 @@ if (version_compare(DRUPAL::VERSION, "8.8.0", '>=') &&
 if (version_compare(DRUPAL::VERSION, "9.0.0", '>=') &&
   empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = 'sites/default/files/sync';
-}
+}$databases['default']['default'] = array (
+  'database' => 'session',
+  'username' => 'root',
+  'password' => '',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);

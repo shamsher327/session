@@ -1,0 +1,33 @@
+uuid: 3a7b7a1f-0ad6-4bff-9c2a-b6a68d642ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icon
+    - media.type.image
+    - taxonomy.vocabulary.social_links
+  content:
+    - 'media:image:b1fab2a8-e19e-4673-b9f0-ecf7ad4c05ac'
+id: taxonomy_term.social_links.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+bundle: social_links
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    weight: '0'
+    target_uuid: b1fab2a8-e19e-4673-b9f0-ecf7ad4c05ac
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

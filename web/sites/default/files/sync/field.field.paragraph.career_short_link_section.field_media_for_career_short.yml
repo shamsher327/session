@@ -1,0 +1,33 @@
+uuid: 114e3f9c-9104-4d63-b8e3-deed8275b7f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_for_career_short
+    - media.type.image
+    - paragraphs.paragraphs_type.career_short_link_section
+  content:
+    - 'media:image:ea8a7b6d-8539-4fff-bbe6-12b57a32a042'
+id: paragraph.career_short_link_section.field_media_for_career_short
+field_name: field_media_for_career_short
+entity_type: paragraph
+bundle: career_short_link_section
+label: 'Media For Career Short'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    weight: '0'
+    target_uuid: ea8a7b6d-8539-4fff-bbe6-12b57a32a042
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

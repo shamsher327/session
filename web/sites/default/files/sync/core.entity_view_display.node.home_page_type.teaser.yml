@@ -1,0 +1,43 @@
+uuid: e0ebcfed-f24d-4c2a-ae70-38353812006d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home_page_type.body
+    - field.field.node.home_page_type.field_capabilities_section
+    - field.field.node.home_page_type.field_careers
+    - field.field.node.home_page_type.field_contact_us
+    - field.field.node.home_page_type.field_extras_section
+    - field.field.node.home_page_type.field_para
+    - field.field.node.home_page_type.field_what_we_offer
+    - node.type.home_page_type
+  module:
+    - text
+    - user
+id: node.home_page_type.teaser
+targetEntityType: node
+bundle: home_page_type
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_capabilities_section: true
+  field_careers: true
+  field_contact_us: true
+  field_extras_section: true
+  field_para: true
+  field_what_we_offer: true
+  langcode: true

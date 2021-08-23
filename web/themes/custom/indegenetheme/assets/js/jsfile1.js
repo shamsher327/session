@@ -1398,8 +1398,8 @@ Drupal.progressBar.prototype.sendPing = function () {
         pb.timer = setTimeout(function () { pb.sendPing(); }, pb.delay);
       },
       error: function (xmlhttp) {
-        pb.displayError(var Drupal = Drupal || { 'settings': {}, 'behaviors': {}, 'locale': {} };
-Drupal.ajaxError(xmlhttp, pb.uri));
+		var Drupal = Drupal || { 'settings': {}, 'behaviors': {}, 'locale': {} }
+        pb.displayError(Drupal.ajaxError(xmlhttp, pb.uri));
       }
     });
   }

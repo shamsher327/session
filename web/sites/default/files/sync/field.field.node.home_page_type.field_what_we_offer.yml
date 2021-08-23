@@ -1,0 +1,43 @@
+uuid: 0465a73d-17d2-45a4-8525-e9ca39ebda7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_what_we_offer
+    - node.type.home_page_type
+    - paragraphs.paragraphs_type.what_we_offer_home_section
+  module:
+    - entity_reference_revisions
+id: node.home_page_type.field_what_we_offer
+field_name: field_what_we_offer
+entity_type: node
+bundle: home_page_type
+label: 'What we offer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      what_we_offer_home_section: what_we_offer_home_section
+    target_bundles_drag_drop:
+      capabilities_section:
+        weight: 6
+        enabled: false
+      career_short_link_section:
+        weight: 7
+        enabled: false
+      home_page:
+        weight: 8
+        enabled: false
+      page_top_section:
+        weight: 9
+        enabled: false
+      what_we_offer_home_section:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

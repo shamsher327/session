@@ -1,0 +1,16 @@
+{# {{kint(content)}} #}
+{% block paragraph %}
+<div class=" fadeInUp container  wow mb-100 mt-100">
+	<section class="page-section bg-scroll banner-section bg-image-right marketing-info-box" style="background-color: #0a4ca4; background-image: url('{{background_url}}');" data-background="{{background_url}}" data-uri="{{background_url}}">
+		<div class=" row">
+			<div class=" col-md-1"></div>
+			<div class=" col-md-6 white-box">
+				<h2 class="font-alt black fw-700">{{(content['field_text_1'][0]['#context']['value'])}} <br>
+				{{(content['field_text_2'][0]['#context']['value'])}}
+				</h2>
+				<a class=" btn btn-mod  btn-medium btn-round" href="/web/contact-us">Contact us</a>
+			</div>
+		</div>
+	</section>
+</div>
+{% endblock paragraph %}

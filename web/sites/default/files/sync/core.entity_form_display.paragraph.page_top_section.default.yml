@@ -1,0 +1,42 @@
+uuid: b52abe92-6109-49ed-b745-09f5ef07393e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.page_top_section.field_heading
+    - field.field.paragraph.page_top_section.field_media_top
+    - field.field.paragraph.page_top_section.field_short_content
+    - paragraphs.paragraphs_type.page_top_section
+  module:
+    - media_library
+id: paragraph.page_top_section.default
+targetEntityType: paragraph
+bundle: page_top_section
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_media_top:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_short_content:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

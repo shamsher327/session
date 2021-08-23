@@ -1,0 +1,31 @@
+uuid: c596f111-48ec-4ed0-bdb8-b4b0d6be6cd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_para
+    - node.type.home_page_type
+    - paragraphs.paragraphs_type.home_page
+  module:
+    - entity_reference_revisions
+id: node.home_page_type.field_para
+field_name: field_para
+entity_type: node
+bundle: home_page_type
+label: Para
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      home_page: home_page
+    target_bundles_drag_drop:
+      home_page:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

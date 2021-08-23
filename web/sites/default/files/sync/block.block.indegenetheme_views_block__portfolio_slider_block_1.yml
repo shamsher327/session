@@ -11,8 +11,8 @@ dependencies:
     - indegenetheme
 id: indegenetheme_views_block__portfolio_slider_block_1
 theme: indegenetheme
-region: logo_region
-weight: 8
+region: top
+weight: 10
 provider: null
 plugin: 'views_block:portfolio_slider-block_1'
 settings:

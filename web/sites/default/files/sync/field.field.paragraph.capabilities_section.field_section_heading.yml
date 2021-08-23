@@ -1,0 +1,21 @@
+uuid: 6bc1ef43-8630-4d0f-a888-04fe024eae69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_heading
+    - paragraphs.paragraphs_type.capabilities_section
+id: paragraph.capabilities_section.field_section_heading
+field_name: field_section_heading
+entity_type: paragraph
+bundle: capabilities_section
+label: 'Section Heading'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Capabilities
+default_value_callback: ''
+settings: {  }
+field_type: string

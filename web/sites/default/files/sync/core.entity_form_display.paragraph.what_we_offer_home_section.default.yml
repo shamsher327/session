@@ -1,0 +1,55 @@
+uuid: bdd9af10-b83f-471a-a0b8-b9219bf17d96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.what_we_offer_home_section.field_featured_technology
+    - field.field.paragraph.what_we_offer_home_section.field_image_section_
+    - field.field.paragraph.what_we_offer_home_section.field_solutions_list
+    - field.field.paragraph.what_we_offer_home_section.field_what_we_offer_section_head
+    - paragraphs.paragraphs_type.what_we_offer_home_section
+  module:
+    - media_library
+id: paragraph.what_we_offer_home_section.default
+targetEntityType: paragraph
+bundle: what_we_offer_home_section
+mode: default
+content:
+  field_featured_technology:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_image_section_:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_solutions_list:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_what_we_offer_section_head:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

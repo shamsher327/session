@@ -1,0 +1,29 @@
+uuid: ae322ac3-e027-4d07-9044-3fcab6c09922
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_technology
+    - paragraphs.paragraphs_type.what_we_offer_home_section
+    - taxonomy.vocabulary.technology
+id: paragraph.what_we_offer_home_section.field_featured_technology
+field_name: field_featured_technology
+entity_type: paragraph
+bundle: what_we_offer_home_section
+label: 'Featured Technology'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technology: technology
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

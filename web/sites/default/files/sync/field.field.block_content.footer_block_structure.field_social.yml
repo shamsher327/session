@@ -1,0 +1,29 @@
+uuid: 33106dae-56d7-4947-bd8b-56c6374b9b1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block_structure
+    - field.storage.block_content.field_social
+    - taxonomy.vocabulary.social_links
+id: block_content.footer_block_structure.field_social
+field_name: field_social
+entity_type: block_content
+bundle: footer_block_structure
+label: Social
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      social_links: social_links
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

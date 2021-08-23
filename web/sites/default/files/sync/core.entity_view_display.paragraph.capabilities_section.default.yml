@@ -1,0 +1,31 @@
+uuid: 96427f34-71da-4601-a64b-eff1b3acb115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.capabilities_section.field_capabilities
+    - field.field.paragraph.capabilities_section.field_section_heading
+    - paragraphs.paragraphs_type.capabilities_section
+id: paragraph.capabilities_section.default
+targetEntityType: paragraph
+bundle: capabilities_section
+mode: default
+content:
+  field_capabilities:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_section_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

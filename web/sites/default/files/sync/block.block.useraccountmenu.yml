@@ -1,0 +1,20 @@
+uuid: 404c3d2e-adbf-4f72-ab07-a4105799e53c
+langcode: en
+status: false
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - indegenetheme
+id: useraccountmenu
+theme: indegenetheme
+region: top
+weight: -12
+provider: null
+plugin: 'we_megamenu_block:account'
+settings:
+  id: 'we_megamenu_block:account'
+  label: 'User account menu'
+  provider: we_megamenu
+  label_display: '0'
+visibility: {  }

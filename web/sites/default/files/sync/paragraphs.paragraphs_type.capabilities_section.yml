@@ -1,0 +1,10 @@
+uuid: 8260698b-2c63-4407-9750-e0e79dc4d36d
+langcode: en
+status: true
+dependencies: {  }
+id: capabilities_section
+label: 'Capabilities Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

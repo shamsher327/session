@@ -1,0 +1,33 @@
+uuid: 929c1467-0c55-437c-a546-8504f26a289a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.technology.field_is_featured
+    - taxonomy.vocabulary.technology
+  module:
+    - text
+id: taxonomy_term.technology.default
+targetEntityType: taxonomy_term
+bundle: technology
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_is_featured:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true

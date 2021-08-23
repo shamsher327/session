@@ -1,28 +1,196 @@
 <?php
 
-function indegenetheme_preprocess_page(&$variables) {
+use Drupal\media\Entity\Media;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\media_entity\MediaInterface;
+use Drupal\node\Entity\Node;
+use Drupal\file\Entity\File;
+// use Drupal\taxonomy\Entity\Term;
+
+
+function indegenetheme_preprocess_page(&$variables)
+{
   // die;
-    $site_config = \Drupal::config('system.site');
-    $variables['site_name'] = $site_config->get('name');
-    $variables['site_slogan'] = $site_config->get('slogan');
-    $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
-    $request = \Drupal::request();
-    $title = "";
-    if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
-      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+
+  $current_user = \Drupal::currentUser();
+  $site_config = \Drupal::config('system.site');
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+  $request = \Drupal::request();
+  $title = "";
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+  $variables['page_title'] = $title;
+  if ($current_user->isAuthenticated()) {
+    $xyz = $current_user->getDisplayName();
+  } else {
+    $xyz = "Anonymous User!! Please Login TO get More";
+  }
+  $variables['#attached']['drupalSettings']['indegenetheme']['username'] = $xyz;
+
+  $variables['#attached']['library'][] = 'indegenetheme/indegenetheme-assets';
+}
+
+function indegenetheme_preprocess_views_view_unformatted(&$variables)
+{
+  $title = "";;
+  $variables['path_uri']  = \Drupal::request()->getRequestUri();
+}
+
+
+function indegenetheme_preprocess_block(&$variables)
+{
+  // die;
+  $site_config = \Drupal::config('system.site');
+  $variables['site_name'] = $site_config->get('name');
+  // echo $variables['site_name'];die;
+  $variables['site_slogan'] = $site_config->get('slogan');
+  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+  $request = \Drupal::request();
+  $title = "";
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+
+
+
+  $mid = 51;
+  $media = Media::load($mid);
+  $fid = $media->field_media_image->target_id;
+  $file = File::load($fid);
+
+  $url = $file->url();
+  $variables["page_slider_url"] =  $url;
+  // $vs = $variables["content"]['#view']->result;
+  //  kint($variables["content"]['#view']->field['field_media']);
+
+
+  //  foreach($vs as $v1 ){
+
+  //    kint(content['#view']->field['field_media']->value($v1));
+  //    $kint()
+  //    kint($v1->_entity->values['field_media']);
+  //    kint($variables["content"]['#view']->field['field_media']);
+  //  }
+
+
+
+
+
+}
+
+// function indegenetheme_page_attachments($variables)
+// {
+
+// }
+
+// function indegenetheme_preprocess_node__article(&$variables){
+//   // kint($variables);die;
+
+// }
+
+
+function indegenetheme_preprocess_paragraph(&$variables)
+{
+
+  $paragraph = $variables['paragraph'];
+
+  if ($paragraph->getType() == "capabilities_section") {
+    $count_data = $paragraph->get('field_capabilities')->getValue();
+    $variables['count_capabilities'] = count($count_data);
+    $variables['capability_section_heading'] = $paragraph->get('field_section_heading')->getValue()[0]['value'];
+  }
+
+  if ($paragraph->getType() == "career_short_link_section") {
+    $count_data = $paragraph->get('field_cta_link')->getValue();
+    $variables['k'] = count($count_data) - 1 ;
+    $variables['data_list'] = $count_data;
+    // kint($variables['data_list']);
+    $variables['career_section_heading'] = $paragraph->get('field_section_')->getValue()[0]['value'];
+
+    $background_url= $paragraph->get('field_media_for_career_short')->getValue();
+
+    $bkurl = "";
+    if(count($background_url)){
+      $media = Media::load($background_url[0]['target_id']);
+      $fid = $media->field_media_image->target_id;
+      $file = File::load($fid);
+
+      $bkurl = $file->url();
+
     }
-    $variables['page_title'] = $title;
+    $variables['background_url'] = $bkurl;
 
   }
 
-  function template_preprocess_views_view_unformatted(&$variables){
-    $title = "";
-    if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
-      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+
+  if ($paragraph->getType() == "what_we_offer_home_section") {
+
+    $count_data1 = $paragraph->get('field_solutions_list')->getValue();
+    $variables['k1'] = count($count_data1) - 1 ;
+    $funct = function($value){
+      $value['name'] = \Drupal\taxonomy\Entity\Term::load($value['target_id'])->get('name')->value;
+      $value['uri'] =\Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $value['target_id']);;
+      return $value;
+    };
+    $variables['data_list1']  = array_map($funct, $count_data1);
+
+
+    $count_data2 = $paragraph->get('field_featured_technology')->getValue();
+    $variables['k2'] = count($count_data2) - 1 ;
+    $funct1 = function($value){
+      $value['name'] =\Drupal\taxonomy\Entity\Term::load($value['target_id'])->get('name')->value;
+      $value['uri'] =\Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $value['target_id']);;
+      return $value;
+    };
+
+    $variables['data_list2']  = array_map($funct1, $count_data2);
+
+    // kint($paragraph);
+
+    $background_url= $paragraph->get('field_image_section_')->getValue();
+
+    $bkurl = "";
+    if(count($background_url)){
+      $media = Media::load($background_url[0]['target_id']);
+      $fid = $media->field_media_image->target_id;
+      $file = File::load($fid);
+
+      $bkurl = $file->url();
+
     }
-    $variables['page_title'] = $title;
-    $variables['path_uri']  = \Drupal::request()->getRequestUri();
+    $variables['background_url'] = $bkurl;
+
+    $variables['wwo_section_heading'] = $paragraph->get('field_what_we_offer_section_head')->getValue()[0]['value'];
 
   }
 
-?>
+
+  if ($paragraph->getType() == "contact_us_link_section") {
+    $background_url= $paragraph->get('field_media_contact')->getValue();
+    // kint($background_url);
+    $bkurl = "";
+    if(count($background_url)){
+      $media = Media::load($background_url[0]['target_id']);
+      $fid = $media->field_media_image->target_id;
+      $file = File::load($fid);
+      $bkurl = $file->url();
+    }
+    $variables['background_url'] = $bkurl;
+    // kint($bkurl);
+  }
+
+  if ($paragraph->getType() == "extras") {
+    // kint($paragraph->get('field_heading_text')->getValue());
+
+    $variables['c_title'] =$paragraph->get('field_heading_text')->getValue()[0]['value'];
+    $variables['c_content'] =$paragraph->get('field_content')->getValue()[0]['value'];
+    $variables['c_align'] =$paragraph->get('field_media_alignment')->getValue()[0]['value'];
+
+    // echo $variables['c_align'];
+  }
+
+  // echo $paragraph->getType();
+}
