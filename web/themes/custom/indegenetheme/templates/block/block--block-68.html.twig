@@ -1,41 +1,54 @@
 <div id="block-block-68" class="block block-block ">
 
 
-  <div class="block-content clearfix">
+	<div class="block-content clearfix">
 
-<nav class="main-nav white js-stick" style="width: 1263px;">
-		<div class="full-wrapper relative clearfix">
-			<!-- Logo ( * your text or image into link tag *) -->
-			<div class="nav-logo-wrap local-scroll">
-				<a href="{{ front_page }}" class="logo">
-					<img src="{{ logopath }}" alt="{{ site_name }}" title="{{ site_name }}">
-				</a>
+		<nav class="main-nav white js-stick" style="width: 1263px;">
+			<div
+				class="full-wrapper relative clearfix">
+				<!-- Logo ( * your text or image into link tag *) -->
+				<div class="nav-logo-wrap local-scroll">
+					<a href="{{ front_page }}" class="logo">
+						<img src="{{ logopath }}" alt="{{ site_name }}" title="{{ site_name }}">
+					</a>
+				</div>
+				<div class="mobile-nav" style="height: 75px; line-height: 75px; width: 75px;">
+					<i class="fa fa-bars"></i>
+				</div>
+				<!-- Main Menu -->
+				<div class="inner-nav desktop-nav">
+					<ul class="clearlist">
+						{% set items = simplify_menu('main') %}
+						{% set default_level = 1 %}
+						{# {{kint(items)}} #}
+						{% for menu_item in items.menu_tree %}
+
+							{% set active = (menu_item.active_trail) ? ' active-trail' : '' %}
+							<li class="tb-megamenu-item level-{{default_level}} {{active}} mega mega-align-justify dropdown align-menu-justify" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0">
+								<a href="{{menu_item.url}}" class="dropdown-toggle  mn-has-sub" style="height: 75px; line-height: 75px;">
+									{{menu_item.text}}
+								</a>
+
+								{#{% if menu_item.submenu %}
+									{% set default_level = default_level + 1 %}
+									<ul class="tb-megamenu-subnav mega-nav">
+										{% for menu_item1 in menu_item.submenu %}
+											{% set active = (menu_item1.active_trail) ? ' active-trail' : '' %}
+											<li class="tb-megamenu-item level-{{default_level}} {{active}} mega mega-align-justify dropdown align-menu-justify" data-level="1" data-type="menu_item1" data-class="" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0">
+												<a href="{{menu_item1.url}}" class="" style="height: 75px; line-height: 75px;">
+													{{menu_item1.text}}
+												</a>
+											</li>
+										{% endfor %}
+									</ul>
+								{% endif %} #}
+
+							{% endfor %}
+						</li>
+					</ul>
+				</div>
+				<!-- End Main Menu -->
 			</div>
-			<div class="mobile-nav" style="height: 75px; line-height: 75px; width: 75px;">
-				<i class="fa fa-bars"></i>
-			</div>
-			<!-- Main Menu -->
-			<div class="inner-nav desktop-nav">
-				<ul class="clearlist">
-                {% set items = simplify_menu('main') %}
-                {% set default_level = 1 %}
-                {% for menu_item in items.menu_tree %}
-                    {% set active = (menu_item.active_trail) ? ' active-trail' : '' %}
-                    <li class="tb-megamenu-item level-{{default_level}} {{active}} mega mega-align-justify dropdown align-menu-justify" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0">
-                        <a href="{{menu_item.url}}" class="" style="height: 75px; line-height: 75px;">
-                            {{menu_item.text}}
-                        </a>
-                    </li>
-                    {% endfor %}
-					<li>
-						<a style="height: 75px; line-height: 75px;">&nbsp;</a>
-					</li>
-				</ul>
-			</div>
-			<!-- End Main Menu -->
-		</div>
-</nav>
+		</nav>
+	</div>
 </div>
-</div>
-
-

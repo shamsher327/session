@@ -49,35 +49,25 @@
 							<h5 class="font-alt mb-sm-40  widget-title">Footer Menu</h5>
 
 							<div class="block-content clearfix">
-								{# <ul class="default-menu">
-									<li>
-										<a href="/contact-us">Contact us</a>
-									</li>
-									<li>
-										<a href="/privacy-policy">Privacy Policy</a>
-									</li>
-									<li>
-										<a href="/corporate-social-responsibility-policy">CSR Policy</a>
-									</li>
-								</ul> #}
 
-			<div class="inner-nav desktop-nav">
-				<ul class="clearlist">
-                {% set items = simplify_menu('footer') %}
-                {% set default_level = 1 %}
-                {% for menu_item in items.menu_tree %}
-                    {% set active = (menu_item.active_trail) ? ' active-trail' : '' %}
-                    <li class="tb-megamenu-item level-{{default_level}} {{active}} mega mega-align-justify dropdown align-menu-justify" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0">
-                        <a href="{{menu_item.url}}" class="" style="height: 75px; line-height: 75px;">
-                            {{menu_item.text}}
-                        </a>
-                    </li>
-                    {% endfor %}
-					<li>
-						<a style="height: 75px; line-height: 75px;">&nbsp;</a>
-					</li>
-				</ul>
-			</div>
+
+							<div class="inner-nav desktop-nav">
+								<ul class="clearlist">
+								{% set items = simplify_menu('footer') %}
+								{% set default_level = 1 %}
+								{% for menu_item in items.menu_tree %}
+									{% set active = (menu_item.active_trail) ? ' active-trail' : '' %}
+									<li class="tb-megamenu-item level-{{default_level}} {{active}} mega mega-align-justify dropdown align-menu-justify" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0">
+										<a href="{{menu_item.url}}" class="" style="height: 75px; line-height: 75px;">
+											{{menu_item.text}}
+										</a>
+									</li>
+									{% endfor %}
+									<li>
+										<a style="height: 75px; line-height: 75px;">&nbsp;</a>
+									</li>
+								</ul>
+							</div>
 							</div>
 
 						</div>
@@ -86,7 +76,7 @@
 					</div>
 					<div class=" col-md-4 social-media-icons">
 
-						{{ content.field_social }}
+						{{ (content.field_social) }}
 
 					</div>
 				</div>

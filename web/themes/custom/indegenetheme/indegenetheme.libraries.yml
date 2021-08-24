@@ -5,7 +5,7 @@ indegenetheme-assets:
     assets/js/jquery-3.3.1.slim.min.js: {}
     # assets/js/jsfile1.js: {}
     # assets/js/jsfile2.js: {}
-    # assets/js/jsfile3.js: {}
+
     # assets/js/jsfile4.js: {}
     # assets/js/jsfile5.js: {}
     # assets/js/jsfile6.js: {}
@@ -21,6 +21,7 @@ indegenetheme-assets:
     # assets/js/jsfile16.js: {}
     assets/js/popper.min.js: {}
     assets/js/cs.js: {}
+    # assets/js/jsfile3.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings

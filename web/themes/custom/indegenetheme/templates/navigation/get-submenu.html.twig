@@ -1,0 +1,18 @@
+{% for menu_item in items.menu_tree %}
+
+{% set active = (menu_item.active_trail) ? ' active-trail' : '' %}
+<li class="tb-megamenu-item level-{{default_level}} {{active}} mega mega-align-justify dropdown align-menu-justify" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0">
+    <a href="{{menu_item.url}}" class="" style="height: 75px; line-height: 75px;">
+        {{menu_item.text}}
+    </a>
+</li>
+{% endfor %}
+{# <li>
+    <a style="height: 75px; line-height: 75px;">&nbsp;</a>
+</li>
+
+{% if item.submenu %}
+    <ul>
+        {% include "@indegenetheme/TEMPLATENAME.html.twig" with {'items': item.submenu} %}
+    </ul>
+{% endif %} #}

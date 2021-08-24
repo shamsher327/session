@@ -50,11 +50,16 @@ function indegenetheme_preprocess_block(&$variables)
   $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
   $request = \Drupal::request();
   $title = "";
+
+
   if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
     $title = \Drupal::service('title_resolver')->getTitle($request, $route);
   }
 
+  if($variables['elements']['#configuration']['id'] == 'views_block:page_slider-block_1'){
+    // kint($variables);
 
+  }
 
   $mid = 51;
   $media = Media::load($mid);
@@ -63,22 +68,6 @@ function indegenetheme_preprocess_block(&$variables)
 
   $url = $file->url();
   $variables["page_slider_url"] =  $url;
-  // $vs = $variables["content"]['#view']->result;
-  //  kint($variables["content"]['#view']->field['field_media']);
-
-
-  //  foreach($vs as $v1 ){
-
-  //    kint(content['#view']->field['field_media']->value($v1));
-  //    $kint()
-  //    kint($v1->_entity->values['field_media']);
-  //    kint($variables["content"]['#view']->field['field_media']);
-  //  }
-
-
-
-
-
 }
 
 // function indegenetheme_page_attachments($variables)
@@ -132,7 +121,7 @@ function indegenetheme_preprocess_paragraph(&$variables)
     $variables['k1'] = count($count_data1) - 1 ;
     $funct = function($value){
       $value['name'] = \Drupal\taxonomy\Entity\Term::load($value['target_id'])->get('name')->value;
-      $value['uri'] =\Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $value['target_id']);;
+      $value['uri'] =\Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $value['target_id']]);
       return $value;
     };
     $variables['data_list1']  = array_map($funct, $count_data1);
@@ -142,7 +131,7 @@ function indegenetheme_preprocess_paragraph(&$variables)
     $variables['k2'] = count($count_data2) - 1 ;
     $funct1 = function($value){
       $value['name'] =\Drupal\taxonomy\Entity\Term::load($value['target_id'])->get('name')->value;
-      $value['uri'] =\Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $value['target_id']);;
+      $value['uri'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $value['target_id']]);
       return $value;
     };
 
@@ -170,7 +159,6 @@ function indegenetheme_preprocess_paragraph(&$variables)
 
   if ($paragraph->getType() == "contact_us_link_section") {
     $background_url= $paragraph->get('field_media_contact')->getValue();
-    // kint($background_url);
     $bkurl = "";
     if(count($background_url)){
       $media = Media::load($background_url[0]['target_id']);
@@ -179,18 +167,14 @@ function indegenetheme_preprocess_paragraph(&$variables)
       $bkurl = $file->url();
     }
     $variables['background_url'] = $bkurl;
-    // kint($bkurl);
   }
 
   if ($paragraph->getType() == "extras") {
-    // kint($paragraph->get('field_heading_text')->getValue());
 
     $variables['c_title'] =$paragraph->get('field_heading_text')->getValue()[0]['value'];
     $variables['c_content'] =$paragraph->get('field_content')->getValue()[0]['value'];
     $variables['c_align'] =$paragraph->get('field_media_alignment')->getValue()[0]['value'];
 
-    // echo $variables['c_align'];
   }
 
-  // echo $paragraph->getType();
 }
