@@ -1,0 +1,7 @@
+indegene_common.admin_settings:
+  path: '/admin/config/system/kanchna-settings-form'
+  defaults:
+    _title: 'Indegene Amazon'
+    _form: '\Drupal\indegene_common\Form\IndegeneFormClass'
+  requirements:
+    _permission: 'indegene custom amazon api'

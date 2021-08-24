@@ -1,0 +1,68 @@
+<?php
+
+
+use Drupal\Core\Database\Database;
+
+
+function indegene_common_schema() {
+
+  $schema['indegene_common'] = [
+    'fields' => [
+      'id' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'custom_col' => [
+        'type' => 'text',
+        'not null' => FALSE,
+        'size' => 'medium',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+
+
+
+
+function indegene_common_update_8001() {
+  $spec = [
+    'type' => 'varchar',
+    'description' => "New Col",
+    'length' => 20,
+    'not null' => FALSE,
+  ];
+  $schema = Database::getConnection()->schema();
+  $schema->addField('indegene_common', 'newcol', $spec);
+
+}
+
+
+/**
+ * implement hook_update for creating the table coloumns.
+ */
+function indegene_common_update_8002() {
+  $spec = [
+    'type' => 'varchar',
+    'description' => "New Col",
+    'length' => 20,
+    'not null' => FALSE,
+  ];
+  $schema = Database::getConnection()->schema();
+  $schema->addField('indegene_common', 'newcol2', $spec);
+
+}
+
+function indegene_common_update_8003() {
+  \Drupal::service("module_installer")->uninstall(["indegene_custom"]);
+}
+
+
+
+
+

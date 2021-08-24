@@ -524,7 +524,7 @@ function hook_install_tasks_alter(&$tasks, $install_state) {
  *   number can never be used: the lowest update number that will be recognized
  *   and run for major version x is x001.
  * Examples:
- * - node_update_8001(): The first update for the Drupal 8.0.x version of the
+ * - node_update_9001(): The first update for the Drupal 8.0.x version of the
  *   Drupal Core node module.
  * - mymodule_update_8101(): The first update for your custom or contributed
  *   module's 8.x-1.x versions.

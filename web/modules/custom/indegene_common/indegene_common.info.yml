@@ -1,0 +1,12 @@
+name: Indegene Common changes
+type: module
+description: Indegene one common module.
+package: indegene
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: indegene_common.admin_settings
+dependencies:
+  - address
+  - admin_toolbar
+  - token
+  - votingapi
