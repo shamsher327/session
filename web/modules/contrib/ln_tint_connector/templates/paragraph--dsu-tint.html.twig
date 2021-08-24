@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('ln_tint_connector/ln-tint') }}
+{% block paragraph %}
+  {# Attributes require for rendering TINT social media Feeds. #}
+  {% set title = content.field_headline|render|striptags|trim %}
+  {% set field_headline = content.field_headline|render|striptags|trim %}
+  {% set field_intro_text = content.field_intro_text|render|striptags|trim %}
+  {% set field_data_id = content.field_data_id|render|striptags|trim %}
+  {% set field_data_expand = content.field_data_expand|render|striptags|trim %}
+  {% set field_data_infinitescroll = content.field_data_infinitescroll|render|striptags|trim %}
+  {% set field_data_personalization_id = content.field_data_personalization_id|render|striptags|trim %}
+  {% set field_data_columns = content.field_data_columns[0]|render|striptags|trim %}
+  {% set field_data_clickformore = content.field_data_clickformore|render|striptags|trim %}
+  {% set field_data_tags = content.field_data_tags|render|striptags|trim %}
+  {% set field_block_height = '' %}
+  {% if paragraph.field_block_height.value %}
+    {% set field_block_height = 'min-height:' ~ content.field_block_height|render|striptags|trim ~ ';' %}
+  {%  endif %}
+  <div{{ attributes.addClass(classes) }} {% if paragraph.field_section_id.value %} id = "{{ paragraph.field_section_id.value|replace({' ': ''}) }}" {% endif %} >
+    <section class="tint-social" data-topic-text="{{ title }}"
+      id="dsu-tint-heading" data-eventLabel="{{ titlefordataLayer }}">
+        <div class="row">
+          {% block content %}
+            {% if content.contextual_links %}
+              {{ content.contextual_links }}
+            {% endif %}
+            <div {{ attributes.addClass('col-sm-12') }}>
+              {% if field_headline %}
+                {% if content.field_dsu_tint_title_style[0]['#markup'] %}
+                {% set title_tag=content.field_dsu_tint_title_style[0]['#markup'] %}
+                <{{ title_tag }}> {{ content.field_headline }}</{{ title_tag }}>
+            {% else %}
+                <h2>{{ field_headline }}</h2>
+            {% endif %}
+              {% endif %}
+              {% if field_intro_text %}
+                <div class="description">{{ field_intro_text }}</div>
+              {% endif %}
+            </div>
+            <div class="col-sm-12">
+              {# Data attributes and rendering settings for feeds. #}
+              <div class="tintup"
+                data-id="{{ field_data_id }}"
+                data-expand="{{ field_data_expand }}"
+                data-infinitescroll="{{ field_data_infinitescroll }}"
+                data-personalization-id="{{ field_data_personalization_id }}"
+                data-columns="{{ field_data_columns }}"
+                data-clickformore="{{ field_data_clickformore }}"
+                data-notrack="true"
+                data-tags="{{field_data_tags }}"
+                style="width:100%; {{ field_block_height }}"></div>
+            </div>
+          {% endblock %}
+        </div>
+    </section>
+  </div>
+{% endblock paragraph %}

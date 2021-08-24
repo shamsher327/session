@@ -1,0 +1,32 @@
+{
+  "name": "lightnest/dsu_srh",
+  "description": "DSU Smart Recipes Hub",
+  "type": "drupal-module",
+  "keywords": [
+    "content",
+    "paragraphs",
+    "frontend"
+  ],
+  "require": {
+    "drupal/metatag": "^1.10",
+    "drupal/jquery_ui_spinner": "^1.1",
+    "drupal/features":"^3.8",
+    "drupal/core": "^8 || ^9",
+    "drupal/entity_browser": "^2.5",
+    "drupal/entity_reference_revisions": "^1.8",
+    "drupal/paragraphs": "^1.12",
+    "drupal/schema_metatag": "^2.1",
+    "drupal/video_embed_field": "^2.4",
+    "drupal/pathauto": "^1.8",
+    "drupal/datalayer":"^1.0",
+    "drupal/config_pages":"^2.7"
+  },
+  "license": "GPL-2.0+",
+  "extra": {
+    "drush": {
+      "services": {
+        "drush.services.yml": "^9"
+      }
+    }
+  }
+}

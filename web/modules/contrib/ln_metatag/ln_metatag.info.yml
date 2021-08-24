@@ -1,0 +1,13 @@
+name: 'Lightnest Metatag'
+description: 'Allows to set default metatags for seo best practice.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 8.x-1.0.1
+dependencies:
+  - metatag
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - schema_metatag
+  - structured_data
+package: 'Lightnest'

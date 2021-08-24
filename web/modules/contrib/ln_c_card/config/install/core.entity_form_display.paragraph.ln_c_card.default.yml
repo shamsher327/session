@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ln_c_card.field_button_color
+    - field.field.paragraph.ln_c_card.field_card_item
+    - field.field.paragraph.ln_c_card.field_classy_paragraph_style
+    - field.field.paragraph.ln_c_card.field_css_class
+    - field.field.paragraph.ln_c_card.field_section_id
+    - paragraphs.paragraphs_type.ln_c_card
+  module:
+    - paragraphs
+id: paragraph.ln_c_card.default
+targetEntityType: paragraph
+bundle: ln_c_card
+mode: default
+content:
+  field_button_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_card_item:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ln_c_card_item
+    third_party_settings: {  }
+    region: content
+  field_classy_paragraph_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_css_class:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_section_id:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

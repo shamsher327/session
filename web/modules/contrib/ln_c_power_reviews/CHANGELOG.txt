@@ -1,0 +1,2 @@
+#1.0.1
+- Update javascript library based on changes in Google SEO

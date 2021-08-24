@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.card_extended_card_title_on_image
+label: 'Extended card title on image'
+targetEntityType: node
+cache: true

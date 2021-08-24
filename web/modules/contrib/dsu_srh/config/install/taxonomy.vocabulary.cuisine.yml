@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Cuisine
+vid: cuisine
+description: '3'
+weight: 0

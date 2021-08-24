@@ -1,0 +1,12 @@
+name: Advanced Datalayer example
+description: Example tags and groups for Advanced Datalayer module
+type: module
+package: SEO
+core_version_requirement: ^8 || ^9
+dependencies:
+  - advanced_datalayer:advanced_datalayer
+
+# Information added by Drupal.org packaging script on 2021-07-29
+version: '1.0.0-rc1'
+project: 'advanced_datalayer'
+datestamp: 1627554549

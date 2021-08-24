@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_youtube_playlist_max_items
+    - paragraphs.paragraphs_type.ln_c_yt_carousel
+id: paragraph.ln_c_yt_carousel.field_youtube_playlist_max_items
+field_name: field_youtube_playlist_max_items
+entity_type: paragraph
+bundle: ln_c_yt_carousel
+label: 'YouTube Playlist Max Items'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

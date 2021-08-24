@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ln_c_card_allow_spacing
+    - paragraphs.paragraphs_type.ln_c_cardgrid
+id: paragraph.ln_c_cardgrid.field_ln_c_card_allow_spacing
+field_name: field_ln_c_card_allow_spacing
+entity_type: paragraph
+bundle: ln_c_cardgrid
+label: 'Allow Spacing'
+description: 'Select spacing or no spacing between cards'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

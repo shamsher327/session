@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+_core:
+  default_config_hash: TNr90R1Bik-mhTW4YQ4Xj4KTHLHNO-5x8WhI040k5EE
+id: config_pages.field_good_balance_text
+field_name: field_good_balance_text
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

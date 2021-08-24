@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Contains ln_c_yt_carousel.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ln_c_yt_carousel_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ln_c_yt_carousel module.
+    case 'help.page.ln_c_yt_carousel':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides YouTube carousel component as a paragraph') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ln_c_yt_carousel_theme() {
+  return [
+    'paragraph__ln_c_yt_carousel' => [
+      'template' => 'paragraph--ln-c-yt-carousel',
+      'base hook' => 'paragraph',
+    ],
+
+    // Add the custom template theme for our youtube search results block.
+    'youtube_search_block' => [
+      'variables' => [
+        'youtube_data' => NULL,
+        'pagecounter' => NULL,
+        'prevpageurl' => NULL,
+        'nextpageurl' => NULL,
+        'maxresults' => NULL,
+        'keyword' => NULL,
+      ],
+      'template' => 'block--youtube-search',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ln_c_yt_carousel_preprocess_paragraph__ln_c_yt_carousel(&$variables) {
+
+  $paragraph = $variables['paragraph'];
+
+  // Get all required values for carousel settings.
+  $duration = $paragraph->field_youtube_carousel_autoplay->value ?? 1;
+  $autoplay = $paragraph->field_youtube_autoplay_video->value;
+  $carouselSpeed = $paragraph->field_youtube_carousel_speed->value;
+  $carouselMaxItems = $paragraph->field_youtube_carousel_max_items->value;
+
+  // Get all required values for fetching data from YouTube API.
+  $playlistID = $paragraph->field_youtube_playlist_id->value;
+  $playlistMaxItems = $paragraph->field_youtube_playlist_max_items->value;
+  $videoIDs = str_replace(' ', '', $paragraph->field_youtube_video_ids->value);
+  // Get the YouTube API services.
+  $youtubeApi = \Drupal::service('youtube.api');
+
+  if (!empty($playlistID)) {
+    // Set Max items to be fetched from Youtube.
+    $youtubeApi->setMaxVideos($playlistMaxItems);
+    $content = $youtubeApi->getVideosbyPlaylist($playlistID);
+  }
+  elseif (!empty($videoIDs)) {
+    $content = $youtubeApi->getVideobyIds($videoIDs);
+  }
+
+  // Add the values for passing it to twig.
+  $variables['content']['youtube'] = $content;
+
+  // Pass the value to drupalSettings.
+  $variables['#attached']['drupalSettings']['ln_c_yt_carousel']['duration'] = $duration * 1000;
+  $variables['#attached']['drupalSettings']['ln_c_yt_carousel']['autoplay'] = $autoplay;
+  $variables['#attached']['drupalSettings']['ln_c_yt_carousel']['carouselSpeed'] = $carouselSpeed;
+  $variables['#attached']['drupalSettings']['ln_c_yt_carousel']['carouselMaxItems'] = $carouselMaxItems;
+}
+
+/**
+ * Implements hook_ln_sample_content().
+ */
+function ln_c_yt_carousel_ln_sample_content() {
+    /** @var \Drupal\Core\Extension\ModuleHandlerInterface $module_handler */
+    $module_handler = \Drupal::service('module_handler');
+    /** @var \Drupal\Core\Extension\Extension $module_object */
+    $module_object = $module_handler->getModule(basename(__FILE__, '.module'));
+    $module_name = $module_object->getName();
+
+    $source = drupal_get_path('module', $module_name) . '/content';
+    $yaml_file_path = NULL;
+    if (file_exists($source)) {
+      /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+      $file_system = \Drupal::service('file_system');
+      $files = $file_system->scanDirectory($source, '/demo.*\.(yml)$/');
+      foreach ($files as $file) {
+        $yaml_file_path[] = '/content/' . $file->filename;
+      }
+    }
+
+    return $yaml_file_path;
+}

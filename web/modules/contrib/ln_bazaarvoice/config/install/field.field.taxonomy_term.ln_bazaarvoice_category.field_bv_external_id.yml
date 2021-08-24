@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bv_external_id
+    - taxonomy.vocabulary.ln_bazaarvoice_category
+id: taxonomy_term.ln_bazaarvoice_category.field_bv_external_id
+field_name: field_bv_external_id
+entity_type: taxonomy_term
+bundle: ln_bazaarvoice_category
+label: 'External Id'
+description: ''
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

@@ -1,0 +1,17 @@
+ln_bazaarvoice.admin_settings_form:
+  route_name: ln_bazaarvoice.admin_settings_form
+  title: Settings
+  weight: -1
+  base_route: ln_bazaarvoice.admin_settings_form
+
+ln_bazaarvoice_productfeed.admin_settings_form:
+  route_name: ln_bazaarvoice_productfeed.admin_settings_form
+  title: External Bazaarvoice Product Feed Settings
+  weight: 100
+  base_route: ln_bazaarvoice.admin_settings_form
+
+ln_bazaarvoice_productfeed.public_feed:
+  route_name: ln_bazaarvoice_productfeed.public_feed
+  title: Lightnest Product Public Feed XML
+  weight: 100
+  base_route: ln_bazaarvoice.admin_settings_form

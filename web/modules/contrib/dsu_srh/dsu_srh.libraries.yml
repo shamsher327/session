@@ -1,0 +1,9 @@
+servings:
+  version: 1.x
+  js:
+    js/servings.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - jquery_ui_spinner/spinner
+    - core/jquery.ui.mousewheel

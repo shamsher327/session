@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Cooking style'
+vid: cooking_style
+description: '17'
+weight: 0

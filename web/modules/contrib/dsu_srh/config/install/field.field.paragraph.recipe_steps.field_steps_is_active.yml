@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_steps_is_active
+    - paragraphs.paragraphs_type.recipe_steps
+id: paragraph.recipe_steps.field_steps_is_active
+field_name: field_steps_is_active
+entity_type: paragraph
+bundle: recipe_steps
+label: 'steps is active'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

@@ -1,0 +1,15 @@
+title: Mocha turkish cream
+field_teaser_subtitle: Chicory barista blue mountain saucer variety
+body: Mocha turkish cream arabica aftertaste brewed variety. Plunger pot, body, rich body con panna, saucer french press cultivar iced sweet caffeine. Chicory barista blue mountain saucer variety mazagran to go.
+field_buton_position: left #or right or center
+field_image:
+  image_name: atelier_chocolate.jpg
+  image_title: Atelier Chocolate
+field_dsu_tags: Sample content
+field_teaser_link:
+  uri: internal:/ # Drupal save "internal:/" when "<front>" is used
+  title: See More
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

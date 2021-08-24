@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ingredient_is_nestle
+    - taxonomy.vocabulary.ingredients
+id: taxonomy_term.ingredients.field_ingredient_is_nestle
+field_name: field_ingredient_is_nestle
+entity_type: taxonomy_term
+bundle: ingredients
+label: 'ingredient is nestle'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

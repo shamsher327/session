@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_text_button_open_tips
+id: config_pages.mymenuiq_configuration.field_text_button_open_tips
+field_name: field_text_button_open_tips
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Text Button Open Tips'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'What does it mean?'
+default_value_callback: ''
+settings: {  }
+field_type: string

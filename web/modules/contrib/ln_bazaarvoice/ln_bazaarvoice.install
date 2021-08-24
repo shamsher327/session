@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ln_bazaarvoice module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function ln_bazaarvoice_install() {
+  // Enable field entity form display.
+  Drupal::service('entity_display.repository')
+    ->getFormDisplay('node', 'dsu_product', 'default')
+    ->setComponent('field_bv_product_id', [
+      'type'     => 'text_textfield',
+      'label'    => 'hidden',
+      'weight'   => 30,
+      'settings' => [
+        'view_mode' => 'default',
+      ],
+    ])
+    ->save();
+
+  // Display in entity view display mode default.
+  Drupal::service('entity_display.repository')
+    ->getViewDisplay('node', 'dsu_product', 'default')
+    ->setComponent('field_bv_product_id')
+    ->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ln_bazaarvoice_uninstall() {
+  /* @var $entityFieldManager Drupal\Core\Entity\EntityFieldManager */
+  $entityFieldManager = Drupal::service('entity_field.manager');
+  $fields = $entityFieldManager->getFieldDefinitions('node', 'dsu_product');
+  // Delete field config on uninstall the module.
+  if (isset($fields['field_bv_product_id'])) {
+    $fields['field_bv_product_id']->delete();
+  }
+  drupal_flush_all_caches();
+}

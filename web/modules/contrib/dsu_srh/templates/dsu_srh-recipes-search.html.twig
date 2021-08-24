@@ -1,0 +1,56 @@
+<div id='{{ variables.ident }}'>
+	{% if variables.empty == true %}
+		<div class="alert alert-warning">
+			{{ variables.message }}
+		</div>
+	{% endif %}
+	{% for key, item in variables.content %}
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				{% if item.isnew == true %}
+					<button type="button"
+					        class="btn btn-danger">{{ 'Is new!'|t }}</button>
+				{% endif %}
+				<h3>
+					<a
+						href='{{ url('entity.node.canonical', {'node': item.id }) }}'>  {{ item.name }} </a>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<div class='row'>
+					<div class='col-sm-4'>
+						{% if item.medias is empty %}
+							<img src="http://via.placeholder.com/200" class="img-circle"
+							     alt="{{ item.name }}" style="width: 100%">
+						{% else %}
+							{% for media in item.medias %}
+								{% if loop.first %}
+									{% if media.idYoutube %}
+										<iframe width="100%" height="100%"
+										        src="https://www.youtube.com/embed/{{ media.idYoutube }}">
+										</iframe>
+									{% elseif  media.path is defined %}
+										<img src='{{ media.path }}' class="img-circle"
+										     alt="{{ item.name }}" style="width: 100%">
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					</div>
+					<div class='col-sm-8'>
+						<p class='description'> {{ item.description }} </p>
+						<button type="button"
+						        class="btn btn-success">{{ item.brand }}</button>
+						<button type="button" class="btn btn-primary">Servings: <span
+								class="badge">{{ item.numberOfServings }}</span></button>
+						<button type="button" class="btn btn-success">Time: <span
+								class="badge">{{ item.prepTime }}</span></button>
+						<button type="button" class="btn btn-warning">Difficulty: <span
+								class="badge">{{ item.difficulty.description }}</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+{{ attach_library('connect/js') }}

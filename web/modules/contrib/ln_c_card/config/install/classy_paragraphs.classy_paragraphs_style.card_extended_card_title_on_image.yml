@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_extended_card_title_on_image
+label: 'Extended card title on image (3 cards per line)'
+classes: extended-card-title-on-image

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_good_balance_text
+_core:
+  default_config_hash: fW2OXdLHaeGIYE4Omt0ui5RP6almycjia1X7lxp7it0
+id: config_pages.mymenuiq_configuration.field_good_balance_text
+field_name: field_good_balance_text
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Good Balance Text'
+description: 'Help Text for Nutritional Score between 45-69'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Your meal is well balanced'
+default_value_callback: ''
+settings: {  }
+field_type: string

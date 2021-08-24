@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ln_c_gridcard_quick_info_box
+label: 'Quick Info Box'
+classes: grid-card-full-color-box

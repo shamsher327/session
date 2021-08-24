@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_gallery.field_c_gallery_item
+    - field.field.paragraph.c_gallery.field_gallery_navigation
+    - field.field.paragraph.c_gallery.field_section_id
+    - paragraphs.paragraphs_type.c_gallery
+  module:
+    - paragraphs
+id: paragraph.c_gallery.default
+targetEntityType: paragraph
+bundle: c_gallery
+mode: default
+content:
+  field_c_gallery_item:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_gallery_navigation:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_id:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

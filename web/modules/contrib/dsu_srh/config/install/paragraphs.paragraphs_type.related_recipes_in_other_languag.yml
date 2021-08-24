@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: related_recipes_in_other_languag
+label: 'SRH Related Recipes'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

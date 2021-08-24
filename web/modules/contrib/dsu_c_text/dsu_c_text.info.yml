@@ -1,0 +1,19 @@
+name: 'Lightnest Components: Text'
+package: 'Lightnest Components'
+version: 8.x-1.4.4
+description: 'Allows to create a component with simple text.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - dsu_c_text/general
+dependencies:
+  - entity_browser
+  - field
+  - paragraphs
+  - media
+  - text
+  - dsu_c_core
+  - options
+  - link_attributes
+  - field_group

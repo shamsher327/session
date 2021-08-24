@@ -1,0 +1,15 @@
+title: Americano decaffeinated coffee
+field_teaser_subtitle: Redeye as froth, cup filter cup percolator
+body: Americano decaffeinated coffee caffeine extra turkish, to go turkish single shot est crema milk. Redeye as froth, cup filter cup percolator con panna irish saucer. Shop pumpkin spice rich medium eu instant lungo instant viennese.
+field_buton_position: center #or right or left
+field_image:
+  image_name: purina-one-cats.jpg
+  image_title: Purina One
+field_dsu_tags: Sample content #Tax term name
+field_teaser_link:
+  uri: internal:/ # Drupal save "internal:/" when "<front>" is used
+  title: More
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

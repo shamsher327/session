@@ -1,0 +1,67 @@
+type: layout_columns_20
+component_description: LAYOUT FIVE COLUMNS 20%
+field_column_first:
+  paragraph:
+    item_0:
+      type: c_image
+      field_c_image:
+        image_name: 84900-banner.jpg
+        image_title: woman with fruit bowl
+    item_1:
+      type: c_text
+      field_c_title: "Layout Column 20 Sample"
+      field_sub_heading: "Column 1"
+      field_summary_text: "Caffeine instant, white flavour frappuccino grinder, coffee java plunger pot to go sugar chicory. Seasonal, at, sugar, as irish cup seasonal turkish dripper black."
+      field_text_horizontal_alignment: position_left
+field_column_second:
+  paragraph:
+    item_0:
+      type: c_image
+      field_c_image:
+        image_name: 84900-banner.jpg
+        image_title: woman with fruit bowl
+    item_1:
+      type: c_text
+      field_c_title: "Layout Column 20 Sample"
+      field_sub_heading: "Column 2"
+      field_summary_text: "Caffeine instant, white flavour frappuccino grinder, coffee java plunger pot to go sugar chicory. Seasonal, at, sugar, as irish cup seasonal turkish dripper black."
+      field_text_horizontal_alignment: position_left
+field_column_third:
+  paragraph:
+    item_0:
+      type: c_image
+      field_c_image:
+        image_name: 84900-banner.jpg
+        image_title: woman with fruit bowl
+    item_1:
+      type: c_text
+      field_c_title: "Layout Column 20 Sample"
+      field_sub_heading: "Column 3"
+      field_summary_text: "Caffeine instant, white flavour frappuccino grinder, coffee java plunger pot to go sugar chicory. Seasonal, at, sugar, as irish cup seasonal turkish dripper black."
+      field_text_horizontal_alignment: position_left
+field_column_fourth:
+  paragraph:
+    item_0:
+      type: c_image
+      field_c_image:
+        image_name: 84900-banner.jpg
+        image_title: woman with fruit bowl
+    item_1:
+      type: c_text
+      field_c_title: "Layout Column 20 Sample"
+      field_sub_heading: "Column 4"
+      field_summary_text: "Caffeine instant, white flavour frappuccino grinder, coffee java plunger pot to go sugar chicory. Seasonal, at, sugar, as irish cup seasonal turkish dripper black."
+      field_text_horizontal_alignment: position_left
+field_column_fifth:
+  paragraph:
+    item_0:
+      type: c_image
+      field_c_image:
+        image_name: 84900-banner.jpg
+        image_title: woman with fruit bowl
+    item_1:
+      type: c_text
+      field_c_title: "Layout Column 20 Sample"
+      field_sub_heading: "Column 5"
+      field_summary_text: "Caffeine instant, white flavour frappuccino grinder, coffee java plunger pot to go sugar chicory. Seasonal, at, sugar, as irish cup seasonal turkish dripper black."
+      field_text_horizontal_alignment: position_left

@@ -1,0 +1,10 @@
+name: "Lightnest Ghostery"
+type: module
+description: "Managed Ghostery Consent Tool and Blocks external javascript files"
+package: "Lightnest"
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 8.x-1.3.7
+dependencies:
+  - dsu_c_core
+configure: dsu_ghostery.settings_form

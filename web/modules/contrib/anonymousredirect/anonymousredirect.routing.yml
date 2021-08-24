@@ -1,0 +1,9 @@
+anonymousredirect.whitelist_routes_config_form:
+  path: '/admin/config/anonymousredirect/whitelistroutesconfig'
+  defaults:
+    _form: '\Drupal\anonymousredirect\Form\WhitelistRoutesConfigForm'
+    _title: 'Whitelist route management'
+  requirements:
+    _permission: 'access whitelist routes management page'
+  options:
+    _admin_route: TRUE

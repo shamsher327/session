@@ -1,0 +1,153 @@
+/* Jcrop styling */
+.jcrop-holder {
+  line-height: 0;
+  margin-bottom: 15px;
+  display: none;
+}
+.image-hotspot-areas-wrapper .jcrop-hline,
+.image-hotspot-areas-wrapper .jcrop-vline {
+  background: #24AA98;
+}
+.image-hotspot-areas-wrapper .jcrop-handle {
+  background-color: #FFFFFF;
+  border-color: #24AA98;
+}
+.toolbar #toolbar-bar {
+  z-index: 1000;
+}
+/* Edit form */
+.image-hotspot-areas-wrapper .edit-form-wrapper {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  border: 2px solid #959EA7;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #F2F5F8;
+}
+.image-hotspot-areas-wrapper .edit-form-wrapper .close-button {
+  display: block;
+  cursor: default;
+  height: 12px;
+  background: url(images/cross.png) no-repeat 100%;
+  margin: 12px;
+}
+.image-hotspot-areas-wrapper .edit-form-wrapper .edit-form {
+  margin: 14px 22px;
+}
+.image-hotspot-areas-wrapper .edit-form-wrapper .form-messages {
+  max-width: 200px;
+  color: #B83D4B;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+.image-hotspot-areas-wrapper .edit-form-wrapper input,
+.image-hotspot-areas-wrapper .edit-form-wrapper button,
+.image-hotspot-areas-wrapper .edit-form-wrapper select,
+.image-hotspot-areas-wrapper .edit-form-wrapper label,
+.image-hotspot-areas-wrapper .edit-form-wrapper p{
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+}
+
+.image-hotspot-areas-wrapper .edit-form-wrapper label{
+  display: inline;
+  margin-right: 10px;
+}
+
+.image-hotspot-areas-wrapper .edit-form-wrapper input,
+.image-hotspot-areas-wrapper .edit-form-wrapper select{
+  height: 32px;
+  background-color: #FFFFFF;
+  border: 2px solid #ACB4BC;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: inline;
+  width: 95%;
+}
+
+.image-hotspot-areas-wrapper .edit-form-wrapper .form-item-title,
+.image-hotspot-areas-wrapper .edit-form-wrapper .form-item-link,
+.image-hotspot-areas-wrapper .edit-form-wrapper .form-item-link-title,
+.image-hotspot-areas-wrapper .edit-form-wrapper .form-item-shape,
+.image-hotspot-areas-wrapper .edit-form-wrapper .form-item-mouse-behaviour {
+  width: 50%;
+  display: inline-block;
+}
+
+.image-hotspot-areas-wrapper .edit-form-wrapper .form-submit {
+  width: 150px;
+}
+
+.image-hotspot-areas-wrapper .edit-form-wrapper input::-webkit-input-placeholder,
+.image-hotspot-areas-wrapper .edit-form-wrapper input::-moz-placeholder,
+.image-hotspot-areas-wrapper .edit-form-wrapper input:-moz-placeholder,
+.image-hotspot-areas-wrapper .edit-form-wrapper input:-ms-input-placeholder{
+  color:#ACB4BC;
+}
+.image-hotspot-areas-wrapper .edit-form-wrapper button {
+  color: #FFFFFF;
+  background-color: #24AA98;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 6px;
+  display: inline-block;
+}
+/* Action lables */
+.image-hotspot-areas-wrapper .labels .label-editor {
+  display: inline-block;
+}
+.image-hotspot-areas-wrapper .action {
+  color: #65ABD0;
+  background-color: #FFFFFF;
+  border: 1px solid #65ABD0;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  padding: 2px 10px;
+  display: inline-block;
+  cursor: default;
+}
+.image-hotspot-areas-wrapper .action.edit {
+  margin-right: 10px;
+}
+.image-hotspot-areas-wrapper .action.selected {
+  color: #FFFFFF;
+  background-color: #65ABD0;
+}
+.image-hotspot-areas-wrapper .add-button {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #FFFFFF;
+  background-color: #24AA98;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: inline-block;
+  cursor: default;
+}
+.ajax-progress-throbber {
+  margin-left: 10px;
+  display: inline-block;
+}
+.ajax-progress-throbber .throbber {
+  font-size: 14px;
+  padding: 1px 8px 2px;
+}
+
+.jcrop-holder.circle div  {
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.image-hotspot-areas-wrapper .open-close-configuration {
+  font-size: 12px;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}

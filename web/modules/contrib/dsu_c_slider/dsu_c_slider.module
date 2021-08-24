@@ -1,0 +1,79 @@
+<?php
+
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph.html.twig.
+ */
+function dsu_c_slider_preprocess_paragraph(&$variables) {
+  // Load the paragraph.
+  $paragraph = $variables['paragraph'];
+  // Load the css file when the rendered element is a slide.
+  
+  // Get c_slide for image field responsive.
+  if ($variables['paragraph']->getType() === 'c_slide') {
+    $variables['#attached']['library'][] = 'dsu_c_slider/slide';
+    if (!(\Drupal::moduleHandler()->moduleExists('twig_tweak'))) {
+      \Drupal::service('module_installer')->install(['twig_tweak']);
+    }
+    if (!empty($paragraph->get('field_c_image')->first())) {
+      $field_c_image = $paragraph->get('field_c_image')
+        ->first()
+        ->get('target_id')
+        ->getString();
+      $entity_image = Media::load($field_c_image);
+
+      $field_name = ($entity_image->hasField('image'))
+        ? 'image'
+        : (($entity_image->hasField('field_media_image')) ? 'field_media_image' : 'field_media_image');
+
+      // Check if image or target id is not empty.
+      if (!empty($entity_image->get($field_name)
+        ->first())) {
+        $image_file_id = $entity_image->get($field_name)
+          ->first()
+          ->get('target_id')
+          ->getString();
+		$file = File::load($image_file_id);
+        // Check if get files having object type.
+        $image_uri = is_object($file) ? $file->getFileUri() : '';
+      }
+      $variables['field_c_image'] = $image_uri;
+    }
+  }
+}
+
+/**
+ * Implements HOOK_preprocess_theme().
+ */
+function dsu_c_slider_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__c_slide' => [
+      'template' => 'paragraph--c-slide',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ln_sample_content().
+ */
+function dsu_c_slider_ln_sample_content() {
+    /** @var \Drupal\Core\Extension\ModuleHandlerInterface $module_handler */
+    $module_handler = \Drupal::service('module_handler');
+    /** @var \Drupal\Core\Extension\Extension $module_object */
+    $module_object = $module_handler->getModule(basename(__FILE__, '.module'));
+    $module_name = $module_object->getName();
+
+    $source = drupal_get_path('module', $module_name) . '/content';
+    /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+    $file_system = \Drupal::service('file_system');
+    $files = $file_system->scanDirectory($source, '/demo.*\.(yml)$/');
+    $yaml_file_path = NULL;
+    foreach ($files as $file) {
+        $yaml_file_path[] = '/content/' . $file->filename;
+    }
+
+    return $yaml_file_path;
+}

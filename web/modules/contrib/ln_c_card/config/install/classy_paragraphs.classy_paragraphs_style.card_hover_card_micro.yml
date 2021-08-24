@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_hover_card_micro
+label: 'Hover Card Micro (6 cards per line)'
+classes: hover-card-micro

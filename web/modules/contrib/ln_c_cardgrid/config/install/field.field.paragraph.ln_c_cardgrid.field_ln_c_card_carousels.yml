@@ -1,0 +1,201 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ln_c_card_carousels
+    - paragraphs.paragraphs_type.ln_c_cardgrid
+    - paragraphs.paragraphs_type.ln_c_grid_card_item
+  module:
+    - entity_reference_revisions
+id: paragraph.ln_c_cardgrid.field_ln_c_card_carousels
+field_name: field_ln_c_card_carousels
+entity_type: paragraph
+bundle: ln_c_cardgrid
+label: Cards
+description: 'Choose cards for grid layout.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ln_c_grid_card_item: ln_c_grid_card_item
+    target_bundles_drag_drop:
+      accordion:
+        weight: 60
+        enabled: false
+      accordion_item:
+        weight: 61
+        enabled: false
+      c_countdown:
+        weight: 63
+        enabled: false
+      c_document:
+        weight: 64
+        enabled: false
+      c_entitycycle:
+        weight: 65
+        enabled: false
+      c_externalvideo:
+        weight: 66
+        enabled: false
+      c_gallery:
+        weight: 67
+        enabled: false
+      c_gallery_item:
+        weight: 68
+        enabled: false
+      c_image:
+        weight: 69
+        enabled: false
+      c_link:
+        weight: 70
+        enabled: false
+      c_link_document_container:
+        weight: 71
+        enabled: false
+      c_map:
+        weight: 72
+        enabled: false
+      c_share_buttons:
+        weight: 73
+        enabled: false
+      c_sideimagetext:
+        weight: 74
+        enabled: false
+      c_slide:
+        weight: 75
+        enabled: false
+      c_slider:
+        weight: 76
+        enabled: false
+      c_social_buttons_item:
+        weight: 78
+        enabled: false
+      c_socialbuttons:
+        weight: 77
+        enabled: false
+      c_spacer:
+        weight: 79
+        enabled: false
+      c_tab_item:
+        weight: 81
+        enabled: false
+      c_tabbed_content:
+        weight: 80
+        enabled: false
+      c_teaser_slide:
+        weight: 85
+        enabled: false
+      c_teasercycle:
+        weight: 82
+        enabled: false
+      c_teasercycle_item:
+        weight: 83
+        enabled: false
+      c_teaserslider:
+        weight: 84
+        enabled: false
+      c_text:
+        weight: 86
+        enabled: false
+      change_log_entry:
+        weight: 62
+        enabled: false
+      dsu_functionality_option:
+        weight: 87
+        enabled: false
+      dsu_tint:
+        weight: 88
+        enabled: false
+      forms:
+        weight: 89
+        enabled: false
+      image_hotspots_areas:
+        weight: 90
+        enabled: false
+      layout_25_25_50:
+        weight: 91
+        enabled: false
+      layout_25_50_25:
+        weight: 92
+        enabled: false
+      layout_25_75:
+        weight: 93
+        enabled: false
+      layout_33_66:
+        weight: 94
+        enabled: false
+      layout_50_25_25:
+        weight: 95
+        enabled: false
+      layout_66_33:
+        weight: 96
+        enabled: false
+      layout_75_25:
+        weight: 97
+        enabled: false
+      layout_columns_1:
+        weight: 98
+        enabled: false
+      layout_columns_2:
+        weight: 99
+        enabled: false
+      layout_columns_20:
+        weight: 100
+        enabled: false
+      layout_columns_3:
+        weight: 101
+        enabled: false
+      layout_columns_4:
+        weight: 102
+        enabled: false
+      ln_c_cardgrid:
+        weight: 104
+        enabled: false
+      ln_c_grid_card_item:
+        enabled: true
+        weight: 107
+      ln_c_yt_carousel:
+        weight: 106
+        enabled: false
+      macronutrients:
+        weight: 107
+        enabled: false
+      media_information:
+        weight: 108
+        enabled: false
+      paragraph_view:
+        weight: 109
+        enabled: false
+      product_listing_block:
+        weight: 110
+        enabled: false
+      recipe_ingredients:
+        weight: 111
+        enabled: false
+      recipe_steps:
+        weight: 112
+        enabled: false
+      recipe_tools:
+        weight: 113
+        enabled: false
+      recipe_variants:
+        weight: 114
+        enabled: false
+      related_recipes_in_other_languag:
+        weight: 115
+        enabled: false
+      srh_macronutrients_unittype:
+        weight: 116
+        enabled: false
+      tags_selector:
+        weight: 117
+        enabled: false
+      tips:
+        weight: 118
+        enabled: false
+field_type: entity_reference_revisions

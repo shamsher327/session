@@ -1,0 +1,293 @@
+.paragraph--type--c-text {
+  padding: 30px 0;
+  .field--name-field-c-title {
+    margin-bottom: 10px;
+  }
+  .field--name-field-sub-heading {
+    margin-bottom: 10px;
+  }
+  .field--name-field-c-title,
+  .field--name-field-sub-heading,
+  .dsu_btn {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .field--name-field-summary-text {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    p {
+      line-height: 34px;
+      margin-bottom: 10px;
+      padding: 0 15px;
+    }
+  }
+  .text-large-bold-underline {
+    margin: 0 0 8px;
+  }
+  .text-large-plain {
+    margin: 0 0 26px;
+  }
+  
+  .horizontal_position_center{
+    text-align: center !important;
+    .field--name-field-summary-text{
+      text-align: center;
+      p{
+        text-align: center !important;
+      }
+    }
+  }
+  .horizontal_position_left{
+    text-align: left;
+    p{
+      text-align: left !important;
+    }
+  }
+  .horizontal_position_right{
+    text-align: right !important;
+    .field--name-field-summary-text{
+      text-align: right !important;
+      p{
+        text-align: right !important;
+      }
+    }
+    
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+    padding: 50px 0;
+  }
+  .paragraph--type--c-text {
+    .field--name-field-c-title,
+    .field--name-field-sub-heading,
+    .field--name-field-summary-text,
+    .dsu_btn
+    {
+      max-width: 1170px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+    padding: 25px 0;
+  }
+  .paragraph--type--c-text {
+    .field--name-field-c-title,
+    .field--name-field-sub-heading,
+    .dsu_btn {
+      max-width: 940px;
+    }
+    .field--name-field-summary-text {
+      max-width: 940px;
+      padding: 0 15px 37px;
+    }
+  }
+  .dark-bg.paragraph--type--c-text .field--name-field-summary-text {
+    padding: 0 15px 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+    padding: 15px 0;
+  }
+  .paragraph--type--c-text {
+    .field--name-field-c-title,
+    .field--name-field-sub-heading,
+    .dsu_btn {
+      max-width: 748px;
+    }
+    .field--name-field-summary-text {
+      max-width: 748px;
+      padding: 0 15px 52px;
+    }
+  }
+  .dark-bg.paragraph--type--c-text .field--name-field-summary-text {
+    padding: 0 15px 25px;
+  }
+}
+
+.dark-bg {
+  background: url('../img/content-tail.gif') center top repeat #1d1d1d;
+  color: #fff;
+  text-align: center;
+}
+
+.field--name-field-components .paragraph--type--c-text.white-text, .field--name-field-components .paragraph--type--c-text.light-text {
+  color: #FFF;
+  .field--name-field-c-title, .field--name-field-sub-heading, .field--name-field-summary-text {
+    color: #FFF;
+  }
+  p {
+    color: #FFF;
+  }
+  strong {
+    font-weight: 600;
+    color: #FFF;
+  }
+  a {
+    color: #FFF;
+    &:hover {
+      color: #FFF;
+    }
+  }
+  .contextual-links a {
+    color: initial;
+  }
+}
+
+.light-bg {
+  background: #fff;
+  color: #333;
+  text-align: center;
+}
+
+.dark-text {
+  color: #333;
+  p {
+    color: #777;
+  }
+  strong {
+    font-weight: 600;
+    color: #333;
+  }
+  a {
+    color: #333;
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
+.image-bg {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.light-bg, .dark-bg {
+  overflow: hidden;
+}
+
+.light-bg {
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+  }
+}
+
+.dark-bg {
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+  }
+}
+
+.image-bg {
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+  }
+  .background-image-overlay img, .field--name-field-background-image img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.dark-bg a, .image-bg a {
+  color: #fff;
+}
+
+.dsu_btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  &.horizontal-right {
+    text-align: right;
+  }
+  &.horizontal-left {
+    text-align: left;
+  }
+  &.vertical-bottom_center, &.vertical-top_center {
+    text-align: center;
+  }
+}
+
+
+.node-dsu-component-page-edit-form {
+  .field--name-field-components .paragraph--type--c-text{
+    a{
+      color: #222222;
+    }
+    .field .field--name-field-c-title {
+      font-size: 18px;
+      margin-top: 29px;
+      margin-bottom: 14.5px;
+      text-align: left;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+    .field .field--name-field-sub-heading {
+        font-weight: bold;
+        font-size: 18px;
+        padding: 0;
+        text-align: left;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }   
+    .field--name-field-summary-text {
+        padding: 0 10px;
+        text-align: left;
+    } 
+  }
+
+  .horizontal_position_center{
+    text-align: center !important;
+    
+    .field--name-field-c-title,.field--name-field-sub-heading {
+      text-align:center !important;
+    }
+
+    .field--name-field-summary-text{
+      text-align: center;
+      p{
+        text-align: center !important;
+      }
+    }
+  }
+  .horizontal_position_left{
+    text-align: left;
+    
+    .field--name-field-c-title,.field--name-field-sub-heading {
+      text-align: left !important;
+    }
+
+    p{
+      text-align: left !important;
+    }
+  }
+  .horizontal_position_right{
+    text-align: right !important;
+
+    .field--name-field-c-title,.field--name-field-sub-heading {
+      text-align: right!important;
+    }
+
+    .field--name-field-summary-text{
+      text-align: right !important;
+      p{
+        text-align: right !important;
+      }
+    }
+    
+  }
+}

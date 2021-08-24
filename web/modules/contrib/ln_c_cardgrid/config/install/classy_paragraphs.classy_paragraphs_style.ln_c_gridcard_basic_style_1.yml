@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ln_c_gridcard_basic_style_1
+label: 'Basic Style 1'
+classes: grid-card-bottom-text-box

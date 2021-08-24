@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_bottom_text_box
+label: 'Bottom text box (2 cards per line)'
+classes: bottom-text-box

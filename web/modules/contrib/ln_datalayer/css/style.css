@@ -1,0 +1,27 @@
+.ajaxify-submit-forms .item-form {
+  width: 100%;
+  float: left;
+}
+.ajaxify-submit-forms .item-form .form-item {
+  width: 32%;
+  float: left;
+}
+.ajaxify-submit-forms .item-form .form-item .form-select {
+  width: 100%;
+}
+#ln-datalayer-settings-form .form-item {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+}
+#ln-datalayer-settings-form .form-item .form-select,
+#ln-datalayer-settings-form .form-item .form-text,
+#ln-datalayer-settings-form .form-item .form-date {
+  width: 70%;
+}
+#ln-datalayer-settings-form .form-item .form-select {
+  height: 30px;
+}
+#ln-datalayer-settings-form .description {
+  width: 80%;
+}

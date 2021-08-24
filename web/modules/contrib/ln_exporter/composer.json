@@ -1,0 +1,10 @@
+{
+    "name": "lightnest/ln_exporter",
+    "description": "Export content data from Drupal.",
+    "type": "drupal-module",
+    "keywords": [
+        "content",
+        "data",
+        "export"
+    ]
+}

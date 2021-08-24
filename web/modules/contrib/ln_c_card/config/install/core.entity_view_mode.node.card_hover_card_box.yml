@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.card_hover_card_box
+label: 'Hover Card Box'
+targetEntityType: node
+cache: true

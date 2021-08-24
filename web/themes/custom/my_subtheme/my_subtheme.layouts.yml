@@ -1,0 +1,13 @@
+layout_twocol_section:
+  label: 'Indegene Two column'
+  path: layouts
+  template: layout--twocol-section
+  category: 'indegene'
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second

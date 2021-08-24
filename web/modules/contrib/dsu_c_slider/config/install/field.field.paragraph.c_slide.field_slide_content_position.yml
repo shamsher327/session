@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_content_position
+    - paragraphs.paragraphs_type.c_slide
+  module:
+    - options
+id: paragraph.c_slide.field_slide_content_position
+field_name: field_slide_content_position
+entity_type: paragraph
+bundle: c_slide
+label: 'Slide Content Position'
+description: 'Set the display position of the content for a slide.'
+required: false
+translatable: false
+default_value:
+  -
+    value: over_center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

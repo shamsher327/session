@@ -1,0 +1,7 @@
+dsu_c_core.settings:
+  path: '/admin/config/lightnest'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: Lightnest
+  requirements:
+    _permission: 'true'

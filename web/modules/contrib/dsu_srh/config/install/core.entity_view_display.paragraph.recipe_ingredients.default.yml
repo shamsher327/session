@@ -1,0 +1,273 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recipe_ingredients.field_ingredient_autofullname
+    - field.field.paragraph.recipe_ingredients.field_ingredient_fraction_descri
+    - field.field.paragraph.recipe_ingredients.field_ingredient_fraction_id
+    - field.field.paragraph.recipe_ingredients.field_ingredient_fullname
+    - field.field.paragraph.recipe_ingredients.field_ingredient_gtin
+    - field.field.paragraph.recipe_ingredients.field_ingredient_idingredient
+    - field.field.paragraph.recipe_ingredients.field_ingredient_isnestleproduct
+    - field.field.paragraph.recipe_ingredients.field_ingredient_lenguage
+    - field.field.paragraph.recipe_ingredients.field_ingredient_name
+    - field.field.paragraph.recipe_ingredients.field_ingredient_nutritonaldb_id
+    - field.field.paragraph.recipe_ingredients.field_ingredient_preparationhint
+    - field.field.paragraph.recipe_ingredients.field_ingredient_quantity
+    - field.field.paragraph.recipe_ingredients.field_ingredient_quantity_displa
+    - field.field.paragraph.recipe_ingredients.field_ingredient_quantity_total
+    - field.field.paragraph.recipe_ingredients.field_ingredient_quantity_value
+    - field.field.paragraph.recipe_ingredients.field_ingredient_quantitygrams
+    - field.field.paragraph.recipe_ingredients.field_ingredient_source
+    - field.field.paragraph.recipe_ingredients.field_ingredient_taxonomy
+    - field.field.paragraph.recipe_ingredients.field_ingredient_unittype_descri
+    - field.field.paragraph.recipe_ingredients.field_ingredient_unittype_id
+    - field.field.paragraph.recipe_ingredients.field_ingredient_unittype_plural
+    - field.field.paragraph.recipe_ingredients.field_ingredient_unittype_singul
+    - field.field.paragraph.recipe_ingredients.field_ingredient_yieldpercentage
+    - field.field.paragraph.recipe_ingredients.field_ingredients_full_name
+    - field.field.paragraph.recipe_ingredients.field_ingredients_order
+    - field.field.paragraph.recipe_ingredients.field_ingredients_tips
+    - paragraphs.paragraphs_type.recipe_ingredients
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: B-qpwFU3ZzTjtHpxqbASzqdAuXhlSnXOeRg4HYW5960
+id: paragraph.recipe_ingredients.default
+targetEntityType: paragraph
+bundle: recipe_ingredients
+mode: default
+content:
+  field_ingredient_autofullname:
+    type: boolean
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_ingredient_fraction_descri:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_fraction_id:
+    type: string
+    weight: 11
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_fullname:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_gtin:
+    type: string
+    weight: 19
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_idingredient:
+    type: string
+    weight: 18
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_isnestleproduct:
+    type: boolean
+    weight: 17
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_ingredient_lenguage:
+    type: string
+    weight: 16
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_name:
+    type: string
+    weight: 15
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_nutritonaldb_id:
+    type: string
+    weight: 14
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_preparationhint:
+    type: string
+    weight: 13
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_quantity:
+    type: number_decimal
+    weight: 12
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_ingredient_quantity_displa:
+    type: number_decimal
+    weight: 10
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_ingredient_quantity_total:
+    type: number_decimal
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_ingredient_quantity_value:
+    type: number_decimal
+    weight: 9
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_ingredient_quantitygrams:
+    type: number_decimal
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_ingredient_source:
+    type: string
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_taxonomy:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_ingredient_unittype_descri:
+    type: string
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_unittype_id:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_unittype_plural:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_unittype_singul:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredient_yieldpercentage:
+    type: number_decimal
+    weight: 20
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_ingredients_full_name:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ingredients_order:
+    weight: 22
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_ingredients_tips:
+    type: entity_reference_revisions_entity_view
+    weight: 21
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

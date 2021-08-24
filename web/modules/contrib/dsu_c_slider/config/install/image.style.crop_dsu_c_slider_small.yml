@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: crop_dsu_c_slider_small
+label: 'Cropped: dsu_c_slider_small'
+effects:
+  3fbffefe-bb62-458b-86ac-1f59cc3b43fe:
+    uuid: 3fbffefe-bb62-458b-86ac-1f59cc3b43fe
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 425
+      height: 318
+      crop_type: focal_point

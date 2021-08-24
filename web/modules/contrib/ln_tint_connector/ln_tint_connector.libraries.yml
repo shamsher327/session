@@ -1,0 +1,15 @@
+ln-tint:
+  header: true
+  version: 1.x
+  css:
+    theme:
+      assets/css/ln-tint-ui.css: {}
+  js:
+    //cdn.hypemarks.com/pages/a5b5e5.js: { weight: -3, type: external, minified: true, async: true }
+
+tint_event_tracking:
+  version: 1.x
+  js:
+    assets/js/ln_tint.js: {}
+  dependencies:
+    - core/jquery

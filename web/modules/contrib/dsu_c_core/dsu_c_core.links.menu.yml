@@ -1,0 +1,6 @@
+dsu_c_core.settings:
+  title: Lightnest
+  description: Various settings for altering the behavior of Lightnest modules.
+  parent: system.admin_config
+  route_name: dsu_c_core.settings
+  weight: -15

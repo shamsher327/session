@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Grid Card Quick Info Box'
+id: node.ln_c_gridcard_quick_info_box
+label: 'Grid Card Quick Info Box'
+targetEntityType: node
+cache: true

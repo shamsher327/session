@@ -1,0 +1,19 @@
+{
+    "name": "lightnest/ln_ciam",
+    "description": "Configure and add require configuration on gigya.",
+    "type": "drupal-module",
+    "keywords": [
+        "Gigya",
+		"CIAM Extension",
+		"User profile"
+    ],
+    "require": {
+		"aws/aws-sdk-php": "2.x",
+		"phpseclib/phpseclib": "^2.0",
+        "drupal/core": "^8 || ^9"
+    },
+    "extra":{
+        "enable-patching": true
+
+    }
+}

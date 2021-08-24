@@ -1,0 +1,16 @@
+ln_bazaarvoice.settings:
+  type: mapping
+  label: 'LN Bazaarvoice Settings'
+  mapping:
+    mode:
+      type: string
+      label: 'Account Mode'
+    method:
+      type: string
+      label: 'Reviews Method'
+    hosted.client_name:
+      type: string
+      label: 'Bazaarvoice Client Name'
+    hosted.site_id:
+      type: string
+      label: 'Site Id'

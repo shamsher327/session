@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gradient_option
+    - paragraphs.paragraphs_type.c_slide
+  module:
+    - options
+id: paragraph.c_slide.field_gradient_option
+field_name: field_gradient_option
+entity_type: paragraph
+bundle: c_slide
+label: 'Gradient Option'
+description: 'Select if you require a gradient to be placed between the image and text'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

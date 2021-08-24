@@ -1,0 +1,13 @@
+# Changelog
+
+
+## 1.1.8 for Drupal 9
+
+- Enable the field_group module if not enabled.
+- Go to '/admin/config/development/features/diff/dsu_c_sideimagetext' and import the diff.
+	- Update the widget of 'CTA Button URL' field from 'Link (with attributes)' to 'Link with target' on 'Manage form display'.
+- Uninstall the link_target module.
+
+
+##Validation
+- Add the component on a page and validate. 

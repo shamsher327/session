@@ -1,0 +1,11 @@
+dsu_srh.admin:
+  route_name: dsu_srh.config
+  title: SRH Connector Configuration
+  weight: 1
+  base_route: dsu_srh.config
+
+dsu_srh.action:
+  route_name: dsu_srh.action
+  title: SRH Manual Importer
+  weight: 2
+  base_route: dsu_srh.config

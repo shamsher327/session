@@ -1,0 +1,5 @@
+dsu_ghostery:
+  title: 'DSU Ghostery settings'
+  base_route_name: dsu_ghostery.settings_form
+  names:
+    - 'dsu_ghostery.settings'

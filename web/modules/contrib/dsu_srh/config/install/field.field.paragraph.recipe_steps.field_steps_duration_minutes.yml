@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_steps_duration_minutes
+    - paragraphs.paragraphs_type.recipe_steps
+id: paragraph.recipe_steps.field_steps_duration_minutes
+field_name: field_steps_duration_minutes
+entity_type: paragraph
+bundle: recipe_steps
+label: 'steps duration minutes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,15 @@
+hosted.external:
+  header: true
+  version: 1.x
+  js:
+    //display.ugc.bazaarvoice.com/mode/static/ClientName/locale/bvapi.js: {weight: -4, type: external, minified: true}
+
+bazaarvoice-id:
+  version: 1.x
+  header: true
+  js:
+    js/ln-bazaarvoice-id.js: {preprocess: false}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings

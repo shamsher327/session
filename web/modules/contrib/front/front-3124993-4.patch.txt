@@ -1,0 +1,47 @@
+diff --git a/front_page.info.yml b/front_page.info.yml
+index ef7f520..00bea40 100644
+--- a/front_page.info.yml
++++ b/front_page.info.yml
+@@ -3,3 +3,4 @@ description: 'Allows site admins setup custom front pages for the site.'
+ type: module
+ configure: front_page.settings
+ core: 8.x
++core_version_requirement: ^8 || ^9
+diff --git a/front_page.module b/front_page.module
+index 5c3f646..180dd42 100644
+--- a/front_page.module
++++ b/front_page.module
+@@ -180,7 +180,10 @@ function theme_front_page_admin_arrange_form($variables) {
+     'attributes' => ['id' => 'front-page-arrange'],
+   ];
+   $output .= $renderer->render($front_page_arrange);
+-  $output .= drupal_render_children($form);
+-
++  foreach (Element::children($form) as $key) {
++    if (!empty($form[$key])) {
++      $output .= \Drupal::service('renderer')->render($form[$key]);
++    }
++  }
+   return $output;
+ }
+diff --git a/src/EventSubscriber/FrontPageSubscriber.php b/src/EventSubscriber/FrontPageSubscriber.php
+index f413115..b68c034 100644
+--- a/src/EventSubscriber/FrontPageSubscriber.php
++++ b/src/EventSubscriber/FrontPageSubscriber.php
+@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
+ use Symfony\Component\HttpKernel\KernelEvents;
+ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
++use \Drupal\Core\Installer\InstallerKernel;
+ 
+ /**
+  * Class FrontPageSubscriber.
+@@ -26,7 +27,7 @@ class FrontPageSubscriber implements EventSubscriberInterface {
+ 
+     // Make sure front page module is not run when using cli (drush).
+     // Make sure front page module does not run when installing Drupal either.
+-    if (PHP_SAPI === 'cli' || drupal_installation_attempted()) {
++    if (PHP_SAPI === 'cli' || InstallerKernel::installationAttempted()) {
+       return;
+     }
+ 

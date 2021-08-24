@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: srh_macronutrients_unittype
+label: 'SRH Macronutrients unitType'
+icon_uuid: null
+description: 'Macronutrients unitType'
+behavior_plugins: {  }

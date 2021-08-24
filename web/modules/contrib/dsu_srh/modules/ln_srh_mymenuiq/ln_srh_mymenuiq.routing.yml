@@ -1,0 +1,6 @@
+ln_srh_mymenuiq.get_side_dishes:
+  path: '/get/side_dish/{recipe_id}/{nutritional_score}/{dish_type}'
+  defaults:
+    _controller: '\Drupal\ln_srh_mymenuiq\Controller\MyMenuIqController::getDishes'
+  requirements:
+    _access: 'TRUE'

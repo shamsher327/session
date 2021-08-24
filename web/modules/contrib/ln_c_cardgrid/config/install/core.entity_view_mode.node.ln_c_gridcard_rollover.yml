@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Grid Card Rollover'
+id: node.ln_c_gridcard_rollover
+label: 'Grid Card Rollover'
+targetEntityType: node
+cache: true

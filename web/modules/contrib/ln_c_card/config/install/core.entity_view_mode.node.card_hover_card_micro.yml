@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.card_hover_card_micro
+label: 'Hover Card Micro'
+targetEntityType: node
+cache: true

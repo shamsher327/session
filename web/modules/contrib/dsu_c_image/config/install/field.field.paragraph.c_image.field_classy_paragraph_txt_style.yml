@@ -1,0 +1,26 @@
+uuid: 970806b7-e249-424b-9ddb-cff8cb73cdbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_classy_paragraph_txt_style
+    - paragraphs.paragraphs_type.c_image
+id: paragraph.c_image.field_classy_paragraph_txt_style
+field_name: field_classy_paragraph_txt_style
+entity_type: paragraph
+bundle: c_image
+label: 'Classy Paragraph Text Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: classy_paragraphs
+  handler_settings:
+    filter:
+      type: starts_with
+      starts_with: dsu_classy_content_
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recipe_variants.field_variant_recipe_id
+    - field.field.paragraph.recipe_variants.field_variant_recipe_version_id
+    - field.field.paragraph.recipe_variants.field_variant_type
+    - field.field.paragraph.recipe_variants.field_variants_recipe_title
+    - paragraphs.paragraphs_type.recipe_variants
+id: paragraph.recipe_variants.default
+targetEntityType: paragraph
+bundle: recipe_variants
+mode: default
+content:
+  field_variant_recipe_id:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_variant_recipe_version_id:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_variant_type:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_variants_recipe_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

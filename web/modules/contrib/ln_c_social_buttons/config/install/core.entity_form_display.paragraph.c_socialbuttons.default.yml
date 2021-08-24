@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_socialbuttons.field_c_title
+    - field.field.paragraph.c_socialbuttons.field_social_buttons_item
+    - paragraphs.paragraphs_type.c_socialbuttons
+  module:
+    - paragraphs
+id: paragraph.c_socialbuttons.default
+targetEntityType: paragraph
+bundle: c_socialbuttons
+mode: default
+content:
+  field_c_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_buttons_item:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

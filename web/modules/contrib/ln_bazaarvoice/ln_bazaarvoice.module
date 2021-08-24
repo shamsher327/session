@@ -1,0 +1,224 @@
+<?php
+
+
+/**
+ * @file
+ * Lightnest Bazaarvoice module.
+ */
+
+use BazaarvoiceSeo\BV;
+use Drupal\Core\Url;
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+use Drupal\taxonomy\Entity\Term;
+
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ *
+ * Passing variables for run time javascript if bazaarvoice product exist.
+ */
+function ln_bazaarvoice_preprocess_node(&$variables) {
+  // Getting current language.
+  $language = Drupal::service('ln_bazaarvoice')->getBazaarvoiceLangCode();
+  $node = $variables['node']->hasTranslation($language) ? $variables['node']->getTranslation($language) : $variables['node'];
+
+  // Get node type object.
+  $nodeType = $node->getType();
+  if ($nodeType === 'dsu_product') {
+    if ($node->hasField('field_bv_product_id') && !empty($node->get('field_bv_product_id')
+        ->first())) {
+      // Update global hosted UI js
+      // to use correct mode and configured client_id.
+      if ($js_url = Drupal::service('ln_bazaarvoice')->buildHostedJsPath()) {
+
+        // Send product id for getting product reivew from bazaarvoice.
+        $variables['#attached']['library'][] = 'ln_bazaarvoice/bazaarvoice-id';
+
+        // Add new dynamic path based on form configuration.
+        $variables['#attached']['html_head'][] = [
+          [
+            '#tag'        => 'script',
+            '#attributes' => [
+              'language' => "javascript",
+              'type'     => "text/javascript",
+              'src'      => $js_url,
+            ],
+            '#value'      => '',
+          ],
+          'jquery-define',
+        ];
+      }
+      // Get Bazaarvoice product ID.
+      $field_bv_product_id = $node->get('field_bv_product_id')
+        ->first()
+        ->get('value')
+        ->getString();
+
+      // Setting cache context zero for getting product id and uncached JS.
+      $variables['#cache']['max-age'] = 0;
+      // Sending drupal behaviour variable for getting reviews for product.
+      $variables['#attached']['drupalSettings']['bazaarvoiceReviews']['productid'] = $field_bv_product_id;
+
+      // Set variable to view.
+      $bv_seo = load_bv_seo($field_bv_product_id);
+      $variables['rating_summary'] = $bv_seo['summary'];
+      $variables['rating_reviews'] = $bv_seo['reviews'];
+    }
+
+    if ($js_path = Drupal::service('ln_bazaarvoice')
+      ->buildHostedBazaarvoiceJsPath()) {
+      // Add new dynamic path based on form configuration.
+      $variables['#attached']['html_head'][] = [
+        [
+          '#tag'        => 'script',
+          '#attributes' => [
+            'async' => TRUE,
+            'src'   => $js_path,
+          ],
+        ],
+        'bv_product_catalogs',
+      ];
+    }
+
+    // Add script in html head.
+    $js_data = product_data_output($node);
+    $variables['#attached']['html_head'][] = [
+      [
+        '#type'       => 'html_tag',
+        '#tag'        => 'script',
+        '#attributes' => [
+          'async' => TRUE,
+          'type'  => "text/javascript",
+        ],
+        '#value'      => $js_data,
+      ],
+    ];
+  }
+}
+
+/**
+ * Get the file uri.
+ */
+function get_file_uri($file_id) {
+  if (!empty($file_id) && isset($file_id)) {
+    $file = File::load($file_id);
+    if (!empty($file)) {
+      $uri = $file->getFileUri();
+    }
+  }
+
+  return isset($uri) ? file_create_url($uri) : FALSE;
+}
+
+/**
+ * Process product data.
+ *
+ * @param object $node
+ *   Node object.
+ *
+ * @return array
+ *   return array.
+ */
+function product_data_output($node) {
+  // Get Product ImageUrl.
+  $image_uri = '';
+  if (!empty($node->get('field_dsu_image')->first())) {
+    $file_id = $node->get('field_dsu_image')->getValue()[0]['target_id'];
+    // Get media image load for url.
+    $entity_image = Media::load($file_id);
+    $field_name = ($entity_image->hasField('image')) ? 'image' : (($entity_image->hasField('field_media_image')) ? 'field_media_image' : 'field_media_image');
+    if (!empty($entity_image)) {
+      $image_file_id = $entity_image->get($field_name)
+        ->first()
+        ->get('target_id')
+        ->getString();
+      // Check if image url is exist.
+      $image_uri = get_file_uri($image_file_id);
+    }
+  }
+  // Get Product Categories.
+  $categoryPath = [];
+  $field_dsu_category = !empty($node->get('field_dsu_category')
+    ->first()) ? $node->get('field_dsu_category')
+                   ->getValue()[0]['target_id'] : FALSE;
+  if ($field_dsu_category) {
+    foreach ($node->get('field_dsu_category')->getValue() as $key => $value) {
+      $term = Term::load($value['target_id']);
+      if (is_object($term)) {
+        $categoryPath[$key]['id'] = $value['target_id'];
+        $categoryPath[$key]['Name'] = $term->getName();
+      }
+    }
+  }
+  // Remove html tag and \r\n from product description.
+  $product_desc = !empty($node->get('field_dsu_product_desc')
+    ->getString()) ? preg_replace('/\s\s+/', '', strip_tags($node->get('field_dsu_product_desc')
+    ->first()
+    ->get('value')
+    ->getString())) : '';
+
+  $product_data = [
+    "productId"          => $node->id(),
+    "productName"        => $node->getTitle(),
+    "productDescription" => $product_desc,
+    "productSku"         => $node->get('field_dsu_sku')->getString(),
+    "productImageURL"    => $image_uri,
+    "productPageURL"     => $node->toUrl()->setAbsolute()->toString(),
+    "categoryPath"       => $categoryPath,
+    "inactive"           => ($node->isPublished()) ? FALSE : TRUE,
+  ];
+  $product = 'window.bvDCC = {
+      catalogData: {locale: "' . Drupal::service('ln_bazaarvoice')
+      ->getBazaarvoiceLocaleCode(Drupal::languageManager()
+        ->getCurrentLanguage()
+        ->getId()) . '",
+        catalogProducts: ' . json_encode([$product_data], JSON_UNESCAPED_SLASHES) . ',
+      }
+    };
+  
+    window.bvCallback = function (BV) {
+      BV.pixel.trackEvent("CatalogUpdate", {
+        type: "Product",
+        locale: window.bvDCC.catalogData.locale,
+        catalogProducts: window.bvDCC.catalogData.catalogProducts
+      });
+    };';
+
+  return $product;
+}
+
+
+/**
+ * Load BazaarVoice SEO SDK.
+ *
+ * @param string $rating_id
+ *   Rating ID.
+ *
+ * @return array
+ *   The raw HTML markup for reviews and aggregating Bazaarvoice.
+ *
+ * @throws Exception
+ */
+function load_bv_seo($rating_id) {
+  $ln_bazaarvoice = Drupal::service('ln_bazaarvoice');
+  $language = Drupal::languageManager()->getCurrentLanguage()->getId();
+
+  $locale = $ln_bazaarvoice->getBazaarvoiceLocaleCode($language);
+  $site_id = $ln_bazaarvoice->getConfig()->get('hosted.site_id');
+  $cloud_key = $ln_bazaarvoice->getConfig()->get('cloud_key');
+
+  $bv = new BV([
+    'cloud_key'      => $cloud_key,
+    'bv_root_folder' => sprintf('%s-%s', $site_id, $locale),
+    'subject_id'     => $rating_id,
+    'page_url'       => Url::fromRoute('<current>', [], ["absolute" => TRUE])
+      ->toString(),
+  ]);
+
+  return [
+    'summary' => $bv->reviews->getAggregateRating(),
+    'reviews' => $bv->reviews->getReviews(),
+  ];
+
+}

@@ -1,0 +1,6 @@
+dsu_ghostery.admin:
+  title: "LightNest Ghostery"
+  description: 'Allows to add a Ghostery JS snippet to your site'
+  parent: dsu_c_core.settings
+  route_name: dsu_ghostery.settings_form
+  weight: 40

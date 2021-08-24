@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: LifeStyle
+vid: lifestyle
+description: '6'
+weight: 0

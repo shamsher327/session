@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient_unittype_descri
+    - paragraphs.paragraphs_type.srh_macronutrients_unittype
+id: paragraph.srh_macronutrients_unittype.field_ingredient_unittype_descri
+field_name: field_ingredient_unittype_descri
+entity_type: paragraph
+bundle: srh_macronutrients_unittype
+label: 'UnitType description'
+description: 'UnitType description'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

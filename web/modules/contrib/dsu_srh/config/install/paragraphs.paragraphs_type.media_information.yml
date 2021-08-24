@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: z0qAxUGheaYIMgonA37x1_xuFtQRsquZ4wldqzEmga8
+id: media_information
+label: 'Media Information'
+icon_uuid: null
+description: 'Structure to save images and other media informations'
+behavior_plugins: {  }

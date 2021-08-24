@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+_core:
+  default_config_hash: C57X8hw8rtULB5Vs8n5RRh1-TUugyYXQeLbLXYKyeqI
+id: config_pages.field_flyout_accord_first_title
+field_name: field_flyout_accord_first_title
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

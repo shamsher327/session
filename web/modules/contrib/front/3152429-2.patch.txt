@@ -1,0 +1,186 @@
+diff --git a/README.txt b/README.txt
+index 4c49c4a..f11db9d 100644
+--- a/README.txt
++++ b/README.txt
+@@ -12,7 +12,8 @@ Front Page issue queue at http://drupal.org/project/issues/front
+ Key Functionality
+ =====================
+ 
+-1. Allows you to specify a custom front page based on role type using 301 Redirect.
++1. Allows you to specify a custom front page based on role type using 301
++    Redirect.
+ 
+ 2. Override Home Links to go to another local path. This could be to stop users
+     going back to a splash screen.
+@@ -27,8 +28,9 @@ Installation
+ 2. Go to Administer -> Config -> Front Page.
+ 
+ 3. Expand any of the roles that you want to override the default front page and
+-    select the appropriate method of override as well as filling in the variables
+-    required for that method. Once the settings are correct save the form.
++    select the appropriate method of override as well as filling in the
++    variables required for that method. Once the settings are correct save the
++    form.
+ 
+ 4. Enable the 'Front Page Override' checkbox and then save the form. The front
+-    page module should now be working correctly.
+\ No newline at end of file
++    page module should now be working correctly.
+diff --git a/front_page.links.menu.yml b/front_page.links.menu.yml
+index 0871152..4baafdc 100644
+--- a/front_page.links.menu.yml
++++ b/front_page.links.menu.yml
+@@ -14,4 +14,4 @@ front_page.home_links:
+     title: 'Home links'
+     description: 'Allows you to change the location of the &lt;front&gt; placeholder.'
+     parent: front_page.admin_index
+-    route_name: front_page.home_links
+\ No newline at end of file
++    route_name: front_page.home_links
+diff --git a/front_page.links.task.yml b/front_page.links.task.yml
+index 15faea0..6aa8389 100644
+--- a/front_page.links.task.yml
++++ b/front_page.links.task.yml
+@@ -8,4 +8,4 @@ front_page.home_links:
+     title: 'Home links'
+     route_name: front_page.home_links
+     base_route: system.admin_config
+-    weight: 10
+\ No newline at end of file
++    weight: 10
+diff --git a/front_page.permissions.yml b/front_page.permissions.yml
+index 7199dc2..cf4f676 100644
+--- a/front_page.permissions.yml
++++ b/front_page.permissions.yml
+@@ -1,4 +1,4 @@
+ administer front page:
+   title: 'Administer front page'
+   description: 'Allow users to make changes to the front page settings.'
+-  restrict access: true
+\ No newline at end of file
++  restrict access: true
+diff --git a/front_page.services.yml b/front_page.services.yml
+index 5537dc1..cf6b7f6 100644
+--- a/front_page.services.yml
++++ b/front_page.services.yml
+@@ -7,4 +7,4 @@ services:
+   front_page.front_page_path_processor:
+     class: Drupal\front_page\FrontPagePathProcessor
+     tags:
+-      - {name: path_processor_outbound}
+\ No newline at end of file
++      - {name: path_processor_outbound}
+diff --git a/src/EventSubscriber/FrontPageSubscriber.php b/src/EventSubscriber/FrontPageSubscriber.php
+index f413115..430a75c 100644
+--- a/src/EventSubscriber/FrontPageSubscriber.php
++++ b/src/EventSubscriber/FrontPageSubscriber.php
+@@ -44,7 +44,6 @@ class FrontPageSubscriber implements EventSubscriberInterface {
+     $isFrontPage = \Drupal::service('path.matcher')->isFrontPage();
+     if (\Drupal::config('front_page.settings')->get('enable', '') && $isFrontPage) {
+ 
+-
+       $roles = \Drupal::currentUser()->getRoles();
+       $config = \Drupal::configFactory()->get('front_page.settings');
+       $current_weigth = NULL;
+@@ -76,8 +75,9 @@ class FrontPageSubscriber implements EventSubscriberInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  static function getSubscribedEvents() {
++  public static function getSubscribedEvents() {
+     $events[KernelEvents::REQUEST][] = ['initData'];
+     return $events;
+   }
++
+ }
+diff --git a/src/Form/FrontPageHomeLinksForm.php b/src/Form/FrontPageHomeLinksForm.php
+index dd6a966..33294c6 100644
+--- a/src/Form/FrontPageHomeLinksForm.php
++++ b/src/Form/FrontPageHomeLinksForm.php
+@@ -4,7 +4,6 @@ namespace Drupal\front_page\Form;
+ 
+ use Drupal\Core\Form\ConfigFormBase;
+ use Drupal\Core\Form\FormStateInterface;
+-use Drupal\Core\Url;
+ 
+ /**
+  * Configure site information settings for this site.
+@@ -38,7 +37,7 @@ class FrontPageHomeLinksForm extends ConfigFormBase {
+       '#default_value' => $config->get('home_link_path'),
+       '#cols' => 20,
+       '#rows' => 1,
+-      '#description' => $this->t('Specify where the user should be redirected to. An example would be <em>/node/12</em>. Leave blank when you\'re not using HOME redirect.'),
++      '#description' => $this->t("Specify where the user should be redirected to. An example would be <em>/node/12</em>. Leave blank when you're not using HOME redirect."),
+       '#field_prefix' => $base_url,
+     ];
+ 
+@@ -54,4 +53,5 @@ class FrontPageHomeLinksForm extends ConfigFormBase {
+       ->save();
+     parent::submitForm($form, $form_state);
+   }
++
+ }
+diff --git a/src/Form/FrontPageSettingsForm.php b/src/Form/FrontPageSettingsForm.php
+index 71c6169..fcccf6b 100644
+--- a/src/Form/FrontPageSettingsForm.php
++++ b/src/Form/FrontPageSettingsForm.php
+@@ -2,10 +2,8 @@
+ 
+ namespace Drupal\front_page\Form;
+ 
+-use Drupal\Core\Database\Database;
+ use Drupal\Core\Form\ConfigFormBase;
+ use Drupal\Core\Form\FormStateInterface;
+-use Drupal\Core\Url;
+ 
+ /**
+  * Configure site information settings for this site.
+@@ -37,7 +35,7 @@ class FrontPageSettingsForm extends ConfigFormBase {
+       '#type' => 'checkbox',
+       '#title' => $this->t('Front Page Override'),
+       '#description' => $this->t('Enable this if you want the front page module to manage the home page.'),
+-      '#default_value' => $config->get('enable') ?: false,
++      '#default_value' => $config->get('enable') ?: FALSE,
+     ];
+ 
+     // Load any existing settings and build the by redirect by role form.
+@@ -63,7 +61,7 @@ class FrontPageSettingsForm extends ConfigFormBase {
+       $form['roles'][$rid]['enabled'] = [
+         '#type' => 'checkbox',
+         '#title' => $this->t('Enable'),
+-        '#value' => isset($role_config['enabled']) ? $role_config['enabled'] : false,
++        '#value' => isset($role_config['enabled']) ? $role_config['enabled'] : FALSE,
+       ];
+ 
+       $form['roles'][$rid]['weigth'] = [
+@@ -94,7 +92,7 @@ class FrontPageSettingsForm extends ConfigFormBase {
+    * {@inheritdoc}
+    */
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+-//    parent::validateForm($form, $form_state);
++    // parent::validateForm($form, $form_state);.
+     $rolesList = $form_state->getUserInput()['roles'];
+     if ($rolesList) {
+       foreach ($rolesList as $rid => $role) {
+@@ -111,12 +109,12 @@ class FrontPageSettingsForm extends ConfigFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $config = \Drupal::configFactory()->getEditable('front_page.settings');
+ 
+-    //Set if all config are enabled or not.
++    // Set if all config are enabled or not.
+     $config->set('enable', $form_state->getValue('front_page_enable'));
+ 
+-    //Set config by role.
++    // Set config by role.
+     $rolesList = $form_state->getUserInput()['roles'];
+-     if (is_array($rolesList)) {
++    if (is_array($rolesList)) {
+       foreach ($rolesList as $rid => $role) {
+         $config->set('rid_' . $rid, $role);
+       }
+@@ -125,4 +123,5 @@ class FrontPageSettingsForm extends ConfigFormBase {
+     $config->save();
+     parent::submitForm($form, $form_state);
+   }
++
+ }

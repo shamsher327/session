@@ -1,0 +1,14 @@
+{% if content.field_bv_product_id[0] %}
+    <div id="BVRRContainer"></div>
+{% elseif  content.field_hn_product_ratings_and_rev is defined %}
+    <section class="grid-container rating-review"
+             data-eventLabel="{{ node.label }}"
+             data-contentName="{{ node.type.entity.label }}">
+        <div class="grid-x grid-margin-x">
+            <div
+                    class="cell small-24 large-20 large-offset-2 xlarge-16 xlarge-offset-4">
+                {{ content.field_hn_product_ratings_and_rev }}
+            </div>
+        </div>
+    </section>
+{% endif %}

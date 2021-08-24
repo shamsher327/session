@@ -1,0 +1,260 @@
+<?php
+
+/**
+ * @file
+ * Token callbacks for the token module.
+ */
+
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\ln_srh_schema_tokens\NodeTokenUtility;
+
+/**
+ * Token info set here.
+ *
+ * @return array
+ *   Tokan info
+ */
+function ln_srh_schema_tokens_token_info() {
+  $info = [];
+  // For rating tokens.
+  $info['tokens']['node']['paragraphfields'] = [
+    'name' => t('paragraph fields'),
+    'description' => t('The name of the paragraph.'),
+  ];
+
+  return $info;
+}
+
+/**
+ * Hook_tokens for add/update.
+ *
+ * @param string $type
+ *   Type of node.
+ * @param string $tokens
+ *   List of tokens in array.
+ * @param array $data
+ *   List of node.
+ * @param array $options
+ *   For the feature set options.
+ * @param \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata
+ *   For the feature use called metadata object.
+ *
+ * @return array
+ *   Return tokens with updated value.
+ */
+function ln_srh_schema_tokens_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $node_type = "";
+  $node_token_utility = new NodeTokenUtility();
+  if ($node && is_object($node)) {
+    $node_type = $node->bundle();
+  }
+
+  // Set paragraph ingredients to a token: paragraphfields.
+  if (isset($node_type) && $node_type == 'recipe' && $type == 'node' && !empty($data['node']) && array_key_exists('paragraphfields', $tokens)) {
+    foreach ($tokens as $original) {
+      $node = $data['node'];
+      $paragraphs = $node->get('field_recipe_ingredient')->getValue();
+      foreach ($paragraphs as $value) {
+        $target_id = $value['target_id'];
+        $paragraph_ingrediants = Paragraph::load($target_id);
+        $ingredient_fullname = !empty($paragraph_ingrediants->hasField('field_ingredient_fullname')) ?
+          $paragraph_ingrediants->get('field_ingredient_fullname')->getString() : '';
+        $ingredient_name[] = $ingredient_fullname;
+      }
+      $replacements[$original] = !empty($ingredient_name) ? implode(',', array_values($ingredient_name)) : '';
+    }
+  }
+
+  // Set keywords token value from recipe tags.
+  if (isset($node_type) && $node_type == 'recipe' && $type == 'node' && !empty($data['node']) && array_key_exists('recipekeywords', $tokens)) {
+    setlocale(LC_CTYPE, 'en_US.utf8');
+    // Process tokens.
+    foreach ($tokens as $original) {
+      $node = $data['node'];
+      // Get recipe tags values.
+      $field_recipe_tags = $node->get('field_recipe_tags')->getValue();
+      $tags_name = [];
+      // Traverse recipe tags.
+      foreach ($field_recipe_tags as $value) {
+        $target_id = $value['target_id'];
+        // Get storage for taxnomy term.
+        $term_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+        // Load taxonomy term from id.
+        $tags_data = $term_storage->load($target_id);
+        // Check for tags terms is not empty.
+        if (!empty($tags_data)) {
+          // Get term name value.
+          $tags_value = $tags_data->get('name')->first()->get('value')->getString();
+          // Set tag name value in tags_name array.
+          $tags_name[] = !empty($tags_value) ? $tags_value : '';
+        }
+      }
+      // Set tag name in replacement token array.
+      $replacements[$original] = $tags_name;
+      $replacements[$original] = implode(',', array_values($replacements[$original]));
+    }
+  }
+
+  // Set images in recipe image token recipeimages.
+  if (isset($node_type) && $node_type == 'recipe' && $type == 'node' &&
+    !empty($data['node']) && array_key_exists('recipeimages', $tokens)) {
+    foreach ($tokens as $original) {
+      $node = $data['node'];
+      $paragraphs = $node->hasField('field_recipe_images') ?
+        $node->get('field_recipe_images')->getValue() : [];
+      foreach ($paragraphs as $value) {
+        $target_id = $value['target_id'];
+        $paragraph_images = Paragraph::load($target_id);
+        $mime_type = !empty($paragraph_images->hasField('field_media_info_mime_type')) ?
+          $paragraph_images->get('field_media_info_mime_type')->getString() : '';
+        if (strpos($mime_type, 'image/') !== false) {
+          $image_fullname = !empty($paragraph_images->hasField('field_media_info_path')) ?
+            $paragraph_images->get('field_media_info_path')->getString() : '';
+          $image_name[] = $image_fullname;
+        }
+      }
+      $replacements[$original] = !empty($image_name) ? $image_name : '';
+      if (is_array($replacements[$original])) {
+        $replacements[$original] = implode(',', array_values($replacements[$original]));
+      }
+    }
+  }
+
+  // Set images in recipe image token recipecategory.
+  if (isset($node_type) && $node_type == 'recipe' && $type == 'node' &&
+    !empty($data['node']) && array_key_exists('recipecategory', $tokens)) {
+    foreach ($tokens as $original) {
+      $node = $data['node'];
+      $recipe_tags_heirarchical = $node->hasField('field_recipe_tag_course') ?
+        $node->get('field_recipe_tag_course')->getValue() : [];
+      if (!empty($recipe_tags_heirarchical)) {
+        foreach ($recipe_tags_heirarchical as $value) {
+          if(!empty($value)) {
+            $term = Term::load($value['target_id']);
+            if (!empty($term)) {
+              $recipe_category[] = $term->getName();
+            }
+          }
+        }
+        $replacements[$original] = !empty($recipe_category) ? $recipe_category : [];
+        $replacements[$original] = implode(',', array_values($replacements[$original]));
+      }
+    }
+  }
+
+  // Array having macronutrient id and macronutrient token name.
+  $macronutrient = [
+    94 => 'calories',
+    101 => 'cholesterolContent',
+    96 => 'proteinContent',
+    95 => 'carbohydrateContent',
+    99 => 'sugarContent',
+    98 => 'fiberContent',
+    100 => 'sodiumContent',
+    97 => 'fatContent',
+    102 => 'saturatedFatContent',
+  ];
+  // Array having macronutrient id and macronutrient name of recipe.
+  $macronutrient_names = [
+    94 => 'energykilocalories',
+    101 => 'cholesterol',
+    96 => 'protein',
+    95 => 'carbohydrates',
+    99 => 'sugar',
+    98 => 'fiber',
+    100 => 'sodium',
+    97 => 'fat',
+    102 => 'saturedfat',
+  ];
+  $searches = ["\r", "\n", "\r\n"];
+  // Process $macronutrient array to fill toekn value.
+  foreach ($macronutrient as $macronutrient_id => $macronurient_name) {
+    // Match macronutrient name of $macronutrient array with token.
+    if (isset($node_type) && $node_type == 'recipe' && $type == 'node' &&
+      !empty($data['node']) && array_key_exists($macronurient_name, $tokens)) {
+      // Get nutrient name from $macronutrient_names array so recipe
+      // macronutrient can be accessed.
+      $nutrient = $macronutrient_names[$macronutrient_id];
+      // Process tokens.
+      foreach ($tokens as $original) {
+        $node = $data['node'];
+        // Get recipe macronutrient field value.
+        $paragraphs = $node->get('field_recipe_macronutrients')->getValue();
+        // Traverse all macronutrient paragraphs.
+        foreach ($paragraphs as $value) {
+          $target_id = $value['target_id'];
+          // Load macronutrient paragraph.
+          $paragraph_macronutrients = Paragraph::load($target_id);
+          // Get nutrient id from recipe to match it with $macronutrient array's
+          // $macronutrient_id.
+          $nutrients_id = !empty($paragraph_macronutrients->hasField('field_para_macro_id')) ?
+            $paragraph_macronutrients->get('field_para_macro_id')->getString() : '';
+          // If match then fill token value.
+          if ($nutrients_id == $macronutrient_id) {
+            // Get nutrient value from recipe node.
+            $data_nutrient = $node_token_utility->getRecipeMacroNutrientsValue($node, $nutrient);
+            // Generate original token from macronutrient name.
+            $token_original = '[node:' . $macronurient_name . ']';
+            $replacements[$token_original] = str_replace($searches, "", $data_nutrient);
+          }
+        }
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Hook_tokens_alter.
+ *
+ * @param array $replacements
+ *   Token replacemnt with value.
+ * @param array $context
+ *   Context have types.
+ * @param \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata
+ *   Get metadata.
+ */
+function ln_srh_schema_tokens_tokens_alter(array &$replacements, array $context, BubbleableMetadata $bubbleable_metadata) {
+
+  if ($context['type'] == 'node' && !empty($context['data']['node'])) {
+    $node = $context['data']['node'];
+    $searches = ["\r", "\n", "\r\n"];
+    if (isset($replacements['[node:field_recipe_steps]'])) {
+      $paragraphs = $node->get('field_recipe_steps')->getValue();
+      foreach ($paragraphs as $value) {
+        $target_id = $value['target_id'];
+        $paragraph_steps = Paragraph::load($target_id);
+        $paragraphs_steps = $paragraph_steps->field_steps_text->value;
+        $paragraphs_steps = str_replace([","], "", $paragraphs_steps);
+        $paragraphs_steps = str_replace($searches, " ", $paragraphs_steps);
+        $paragraphs_steps_desc[] = $paragraphs_steps;
+      }
+
+      $replacements['[node:field_recipe_steps]'] = implode(',', $paragraphs_steps_desc);
+    }
+
+    $nutri_term_name = [];
+    if (isset($replacements['[node:field_recipe_tag_nutritional]'])) {
+      $nutritional_terms = $node->get('field_recipe_tag_nutritional')->getValue();
+      if (!empty($nutritional_terms)) {
+        foreach ($nutritional_terms as $nutritional_term) {
+          $nutri_tags_id = $nutritional_term['target_id'];
+          if (!empty($nutri_tags_id)) {
+            $nutri_term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($nutri_tags_id);
+            if (!empty($nutri_term)) {
+              $nutri_term_name[] = $nutri_term->getName();
+            }
+          }
+        }
+      }
+      if (!empty($nutri_term_name)) {
+        $replacements['[node:field_recipe_tag_nutritional]'] = str_replace($searches, "", implode(',', $nutri_term_name));
+      }
+    }
+  }
+}

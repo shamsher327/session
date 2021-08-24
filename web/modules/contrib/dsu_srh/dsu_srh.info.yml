@@ -1,0 +1,28 @@
+name: 'Lightnest SRH Connector'
+description: 'Connect with Smart Recipe Hub, import and syncronize recipes.'
+package: 'Lightnest'
+type: module
+version: 8.x-2.6.5
+core: 8.x
+core_version_requirement: '^8 || ^9'
+configure: dsu_srh.config
+dependencies:
+  - block_content
+  - drupal:entity_browser
+  - drupal:entity_reference_revisions
+  - drupal:jquery_ui_spinner
+  - drupal:lightning_media
+  - drupal:media
+  - drupal:metatag
+  - drupal:options
+  - drupal:paragraphs
+  - drupal:path
+  - drupal:pathauto
+  - drupal:user
+  - drupal:video_embed_field
+  - drupal:features
+  - drupal:datalayer
+enforced:
+  module:
+    - dsu_srh
+core_incompatible: false

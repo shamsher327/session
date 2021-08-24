@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dsu_classy_text_dark_background
+label: 'Dark Background'
+classes: "dark-bg\r\nwhite-text"

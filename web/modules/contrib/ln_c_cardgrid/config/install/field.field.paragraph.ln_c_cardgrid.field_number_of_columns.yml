@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_of_columns
+    - paragraphs.paragraphs_type.ln_c_cardgrid
+  module:
+    - options
+id: paragraph.ln_c_cardgrid.field_number_of_columns
+field_name: field_number_of_columns
+entity_type: paragraph
+bundle: ln_c_cardgrid
+label: 'Number of Columns'
+description: 'Select the number of cards that will appear in a row'
+required: true
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

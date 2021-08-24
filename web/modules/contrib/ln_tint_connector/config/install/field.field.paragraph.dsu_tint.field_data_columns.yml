@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_data_columns
+    - paragraphs.paragraphs_type.dsu_tint
+  module:
+    - options
+id: paragraph.dsu_tint.field_data_columns
+field_name: field_data_columns
+entity_type: paragraph
+bundle: dsu_tint
+label: 'Data Columns'
+description: 'Select the number of columns to display in TINT widget (Maximum: 8 columns)'
+required: true
+translatable: false
+default_value:
+  -
+    value: 4
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
+

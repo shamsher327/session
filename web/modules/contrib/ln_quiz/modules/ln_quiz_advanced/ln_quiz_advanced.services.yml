@@ -1,0 +1,8 @@
+services:
+  ln_quiz_advanced.config_replacer:
+    class: Drupal\ln_quiz_advanced\Services\ConfigReplace
+    arguments: ['@file_system', '@config.factory', '@module_handler', '@ln_quiz_advanced.logger.channel', '@?language.config_factory_override']
+  ln_quiz_advanced.logger.channel:
+      class: Drupal\Core\Logger\LoggerChannel
+      factory: logger.factory:get
+      arguments: ['ln_quiz_advanced']

@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ln_bazaarvoice_category.field_bv_external_id
+    - field.field.taxonomy_term.ln_bazaarvoice_category.field_bv_image
+    - field.field.taxonomy_term.ln_bazaarvoice_category.field_bv_link_to
+    - taxonomy.vocabulary.ln_bazaarvoice_category
+  module:
+    - link
+    - text
+id: taxonomy_term.ln_bazaarvoice_category.default
+targetEntityType: taxonomy_term
+bundle: ln_bazaarvoice_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_bv_external_id:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+    type: string
+    region: content
+  field_bv_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {}
+    region: content
+  field_bv_link_to:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {}
+    type: link
+    region: content
+hidden:
+  field_link_to: true
+  search_api_excerpt: true

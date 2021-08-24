@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_flyout_tips_title
+_core:
+  default_config_hash: '-IrysR_Ha3U_p3d3UvcBOo4AHWx1x5GKE74Q-W4fuG0'
+id: config_pages.mymenuiq_configuration.field_flyout_tips_title
+field_name: field_flyout_tips_title
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'MenuFlyout Nutritional Tips Title'
+description: 'Nutritional Tips Heading in Menu Flyout.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Nutritional tips'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+ln_c_hotspot_areas.delete_hotspot:
+  path: '/hotspot-areas/{hid}/delete'
+  defaults:
+    _title: 'Edit hotspot area'
+    _controller: '\Drupal\ln_c_hotspot_areas\Controller\HotspotAreasController::deleteAction'
+  requirements:
+    _permission: 'edit hotspot area'
+
+ln_c_hotspot_areas.create_hotspot:
+  path: '/hotspot-areas/create'
+  defaults:
+    _title: 'Create hotspot area'
+    _controller: '\Drupal\ln_c_hotspot_areas\Controller\HotspotAreasController::createAction'
+  requirements:
+    _permission: 'edit hotspot area'
+
+ln_c_hotspot_areas.update_hotspot:
+  path: '/hotspot-areas/{hid}/update'
+  defaults:
+    _title: 'Update hotspot area'
+    _controller: '\Drupal\ln_c_hotspot_areas\Controller\HotspotAreasController::updateAction'
+  requirements:
+    _permission: 'edit hotspot area'

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1F0WPyfg7RTVoovSGYTmVPX_zEvbW4G7uUCTHOvMkyk
+name: Tag
+vid: dsu_tag
+description: ''
+weight: 0

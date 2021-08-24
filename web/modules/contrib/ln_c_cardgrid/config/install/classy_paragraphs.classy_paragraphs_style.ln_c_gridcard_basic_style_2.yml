@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ln_c_gridcard_basic_style_2
+label: 'Basic Style 2'
+classes: grid-card-extended-card

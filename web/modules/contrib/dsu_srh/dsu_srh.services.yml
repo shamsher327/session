@@ -1,0 +1,12 @@
+services:
+  dsu_srh.importer:
+    class: Drupal\dsu_srh\Controller\Importer
+    arguments:
+      - '@config.factory'
+      - '@serialization.json'
+  dsu_srh.search:
+    class: Drupal\dsu_srh\Controller\SearchService
+    arguments:
+      - '@config.factory'
+      - '@serialization.json'
+      - '@dsu_srh.importer'

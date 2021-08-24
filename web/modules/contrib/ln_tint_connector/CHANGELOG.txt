@@ -1,0 +1,14 @@
+## 1.0.x (April 28, 2021)
+
+- Updated help text for fields and the order of all fields.
+
+## Steps:
+- Check Lightnest Components: Tint module should enable on your site.
+- Go to "/node/add/dsu_component_page"
+- Choose "Add paragraph as Content: Tint" under components field.
+- Add details for Data personalization Id and Data ID recieved from TINT.
+- Click on save.
+
+##Validation
+- Every field has help text and that should end without dot. 
+- Order of fields would be Headline,Intro text,Data ID, Data personalization ID,Data Columns,Height, Data Expand, Data Clickformore,Data Infinitescroll,Tags,Section ID

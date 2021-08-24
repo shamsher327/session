@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_macro_quantity
+    - paragraphs.paragraphs_type.macronutrients
+id: paragraph.macronutrients.field_para_macro_quantity
+field_name: field_para_macro_quantity
+entity_type: paragraph
+bundle: macronutrients
+label: Quantity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

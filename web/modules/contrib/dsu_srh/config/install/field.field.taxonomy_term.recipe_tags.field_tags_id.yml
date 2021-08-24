@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tags_id
+    - taxonomy.vocabulary.recipe_tags
+id: taxonomy_term.recipe_tags.field_tags_id
+field_name: field_tags_id
+entity_type: taxonomy_term
+bundle: recipe_tags
+label: 'Tags ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

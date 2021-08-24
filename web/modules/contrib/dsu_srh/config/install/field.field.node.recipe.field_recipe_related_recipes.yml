@@ -1,0 +1,117 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_related_recipes
+    - node.type.recipe
+    - paragraphs.paragraphs_type.related_recipes_in_other_languag
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_recipe_related_recipes
+field_name: field_recipe_related_recipes
+entity_type: node
+bundle: recipe
+label: 'Recipe related recipes in other languages'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      related_recipes_in_other_languag: related_recipes_in_other_languag
+    target_bundles_drag_drop:
+      accordion:
+        weight: 31
+        enabled: false
+      accordion_item:
+        weight: 32
+        enabled: false
+      c_countdown:
+        weight: 33
+        enabled: false
+      c_image:
+        weight: 34
+        enabled: false
+      c_teaserslider:
+        weight: 35
+        enabled: false
+      c_teaser_slide:
+        weight: 36
+        enabled: false
+      forms:
+        weight: 37
+        enabled: false
+      layout_25_25_50:
+        weight: 38
+        enabled: false
+      layout_25_50_25:
+        weight: 39
+        enabled: false
+      layout_25_75:
+        weight: 40
+        enabled: false
+      layout_33_66:
+        weight: 41
+        enabled: false
+      layout_50_25_25:
+        weight: 42
+        enabled: false
+      layout_66_33:
+        weight: 43
+        enabled: false
+      layout_75_25:
+        weight: 44
+        enabled: false
+      layout_columns_1:
+        weight: 45
+        enabled: false
+      layout_columns_2:
+        weight: 46
+        enabled: false
+      layout_columns_20:
+        weight: 47
+        enabled: false
+      layout_columns_3:
+        weight: 48
+        enabled: false
+      layout_columns_4:
+        weight: 49
+        enabled: false
+      ln_c_yt_carousel:
+        weight: 50
+        enabled: false
+      macronutrients:
+        weight: 51
+        enabled: false
+      media_information:
+        weight: 52
+        enabled: false
+      recipe_ingredients:
+        weight: 53
+        enabled: false
+      recipe_steps:
+        weight: 54
+        enabled: false
+      recipe_tools:
+        weight: 55
+        enabled: false
+      recipe_variants:
+        weight: 56
+        enabled: false
+      srh_macronutrients_unittype:
+        weight: 57
+        enabled: false
+      tags_selector:
+        weight: 58
+        enabled: false
+      tips:
+        weight: 59
+        enabled: false
+      related_recipes_in_other_languag:
+        enabled: true
+        weight: 60
+field_type: entity_reference_revisions

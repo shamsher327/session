@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_energybreakdown_disclaimer
+_core:
+  default_config_hash: hPKsZQSY6vqp9VZbyfOg8p4pHAoToLdm_0vu_vMC68U
+id: config_pages.mymenuiq_configuration.field_energybreakdown_disclaimer
+field_name: field_energybreakdown_disclaimer
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'EnergyBreakdown DisclaimerText'
+description: 'Energy Content Breakdown Disclaimer Text in Flyout.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'The energy content breakdown shows the amount of the macronutrients (i.e. carbohydrate, protein and fat) contained in one serving of the recipe and their relative contribution (in %) to the total energy content of the serving.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

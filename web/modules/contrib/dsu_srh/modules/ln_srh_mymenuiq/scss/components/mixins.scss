@@ -1,0 +1,25 @@
+@mixin breakpoint($size) {
+	@if $size == mobile-only {
+	  @media (max-width: 576px) { @content; }
+	} @else if $size == col-sm {
+	  @media (min-width: 576px) { @content; }
+	} @else if $size == col-md {
+	  @media (min-width: 768px) { @content; }
+	} @else if $size == col-lg {
+	  @media (min-width: 992px) { @content; }
+	} @else if $size == col-xl {
+	  @media (min-width: 1200px) { @content; }
+	} @else if($size == col-lg-down) {
+	  @media (max-width: 992px) { @content; }
+	} @else if($size == col-md-only) {
+		@media (min-width: 768px) and (max-width: 991px) { @content; }
+	} @else if($size == col-lg-only) {
+		@media (min-width: 992px) and (max-width: 1199px) { @content; }
+	}
+}
+
+
+@function rem-calc($size) {
+	$remSize: $size / 16;
+	@return #{$remSize}rem;
+}

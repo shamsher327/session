@@ -1,0 +1,10 @@
+accordion:
+  version: 1.x
+  css:
+    theme:
+      css/accordion_component.css: {}
+  js:
+    js/accordion_component.js: {}
+  dependencies:
+      - core/jquery
+      - core/jquery.once

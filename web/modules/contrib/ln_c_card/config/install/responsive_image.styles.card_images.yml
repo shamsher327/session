@@ -1,0 +1,35 @@
+uuid: 715adc6f-ad1f-48e7-8a50-c6412d483892
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.cropped_ln_c_card_1_1_small
+    - image.style.cropped_ln_c_card_1_is_to_1_large
+    - image.style.cropped_ln_card_1_1_medium
+  module:
+    - ln_c_card
+id: card_images
+label: ln_card_images
+image_style_mappings:
+  -
+    breakpoint_id: ln_c_card.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cropped_ln_c_card_1_is_to_1_large
+  -
+    breakpoint_id: ln_c_card.medium_tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cropped_ln_card_1_1_medium
+  -
+    breakpoint_id: ln_c_card.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cropped_ln_card_1_1_medium
+  -
+    breakpoint_id: ln_c_card.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cropped_ln_c_card_1_1_small
+breakpoint_group: ln_c_card
+fallback_image_style: '_original image_'

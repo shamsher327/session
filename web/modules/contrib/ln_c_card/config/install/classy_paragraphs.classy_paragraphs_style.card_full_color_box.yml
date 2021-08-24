@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_full_color_box
+label: 'Full color box (5 cards per line)'
+classes: full-color-box

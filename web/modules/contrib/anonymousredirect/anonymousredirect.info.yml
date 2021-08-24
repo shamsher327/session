@@ -1,0 +1,12 @@
+name: 'Anonymous Redirect'
+type: module
+description: 'Redirect anonymous user to login page and prevent access to any pages'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Contributes
+configure: anonymousredirect.whitelist_routes_config_form
+
+# Information added by Drupal.org packaging script on 2020-05-10
+version: '8.x-2.2'
+project: 'anonymousredirect'
+datestamp: 1589103934

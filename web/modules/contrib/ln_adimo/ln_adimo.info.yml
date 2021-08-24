@@ -1,0 +1,12 @@
+name: 'Lightnest Adimo Integration'
+description: Lightnest Drupal module for Adimo services.
+package: 'Lightnest'
+type: module
+version: 8.x-2.2.0
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:field
+  - migrate_source_csv:migrate_source_csv
+  - dsu_c_core
+configure: ln_adimo.migrate.admin.form

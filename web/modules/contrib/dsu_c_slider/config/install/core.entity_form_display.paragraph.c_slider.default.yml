@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_slider.field_c_slide
+    - field.field.paragraph.c_slider.field_classy_paragraph_style
+    - field.field.paragraph.c_slider.field_section_id
+    - paragraphs.paragraphs_type.c_slider
+  module:
+    - paragraphs
+id: paragraph.c_slider.default
+targetEntityType: paragraph
+bundle: c_slider
+mode: default
+content:
+  field_c_slide:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_classy_paragraph_style:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_id:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_classy_paragraph_style: true
+  status: true
+  uid: true

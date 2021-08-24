@@ -1,0 +1,14 @@
+{
+  "name": "lightnest/ln_metatag",
+  "description": "Allows to set default metatags for seo best practice.",
+  "type": "drupal-module",
+  "keywords": [
+    "open graph",
+    "twitter card",
+    "seo"
+  ],
+  "require": {
+    "drupal/schema_metatag": "^2.1",
+    "drupal/structured_data": "^1.2"
+  }
+} 

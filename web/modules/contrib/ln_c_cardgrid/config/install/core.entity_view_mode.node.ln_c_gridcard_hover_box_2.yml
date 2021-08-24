@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Grid Card Hover Box 2'
+id: node.ln_c_gridcard_hover_box_2
+label: 'Grid Card Hover Box 2'
+targetEntityType: node
+cache: true

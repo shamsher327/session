@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+_core:
+  default_config_hash: qqUkQ-cbi-M84WL8ITf0-GY9jwl8iIbDrh82zMDy4gM
+id: config_pages.field_min_range_balance_improvem
+field_name: field_min_range_balance_improvem
+entity_type: config_pages
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+ln_c_card.small:
+  label: small
+  mediaQuery: '(min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+
+ln_c_card.medium:
+  label: medium
+  mediaQuery: '(min-width: 468px) and (max-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+
+ln_c_card.medium_tablet:
+  label: medium_tablet
+  mediaQuery: '(min-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+ln_c_card.large:
+  label: large
+  mediaQuery: '(min-width: 992px)'
+  weight: 2
+  multipliers:
+    - 1x

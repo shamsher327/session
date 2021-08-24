@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: text_background_image_1920x795_
+label: 'Text Background Image (1920X795)'
+effects:
+  28e66386-9863-4cbe-bb6f-a2f4c43afb2d:
+    uuid: 28e66386-9863-4cbe-bb6f-a2f4c43afb2d
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: 795
+      upscale: true

@@ -1,0 +1,17 @@
+# Gigya Custom API endpoints
+    
+ln_ciam.post:
+  path: 'gigya-api/postextension.json'
+  defaults: { _controller: '\Drupal\ln_ciam\Controller\GigyaAPIController::post_extension' }
+  methods:  [POST]
+  requirements:
+    # It is accessable for anonymous users.
+    _access: 'TRUE'
+
+ln_ciam.settings:
+  path: '/admin/config/lightnest/ln-ciam/settings'
+  defaults:
+    _form: '\Drupal\ln_ciam\Form\GigyaSettingsForm'
+    _title: 'Update key path for Gigya module'
+  requirements:
+    _permission: 'administer site configuration'

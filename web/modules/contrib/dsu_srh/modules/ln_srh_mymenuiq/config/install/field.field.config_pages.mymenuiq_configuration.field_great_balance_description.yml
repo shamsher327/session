@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_great_balance_description
+_core:
+  default_config_hash: GJJCYMJ57Hz2lthEmtVB_i27k6wA0LnJ44-FsO9PxQk
+id: config_pages.mymenuiq_configuration.field_great_balance_description
+field_name: field_great_balance_description
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Great Balance Description'
+description: 'Description For Great Balance.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'This menu has great nutritional balance, providing a good variety of food groups and key nutrients.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

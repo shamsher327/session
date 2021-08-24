@@ -1,0 +1,20 @@
+<div class="image-hotspot-areas-wrapper" data-entity-id="{{ info.entity_id }}" data-lang="{{ info.lang }}" data-field-name="{{ info.field_name }}"  data-image-style="{{ info.image_style }}" data-fid="{{ info.fid }}">
+  <div class="image-wrapper">
+    {{ image }}
+  </div>
+  {% if info.editable %}
+    <a href="javascript:void(0);" class="open-close-configuration">Configuration Image Hotspots Areas</a>
+    <div class="configuration-image-hotspot-areas-wrapper" style="display: none;">
+      <div class="labels"></div>
+      <button class="add-button action" title="{% trans %}Add new hotspot area to image{% endtrans %}">Add hotspot area</button>
+      <div class="edit-form-wrapper">
+        <div class="form-header">
+          <div class="close-button"></div>
+        </div>
+        <div class="form-messages" tabindex="1"></div>
+        <p class="disclaimer">{% trans %}Please, first select or edit an area in the image.{% endtrans %}</p>
+        {{ form }}
+      </div>
+    </div>
+  {% endif %}
+</div>

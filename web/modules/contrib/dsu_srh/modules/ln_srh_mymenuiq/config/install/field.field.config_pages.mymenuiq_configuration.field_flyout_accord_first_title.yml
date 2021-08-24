@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_flyout_accord_first_title
+_core:
+  default_config_hash: U9GNnTlEAz9K1FcsbAJcjCR7eJ5jiyAbjW14_KfOXQE
+id: config_pages.mymenuiq_configuration.field_flyout_accord_first_title
+field_name: field_flyout_accord_first_title
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'MenuFlyout Accordion First Title'
+description: 'Text to Appear for Menu Flyout Overlay Accordion First Title.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Want to know more about MyMenu IQ™?'
+default_value_callback: ''
+settings: {  }
+field_type: string

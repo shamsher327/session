@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_min_value_great_balance
+_core:
+  default_config_hash: 1bUj9W000UcIq7Z-Vd7Bz8as5sCf1MfS2R2x2KtAcls
+id: config_pages.mymenuiq_configuration.field_min_value_great_balance
+field_name: field_min_value_great_balance
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Min Value Great Balance'
+description: 'Min Value for Great Balance Nutritional Score.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 70
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

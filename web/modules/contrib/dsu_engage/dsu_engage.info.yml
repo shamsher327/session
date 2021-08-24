@@ -1,0 +1,10 @@
+name: Lightnest Engage
+description: 'Provide a "Contact us" form connected with Engage.'
+type: module
+core: 8.x
+version: 8.x-2.0.5
+core_version_requirement: ^8 || ^9
+package: Lightnest
+dependencies:
+  - advanced_datalayer
+  - dsu_c_core

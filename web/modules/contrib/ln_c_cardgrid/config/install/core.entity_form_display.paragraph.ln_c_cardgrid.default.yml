@@ -1,0 +1,82 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ln_c_cardgrid.field_c_cardgrid_title_style
+    - field.field.paragraph.ln_c_cardgrid.field_ln_c_card_allow_spacing
+    - field.field.paragraph.ln_c_cardgrid.field_ln_c_card_carousels
+    - field.field.paragraph.ln_c_cardgrid.field_ln_c_card_title
+    - field.field.paragraph.ln_c_cardgrid.field_ln_c_grid_card_style
+    - field.field.paragraph.ln_c_cardgrid.field_ln_card_color
+    - field.field.paragraph.ln_c_cardgrid.field_number_of_columns
+    - field.field.paragraph.ln_c_cardgrid.field_section_id
+    - paragraphs.paragraphs_type.ln_c_cardgrid
+  module:
+    - paragraphs
+id: paragraph.ln_c_cardgrid.default
+targetEntityType: paragraph
+bundle: ln_c_cardgrid
+mode: default
+content:
+  field_c_cardgrid_title_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ln_c_card_allow_spacing:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ln_c_card_carousels:
+    type: entity_reference_paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_ln_c_card_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ln_c_grid_card_style:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ln_card_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_number_of_columns:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_id:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

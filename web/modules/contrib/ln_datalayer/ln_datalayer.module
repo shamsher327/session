@@ -1,0 +1,278 @@
+<?php
+
+/**
+ * @file
+ * Provides primary Drupal hook implementations.
+ */
+
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\RedirectCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\ln_datalayer\Ajax\PushCommand;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Calculate some tags on clien side.
+ */
+function ln_datalayer_page_attachments(array &$attachments) {
+
+  $datalayer_manager = \Drupal::service('advanced_datalayer.manager');
+  $datalayer_tags = $datalayer_manager->getGlobalDatalayerTags();
+
+  // Check if we have any datalayer tags, possibly it is disabled.
+  if (!empty($datalayer_tags) && advanced_datalayer_is_current_route_supported()) {
+
+    $module_handler = \Drupal::service('module_handler');
+    $module_path = $module_handler->getModule('ln_datalayer')->getPath();
+
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#type' => 'html_tag',
+        '#tag' => 'script',
+        '#attributes' => [
+          'type' => 'text/javascript',
+          'src' => '/' . $module_path . '/js/isMobile.min.js',
+        ],
+        '#weight' => -96,
+      ],
+      'ln_datalayers_mobile_detect',
+    ];
+
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#type' => 'html_tag',
+        '#tag' => 'script',
+        '#attributes' => [
+          'type' => 'text/javascript',
+          'src' => '/' . $module_path . '/js/ln_datalayer.js',
+        ],
+        '#weight' => -95,
+      ],
+      'ln_datalayers',
+    ];
+  }
+
+  // Ajax datalayer JS command.
+  $attachments['#attached']['library'][] = 'ln_datalayer/ajax';
+}
+
+// @TODO - Old code below from v1.x, will be removed in future releases.
+
+/**
+ * Get list actions by form_id to use ajax.
+ *
+ * @param mixed $form_id
+ *   For ID.
+ *
+ * @return array
+ *   Array of forms to apply.
+ */
+function getlist_forms($form_id) {
+  $configs = \Drupal::config('ln_datalayer.settings');
+  $data = $configs->getRawData();
+  $list = [];
+  if (count($data) > 0) {
+    for ($x = 0; $x < count($data); $x++) {
+      $value = explode(':', $configs->get('ln_datalayer_' . $x));
+      if (in_array($form_id, $value)) {
+        $list[] = $configs->get('ln_datalayer_' . $x);
+      }
+    }
+  }
+
+  return $list;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ln_datalayer_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  $list = getlist_forms($form_id);
+  if (count($list) > 0) {
+    $selector = "ajaxify_submit_form_" . $form_id;
+    $form['#prefix'] = '<div id="' . $selector . '">';
+    $form['#suffix'] = '</div>';
+    foreach ($list as $value) {
+      $form['status_messages_' . $form_id] = [
+        '#type' => 'status_messages',
+        '#weight' => -10,
+      ];
+      $form['form_id'] = [
+        '#type' => 'hidden',
+        '#value' => $form_id,
+      ];
+      $value = explode(':', $value);
+
+      $action = $value[1];
+      // Adjust the form to use ajax submit.
+      $form['actions'][$action]['#ajax'] = [
+        'callback' => 'ajaxify_submit_forms_form_ajax_callback',
+        'wrapper' => $selector,
+        'effect' => 'fade',
+        '#attributes' => [
+          'class' => [
+            'use-ajax',
+          ],
+        ],
+      ];
+    }
+  }
+}
+
+/**
+ * Define a validation for forms.
+ */
+function ajaxify_submit_forms_form_ajax_callback(&$form, FormStateInterface &$form_state) {
+  $response = new AjaxResponse();
+  $form_id = $form_state->getUserInput()['form_id'];
+  if ($form_state->hasAnyErrors()) {
+    $wrapper_id = '#ajaxify_submit_form_' . $form_id;
+    ln_datalayer_form_ajax_validate($wrapper_id, $form, $form_id, $response, $form_state);
+  }
+  else {
+    ln_datalayer_form_ajax_response($form_id, $response, $form_state);
+  }
+  return $response;
+}
+
+/**
+ * Define responses.
+ */
+function ln_datalayer_form_ajax_response($form_id, $response, &$form_state) {
+  switch ($form_id) {
+    case 'user_login_form':
+      $current_user = \Drupal::currentUser();
+      $uid = $current_user->id();
+      $user = User::load($uid);
+      $user_type = ($user->get('field_user_type')->value == 1) ? 'nestle_employee' : 'agency';
+      $response->addCommand(new PushCommand([
+        'event' => 'userLogin',
+        'eventCategory' => 'account',
+        'eventAction' => 'login-successful',
+        'eventLabel' => 'email',
+        'accountType' => $user_type,
+        'loginStatus' => 'yes',
+        'loginType' => 'email',
+        'userID' => $current_user->id(),
+        'userID_User' => 'ID' . $current_user->id(),
+        'userType' => $user_type,
+        'login-completed' => 1,
+        'login-completed:email' => 1,
+      ]));
+
+      $response->addCommand(new PushCommand([
+        'event' => 'userLogin',
+        'eventCategory' => 'account',
+        'eventAction' => 'completionScreen',
+        'eventLabel' => 'email',
+        'login-error' => 1,
+
+      ]));
+      $destination = \Drupal::request()->query->get('destination');
+      $redirect_url = (!is_null($destination) && !empty($destination)) ? '/' . $destination : (URL::fromRoute('<front>')
+        ->toString());
+      $response->addCommand(new RedirectCommand($redirect_url));
+      break;
+
+    case 'user_register_form':
+      $user = user_load_by_name($form_state->getValue('name'));
+      $user_type = ($user->get('field_user_type')->value == 1) ? 'nestle_employee' : 'agency';
+      $response->addCommand(new PushCommand([
+        'event' => 'userRegistration',
+        'eventCategory' => 'form:registration',
+        'eventAction' => 'completed_registration',
+        'eventLabel' => 'email',
+        'accountType' => $user_type,
+        'userID' => $user->id(),
+        'userID_User' => 'ID' . $user->id(),
+        'userType' => $user_type,
+        'registrationSubmitted' => 1,
+        'registrationSubmitted:email' => 1,
+      ]));
+      $dsu_security_config = \Drupal::config('dsu_security.settings');
+      $redirect_url = (!empty($dsu_security_config->get('redirect_url'))) ? $dsu_security_config->get('redirect_url') : '/';
+      $response->addCommand(new RedirectCommand($redirect_url, 302));
+      break;
+  }
+  return $response;
+}
+
+/**
+ * Define responses .
+ */
+function ln_datalayer_form_ajax_validate($wrapper_id, $form, $form_id, $response, FormStateInterface &$form_state) {
+  switch ($form_id) {
+    case 'user_login_form':
+      if ($form_state->hasAnyErrors()) {
+        $errors = $form_state->getErrors();
+        // We only remove messages if we get the following error.
+        $reset_message = preg_grep("/(Unrecognized username or password)|(is already taken)./", $errors);
+        if (count($reset_message)) {
+          // Resets the form error status so no form fields are highlighted in
+          // red.
+          $form_state->setRebuild();
+          $form_state->clearErrors();
+
+          // Removes "$name is not recognized as a username or an email.".
+          \Drupal::messenger()->deleteAll();
+          $response->addCommand(new PushCommand([
+            'event' => 'userLogin',
+            'eventCategory' => 'account',
+            'eventAction' => 'login-error',
+            'eventLabel' => 'email',
+            'login-error' => 1,
+          ]));
+          $response->addCommand(new PushCommand([
+            'event' => 'userLogin',
+            'eventCategory' => 'account',
+            'eventAction' => 'login-started:email',
+            'eventLabel' => 'email',
+            'login-started' => 1,
+            'login-started:email' => 1,
+          ]));
+          $response->addCommand(new ReplaceCommand($wrapper_id, $form));
+        }
+        else {
+          $response->addCommand(new ReplaceCommand($wrapper_id, $form));
+        }
+      }
+      break;
+
+    case 'user_register_form':
+      if ($form_state->hasAnyErrors()) {
+        // Validate user already exist by email. Try to load by email.
+        $account = user_load_by_mail($form_state->getValue('mail'));
+        if (empty($account)) {
+          // No success, try to load by name.
+          $account = user_load_by_name($form_state->getValue('name'));
+        }
+        if ($account && \Drupal::currentUser()
+          ->isAnonymous() && $account->id() != 0) {
+          $form_state->setRebuild();
+          $form_state->clearErrors();
+          \Drupal::messenger()->deleteAll();
+          // Send email to user.
+          $mail = _user_mail_notify('status_exist', $account);
+          // Resets the form error status so no form fields are highlighted in.
+          // red.
+          if (!empty($mail)) {
+            \Drupal::messenger()->addMessage(t('An e-mail has been sent with further instructions.'), 'status');
+          }
+          $dsu_security_config = \Drupal::config('dsu_security.settings');
+          $redirect_url = (!empty($dsu_security_config->get('redirect_url'))) ? $dsu_security_config->get('redirect_url') : '/';
+          $response->addCommand(new RedirectCommand($redirect_url, 301));
+        }
+        $response->addCommand(new ReplaceCommand($wrapper_id, $form));
+
+      }
+      else {
+        $response->addCommand(new ReplaceCommand($wrapper_id, $form));
+      }
+      break;
+  }
+  return $response;
+}

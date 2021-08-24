@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_slide_content_position
+field_name: field_slide_content_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: above_center
+      label: 'Top Center'
+    -
+      value: above_left
+      label: 'Top Left'
+    -
+      value: above_right
+      label: 'Top right'
+    -
+      value: bellow_center
+      label: 'Bottom Center'
+    -
+      value: bellow_left
+      label: 'Bottom Left'
+    -
+      value: bellow_right
+      label: 'Bottom Right'
+    -
+      value: over_center
+      label: 'Middle Center'
+    -
+      value: over_right
+      label: 'Middle Right'
+    -
+      value: over_left
+      label: 'Middle Left'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

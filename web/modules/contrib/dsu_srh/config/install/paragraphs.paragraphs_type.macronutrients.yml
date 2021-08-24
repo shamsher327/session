@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: macronutrients
+label: 'SRH Recipe MacroNutrients'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

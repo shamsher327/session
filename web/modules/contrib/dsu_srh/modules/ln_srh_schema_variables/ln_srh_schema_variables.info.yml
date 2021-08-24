@@ -1,0 +1,10 @@
+name: 'LightNest SRH Custom Schema.org variables for recipe'
+description: 'Create new fields in recipe schema'
+type: module
+core: '8.x'
+core_version_requirement: ^8 || ^9
+package: 'Lightnest'
+dependencies:
+  - dsu_srh
+  - schema_metatag
+  - schema_recipe

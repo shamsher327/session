@@ -1,0 +1,10 @@
+{
+  "name": "lightnest/ln_srh_schema_variables",
+  "description": "Lightnest schema variables",
+  "type": "drupal-module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/core": "^8 || ^9"
+  }
+}

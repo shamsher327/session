@@ -1,0 +1,165 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_item
+    - paragraphs.paragraphs_type.ln_c_card
+    - paragraphs.paragraphs_type.ln_c_card_item
+  module:
+    - entity_reference_revisions
+id: paragraph.ln_c_card.field_card_item
+field_name: field_card_item
+entity_type: paragraph
+bundle: ln_c_card
+label: 'Card Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ln_c_card_item: ln_c_card_item
+    target_bundles_drag_drop:
+      ln_c_card_item:
+        enabled: true
+        weight: 47
+      accordion:
+        weight: 48
+        enabled: false
+      accordion_item:
+        weight: 49
+        enabled: false
+      brand_gallery:
+        weight: 50
+        enabled: false
+      c_document:
+        weight: 51
+        enabled: false
+      c_entitycycle:
+        weight: 52
+        enabled: false
+      c_externalvideo:
+        weight: 53
+        enabled: false
+      c_gallery:
+        weight: 54
+        enabled: false
+      c_gallery_item:
+        weight: 55
+        enabled: false
+      c_image:
+        weight: 56
+        enabled: false
+      c_link:
+        weight: 57
+        enabled: false
+      c_link_document_container:
+        weight: 58
+        enabled: false
+      c_map:
+        weight: 59
+        enabled: false
+      c_share_buttons:
+        weight: 60
+        enabled: false
+      c_sideimagetext:
+        weight: 61
+        enabled: false
+      c_slide:
+        weight: 62
+        enabled: false
+      c_slider:
+        weight: 63
+        enabled: false
+      c_tab_item:
+        weight: 64
+        enabled: false
+      c_tabbed_content:
+        weight: 65
+        enabled: false
+      c_teasercycle:
+        weight: 66
+        enabled: false
+      c_teasercycle_item:
+        weight: 67
+        enabled: false
+      c_text:
+        weight: 68
+        enabled: false
+      dsu_c_banner_bubble:
+        weight: 69
+        enabled: false
+      dsu_c_block:
+        weight: 70
+        enabled: false
+      dsu_c_cta_button:
+        weight: 71
+        enabled: false
+      dsu_c_hovercard:
+        weight: 72
+        enabled: false
+      dsu_c_hovercard_item:
+        weight: 73
+        enabled: false
+      dsu_c_socialbuttons:
+        weight: 74
+        enabled: false
+      dsu_c_tab_item:
+        weight: 75
+        enabled: false
+      dsu_c_tabs:
+        weight: 76
+        enabled: false
+      dsu_c_tint:
+        weight: 77
+        enabled: false
+      dsu_c_view:
+        weight: 78
+        enabled: false
+      forms:
+        weight: 79
+        enabled: false
+      layout_columns_1:
+        weight: 80
+        enabled: false
+      layout_columns_2:
+        weight: 81
+        enabled: false
+      layout_columns_3:
+        weight: 82
+        enabled: false
+      layout_columns_4:
+        weight: 83
+        enabled: false
+      layout_columns_5:
+        weight: 84
+        enabled: false
+      lcp_nestle_search_slogan:
+        weight: 85
+        enabled: false
+      ln_c_box_expandable:
+        weight: 86
+        enabled: false
+      ln_c_card:
+        weight: 87
+        enabled: false
+      ln_c_entityslider:
+        weight: 88
+        enabled: false
+      ln_c_flickr:
+        weight: 89
+        enabled: false
+      ln_c_maplocator:
+        weight: 90
+        enabled: false
+      ln_c_yt_carousel:
+        weight: 91
+        enabled: false
+      press_release_carousel:
+        weight: 92
+        enabled: false
+field_type: entity_reference_revisions

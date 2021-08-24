@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_horizontal_aligment
+    - paragraphs.paragraphs_type.c_image
+  module:
+    - options
+id: paragraph.c_image.field_horizontal_aligment
+field_name: field_horizontal_aligment
+entity_type: paragraph
+bundle: c_image
+label: 'Horizontal Aligment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

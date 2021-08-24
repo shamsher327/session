@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_height
+    - paragraphs.paragraphs_type.dsu_tint
+id: paragraph.dsu_tint.field_block_height
+field_name: field_block_height
+entity_type: paragraph
+bundle: dsu_tint
+label: Height
+description: 'Specify the height of the TINT in pixels (default is 500 px). For the height option to work, the Data Expand setting must be set to ´No´.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

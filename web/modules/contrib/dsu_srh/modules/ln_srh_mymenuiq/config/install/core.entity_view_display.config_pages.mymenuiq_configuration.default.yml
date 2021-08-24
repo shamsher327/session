@@ -1,0 +1,95 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.field.config_pages.mymenuiq_configuration.field_balance_improvement_des
+    - field.field.config_pages.mymenuiq_configuration.field_balance_improvement_text
+    - field.field.config_pages.mymenuiq_configuration.field_balance_improvement_title
+    - field.field.config_pages.mymenuiq_configuration.field_energybreakdown_disclaimer
+    - field.field.config_pages.mymenuiq_configuration.field_flyout_acc_frst_sec_title
+    - field.field.config_pages.mymenuiq_configuration.field_flyout_accord_first_title
+    - field.field.config_pages.mymenuiq_configuration.field_flyout_bargraph_nutrients
+    - field.field.config_pages.mymenuiq_configuration.field_flyout_fst_acc_description
+    - field.field.config_pages.mymenuiq_configuration.field_flyout_sec_acc_title
+    - field.field.config_pages.mymenuiq_configuration.field_flyout_tips_title
+    - field.field.config_pages.mymenuiq_configuration.field_flyoutaccord_frst_subtitle
+    - field.field.config_pages.mymenuiq_configuration.field_good_balance_description
+    - field.field.config_pages.mymenuiq_configuration.field_good_balance_text
+    - field.field.config_pages.mymenuiq_configuration.field_good_balance_title
+    - field.field.config_pages.mymenuiq_configuration.field_great_balance_description
+    - field.field.config_pages.mymenuiq_configuration.field_great_balance_text
+    - field.field.config_pages.mymenuiq_configuration.field_great_balance_title
+    - field.field.config_pages.mymenuiq_configuration.field_max_value_good_balance
+    - field.field.config_pages.mymenuiq_configuration.field_max_value_great_balance
+    - field.field.config_pages.mymenuiq_configuration.field_maxvalue_bal_improvement
+    - field.field.config_pages.mymenuiq_configuration.field_menu_flyout_heading
+    - field.field.config_pages.mymenuiq_configuration.field_menu_flyout_subheading
+    - field.field.config_pages.mymenuiq_configuration.field_menuflyout_disclaimer_text
+    - field.field.config_pages.mymenuiq_configuration.field_min_range_balance_improvem
+    - field.field.config_pages.mymenuiq_configuration.field_min_value_good_balance
+    - field.field.config_pages.mymenuiq_configuration.field_min_value_great_balance
+    - field.field.config_pages.mymenuiq_configuration.field_mymenu_iq_finalization_msg
+    - field.field.config_pages.mymenuiq_configuration.field_nutritional_tips_points
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_added_message
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_removed_message
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_tab_1_title
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_tab_2_title
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_tab_3_title
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_tab_4_title
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_title
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_to_add_message
+    - field.field.config_pages.mymenuiq_configuration.field_side_dish_to_remove_messag
+    - field.field.config_pages.mymenuiq_configuration.field_text_button_open_tips
+    - field.field.config_pages.mymenuiq_configuration.field_mymenu_iq_arrow_color
+id: config_pages.mymenuiq_configuration.default
+targetEntityType: config_pages
+bundle: mymenuiq_configuration
+mode: default
+content:
+  field_mymenu_iq_finalization_msg:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_balance_improvement_des: true
+  field_balance_improvement_text: true
+  field_balance_improvement_title: true
+  field_energybreakdown_disclaimer: true
+  field_flyout_acc_frst_sec_title: true
+  field_flyout_accord_first_title: true
+  field_flyout_bargraph_nutrients: true
+  field_flyout_fst_acc_description: true
+  field_flyout_sec_acc_title: true
+  field_flyout_tips_title: true
+  field_flyoutaccord_frst_subtitle: true
+  field_good_balance_description: true
+  field_good_balance_text: true
+  field_good_balance_title: true
+  field_great_balance_description: true
+  field_great_balance_text: true
+  field_great_balance_title: true
+  field_max_value_good_balance: true
+  field_max_value_great_balance: true
+  field_maxvalue_bal_improvement: true
+  field_menu_flyout_heading: true
+  field_menu_flyout_subheading: true
+  field_menuflyout_disclaimer_text: true
+  field_min_range_balance_improvem: true
+  field_min_value_good_balance: true
+  field_min_value_great_balance: true
+  field_nutritional_tips_points: true
+  field_side_dish_added_message: true
+  field_side_dish_removed_message: true
+  field_side_dish_tab_1_title: true
+  field_side_dish_tab_2_title: true
+  field_side_dish_tab_3_title: true
+  field_side_dish_tab_4_title: true
+  field_side_dish_title: true
+  field_side_dish_to_add_message: true
+  field_side_dish_to_remove_messag: true
+  field_text_button_open_tips: true

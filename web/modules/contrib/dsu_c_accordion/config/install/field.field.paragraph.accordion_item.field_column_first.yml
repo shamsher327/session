@@ -1,0 +1,22 @@
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_first
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion_item.field_column_first
+field_name: field_column_first
+entity_type: paragraph
+bundle: accordion_item
+label: 'Full content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+field_type: entity_reference_revisions

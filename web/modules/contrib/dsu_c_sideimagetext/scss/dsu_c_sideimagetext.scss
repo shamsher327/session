@@ -1,0 +1,297 @@
+@import '../../../../mixins';
+
+$dsu_c_sideimagetext_title_text_size: 24px !default;
+$dsu_c_sideimagetext_title_space_top: 29px !default;
+$dsu_c_sideimagetext_title_space_bottom: 14.5px !default;
+$dsu_c_sideimagetext_subheading_text_size: 20px !default;
+$dsu_c_sideimagetext_subheading_space_top: 14.5px !default;
+$dsu_c_sideimagetext_subheading_space_bottom: 14.5px !default;
+$dsu_c_sideimagetext_summary_text_size: 16px !default;
+
+.paragraph--type--c-sideimagetext {
+  position: relative;
+
+  .field--name-field-c-title {
+    font-weight: bold;
+    font-size: $dsu_c_sideimagetext_title_text_size;
+    line-height: 29px;
+    margin-top: $dsu_c_sideimagetext_title_space_top;
+    margin-bottom: $dsu_c_sideimagetext_title_space_bottom;
+  }
+
+  .field--name-field-c-sideimagetext-subheading {
+    font-size: $dsu_c_sideimagetext_subheading_text_size;
+    line-height: 29px;
+    margin-top: $dsu_c_sideimagetext_subheading_space_top;
+    margin-bottom: $dsu_c_sideimagetext_subheading_space_bottom;
+  }
+
+  .wrapper-paragraph-section {
+    .inner-wrapper-c-sideimagetext {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      overflow: hidden;
+      .row {
+        display:flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .wrapper-img-section {
+      align-self: center;
+      padding: 0;
+      &.image-left {
+        order: 0;
+        &+.wrapper-description-section {
+          @include breakpoint(col-sm) {
+            padding-right: 30px;
+          }
+        }
+      }
+
+      &.image-right {
+        order: 2;
+        &+.wrapper-description-section {
+          @include breakpoint(col-sm) {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+
+    .wrapper-description-section {
+      @include breakpoint(mobile-only) {
+        padding: 0 30px;
+      }
+      align-self: center;
+    }
+  }
+
+  .field--name-field-c-image {
+    margin: 0;
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .field--name-field-c-sideimagetext-summary {
+    font-size: $dsu_c_sideimagetext_summary_text_size;
+  }
+
+  &.vertical_top{
+    .wrapper-paragraph-section {
+      .wrapper-description-section{
+        align-self: flex-start;
+        /*top: 15px;*/
+      }
+    }
+  }
+  &.vertical_bottom{
+    .wrapper-paragraph-section {
+      .wrapper-description-section{
+        align-self: flex-end;
+        @include breakpoint(col-sm) {
+          /*bottom: 15px;*/
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  &.vertical_middle{
+    .wrapper-paragraph-section {
+      .wrapper-description-section{
+        align-self: center;
+       /* top: 15px;*/
+      }
+    }
+  }
+
+  .wrapper-paragraph-section {
+    .wrapper-description-section{
+      .field--name-field-c-title{
+        margin-bottom: 0;
+      }
+      .field--name-field-c-sideimagetext-subheading{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.horizontal_position_center{
+    .wrapper-paragraph-section {
+      .wrapper-description-section{
+        .field--name-field-c-title{
+          text-align: center;
+        }
+        .field--name-field-c-sideimagetext-subheading{
+          text-align: center;
+        }
+        .field--name-field-c-sideimagetext-summary{
+            text-align: center;
+            p{
+              text-align: center;
+            }
+        }
+      }
+    }
+  }
+  &.horizontal_position_right{
+    .wrapper-paragraph-section {
+      .wrapper-description-section{
+        .field--name-field-c-title{
+          text-align: right;
+        }
+        .field--name-field-c-sideimagetext-subheading{
+          text-align: right;
+        }
+        .field--name-field-c-sideimagetext-summary{
+            text-align: right;
+            p{
+              text-align: right;
+            }
+        }
+      }
+    }
+  }
+}
+
+.dark-bg {
+  overflow: hidden;
+  background-color: #333;
+  color: #FFF;
+  text-align: center;
+
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+  }
+
+  a {
+    color: #FFF;
+  }
+}
+
+.white-text, .light-text {
+  color: #FFF;
+
+  a {
+    color: #FFF;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+.light-bg {
+  overflow: hidden;
+  background: #FFF;
+  color: #333;
+  text-align: center;
+
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+  }
+}
+
+.dark-text {
+  color: #333;
+
+  p {
+    color: #777;
+  }
+
+  strong {
+    color: #333;
+    font-weight: 600;
+  }
+
+  a {
+    color: #333;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
+.image-bg {
+  position: relative;
+  overflow: hidden;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+  text-align: center;
+
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  a {
+    color: #FFF;
+  }
+}
+.dsu_btn {
+  width: 100%;
+  display: block;
+  text-align: left;
+  &.horizontal-right {
+    text-align: right;
+  }
+  &.horizontal-left {
+    text-align: left;
+  }
+  &.vertical-bottom_center, &.vertical-top_center {
+    text-align: center;
+  }
+  &.horizontal-center{
+    text-align: center;
+  }
+}
+
+.node-dsu-component-page-edit-form{
+  .paragraph--type--c-sideimagetext{
+    .dsu_btn{
+      .btn{
+          padding: 6px 16px;
+          font-size: 16px;
+          line-height: 1.846;
+          display: inline-block;
+          text-transform: uppercase;
+      }
+      .image_cta_link {
+        margin: 25px 0 6px;
+        padding-left: 0;
+        padding-right: 0;
+        transition: box-shadow 0.4s;
+        display: inline-block;
+        padding: 13px 35px;
+        background: #0045AB;
+        border-radius: 22px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none; 
+        line-height: 1;
+      }
+    }
+    a, p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+body{
+  font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+}

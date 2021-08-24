@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Contains ln_user_recertification.module
+ */
+
+  use Drupal\views\ViewExecutable;
+  use Drupal\views\Plugin\views\query\QueryPluginBase;
+  use Drupal\Core\Url;
+
+  /**
+   * Implement hook_views_query_alter().
+   */
+  function ln_user_recertification_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+    $roles = \Drupal::request()->query->all();
+    if ($view->id() == 'user_recertification' && $view->current_display == 'data_export_1') {
+      if(!empty($roles) && isset($roles['roles'])) {
+        $roles = explode(',', $roles['roles']);
+        foreach ($query->where as &$condition_group) {
+          // call helper function to alter conditions.
+          _alter_query_condition($condition_group['conditions'][0], $roles);
+        }
+      }
+      else {
+        foreach ($query->where as $k => $condition_group) {
+          // remove condition for all user roles data.
+          $condition = $condition_group['conditions'][0];
+          if (isset($condition['field']) && ($condition['field'] === 'user__roles.roles_target_id IN(:user__roles_roles_target_id[])')) {
+            unset($query->where[$k]);
+          }
+        }
+      }
+    }
+  }
+
+  // separate helper function to determine if the condition is one we want to alter
+  function _alter_query_condition(&$condition, $roles) {
+    $values = [];
+    if (isset($condition['field']) && ($condition['field'] === 'user__roles.roles_target_id IN(:user__roles_roles_target_id[])')) {
+      foreach($roles as $role) {
+        $values[$role] = $role;
+      }
+      $condition['value'][':user__roles_roles_target_id[]'] = $values;
+      $condition['value'] = $condition['value'];
+    }
+  }
+
+  /**
+   * Implement hook_views_pre_view().
+   */
+  function ln_user_recertification_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+    if ($view->id() == 'user_recertification' && $view->current_display == 'page_1') {
+      $roles = \Drupal::request()->query->all();
+      if(!empty($roles) && isset($roles['roles_target_id'])) {
+        global $base_url;
+        $roles_ids = implode(',', $roles['roles_target_id']);
+        $option = [
+          'query' => ['roles' => $roles_ids],
+        ];
+        // Create dynamic url from filter values.
+        $url  = Url::fromUri($base_url.'/recertification/users/csv', $option);
+        $link = '<a href="' . $url->toString() . '"><b>Download the user list</b></a><br /><br /><br />';
+        $view->display_handler->options['header']['area']['content']['value'] = $link;
+        $options = $view->display_handler->options['header']['area'];
+        // Update download link in header.
+        $view->setHandler('page_1', 'header', 'area', $options);
+      }
+    }
+  }
+

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dsu_classy_text_light_background
+label: 'Light Background'
+classes: "light-bg\r\ndark-text"

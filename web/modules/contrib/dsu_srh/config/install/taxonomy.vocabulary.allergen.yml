@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Allergen
+vid: allergen
+description: '9'
+weight: 0

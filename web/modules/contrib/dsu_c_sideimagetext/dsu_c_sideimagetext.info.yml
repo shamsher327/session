@@ -1,0 +1,21 @@
+name: 'Lightnest Components: Text + Image'
+package: 'Lightnest Components'
+version: 8.x-1.2.3
+description: 'Allows to create a component with text and an image next to it.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - dsu_c_sideimagetext/general
+dependencies:
+  - entity_browser
+  - field
+  - image
+  - link
+  - media
+  - options
+  - paragraphs
+  - text
+  - dsu_c_core
+  - link_attributes
+  - field_group

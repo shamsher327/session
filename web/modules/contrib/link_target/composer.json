@@ -1,0 +1,9 @@
+{
+  "name": "lightnest/link_target",
+  "type": "drupal-module",
+  "description": "D9 Compatible link target module.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": { }
+}

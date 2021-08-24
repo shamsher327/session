@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_info_locale
+    - paragraphs.paragraphs_type.media_information
+_core:
+  default_config_hash: mBMdWcEi-C0vTUqmZocN9dXGwo5qvH4Tgp9PDS04WQE
+id: paragraph.media_information.field_media_info_locale
+field_name: field_media_info_locale
+entity_type: paragraph
+bundle: media_information
+label: locale
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

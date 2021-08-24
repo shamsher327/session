@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ln_c_grid_card_style
+    - paragraphs.paragraphs_type.ln_c_cardgrid
+id: paragraph.ln_c_cardgrid.field_ln_c_grid_card_style
+field_name: field_ln_c_grid_card_style
+entity_type: paragraph
+bundle: ln_c_cardgrid
+label: 'Card Style'
+description: 'Choose Grid Card Style'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: classy_paragraphs
+  handler_settings:
+    filter:
+      type: starts_with
+      starts_with: ln_c_gridcard_
+    sort:
+      field: id
+      direction: ASC
+field_type: entity_reference

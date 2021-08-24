@@ -1,0 +1,13 @@
+{
+    "name": "lightnest/ln_user_recertification",
+    "description": "Create user recertification details.",
+    "type": "drupal-module",
+    "keywords": [
+        "User",
+		"Roles"
+    ],
+    "require": {
+	  "drupal/views_data_export": "^1.0",
+      "drupal/csv_serialization": "^2.0@beta"
+	}
+}

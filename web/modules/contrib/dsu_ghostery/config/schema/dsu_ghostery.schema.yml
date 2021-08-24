@@ -1,0 +1,12 @@
+# Schema for the configuration files of the Ghostery module.
+
+dsu_ghostery.settings:
+  type: config_object
+  label: 'DSU Ghostery Settings'
+  mapping:
+    ghostery_cid:
+      type: label
+      label: 'Ghostery consent CID'
+    ghostery_nid:
+      type: label
+      label: 'Ghostery consent NID'

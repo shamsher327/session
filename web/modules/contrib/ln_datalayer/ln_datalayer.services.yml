@@ -1,0 +1,4 @@
+services:
+  ln_datalayer.datasets:
+    class: Drupal\ln_datalayer\LnDatalayerDatasets
+    arguments: ['@module_handler']

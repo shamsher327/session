@@ -1,0 +1,27 @@
+DSU Engage 8.x-1.1, 2018-07-28
+----------------------------------
+Changes since 8.x-1.0:
+
+- Modified composer.json to apply a patch:
+    "1091852 - Display Bug when using #states (Forms API) with Ajax Request":"https://www.drupal.org/files/issues/1091852_70.patch"
+    This patch is intended for Drupal 8.5. If you want tompatch Drupal 8.4.x, you should use the follow one:
+    "1091852 - Display Bug when using #states (Forms API) with Ajax Request": "https://www.drupal.org/files/issues/1091852_70-8.4.x.patch"
+    see: https://www.drupal.org/project/drupal/issues/1091852 for more info.
+
+- Modified dsu_engage.info.yml to reflect the right version:1.x-dev
+
+DSU Engage 8.x-1.x-dev, 2018-10-14
+----------------------------------
+- Fixed: https://dsu-jira.nestle.biz/browse/DNE-2351 => Navigation - user redirected to 'Question' tab
+- Fixed: https://dsu-jira.nestle.biz/browse/DNE-2934 => CU Widget - Validation for Country not working
+- Adde help page fr the module:
+    If you are installing this module in Drupal 8.4.x, you should install the follow core patch:
+        1091852_70-8.4.x - Display Bug when using #states (Forms API) with Ajax Request: https://www.drupal.org/files/issues/1091852_70-8.4.x.patch
+
+    If you are installing this module in Drupal 8.5.x, you should install the follow core patch:
+
+        1091852_70 - Display Bug when using #states (Forms API) with Ajax Request: https://www.drupal.org/files/issues/1091852_70.patch
+
+    If you are installing this module in Drupal 8.7.x, you should install the follow core patch:
+
+        1091852_77 - Display Bug when using #states (Forms API) with Ajax Request: https://www.drupal.org/files/issues/2018-08-22/1091852-77.patch

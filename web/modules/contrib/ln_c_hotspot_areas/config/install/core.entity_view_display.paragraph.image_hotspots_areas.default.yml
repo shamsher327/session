@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_hotspots_areas.field_image_hotspots
+    - paragraphs.paragraphs_type.image_hotspots_areas
+    - field.field.paragraph.image_hotspots_areas.field_section_id
+  module:
+    - ln_c_hotspot_areas
+id: paragraph.image_hotspots_areas.default
+targetEntityType: paragraph
+bundle: image_hotspots_areas
+mode: default
+content:
+  field_image_hotspots:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: hotspot_areas_formatter
+    region: content
+hidden:
+  field_section_id: true

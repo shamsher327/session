@@ -1,0 +1,6 @@
+link-container:
+  version: 1.x
+  css:
+    component:
+      css/dsu_c_link_document_container.css: {}
+

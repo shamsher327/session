@@ -1,0 +1,15 @@
+title: 'Subscribe to our newsletter'
+field_teaser_subtitle: 
+body: 
+field_buton_position:
+field_image:
+  image_name: world.png
+  image_title: World
+field_dsu_tags: Sample content
+field_teaser_link:
+  uri: internal:/ # Drupal save "internal:/" when "<front>" is used
+  title: More
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

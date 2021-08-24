@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'BFood trends'
+vid: bfood_trends
+description: '18'
+weight: 0

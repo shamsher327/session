@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ln_card_color
+    - paragraphs.paragraphs_type.ln_c_cardgrid
+    - taxonomy.vocabulary.color
+id: paragraph.ln_c_cardgrid.field_ln_card_color
+field_name: field_ln_card_color
+entity_type: paragraph
+bundle: ln_c_cardgrid
+label: 'Card Color'
+description: 'The color selected here will be applied to all cards. Color can be changed on individual cards if variations are desired.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      color: color
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

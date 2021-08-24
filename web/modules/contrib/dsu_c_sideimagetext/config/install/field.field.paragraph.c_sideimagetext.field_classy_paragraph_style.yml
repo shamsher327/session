@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_classy_paragraph_style
+    - paragraphs.paragraphs_type.c_sideimagetext
+id: paragraph.c_sideimagetext.field_classy_paragraph_style
+field_name: field_classy_paragraph_style
+entity_type: paragraph
+bundle: c_sideimagetext
+label: 'Classy Paragraph Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: classy_paragraphs
+  handler_settings:
+    filter:
+      type: target_bundles
+      target_bundles:
+        dsu_classy_text_dark_background: dsu_classy_text_dark_background
+        dsu_classy_text_image_background: dsu_classy_text_image_background
+        dsu_classy_text_light_background: dsu_classy_text_light_background
+      negate: 0
+    sort:
+      field: _none
+field_type: entity_reference

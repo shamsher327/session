@@ -1,0 +1,82 @@
+.node-dsu-component-page-edit-form{
+    .accordion--components{
+        .dsu_btn{
+            .btn{
+                padding: 6px 16px;
+                font-size: 16px;
+                line-height: 1.846;
+                display: inline-block;
+                text-transform: uppercase;
+            }
+        }
+        .paragraph--type--c-text {
+            padding: 0;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.paragraph--type--accordion {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    .field--name-field-accordion-item {
+        .paragraph--type--accordion-item {
+            border-bottom: 1px solid #D8D8D8;
+
+            .accordion--text{
+                padding: 35px 0 25px 0;
+                position: relative;
+                cursor: pointer;
+                display : block;
+                .field--name-field-c-title {
+                    font-weight: 600;
+                    cursor: pointer;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    width: 90%;
+                }
+
+                &:after {
+                    content: "+";
+                    font-weight: 600;
+                    position: absolute;
+                    right: 0.75em;
+                    top: 50%;
+                    font-size: 35px;
+                    background: #D8D8D8;
+                    border-radius: 50%;
+                    display:block;
+                    width:40px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 34px;
+                    transform: translateY(-35%);
+                }
+            }
+
+            .accordion--components {
+                padding: 0.75em;
+            }
+
+            .accordion--teaser-text {
+                font-size: 0.85em;
+                padding: 0.75em;
+                opacity: 0.75;
+            }
+
+            &.status--enable {
+                .accordion--text:after {
+                    content: "-";
+                }
+            }
+
+            .paragraph--type--c-text {
+                padding: 0;
+                margin-top: 0;
+            }
+        }
+    }
+
+}

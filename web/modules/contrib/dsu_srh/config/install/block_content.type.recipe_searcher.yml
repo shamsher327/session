@@ -1,0 +1,6 @@
+status: true
+dependencies: {  }
+id: recipe_searcher
+label: 'Recipe searcher'
+revision: 1
+description: ''

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.card_bottom_text_box
+label: 'Bottom text box'
+targetEntityType: node
+cache: true

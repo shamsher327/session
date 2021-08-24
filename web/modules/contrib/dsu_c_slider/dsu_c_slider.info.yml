@@ -1,0 +1,18 @@
+name: 'Lightnest Components: Slider'
+package: 'Lightnest Components'
+description: 'Allows to create a carousel component.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 8.x-1.3.3
+dependencies:
+  - dsu_c_core
+  - twig_tweak
+  - entity_reference_revisions
+  - field
+  - image
+  - link
+  - paragraphs
+  - slick
+  - slick_paragraphs
+  - text

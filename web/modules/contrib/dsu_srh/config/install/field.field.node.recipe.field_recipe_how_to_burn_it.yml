@@ -1,0 +1,222 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_how_to_burn_it
+    - node.type.recipe
+    - paragraphs.paragraphs_type.dsu_srh_how_to_burn_it
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_recipe_how_to_burn_it
+field_name: field_recipe_how_to_burn_it
+entity_type: node
+bundle: recipe
+label: 'How To Burn It'
+description: 'Recipe How To Burn It'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      dsu_srh_how_to_burn_it: dsu_srh_how_to_burn_it
+    target_bundles_drag_drop:
+      accordion:
+        weight: 66
+        enabled: false
+      accordion_item:
+        weight: 67
+        enabled: false
+      c_countdown:
+        weight: 69
+        enabled: false
+      c_document:
+        weight: 70
+        enabled: false
+      c_entitycycle:
+        weight: 71
+        enabled: false
+      c_externalvideo:
+        weight: 72
+        enabled: false
+      c_gallery:
+        weight: 73
+        enabled: false
+      c_gallery_item:
+        weight: 74
+        enabled: false
+      c_image:
+        weight: 75
+        enabled: false
+      c_link:
+        weight: 76
+        enabled: false
+      c_link_document_container:
+        weight: 77
+        enabled: false
+      c_map:
+        weight: 78
+        enabled: false
+      c_share_buttons:
+        weight: 79
+        enabled: false
+      c_shopify:
+        weight: 80
+        enabled: false
+      c_sideimagetext:
+        weight: 81
+        enabled: false
+      c_slide:
+        weight: 82
+        enabled: false
+      c_slider:
+        weight: 83
+        enabled: false
+      c_social_buttons_item:
+        weight: 85
+        enabled: false
+      c_socialbuttons:
+        weight: 84
+        enabled: false
+      c_spacer:
+        weight: 86
+        enabled: false
+      c_tab_item:
+        weight: 88
+        enabled: false
+      c_tabbed_content:
+        weight: 87
+        enabled: false
+      c_teasercycle:
+        weight: 89
+        enabled: false
+      c_teasercycle_item:
+        weight: 90
+        enabled: false
+      c_text:
+        weight: 91
+        enabled: false
+      change_log_entry:
+        weight: 68
+        enabled: false
+      dsu_c_view:
+        weight: 92
+        enabled: false
+      dsu_functionality_option:
+        weight: 93
+        enabled: false
+      dsu_srh_how_to_burn_it:
+        enabled: true
+        weight: 94
+      dsu_tint:
+        weight: 95
+        enabled: false
+      forms:
+        weight: 96
+        enabled: false
+      image_hotspots_areas:
+        weight: 97
+        enabled: false
+      layout_25_25_50:
+        weight: 98
+        enabled: false
+      layout_25_50_25:
+        weight: 99
+        enabled: false
+      layout_25_75:
+        weight: 100
+        enabled: false
+      layout_33_66:
+        weight: 101
+        enabled: false
+      layout_50_25_25:
+        weight: 102
+        enabled: false
+      layout_66_33:
+        weight: 103
+        enabled: false
+      layout_75_25:
+        weight: 104
+        enabled: false
+      layout_columns_1:
+        weight: 105
+        enabled: false
+      layout_columns_2:
+        weight: 106
+        enabled: false
+      layout_columns_20:
+        weight: 107
+        enabled: false
+      layout_columns_3:
+        weight: 108
+        enabled: false
+      layout_columns_4:
+        weight: 109
+        enabled: false
+      ln_c_buy_now_component:
+        weight: 110
+        enabled: false
+      ln_c_card:
+        weight: 111
+        enabled: false
+      ln_c_card_item:
+        weight: 113
+        enabled: false
+      ln_c_cardgrid:
+        weight: 112
+        enabled: false
+      ln_c_grid_card_item:
+        weight: 114
+        enabled: false
+      ln_c_power_reviews:
+        weight: 115
+        enabled: false
+      ln_c_yt_carousel:
+        weight: 116
+        enabled: false
+      macronutrients:
+        weight: 117
+        enabled: false
+      media_information:
+        weight: 118
+        enabled: false
+      paragraph_view:
+        weight: 119
+        enabled: false
+      product_listing_block:
+        weight: 120
+        enabled: false
+      quiz:
+        weight: 121
+        enabled: false
+      quiz_question:
+        weight: 122
+        enabled: false
+      recipe_ingredients:
+        weight: 123
+        enabled: false
+      recipe_steps:
+        weight: 124
+        enabled: false
+      recipe_tools:
+        weight: 125
+        enabled: false
+      recipe_variants:
+        weight: 126
+        enabled: false
+      related_recipes_in_other_languag:
+        weight: 127
+        enabled: false
+      srh_macronutrients_unittype:
+        weight: 128
+        enabled: false
+      tags_selector:
+        weight: 129
+        enabled: false
+      tips:
+        weight: 130
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_balance_improvement_des
+_core:
+  default_config_hash: ka0QhHF8wa-Kmn1lFfiapiQCUFHfpWukyoE9eHQvvLw
+id: config_pages.mymenuiq_configuration.field_balance_improvement_des
+field_name: field_balance_improvement_des
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Balance Improvement Description'
+description: 'Description for Room for Balance Improvement'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'This menu has room to improve its nutritional balance to help you meet dietary and nutritional recommendations.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_side_dish_title
+id: config_pages.mymenuiq_configuration.field_side_dish_title
+field_name: field_side_dish_title
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Side dish title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Complete your menu'
+default_value_callback: ''
+settings: {  }
+field_type: string

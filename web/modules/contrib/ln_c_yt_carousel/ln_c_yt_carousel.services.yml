@@ -1,0 +1,4 @@
+services:
+  youtube.api:
+    class: Drupal\ln_c_yt_carousel\YouTubeApiServices
+    arguments: ['@config.factory', '@cache.default']

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Grid card basic style 2.'
+id: node.ln_c_gridcard_basic_style_2
+label: 'Grid Card Basic Style 2'
+targetEntityType: node
+cache: true

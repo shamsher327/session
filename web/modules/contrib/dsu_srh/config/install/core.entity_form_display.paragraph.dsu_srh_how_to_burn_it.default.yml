@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dsu_srh_how_to_burn_it.field_srh_burn_it_sport_name
+    - field.field.paragraph.dsu_srh_how_to_burn_it.field_srh_burn_it_time
+    - paragraphs.paragraphs_type.dsu_srh_how_to_burn_it
+id: paragraph.dsu_srh_how_to_burn_it.default
+targetEntityType: paragraph
+bundle: dsu_srh_how_to_burn_it
+mode: default
+content:
+  field_srh_burn_it_sport_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_srh_burn_it_time:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

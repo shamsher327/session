@@ -1,0 +1,90 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.macronutrients.field_para_macro_display
+    - field.field.paragraph.macronutrients.field_para_macro_id
+    - field.field.paragraph.macronutrients.field_para_macro_name
+    - field.field.paragraph.macronutrients.field_para_macro_percentage
+    - field.field.paragraph.macronutrients.field_para_macro_quantity
+    - field.field.paragraph.macronutrients.field_para_macro_type
+    - field.field.paragraph.macronutrients.field_para_macro_unit
+    - field.field.paragraph.macronutrients.field_para_macro_unit_type
+    - paragraphs.paragraphs_type.macronutrients
+  module:
+    - entity_reference_revisions
+id: paragraph.macronutrients.default
+targetEntityType: paragraph
+bundle: macronutrients
+mode: default
+content:
+  field_para_macro_display:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_para_macro_id:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_para_macro_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_para_macro_percentage:
+    type: string
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_para_macro_quantity:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_para_macro_type:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_para_macro_unit:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_para_macro_unit_type:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

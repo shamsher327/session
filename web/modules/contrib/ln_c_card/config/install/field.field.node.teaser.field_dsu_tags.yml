@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dsu_tags
+    - node.type.teaser
+    - taxonomy.vocabulary.dsu_tag
+id: node.teaser.field_dsu_tags
+field_name: field_dsu_tags
+entity_type: node
+bundle: teaser
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      dsu_tag: dsu_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,7 @@
+youtube_api.admin:
+  title: 'Youtube API Key'
+  description: 'YouTube API Key form.'
+  parent: dsu_c_core.settings
+  route_name: youtube_api.form
+  weight: 160
+
