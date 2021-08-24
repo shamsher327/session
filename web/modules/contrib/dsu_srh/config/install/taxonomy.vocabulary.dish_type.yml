@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dish type'
+vid: dish_type
+description: '15'
+weight: 0

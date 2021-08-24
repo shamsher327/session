@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the dsu_c_core config.
+ */
+
+
+/**
+ * Implements hook_update().
+ * DWDL-438 : Disabled the /frontpage view
+ */
+function dsu_c_core_update_8601() {
+  Drupal::entityTypeManager()
+    ->getStorage('view')
+    ->load('frontpage')
+    ->setStatus(FALSE)
+    ->save();
+}
+
+/**
+ * Implements hook_update().
+ * DWDL-438 : Enable some important module.
+ */
+function dsu_c_core_update_8602() {
+  $module_list = [
+    'twig_tweak',
+    'image_widget_crop',
+  ];
+  // Enable the module.
+  \Drupal::service('module_installer')->install($module_list);
+  // Clear cache.
+  drupal_flush_all_caches();
+}

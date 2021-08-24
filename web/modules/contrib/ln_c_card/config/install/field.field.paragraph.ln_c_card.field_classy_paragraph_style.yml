@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_classy_paragraph_style
+    - paragraphs.paragraphs_type.ln_c_card
+id: paragraph.ln_c_card.field_classy_paragraph_style
+field_name: field_classy_paragraph_style
+entity_type: paragraph
+bundle: ln_c_card
+label: 'Card Styles'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: classy_paragraphs
+  handler_settings:
+    filter:
+      type: starts_with
+      starts_with: card_
+    sort:
+      field: _none
+field_type: entity_reference

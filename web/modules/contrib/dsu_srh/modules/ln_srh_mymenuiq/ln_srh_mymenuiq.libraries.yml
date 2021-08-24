@@ -1,0 +1,10 @@
+mymenuiq:
+  js:
+    js/mymenuiq.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - slick/slick.theme
+  css:
+    theme:
+      css/mymenuiq.css: {}

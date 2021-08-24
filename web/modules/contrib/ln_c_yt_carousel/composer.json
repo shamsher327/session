@@ -1,0 +1,11 @@
+{
+  "name": "lightnest/ln_c_yt_carousel",
+  "description": "Provides a youtube carousel component to be used as paragraph.",
+  "type": "drupal-module",
+  "keywords": [
+    "content",
+    "paragraphs",
+    "youtube",
+	"carousel"
+  ]
+}

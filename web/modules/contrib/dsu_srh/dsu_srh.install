@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_update().
+ * Reimporting default module config and updating dsu_srh field for update
+ * features.
+ */
+function dsu_srh_update_8701() {
+  // Re-import dsu_srh config and get storage instance for recipes paragraph.
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('dsu_srh.settings');
+  $config->set('dsu_srh.dsu_connect_cron_sync_update_type', 'one_day_before');
+  $config->set('dsu_srh.dsu_connect_periodic', '0');
+  $config->set('dsu_srh.dsu_single_indexing_server', '');
+  $config->save(TRUE);
+  // Flush all cache.
+  drupal_flush_all_caches();
+}

@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\dsu_c_core\LightnestImageWidgetHelper;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme.
+ */
+function dsu_c_core_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__layout_columns_1' => [
+      'template' => 'paragraph--layout-columns-1',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_2' => [
+      'template' => 'paragraph--layout-columns-2',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_3' => [
+      'template' => 'paragraph--layout-columns-3',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_4' => [
+      'template' => 'paragraph--layout-columns-4',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_20' => [
+      'template' => 'paragraph--layout-columns-20',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_25_25_50' => [
+      'template' => 'paragraph--layout-25-25-50',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_50_25_25' => [
+      'template' => 'paragraph--layout-50-25-25',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_25_50_25' => [
+      'template' => 'paragraph--layout-25-50-25',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_25_75' => [
+      'template' => 'paragraph--layout-25-75',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_75_25' => [
+      'template' => 'paragraph--layout-75-25',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_33_66' => [
+      'template' => 'paragraph--layout-33-66',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_66_33' => [
+      'template' => 'paragraph--layout-66-33',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ln_sample_content().
+ */
+function dsu_c_core_ln_sample_content() {
+    /** @var \Drupal\Core\Extension\ModuleHandlerInterface $module_handler */
+    $module_handler = \Drupal::service('module_handler');
+    /** @var \Drupal\Core\Extension\Extension $module_object */
+    $module_object = $module_handler->getModule(basename(__FILE__, '.module'));
+    $module_name = $module_object->getName();
+
+    $source = drupal_get_path('module', $module_name) . '/content';
+    /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+    $file_system = \Drupal::service('file_system');
+    $files = $file_system->scanDirectory($source, '/demo.*\.(yml)$/');
+    $yaml_file_path = NULL;
+    foreach ($files as $file) {
+        $yaml_file_path[] = '/content/' . $file->filename;
+    }
+
+    return $yaml_file_path;
+}
+
+/**
+ * Implements hook_ln_page_attachments().
+ */
+function  dsu_c_core_page_attachments(array &$attachments) {
+    $attachments['#attached']['library'][] = 'dsu_c_core/general';
+}
+
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function dsu_c_core_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  // Update alt character limit for seo.
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getType() == 'image') {
+    LightnestImageWidgetHelper::alter($element);
+  }
+}
+
+/**
+ * Implements hook_link_attributes_plugin_alter().
+ */
+function dsu_c_core_link_attributes_plugin_alter(&$plugins) {
+  // Add description for rel attribute in link field.
+  if (isset($plugins['rel'])) {
+    $plugins['rel']['title'] = t('Rel (follow/nofollow tags).  Default is blank');
+    $plugins['rel']['description'] = t('Please enter one of the following values. If you are unsure, leave this attribute blank as search engines will automatically follow 
+    <br /> -nofollow
+    <br /> -sponsored 
+    <br /> -ugc
+    <br /><br /> <a style = "font-size:0.79rem;" href = "https://developers.google.com/search/docs/advanced/guidelines/qualify-outbound-links" target = "blank">For more information on how Google treats outbound links</a>');
+  }
+}

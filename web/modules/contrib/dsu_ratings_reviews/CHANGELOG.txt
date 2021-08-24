@@ -1,0 +1,22 @@
+# Changelog
+
+## 2.0.4
+- Fix defect Ratings & Reviews | Rating stars can be changed by other people.
+- Run clear cache and check if site having any issue.
+
+## 2.0.3
+- Remove max_resolution, min_resolution, max_filesize key from field yml.
+- Run feature import and check if site having any issue.
+
+## 2.0.2
+- Added New Lightnest rating & Reviews module.
+- Follow proper readme files for configuration.
+- Run update.php once you get new ratings & reviews module.
+- Run clear cache and check if site having any issue.
+
+## 1.1.1
+
+- Removed version from info.yml.
+- Comment title is now shown by default.
+- Replies are now restricted to one per comment.
+- Additionally, a permission has been added to limit them to specific users.

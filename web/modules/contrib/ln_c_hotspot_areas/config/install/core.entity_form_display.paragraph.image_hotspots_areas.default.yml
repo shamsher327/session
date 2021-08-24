@@ -1,0 +1,37 @@
+uuid: 94b0bee5-8c78-4883-9052-e2ae1fc3b9ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_hotspots_areas.field_image_hotspots
+    - field.field.paragraph.image_hotspots_areas.field_section_id
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_hotspots_areas
+  module:
+    - image
+_core:
+  default_config_hash: canpO7pGltK-CncN7cJqKufxECIMPdiTU4OECwyEhJE
+id: paragraph.image_hotspots_areas.default
+targetEntityType: paragraph
+bundle: image_hotspots_areas
+mode: default
+content:
+  field_image_hotspots:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_section_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

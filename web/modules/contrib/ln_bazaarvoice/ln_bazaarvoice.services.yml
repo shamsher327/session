@@ -1,0 +1,5 @@
+services:
+  # Services.
+  ln_bazaarvoice:
+    class: Drupal\ln_bazaarvoice\Service\LnBazaarvoiceService
+    arguments: ['@config.factory', '@database', '@language_manager']

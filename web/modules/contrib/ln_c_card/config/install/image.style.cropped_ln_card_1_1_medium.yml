@@ -1,0 +1,17 @@
+uuid: 60289693-1de8-4a6c-b055-773277ff873a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: cropped_ln_card_1_1_medium
+label: 'cropped: ln card 1:1 medium'
+effects:
+  1a3b9d21-7f3e-411c-8ad1-888f3d3e06be:
+    uuid: 1a3b9d21-7f3e-411c-8ad1-888f3d3e06be
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      crop_type: focal_point

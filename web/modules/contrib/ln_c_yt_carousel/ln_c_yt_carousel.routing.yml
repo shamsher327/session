@@ -1,0 +1,15 @@
+youtube_api.form:
+  path: '/admin/config/content/youtube'
+  defaults:
+    _form: '\Drupal\ln_c_yt_carousel\Form\YouTubeConfigurationForm'
+    _title: 'Youtube API Key configrations'
+  requirements:
+    _permission: 'administer site configuration'
+
+youtube_api.pager:
+  path: '/youtube_api'
+  defaults:
+    _controller: '\Drupal\ln_c_yt_carousel\Controller\YouTubeCarouselController::getPagebyPageToken'
+    _title: 'Youtube API Key configurations'
+  requirements:
+    _permission: 'access content'

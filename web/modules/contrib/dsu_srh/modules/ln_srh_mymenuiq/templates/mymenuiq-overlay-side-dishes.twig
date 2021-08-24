@@ -1,0 +1,38 @@
+<div class="meal-score score-medium" data-score="{{ nutritional_score }}">
+  <h3 class="title-choose">
+    <span>{{ side_dishes_menu.side_dish_title }}</span>
+  </h3>
+  <div class="add-dish-wrapper">
+    <div class="additional-dish">
+      {% for key, value in side_dishes_menu.side_dish_tabs %}
+        <div class=" meal" data-dish-type="{{ key }}">
+          <div class="added-dish-wrapper hide"></div>
+          <div class="meal-wrapper">
+            <a class="meal-title" id="">{{ value }}</a>
+            <div class="meal-img-wrapper">
+              <div class="meal-img-container">
+                <img alt="" title="" class="rounded-circle add-img"
+                     src="/modules/contrib/dsu_srh/modules/ln_srh_mymenuiq/images/add-meal.png">
+                <span class="meal-img"></span>
+              </div>
+            </div>
+            <span class="add-meal-text" id="">{{ 'add meal'|t }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="side_dishes"></div>
+  <div class="see_combined_receipes">
+    <a href="javascript:void(0)" class="see_combined_receipes_CTA">
+      <i class="right-chevron"></i>
+      {{ 'See Combined Recipes'|t }}
+    </a>
+  </div>
+  <div class="enjoy_your_meal">
+    <a href="javascript:void(0)" class="enjoy_your_meal_CTA">
+      {{ nutritional_finalization_message }}
+    </a>
+  </div>
+
+</div>

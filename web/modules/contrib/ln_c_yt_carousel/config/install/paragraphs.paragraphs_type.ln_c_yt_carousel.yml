@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      carousels_galleries: carousels_galleries
+id: ln_c_yt_carousel
+label: 'Content: YouTube Carousel'
+icon_uuid: null
+icon_default: null
+description: 'Displays YouTube videos in a carousel navigation with optional titles and descriptions.'
+behavior_plugins: {  }

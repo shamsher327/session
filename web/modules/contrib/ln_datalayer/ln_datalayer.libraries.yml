@@ -1,0 +1,6 @@
+ajax:
+  js:
+    js/ln_datalayer.ajax.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupal.ajax

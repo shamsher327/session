@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_info_mime_type
+    - paragraphs.paragraphs_type.media_information
+_core:
+  default_config_hash: MijRqcY7xnwYMaT-mT38WdiemY-mIsekWMX4RsFpWE8
+id: paragraph.media_information.field_media_info_mime_type
+field_name: field_media_info_mime_type
+entity_type: paragraph
+bundle: media_information
+label: 'mime type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

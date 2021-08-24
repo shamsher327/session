@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_flyoutaccord_frst_subtitle
+_core:
+  default_config_hash: VDUTMiGqbodGTXmy2b5KXIfVoSzS3Lc57X4HU29S_o4
+id: config_pages.mymenuiq_configuration.field_flyoutaccord_frst_subtitle
+field_name: field_flyoutaccord_frst_subtitle
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'MenuFlyout Accordion First SubTitle'
+description: 'Text to Appear for Menu Flyout Overlay Accordion First Subtitle'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'What is a balanced menu?'
+default_value_callback: ''
+settings: {  }
+field_type: string

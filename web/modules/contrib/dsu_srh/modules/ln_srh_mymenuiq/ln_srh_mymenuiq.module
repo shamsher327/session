@@ -1,0 +1,223 @@
+<?php
+
+/**
+ * @file
+ * Manages ln_srh_mymenuiq module.
+ */
+
+use Drupal\config_pages\Entity\ConfigPages;
+
+
+/**
+ * Implements hook_theme().
+ */
+function ln_srh_mymenuiq_theme($existing, $type, $theme, $path) {
+  return [
+    'my_menu_iq_block'       => [
+      'template'  => 'block--mymenuiq-block',
+      'variables' => [
+        'nutritional_score'       => NULL,
+        'seperator_text'          => NULL,
+        'heading'                 => NULL,
+        'subheading'              => NULL,
+        'widget_arrow_color_code' => NULL,
+        'overlay'                 => NULL,
+        'recipe_name'             => NULL,
+        'module_path'             => NULL,
+        'side_dishes_menu'        => NULL,
+      ],
+    ],
+    'my_menu_iq_side_dishes' => [
+      'template'  => 'mymenuiq-overlay-additional-dishes',
+      'variables' => [
+        'nutritional_score' => NULL,
+        'side_dishes'       => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Get all parent child terms and return final array of recipe configurations.
+ */
+function ln_srh_mymenuiq_get_recipe_settings_term_fields() {
+  $config_type = 'mymenuiq_configuration';
+  $final_array = [];
+  if (\Drupal::moduleHandler()->moduleExists('config_pages')) {
+    $config = ConfigPages::config($config_type);
+  }
+  if ($config) {
+    $final_array = [
+      // Flyout Settings.
+      'menu_flyout_heading'                   => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_menu_flyout_heading'),
+      'menu_flyout_subheading'                => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_menu_flyout_subheading'),
+      'balance_improvement_title'             => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_balance_improvement_title'),
+      'balance_improvement_text'              => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_balance_improvement_text'),
+      'balance_improvement_description'       => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_balance_improvement_des'),
+      'min_value_balance_improvement'         => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_min_range_balance_improvem'),
+      'max_value_balance_improvement'         => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_maxvalue_bal_improvement'),
+      'good_balance_title'                    => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_good_balance_title'),
+      'good_balance_text'                     => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_good_balance_text'),
+      'good_balance_description'              => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_good_balance_description'),
+      'min_value_good_balance'                => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_min_value_good_balance'),
+      'max_value_good_balance'                => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_max_value_good_balance'),
+      'great_balance_title'                   => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_great_balance_title'),
+      'great_balance_text'                    => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_great_balance_text'),
+      'mymenu_iq_finalization_msg'            => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_mymenu_iq_finalization_msg'),
+      'great_balance_description'             => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_great_balance_description'),
+      'min_value_great_balance'               => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_min_value_great_balance'),
+      'max_value_great_balance'               => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_max_value_great_balance'),
+      'text_button_open_tips'                 => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_text_button_open_tips'),
+      'flyout_accordion_first_title'          => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyout_accord_first_title'),
+      'flyout_accordion_first_subtitle'       => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyoutaccord_frst_subtitle'),
+      'flyout_accordion_first_description'    => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyout_fst_acc_description'),
+      'flyout_accordion_second_min_max_title' => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyout_acc_frst_sec_title'),
+      'flyout_acoordion_first_second_title'   => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyout_acc_frst_sec_title'),
+      'flyout_disclaimer_text'                => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_menuflyout_disclaimer_text'),
+      'flyout_accordion_second_title'         => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyout_sec_acc_title'),
+      'macronutrients_graph'                  => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyout_bargraph_nutrients'),
+      'energybreakdown_disclaimer'            => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_energybreakdown_disclaimer'),
+      'nutitional_tips_title'                 => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_flyout_tips_title'),
+      'nutritional_points'                    => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_nutritional_tips_points'),
+      'side_dish_title'                       => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_title'),
+      'side_dish_tab_1_title'                 => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_tab_1_title'),
+      'side_dish_tab_2_title'                 => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_tab_2_title'),
+      'side_dish_tab_3_title'                 => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_tab_3_title'),
+      'side_dish_tab_4_title'                 => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_tab_4_title'),
+      'side_dish_added_message'               => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_added_message'),
+      'side_dish_removed_message'             => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_removed_message'),
+      'side_dish_to_add_message'              => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_to_add_message'),
+      'side_dish_to_remove_messag'            => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_side_dish_to_remove_messag'),
+      'widget_arrow_color_code'               => ln_srh_mymenuiq_get_check_fetch_value($config, 'field_mymenu_iq_arrow_color'),
+    ];
+  }
+  return $final_array;
+}
+
+/**
+ * Funtion to check and get config value by field.
+ */
+function ln_srh_mymenuiq_get_check_fetch_value($config, $field) {
+  $field_value = '';
+  $arr = [];
+  if (!empty($config) && !empty($field)) {
+    if ($config->hasField($field) && $config->get($field) != NULL) {
+      if (count($config->get($field)->getValue()) > 1) {
+        if ($config->get($field)->getFieldDefinition()->getType() == "string") {
+          foreach ($config->get($field)->getValue() as $value) {
+            $arr[] = $value['value'];
+          }
+        }
+        else {
+          if ($config->get($field)->getFieldDefinition()->getType() == "link") {
+            foreach ($config->get($field)->getValue() as $value) {
+              $arr['uri'] = $value['uri'];
+              $arr['title'] = $value['title'];
+            }
+          }
+          else {
+            if ($config->get($field)
+                ->getFieldDefinition()
+                ->getType() == "list_string") {
+              foreach ($config->get($field)->getValue() as $value) {
+                // In case key is comma sepearated for collecting 2 values from it.
+                $commaseparated_key_arr = explode(',', $value['value']);
+                $arr[$commaseparated_key_arr[0]] = $commaseparated_key_arr[1];
+              }
+            }
+            // String Long condition for Nutitional tips.
+            else {
+              if ($config->get($field)
+                  ->getFieldDefinition()
+                  ->getType() == "string_long") {
+                foreach ($config->get($field)->getValue() as $value) {
+                  $arr[] = $value['value'];
+                }
+              }
+              else {
+                foreach ($config->get($field)->getValue() as $value) {
+                  $arr[] = $value['target_id'];
+                }
+              }
+            }
+          }
+        }
+        return $arr;
+      }
+      else {
+        if ($config->get($field)
+            ->getFieldDefinition()
+            ->getType() == 'entity_reference' && !empty($config->get($field)
+            ->getValue())) {
+          $arr[] = $config->get($field)->getValue()[0]['target_id'];
+          return $arr;
+        }
+        else {
+          if ($config->get($field)->getFieldDefinition()->getType() == "link") {
+            foreach ($config->get($field)->getValue() as $value) {
+              $arr['uri'] = $value['uri'];
+              $arr['title'] = $value['title'];
+            }
+          }
+          else {
+            if ($config->get($field)
+                ->getFieldDefinition()
+                ->getType() == "list_string") {
+              foreach ($config->get($field)->getValue() as $value) {
+                // In case key is comma sepearated for collecting 2 values from it.
+                $commaseparated_key_arr = explode(',', $config->get($field)
+                                                         ->getValue()[0]['value']);
+                $arr[$commaseparated_key_arr[0]] = $commaseparated_key_arr[1];
+                return $arr;
+              }
+            }
+            else {
+              if ($config->get($field)
+                  ->getFieldDefinition()
+                  ->getType() == "boolean") {
+                $field_value = $config->get($field)->getValue();
+                return $field_value;
+              }
+              else {
+                $field_value = $config->get($field)->value;
+                return $field_value;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return $arr;
+}
+
+/**
+ * Function to convert recipe urls to dynamic.
+ *
+ * @param string $img_original_url
+ *   Original Img URL.
+ * @param array $img_resolutions
+ *   Dimension to convert into Dynamic url.
+ */
+function recipe_img_dynamic_urls($img_original_url, array $img_resolutions) {
+  $image_resize = [];
+  if (!empty($img_original_url)) {
+    $img_dynamic_url = str_replace("original", "resized", $img_original_url);
+    // Explode the Image URL.
+    $img = explode('.', $img_dynamic_url);
+    // Get count of img url.
+    $str_count = count($img);
+    // Take out the second last element.
+    $second_lastelement = $img[$str_count - 2];
+    // Foreach loop.
+    foreach ($img_resolutions as $key => $res) {
+      $new_array = [];
+      $new_array = $img;
+      $img_arr = $second_lastelement . $res;
+      $new_array[count($new_array) - 2] = $img_arr;
+      $new_img = implode('.', $new_array);
+      $image_resize[$key] = $new_img;
+    }
+  }
+  return $image_resize;
+}

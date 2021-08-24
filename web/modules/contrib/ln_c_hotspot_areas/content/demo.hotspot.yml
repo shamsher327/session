@@ -1,0 +1,118 @@
+type: image_hotspots_areas
+component_description: IMAGE HOTSPOT AREAS HOVER
+field_image_hotspots:
+  image_name: infographic.png
+  image_title: infographic sample
+hotspot_data:
+  0:
+    description: <p>The first hotspot</p>
+    description_format: rich_text
+    field_name: field_image_hotspots
+    image_style: none
+    lang: en
+    link: http://lightnest.nestle.com
+    link_title: See More
+    mouse_behaviour: hover
+    shape: circle
+    title: Analysis
+    uid: 1
+    x: 350
+    x2: 457
+    y: 27
+    y2: 126
+  1:
+    description: <p>The second hotspot</p>
+    description_format: rich_text
+    field_name: field_image_hotspots
+    image_style: none
+    lang: en
+    link: http://lightnest.nestle.com
+    link_title: See More
+    mouse_behaviour: hover
+    shape: circle
+    title: Demand
+    uid: 1
+    x: 225
+    x2: 334
+    y: 110
+    y2: 224
+  2:
+    description: <p>The third hotspot</p>
+    description_format: rich_text
+    field_name: field_image_hotspots
+    image_style: none
+    lang: en
+    link: http://lightnest.nestle.com
+    link_title: See More
+    mouse_behaviour: hover
+    shape: circle
+    title: Hosting
+    uid: 1
+    x: 428
+    x2: 538
+    y: 163
+    y2: 277
+  3:
+    description: <p>The fourth hotspot</p>
+    description_format: rich_text
+    field_name: field_image_hotspots
+    image_style: none
+    lang: en
+    link: http://lightnest.nestle.com
+    link_title: See More
+    mouse_behaviour: hover
+    shape: square
+    title: Change Release
+    uid: 1
+    x: 228
+    x2: 337
+    y: 247
+    y2: 359
+  4:
+    description: <p>The fifth hotspot</p>
+    description_format: rich_text
+    field_name: field_image_hotspots
+    image_style: none
+    lang: en
+    link: http://lightnest.nestle.com
+    link_title: See More
+    mouse_behaviour: hover
+    shape: circle
+    title: Going Live
+    uid: 1
+    x: 424
+    x2: 539
+    y: 313
+    y2: 414
+  5:
+    description: <p>The sixth hotspot</p>
+    description_format: rich_text
+    field_name: field_image_hotspots
+    image_style: none
+    lang: en
+    link: http://lightnest.nestle.com
+    link_title: See More
+    mouse_behaviour: hover
+    shape: circle
+    title: Support
+    uid: 1
+    x: 228
+    x2: 334
+    y: 402
+    y2: 504
+  6:
+    description: <p>The seventh hotspot</p>
+    description_format: rich_text
+    field_name: field_image_hotspots
+    image_style: none
+    lang: en
+    link: http://lightnest.nestle.com
+    link_title: See More
+    mouse_behaviour: hover
+    shape: square
+    title: Decomission
+    uid: 1
+    x: 435
+    x2: 535
+    y: 448
+    y2: 546

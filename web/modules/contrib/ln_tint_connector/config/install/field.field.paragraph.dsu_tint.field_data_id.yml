@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_data_id
+    - paragraphs.paragraphs_type.dsu_tint
+id: paragraph.dsu_tint.field_data_id
+field_name: field_data_id
+entity_type: paragraph
+bundle: dsu_tint
+label: 'Data ID'
+description: 'Enter the ID from your Tint account for your brand'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

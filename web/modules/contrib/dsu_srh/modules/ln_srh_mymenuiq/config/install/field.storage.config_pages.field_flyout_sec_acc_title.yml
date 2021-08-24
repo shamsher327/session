@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+_core:
+  default_config_hash: s-9wveXB5MPe6LUd8AD6IfP1I0Rpv6PpwLzf6wXKR6Y
+id: config_pages.field_flyout_sec_acc_title
+field_name: field_flyout_sec_acc_title
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

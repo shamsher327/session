@@ -1,0 +1,7 @@
+dsu_ghostery.settings_form:
+  path: '/admin/config/lightnest/dsu-ghostery'
+  defaults:
+    _title: 'Lightnest Ghostery: Settings Form'
+    _form: '\Drupal\dsu_ghostery\Form\GhosterySettingsForm'
+  requirements:
+    _permission: 'administer dsu ghostery'

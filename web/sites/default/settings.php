@@ -675,6 +675,7 @@ if ($settings['hash_salt']) {
  * Load services definition file.
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+$settings['rebuild_access'] = TRUE;
 
 /**
  * Override the default service container class.
@@ -796,6 +797,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 
+
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
+
+
+
 $config['system.logging']['error_level'] = 'verbose';
 
 $host = "db";
@@ -849,4 +856,9 @@ if (version_compare(DRUPAL::VERSION, "8.8.0", '>=') &&
 if (version_compare(DRUPAL::VERSION, "9.0.0", '>=') &&
   empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = 'sites/default/files/sync';
+}
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
 }

@@ -1,0 +1,316 @@
+## 2.6.5 (26 july, 2021)
+
+- Fix defect generalTips not properly imported.
+
+## Steps:
+- composer update
+- clear cache.
+
+## 2.6.4 (12 june, 2021)
+
+- Make MyMenu IQ widget arrow an SVG file.
+- Create a new field in myMenuIQ config to manage the color of svg icon.(/admin/config/lightnest/dsu_srh/mymenu-iq)
+- Some UI/CSS fixes for myMenuIQ.
+- Some config changes added.
+- Update Event names in MyMenuIQ datalayer events.
+
+## Steps:
+- composer update
+- config import (go to "admin/config/development/features/diff/dsu_srh" and import specific difference of files)
+- clear cache.
+
+##Validation
+- Field will create under MyMenu IQ configuration named "MyMenu IQ widget arrow Color"
+
+
+## 2.6.3 (May 28, 2021)
+
+- Changes for myMenuIQ language for non prefix conditions.
+- Some UI/CSS fixes for myMenuIQ.
+- Some config changes and dependency added.
+
+## Steps:
+- composer update
+- clear cache.
+
+
+## 2.3.0 (April 21, 2020)
+
+- Created new fileds in Recipe content type name "field_recipe_nutritional_tips" with type of entity reference of (Tips) Paragraph.
+- Created one field name "field_para_macro_percentage" in paragraph name "macronutrients"
+- Change field type Tips Media in tips paragraph type from image to entity reference of Media paragraph.
+
+## Steps:
+- Check Features UI module should enable on your site.
+- Go to "admin/config/development/features"
+- Choose "DSU" Bundle type.
+- Find "Lightnest SRH Connector" in the list.
+- Click on missing link and import missing files.
+- After import missing files. Newly created fields will be import in database.
+- Now go to "admin/config/development/features/diff/dsu_srh" and import specific difference of files.
+
+##Validation
+- Field will create under Tips paragraph name "field_tips_media_path"
+- Field will create under Recipe MacroNutrients paragraph name "field_para_macro_percentage"
+- Field will create under Recipe content type name "field_recipe_nutritional_tip"
+- Enable disable from "Manage Form display" based on site specific needs.
+
+## 2.4.0 (May 04, 2020)
+
+- Drupal status messages corrections.
+- Menu links routing change.
+
+## 2.4.1 (May 08, 2020)
+
+- Fixed brand by filter for recipes.
+
+####################################################################################################################
+
+- Translate taxonomy terms.
+- Delete hook_cron and create the same logical inside drush command (dsu_srh:synchronize).
+- Modify cron config options in config form.
+- Add new paragraph type "related_recipes_in_other_languag".
+- Add new field in CT Recipe "field_recipe_related_recipes" related with above paragraph. This field will store
+  information about recipe translations.
+- Add new field in CT Recipe "field_recipe_cost". This field will store information about recipe cost.
+
+
+## Steps:
+- Check Features UI module should enable on your site.
+- Go to "admin/config/development/features"
+- Choose "DSU" Bundle type.
+- Find "Lightnest SRH Connector" in the list.
+- Click on missing link and import missing files.
+- After import missing files. Newly created fields will be import in database.
+- Now go to "admin/config/development/features/diff/dsu_srh" and import specific difference of files.
+
+##Validation
+- Check if new paragraph named "Related recipes" (related_recipes_in_other_languag) has been created.
+- Check if above paragraph has the next fields:
+    - "Drupal Locale" (field_parag_rel_recipe_drupal_lo).
+    - "Recipe id" (field_parag_rel_recipe_id).
+    - "Recipe Locale" (field_parag_rel_recipe_locale).
+    - "Recipe Title" (field_parag_rel_recipe_title).
+- Check if new field named "Recipe related recipes in other languages" (field_recipe_related_recipes) has been created
+  inside CT Recipe.
+
+## 2.4.2 (June 02, 2020)
+
+- Remove un-require optional folder yml.
+- check error issues and fixes.
+
+####################################################################################################################
+
+- Import the canonical Owner data to the recipe.
+
+## Steps:
+- Import recipes with SEOCanonicalOwner setted
+
+##Validation
+- After import a recipe, edit node and check Canonical URL field in Metatags/Advanced/Canonical URL
+
+####################################################################################################################
+
+- Implement the Google markup language for recipes
+
+## Steps:
+
+Enable modules:
+ - Schema.org Metatag
+ - Schema.org Recipe
+ - SRH Custom Schema.org tokens for recipe
+ - SRH Custom Schema.org variables for recipe
+
+Set config:
+ - Go to admin/config/search/metatag/settings
+   - Drop down "Content: Recipe"
+     - Check Schema.org: Recipe
+ - Go to admin/config/search/metatag
+   - Press button "Add default meta tags"
+   - Select Type "Recipe"
+   - Drop down "Schema.org: Recipe" and set:
+     - @type: Recipe
+     - name: [node:field_recipe_name]
+     - description: [node:field_recipe_description:value]
+     - recipeCuisine: [node:field_recipe_tag_cuisine]
+     - Nutritional Tags: [node:field_recipe_tag_nutritional]
+     - prepTime: PM[node:field_recipe_prepa_time]T
+     - Quantity Information: [node:field_recipe_number_servings]
+     - Release date: [node:field_recipe_updatedate]
+     - url: [node:url]
+     - cookTime: PM[node:field_recipe_cooking_time]T
+     - totalTime: PM[node:field_recipe_total_time]T
+     - recipeIngredient: [node:paragraphfields]
+     - recipeInstructions: [node:field_recipe_steps]
+     - recipeCategory: [node:recipecategory]
+
+     *** author ***
+     - @type: Person
+     - name: [node:field_recipe_source]
+
+     *** image ***
+     - @type: ImageObject
+     - representativeOfPage: True
+     - url: [node:recipeimages]
+
+     *** nutrition ***
+     - @type: NutritionInformation
+     - calories: [node:calories]
+     - carbohydrateContent: [node:carbohydrateContent]
+     - cholesterolContent: [node:cholesterolContent]
+     - fiberContent: [node:fiberContent]
+     - proteinContent: [node:proteinContent]
+     - sodiumContent: [node:sodiumContent]
+     - sugarContent: [node:sugarContent]
+     - fatContent: [node:fatContent]
+     - saturatedFatContent: [node:saturatedFatContent]
+
+##Validation
+
+  - Open recipe and press Ctrl+u or right click and select "View Source."
+  - Check if <script type="application/ld+json"> exists
+
+## 2.4.4 (August 05, 2020)
+
+- Adapt code to get the new Tags structure from SRH.
+- Set the new Tag id from SRH into taxonomy description field.
+- Created new fields in CT Recipe:
+    field_recipe_tag_allergen
+    field_recipe_tag_bfood_trends
+    field_recipe_tag_cooking_style
+    field_recipe_tag_dish_type
+    field_recipe_tag_main_ingredient
+    field_recipe_tag_nutrition_trend
+    field_recipe_tag_srh_internal_ta
+    field_recipe_tag_taste
+- Created new taxonomies:
+    allergen
+    bfood_trends
+    cooking_style
+    dish_type
+    main_ingredient
+    nutrition_trends
+    srh_internal_tags
+    taste
+
+## Steps:
+- Check Features UI module should enable on your site.
+- Go to "admin/config/development/features"
+- Choose "Lightnest Components" Bundle type.
+- Find "Lightnest SRH Connector" in the list.
+- Click on missing link and import missing files.
+- After import missing files. Newly created fields will be import in database.
+
+##Validation
+- Check the new fields has been created in CT Recipe.
+- Check the new taxonomies has been created and check if their description field is set with the Tag id.
+- Old taxonomies description field will be set after import recipes.
+
+
+## 2.4.4 (August 05, 2020)
+
+- Adapt code to get the new Tags structure from SRH.
+- Set the new Tag id from SRH into taxonomy description field.
+- Created new fields in CT Recipe:
+    field_recipe_tag_allergen
+    field_recipe_tag_bfood_trends
+    field_recipe_tag_cooking_style
+    field_recipe_tag_dish_type
+    field_recipe_tag_main_ingredient
+    field_recipe_tag_nutrition_trend
+    field_recipe_tag_srh_internal_ta
+    field_recipe_tag_taste
+- Created new taxonomies:
+    allergen
+    bfood_trends
+    cooking_style
+    dish_type
+    main_ingredient
+    nutrition_trends
+    srh_internal_tags
+    taste
+
+## Steps:
+- Check Features UI module should enable on your site.
+- Go to "admin/config/development/features"
+- Choose "Lightnest Components" Bundle type.
+- Find "Lightnest SRH Connector" in the list.
+- Click on missing link and import missing files.
+- After import missing files. Newly created fields will be import in database.
+
+## Validation
+- Check the new fields has been created in CT Recipe.
+- Check the new taxonomies has been created and check if their description field is set with the Tag id.
+- Old taxonomies description field will be set after import recipes.
+
+## 2.5.0 (October 01, 2020)
+
+- Mandatory field for channel id in configuration form.
+- Releases of Mymenu IQ widget version 3. Including side dishes selector feature.
+- UI/UX of Mymenu IQ block header fixed  in mobile and desktop version.
+- Adapt code to get the new Tags structure from SRH.
+- Set the new Tag id from SRH into taxonomy description field.
+
+## Steps:
+- Check Features UI module should enable on your site.
+- Go to "admin/config/development/features"
+- Choose "Lightnest Components" Bundle type.
+- If Multilingual site, check for configurations for all languages for the Widget.
+- If MyMenuIQ Widget is already enabled, and Re-Install the module and do settings for MyMenu IQ widget.
+- Check for Configurations for MyMenu IQ widget [/admin/config/lightnest/dsu_srh/mymenu-iq].
+
+## Validation
+- Check that all the field_recipe_tag_{vocabulary} fields are available in the recipe content type.
+- Check that all the field.field.taxonomy_term.{vocabulary}.field_recipe_tags_id.yml fields imported to keep track of tag ids and prevent from duplicates.
+- {vocabulary} stands for machine name for all tag types.
+
+## 2.5.1 (November 06, 2020)
+
+- MyMenuIQ - bug fixing, function and configuration files renaming due to conflicts with some existing projects.
+- MyMenuIQ - Side dishes ajax calls fix to adapt to multilanguage sites.
+- MyMenuIQ - Side generic dishes are also displayed in the widget.
+
+## Steps:
+- After updating, reimport configuration files folder (/modules/ln_srh_mymenuiq/config/install).
+
+## 2.5.2 (November 24, 2020)
+
+- MyMenuIQ - On see combined recipes links open in new tab.
+- MyMenuIQ - Added custom dataLayer events for the widget.
+- MyMenuIQ - Added finalization message after selecting one generic item as a side dish.
+
+## Steps:
+- After updating, clear the cache.
+
+## 2.5.3 (December 18, 2020)
+
+- SRH - drupal:datalayer dependency added.
+- MyMenuIQ - Widget only appears on recipes with associated score in SRH and with 'Main Course' tag.
+- MyMenuIQ - Added time and difficulty
+- MyMenuIQ - Updated desserts category icon and default text.
+- MyMenuIQ - Widget values are not being reset after closing it.
+
+## Steps:
+- After updating, clear the cache.
+
+## 2.6.0 (January 13, 2021)
+
+- SRH - remove old tag structure processing.
+- SRH - Remove vocabulary id update from the import and invoke it in the admin form submit.
+
+## 2.7.0
+- New Paragraph created for Burn it.
+- New Field is created in Recipe content type to map burn it paragraph.
+- Updated code to sync now burn it in recipes.
+
+## Steps:
+- Check Features UI module should enable on your site.
+- Go to "admin/config/development/features"
+- Choose "Lightnest Components" Bundle type.
+- Check dsu_srh missing link in feature module.
+- Import missing files and new added fields in the dsu_srh
+- clear cache
+
+## Validation
+- Check that all the field_recipe_how_to_burn_it fields are available in the recipe content type.
+- Check one new Paragraph in listing "SRH Recipe How To Burn It"

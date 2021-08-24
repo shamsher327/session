@@ -1,0 +1,49 @@
+uuid: e8fcdc24-9280-417c-a4be-388b3dce96ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_steps_image
+    - paragraphs.paragraphs_type.media_information
+    - paragraphs.paragraphs_type.recipe_steps
+  module:
+    - entity_reference_revisions
+id: paragraph.recipe_steps.field_steps_image
+field_name: field_steps_image
+entity_type: paragraph
+bundle: recipe_steps
+label: 'Steps image'
+description: 'Steps image'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      media_information: media_information
+    target_bundles_drag_drop:
+      macronutrients:
+        weight: 8
+        enabled: false
+      media_information:
+        enabled: true
+        weight: 9
+      recipe_ingredients:
+        weight: 10
+        enabled: false
+      recipe_steps:
+        weight: 11
+        enabled: false
+      recipe_tools:
+        weight: 12
+        enabled: false
+      tags_selector:
+        weight: 13
+        enabled: false
+      tips:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

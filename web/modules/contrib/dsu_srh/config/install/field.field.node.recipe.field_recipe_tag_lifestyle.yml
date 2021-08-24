@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_tag_lifestyle
+    - node.type.recipe
+    - taxonomy.vocabulary.lifestyle
+id: node.recipe.field_recipe_tag_lifestyle
+field_name: field_recipe_tag_lifestyle
+entity_type: node
+bundle: recipe
+label: 'Recipe tag LifeStyle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lifestyle: lifestyle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

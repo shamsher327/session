@@ -1,0 +1,9 @@
+ {
+  "name": "lightnest/front",
+  "type": "drupal-module",
+  "description": "Provides configurable front page",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/core": "^8.8 || ^9"
+  }
+}

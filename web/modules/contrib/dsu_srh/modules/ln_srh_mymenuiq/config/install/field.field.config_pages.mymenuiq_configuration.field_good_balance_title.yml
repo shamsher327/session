@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_good_balance_title
+id: config_pages.mymenuiq_configuration.field_good_balance_title
+field_name: field_good_balance_title
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Good Balance Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Good Balance'
+default_value_callback: ''
+settings: {  }
+field_type: string

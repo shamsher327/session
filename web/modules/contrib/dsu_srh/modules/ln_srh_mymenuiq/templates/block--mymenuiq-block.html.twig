@@ -1,0 +1,97 @@
+{% if nutritional_score is defined and nutritional_score is not empty %}
+  <script> dataLayer = dataLayer || [];
+    dataLayer.push({
+      event: "MyMenuIQEvent",
+      eventCategory: "MyMenuIQ",
+      eventAction: "MyMenuIQ Load",
+      eventLabel: "{{ recipe_name }}"
+    });
+
+    var nutritional_text_details = {
+      "0-44":{
+        "nutritional_balance_title" : "Room for Balance Improvement",
+        "nutritional_balance_desc" : "Your meal is not well balanced",
+        "cssClasses" : "score-bad",
+        "strokeColor": "#97D815"
+      },
+      "45-69":{
+        "nutritional_balance_title" : "Good Balance",
+        "nutritional_balance_desc" : "Your meal is having good balance",
+        "cssClasses" : "score-medium",
+        "strokeColor": "#F1D100"
+      },
+      "70-100":{
+        "nutritional_balance_title" : "Great Balance",
+        "nutritional_balance_desc" : "Your meal is  having great nutritional value",
+        "cssClasses" : "score-good",
+        "strokeColor": "#FF8C28"
+      },
+    };
+  </script>
+  <div class="mg-stagemymenu mg-stagemymenu-override js-mg-stage-menu"
+       data-recipename="{{ recipe_name }}"
+       data-recipescore='{{ nutritional_score }}'>
+    <div class="cell small-24 mg-stagemymenu__container">
+      <div class="circle">
+        {% if nutritional_score > 69 %}
+          {% set colorCode = '#97D815' %}
+        {% elseif nutritional_score > 44 %}
+          {% set colorCode = '#F1D100' %}
+        {% else %}
+          {% set colorCode = '#FF8C28' %}
+        {% endif %}
+        <svg class="progress-ring" data-percent="{{ nutritional_score }}"  data-updated-percent="{{ nutritional_score }}"  data-after-score-text="{{ seperator_text }} {{ '100'|t }}">
+          <circle
+            class="progress-ring__base_circle"
+            stroke="#8e8171"
+            stroke-width="6"
+            stroke-dasharray=""
+            stroke-dashoffset=""
+            fill="transparent"
+            r="50"
+            cx="50%"
+            cy="50%"/>
+
+          <circle
+            class="progress-ring__circle"
+            stroke="{{ colorCode }}"
+            stroke-width="6"
+            stroke-dasharray=""
+            stroke-dashoffset=""
+            fill="transparent"
+            r="50"
+            cx="50%"
+            cy="50%"/>
+
+        </svg>
+        <div class="nutritional_score"  data-show-score="">
+          {{ nutritional_score }}
+          <span>{{ seperator_text }} {{ '100'|t }}</span>
+        </div>
+      </div>
+
+      <div class="title" arrow-color-code="{{ widget_arrow_color_code }}">
+        <div class="title-text">{{ subheading }}</div>
+        {# <img class="yellow-arrow" src="/modules/contrib/dsu_srh/modules/ln_srh_mymenuiq/images/yellow-arrow.png"> #}
+             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="23px" viewBox="0 0 13.52 24"><title></title><path fill="{{widget_arrow_color_code ? widget_arrow_color_code : '#fff33e' }}" d="M.44.44a1.51,1.51,0,0,0,0,2.14L9.86,12,.44,21.42a1.51,1.51,0,1,0,2.14,2.14L13,13.11l.05,0a1.55,1.55,0,0,0,0-2.16l-.05,0L2.58.44A1.51,1.51,0,0,0,.44.44Z" fill-rule="evenodd"/></svg>
+
+      </div>
+      {# <div class="plusIcon text-center align-center"><span>+</span></div> #}
+    </div>
+    {% if overlay is defined and overlay|length > 0 %}
+      <div class="cell stagemymenu_overlay-wrapper">
+
+        <div class="stagemymenu-bg-mask"></div>
+        {% if side_dishes_menu.response_code != 200 or side_dishes_menu.side_dish_tabs|length < 0 or side_dishes_menu.side_dish_tabs|length == 0 %}
+          {% set custom_classes = ' no-side-recipes' %}
+        {% endif %}
+        <div class="stagemymenu_overlay stagemymenu_overlay-override{{ custom_classes }}">
+          {% include "#{ module_path }/templates/mymenuiq-overlay.twig" with overlay %}
+        </div>
+        <div class="combined_recipes">
+          {% include "#{ module_path }/templates/mymenuiq-overlay-combined-recipes.twig" with overlay %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

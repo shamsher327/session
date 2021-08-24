@@ -1,0 +1,15 @@
+title: Foam dark froth
+field_teaser_subtitle: Percolator crema, eu mazagran brewed
+body: Foam dark froth, to go caffeine coffee coffee, that percolator crema, eu mazagran brewed organic americano. Iced, steamed, percolator grinder and dripper sugar, cultivar, roast, et variety viennese at, viennese, single origin, sit mug blue mountain steamed coffee.
+field_buton_position:
+field_image:
+  image_name: yes-bar.jpg
+  image_title: Yes bar
+field_dsu_tags: Sample content
+field_teaser_link:
+  uri: internal:/ # Drupal save "internal:/" when "<front>" is used
+  title: More
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

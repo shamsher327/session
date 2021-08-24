@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient_isnestleproduct
+    - paragraphs.paragraphs_type.recipe_ingredients
+id: paragraph.recipe_ingredients.field_ingredient_isnestleproduct
+field_name: field_ingredient_isnestleproduct
+entity_type: paragraph
+bundle: recipe_ingredients
+label: 'ingredient isNestleProduct'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

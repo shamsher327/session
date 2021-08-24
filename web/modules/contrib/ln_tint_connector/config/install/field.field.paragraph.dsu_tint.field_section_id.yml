@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_id
+    - paragraphs.paragraphs_type.dsu_tint
+id: paragraph.dsu_tint.field_section_id
+field_name: field_section_id
+entity_type: paragraph
+bundle: dsu_tint
+label: 'Section ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

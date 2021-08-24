@@ -1,0 +1,174 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_browser
+    - field.field.paragraph.c_image.field_button_color
+    - field.field.paragraph.c_image.field_c_image
+    - field.field.paragraph.c_image.field_c_image_subheading
+    - field.field.paragraph.c_image.field_c_image_summary_text
+    - field.field.paragraph.c_image.field_c_image_title_style
+    - field.field.paragraph.c_image.field_c_link
+    - field.field.paragraph.c_image.field_c_title
+    - field.field.paragraph.c_image.field_classy_paragraph_style
+    - field.field.paragraph.c_image.field_classy_paragraph_txt_style
+    - field.field.paragraph.c_image.field_horizontal_aligment
+    - field.field.paragraph.c_image.field_position
+    - field.field.paragraph.c_image.field_section_id
+    - field.field.paragraph.c_image.field_text_horizontal_alignment
+    - field.field.paragraph.c_image.field_text_vertical_alignment
+    - paragraphs.paragraphs_type.c_image
+  module:
+    - entity_browser
+    - field_group
+    - link_attributes
+    - text
+third_party_settings:
+  field_group:
+    group_cta_button:
+      children:
+        - field_c_link
+        - field_button_color
+        - field_horizontal_aligment
+        - field_position
+      parent_name: ''
+      weight: 7
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: false
+      label: 'CTA Button'
+      region: content
+    group_position:
+      children:
+        - field_text_horizontal_alignment
+        - field_text_vertical_alignment
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Position
+      region: content
+id: paragraph.c_image.default
+targetEntityType: paragraph
+bundle: c_image
+mode: default
+content:
+  field_button_color:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_c_image:
+    type: entity_browser_entity_reference
+    weight: 6
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+      field_widget_replace: false
+    region: content
+    third_party_settings: {  }
+  field_c_image_subheading:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c_image_summary_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_c_image_title_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_c_link:
+    type: link_attributes
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: true
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+  field_c_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_classy_paragraph_txt_style:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_horizontal_aligment:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_position:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_section_id:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_horizontal_alignment:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_vertical_alignment:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  field_classy_paragraph_style: true
+  status: true
+  uid: true

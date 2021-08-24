@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_hover_card_profile
+label: 'Hover Card Profile (3 cards per line)'
+classes: hover-card-profile

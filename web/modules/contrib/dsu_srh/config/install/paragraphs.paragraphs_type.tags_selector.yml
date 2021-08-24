@@ -1,0 +1,7 @@
+status: true
+dependencies: {  }
+id: tags_selector
+label: 'SRH Tags Selector'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

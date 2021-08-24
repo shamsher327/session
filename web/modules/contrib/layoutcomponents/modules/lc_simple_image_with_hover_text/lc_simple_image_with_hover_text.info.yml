@@ -1,0 +1,12 @@
+name: Layout Components - Simple Image With Hover Text
+type: module
+description: Simple image with hover text
+package: LayoutComponents
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - layoutcomponents
+
+# Information added by Drupal.org packaging script on 2021-07-24
+version: '3.0.1'
+project: 'layoutcomponents'
+datestamp: 1627115751

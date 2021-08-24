@@ -1,0 +1,41 @@
+type: ln_c_cardgrid
+field_ln_c_card_title: CARD Grid - Basic style hover box 1
+field_c_cardgrid_title_style: 'h1'
+field_ln_c_grid_card_style: ln_c_gridcard_hover_box_1
+field_number_of_columns: '2'
+field_ln_c_card_allow_spacing: '1'
+field_ln_card_color:
+  tax_term_name:
+    vid: color
+    name: Sample Color
+    custom_field:
+      field_color_code: '#0045AB'
+      field_font_color: '#FFFFFF'
+field_ln_c_card_carousels:
+  paragraph:
+    item_0:
+      type: ln_c_grid_card_item
+      field_ln_c_grid_card_color:
+        tax_term_name:
+          vid: color
+          name: Sample Color
+          custom_field:
+            field_color_code: '#0045AB'
+            field_font_color: '#FFFFFF'
+      field_ln_c_grid_card_teaser:
+        entity_relation:
+          item_0: teaser
+      teaser_to_get: 0
+    item_1:
+      type: ln_c_grid_card_item
+      field_ln_c_grid_card_color:
+        tax_term_name:
+          vid: color
+          name: Sample Color
+          custom_field:
+            field_color_code: '#0045AB'
+            field_font_color: '#FFFFFF'
+      field_ln_c_grid_card_teaser:
+        entity_relation:
+          item_0: teaser
+      teaser_to_get: 1

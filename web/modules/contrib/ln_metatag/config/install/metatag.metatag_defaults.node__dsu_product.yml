@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__dsu_product
+label: 'Content: Product'
+tags:
+  title: '[node:title]'
+  schema_product_brand: 'a:2:{s:5:"@type";s:5:"Brand";s:4:"name";s:32:"[node:field_product_brand:value]";}'
+  schema_product_description: '[node:field_dsu_product_desc]'
+  schema_product_image: 'a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:37:"[node:field_product_image:entity:url]";}'
+  schema_product_name: '[node:title]'
+  schema_product_offers: 'a:3:{s:5:"@type";s:5:"Offer";s:5:"price";s:22:"[node:field_dsu_price]";s:13:"priceCurrency";s:25:"[node:field_dsu_currency]";}'
+  schema_product_review: 'a:3:{s:5:"@type";s:6:"Review";s:6:"author";a:2:{s:5:"@type";s:6:"Person";s:4:"name";s:26:"[node:author:display-name]";}s:12:"reviewRating";a:3:{s:5:"@type";s:15:"AggregateRating";s:11:"ratingValue";s:35:"[current-page:metatag:rating:value]";s:11:"ratingCount";s:35:"[node:field_reviews:comment_count]";}}'
+  schema_product_sku: '[node:field_dsu_sku:value]'
+  schema_product_type: Product

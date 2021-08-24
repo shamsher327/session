@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_steps_workload
+    - paragraphs.paragraphs_type.recipe_steps
+id: paragraph.recipe_steps.field_steps_workload
+field_name: field_steps_workload
+entity_type: paragraph
+bundle: recipe_steps
+label: 'steps workload'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

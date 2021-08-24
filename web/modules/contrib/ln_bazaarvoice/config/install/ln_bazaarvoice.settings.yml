@@ -1,0 +1,5 @@
+mode: 'stg'
+method: 'hosted'
+hosted:
+  client_name: '{your Client Name}'
+  site_id: '{ your Deployment Zone }'

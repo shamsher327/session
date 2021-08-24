@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient_quantity
+    - paragraphs.paragraphs_type.recipe_ingredients
+id: paragraph.recipe_ingredients.field_ingredient_quantity
+field_name: field_ingredient_quantity
+entity_type: paragraph
+bundle: recipe_ingredients
+label: ingredient_quantity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

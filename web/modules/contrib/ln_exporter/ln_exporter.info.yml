@@ -1,0 +1,10 @@
+name: 'Lightnest Data Exporter'
+description: Lightnest module for Data Export.
+package: 'Lightnest'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - dsu_c_core
+  - dsu_article
+configure: ln_exporter.admin.form

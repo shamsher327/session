@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ln_c_card_item.field_button_color
+    - field.field.paragraph.ln_c_card_item.field_card_entity_selector
+    - paragraphs.paragraphs_type.ln_c_card_item
+  module:
+    - inline_entity_form
+id: paragraph.ln_c_card_item.default
+targetEntityType: paragraph
+bundle: ln_c_card_item
+mode: default
+content:
+  field_button_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_card_entity_selector:
+    weight: 0
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

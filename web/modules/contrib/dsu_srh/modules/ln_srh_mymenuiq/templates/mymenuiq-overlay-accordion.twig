@@ -1,0 +1,59 @@
+{% if accordion_first is defined and accordion_first is not empty %}
+  <div class="cell stagemymenu_overlay_accordion1">
+
+    {% if overlay.subtitle is not empty or overlay.description is not empty %}
+      <div class="part-1">
+        <div class="title">{{ overlay.subtitle }}</div>
+        <div class="description">{{ overlay.description|raw }}</div>
+      </div>
+    {% endif %}
+    <div class="part-2">
+      {% if overlay.min_max_data_heading is defined and overlay.min_max_data_heading is not empty %}
+        <div class="heading">{{ overlay.min_max_data_heading }}</div>
+      {% endif %}
+
+      {% for key, value in overlay.min_max_data %}
+        <div class="group">
+          <div class="title">
+			<span class="range-icon">
+				<svg class="{{ key }}" height="24px" width="24px">
+  					<circle cx="50%" cy="50%" r="12" stroke="" stroke-width=""/>
+				</svg>
+			</span>
+            {{ value.title }}
+            {% if value.max is defined and value.max is not empty %}
+              <span class="range"> ({{ value.min }} - {{ value.max }})</span>
+            {% endif %}
+          </div>
+          {% if value.description is defined and value.description is not empty %}
+            <div class="description">{{ value.description }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+      {% if overlay.disclaimer_text is defined and overlay.disclaimer_text is not empty %}
+        <div class="disclaimer">{{ overlay.disclaimer_text }}</div>
+      {% endif %}
+    </div>
+  </div>
+{% elseif accordion_second is defined and accordion_second is not empty %}
+  <div class="cell stagemymenu_overlay_accordion2">
+    <div class="part-2">
+      {% for value in overlay.nutritional_breakup %}
+        {% if value.percent %}
+          <div class="graph-section">
+            <div class="name">{{ value.name }}</div>
+            <div class="bar-main">
+              <div class="bar-sub"
+                   style="right:{{ 100 - value.percent }}%"></div>
+            </div>
+            <div class="units"><span>{{ value.unit }}</span> /
+              <span>{{ value.percent }}%</span></div>
+          </div>
+        {% endif %}
+      {% endfor %}
+      {% if overlay.disclaimer_text is defined and overlay.disclaimer_text is not empty %}
+        <div class="disclaimer">{{ overlay.disclaimer_text }}</div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

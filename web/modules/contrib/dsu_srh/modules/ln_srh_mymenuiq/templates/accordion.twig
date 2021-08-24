@@ -1,0 +1,41 @@
+<div class="grid-container">
+  <div class="grid-x mg-accordion accordion-override">
+    <div
+      class="cell small-24 {% if containermodifier != 'without-gutter' %} medium-14 medium-offset-5 {% endif %} mg-gutter-container ">
+      <div id="{{ id }}" class="accordion border-bottom-none is-visible"
+           multiexpand="{{ multipleExpand }}">
+        {% if componentTitle is defined and componentTitle is not empty and componentTitle is not null %}
+          <h2>{{ componentTitle }}</h2>
+        {% endif %}
+        {% for item in accordion %}
+          {# test item start #}
+          {% if item.title is defined and item.title is not empty %}
+            <div class="accordion-group">
+              <div class="panel-title">
+                <a data-toggle="collapse" data-parent="{{ id }}"
+                   href="#{{ item.id }}" aria-expanded="false"
+                   aria-controls="{{ item.id }}" class = "accordion-function" data-topic = "{{ item.title }}">
+                  <h3 class="mg-dark">{{ item.title }}</h3>
+                </a>
+                <i class="{{ item.id }} fas fa-sm arrow-down"></i>
+              </div>
+              <div id="{{ item.id }}"
+                   class="collapse panel-content bodycopy-small mg-generic-text__description">
+                {% if item.type is defined and item.type is not null and item.type == 'partials' %}
+                  {% include "#{ module_path }/templates/"~item.component.name~".twig" with item.component %}
+                {% elseif item.type is defined and item.type is not null and item.type == 'content' %}
+                  {% include "#{ module_path }/templates/"~item.component.name~".twig" with item.component %}
+                {% else %}
+                  {% if item.content is defined and item.content is not null %}
+                    {{ item.content|raw }}
+                  {% endif %}
+                {% endif %}
+              </div>
+              {# test item end #}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

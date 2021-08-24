@@ -1,0 +1,11 @@
+name: 'Lightnest Components: YouTube Carousel'
+description: 'Provides Youtube Carousel paragraphs type and related configuration.'
+type: module
+core: 8.x
+version: 8.x-1.0.5
+core_version_requirement: ^8 || ^9
+package: 'Lightnest Components'
+dependencies:
+  - paragraphs
+  - entity_class_formatter
+  - dsu_c_core

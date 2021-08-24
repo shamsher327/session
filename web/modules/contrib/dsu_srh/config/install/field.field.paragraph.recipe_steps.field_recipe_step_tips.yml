@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_recipe_step_tips
+    - paragraphs.paragraphs_type.recipe_steps
+    - paragraphs.paragraphs_type.tips
+  module:
+    - entity_reference_revisions
+id: paragraph.recipe_steps.field_recipe_step_tips
+field_name: field_recipe_step_tips
+entity_type: paragraph
+bundle: recipe_steps
+label: 'Recipe Step Tips'
+description: 'Recipe Step Tips'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tips: tips
+    target_bundles_drag_drop:
+      tips:
+        enabled: true
+        weight: 7
+      macronutrients:
+        weight: 8
+        enabled: false
+      recipe_ingredients:
+        weight: 9
+        enabled: false
+      recipe_steps:
+        weight: 10
+        enabled: false
+      recipe_tools:
+        weight: 11
+        enabled: false
+      tags_selector:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      other: other
+id: image_hotspots_areas
+label: 'Content: Image Hotspots'
+icon_uuid: null
+icon_default: null
+description: 'Adds text and links to specific areas of an image when a visitor hovers or clicks on specific areas.'
+behavior_plugins: {  }

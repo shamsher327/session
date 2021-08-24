@@ -1,0 +1,13 @@
+diff --git a/link_target.info.yml b/link_target.info.yml
+index fa640d4..83be60f 100755
+--- a/link_target.info.yml
++++ b/link_target.info.yml
+@@ -2,5 +2,6 @@ name: Link target
+ type: module
+ description: Provide a widget for Link field type which permits to choose target.
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ dependencies:
+-  - drupal:link
+\ No newline at end of file
++  - drupal:link

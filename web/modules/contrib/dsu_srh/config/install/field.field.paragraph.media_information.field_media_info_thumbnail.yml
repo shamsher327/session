@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_info_thumbnail
+    - paragraphs.paragraphs_type.media_information
+id: paragraph.media_information.field_media_info_thumbnail
+field_name: field_media_info_thumbnail
+entity_type: paragraph
+bundle: media_information
+label: thumbnail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

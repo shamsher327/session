@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_testimonial.field_c_testimonial_head_style
+    - field.field.paragraph.c_testimonial.field_c_testimonial_heading
+    - field.field.paragraph.c_testimonial.field_c_testimonial_item
+    - field.field.paragraph.c_testimonial.field_c_testimonial_sub_heading
+    - paragraphs.paragraphs_type.c_testimonial
+  module:
+    - paragraphs
+id: paragraph.c_testimonial.default
+targetEntityType: paragraph
+bundle: c_testimonial
+mode: default
+content:
+  field_c_testimonial_head_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_c_testimonial_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_c_testimonial_item:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: c_testimonial_item
+    third_party_settings: {  }
+    region: content
+  field_c_testimonial_sub_heading:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

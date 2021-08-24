@@ -1,0 +1,6 @@
+ln_exporter.admin.form:
+  title: 'LightNest Node ID Exporter'
+  description: 'LightNest Node ID Exporter'
+  route_name: ln_exporter.admin.form
+  parent: dsu_c_core.settings
+  weight: 35

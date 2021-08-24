@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+.kanchana-region{
+    display: block;
+    float: right;
+}

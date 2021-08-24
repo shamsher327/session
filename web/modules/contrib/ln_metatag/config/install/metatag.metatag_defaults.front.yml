@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies: {  }
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'
+  og_description: '[node:summary]'
+  og_image: '[node:field_dsu_image:entity:image:entity:url][node:field_featured_image:entity:image:entity:url][node:field_product_image:entity:image:entity:url]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  og_type: '[node:content-type]'
+  og_url: '[node:url]'
+  twitter_cards_creator: '[node:author:account-name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: '[node:field_dsu_image:entity:image:entity:url][node:field_featured_image:entity:image:entity:url][node:field_product_image:entity:image:entity:url]'
+  twitter_cards_image_alt: 'Site image'
+  twitter_cards_site: '[site:name]'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary_large_image
+  schema_organization_contact_point: 'a:3:{s:5:"@type";s:12:"ContactPoint";s:9:"telephone";s:17:"+44 0800 00 00 30";s:11:"contactType";s:16:"customer service";}'
+  schema_organization_name: '[site:name]'
+  schema_organization_type: Organization
+  schema_organization_url: '[site:url]'

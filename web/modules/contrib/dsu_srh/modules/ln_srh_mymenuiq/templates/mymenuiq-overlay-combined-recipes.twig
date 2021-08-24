@@ -1,0 +1,36 @@
+<div class="combined_recipes_content">
+  <a class="close-combined-recipe" href="javascript:void(0)">
+    <span>x</span>
+  </a>
+  <div class="combined_recipes_images">
+    <div class="row">
+      <div class="col-6 col-xs-6 no-padding">
+        <img src="{{ overlay.image_path_medium }}">
+      </div>
+      <div class="col-6 col-xs-6 no-padding">
+        <img class="side-dish-selected-img" src="{{ overlay.image_path_medium }}">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cell primary_part mb-10">
+      <div class="mymenu-title">{{ overlay.overlay_heading }}</div>
+    </div>
+    <div class="cell primary_part">
+      <div class="combined_recipe_titles_wrapper ">
+        {% set current_url = url('<current>') %}
+        <a href="{{ current_url }}" class="main-dish-title" target="_blank">
+          <h2>{{ overlay.recipe_title }}</h2></a>
+        <span class="plus-sign">+</span>
+        <a href="javascript:void(0)" class="side-dish-added-title" target="_blank">
+          <h2>{{ overlay.recipe_title }}</h2></a>
+      </div>
+      <div class="combined_link_back_wrapper">
+        <a class="combined_link_back" href="#">
+          <i class="left-chevron"></i>
+          {{ 'Not the right choice? Go back'|t }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

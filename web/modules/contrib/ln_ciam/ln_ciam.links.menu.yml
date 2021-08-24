@@ -1,0 +1,4 @@
+ln_ciam.settings:
+  title: 'Update key path for Gigya module'
+  parent: system.admin_config_services
+  route_name: ln_ciam.settings

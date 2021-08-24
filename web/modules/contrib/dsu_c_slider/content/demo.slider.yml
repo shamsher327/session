@@ -1,0 +1,75 @@
+type: c_slider
+component_description: SLIDER - SHOWING SAMPLE OPTIONS OF TEXT ABOVE, OVER AND BELOW SLIDE AND ALIGNMENTS
+field_classy_paragraph_style:
+  target_id:
+field_c_slide:
+  paragraph:
+    item_0:
+      type: c_slide
+      field_c_title: Slider Text Above Left
+      field_button_color:
+        tax_term_name:
+          vid: color
+          name: Sample color
+          custom_field:
+            field_color_code: '#0045AB'
+            field_font_color: '#FFFFFF'
+      field_c_image:
+        image_name: atelier-chocolate-800.jpg
+        image_title: Les Recettes de L'Atelier
+      field_slide_content_position: above_left
+      field_slide_description: Arabica strong lungo, espresso, arabica froth, as variety viennese instant robusta dripper
+      field_c_link:
+        links:
+          item_0:
+            uri: https://www.nestle.com
+            title: More
+            options:
+              attributes:
+              target: _blank
+    item_1:
+      type: c_slide
+      field_c_title: Slider Text Center Middle
+      field_button_color:
+        tax_term_name:
+          vid: color
+          name: Sample color
+          custom_field:
+            field_color_code: '#0045AB'
+            field_font_color: '#FFFFFF'
+      field_c_image:
+        image_name: nesquino.jpg
+        image_title: Nesquino
+      field_slide_content_position: over_center
+      field_slide_description: Arabica strong lungo, espresso, arabica froth, as variety viennese instant robusta dripper
+      field_c_link:
+        links:
+          item_0:
+            uri: https://www.nestle.com
+            title: More
+            options:
+              attributes:
+              target: _blank
+    item_2:
+      type: c_slide
+      field_c_title: Slider Text Right Bottom
+      field_button_color:
+        tax_term_name:
+          vid: color
+          name: Sample color
+          custom_field:
+            field_color_code: '#0045AB'
+            field_font_color: '#FFFFFF'
+      field_c_image:
+        image_name: yes-bar.jpg
+        image_title: Yes bar
+      field_slide_content_position: bellow_right
+      field_slide_description: Arabica strong lungo, espresso, arabica froth, as variety viennese instant robusta dripper
+      field_c_link:
+        links:
+          item_0:
+            uri: https://www.nestle.com
+            title: More
+            options:
+              attributes:
+              target: _blank

@@ -1,0 +1,12 @@
+name: 'Lightnest Components: Image Hotspots'
+description: 'Module allows you to create hot areas in an image, and show information on mouse over or click'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 8.x-1.0.7
+dependencies:
+  - field
+  - file
+  - image
+  - paragraphs
+package: 'Lightnest Components'

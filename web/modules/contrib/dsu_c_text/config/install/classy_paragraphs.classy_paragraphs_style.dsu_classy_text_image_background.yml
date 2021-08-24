@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dsu_classy_text_image_background
+label: 'Image Background'
+classes: "image-bg\r\nlight-text"

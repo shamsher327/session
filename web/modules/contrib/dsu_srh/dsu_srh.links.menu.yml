@@ -1,0 +1,20 @@
+dsu_srh.index:
+  title: Smart Recipe Hub (SRH)
+  description: Various settings for altering the behavior of SRH modules.
+  parent: system.admin_config
+  route_name: dsu_srh.index
+  weight: 150
+
+dsu_srh.admin:
+  title: 'SRH Connector Configuration'
+  description: 'Configuration for the SRH connector'
+  parent: dsu_srh.index
+  route_name: dsu_srh.config
+  weight: 20
+
+dsu_srh.action:
+  title: 'SRH Manual Importer'
+  description: 'Import recipes from the Smart Recipe Hub to local'
+  parent: dsu_srh.index
+  route_name: dsu_srh.action
+  weight: 25

@@ -8,9 +8,8 @@ base theme: false
 libraries:
   - bootstrap_barrio/global-styling
 
-libraries-extend:
-  core/drupal.dropbutton:
-    - bootstrap_barrio/dropbutton
+libraries-override:
+  core/drupal.dropbutton: false
   file/drupal.file:
     - bootstrap_barrio/file
   views/views.ajax:

@@ -1,0 +1,31 @@
+# The 'type' should be "label" for short meta tags and "text" for ones which
+# could get longer, especially ones which use a textarea field instead of a
+# textfield.
+metatag.metatag_tag.schema_recipe_image_url:
+  type: text
+  label: 'Image Url'
+metatag.metatag_tag.schema_recipe_newauthor:
+  type: text
+  label: 'Author'
+metatag.metatag_tag.schema_recipe_url:
+  type: text
+  label: 'URL of the recipe'
+metatag.metatag_tag.schema_recipe_releasedate:
+  type: text
+  label: 'Release date'
+metatag.metatag_tag.schema_recipe_quantity:
+  type: text
+  label: 'Quantity Information'
+metatag.metatag_tag.schema_recipe_ingredients:
+  type: text
+  label: 'Recipe Ingredients'
+metatag.metatag_tag.schema_recipe_preparationsteps:
+  type: text
+  label: 'Preparation Steps'
+metatag.metatag_tag.schema_recipe_nutrionalinformation:
+  type: text
+  label: 'Nutritional Information'
+metatag.metatag_tag.schema_product_category:
+  type: text
+  label: 'Product Category'
+

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dsu_srh_how_to_burn_it
+label: 'SRH Recipe How To Burn It'
+icon_uuid: null
+icon_default: null
+description: 'SRH how To Burn It'
+behavior_plugins: {  }

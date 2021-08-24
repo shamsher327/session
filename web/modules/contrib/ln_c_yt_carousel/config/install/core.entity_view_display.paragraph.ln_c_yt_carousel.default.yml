@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ln_c_yt_carousel.field_css_class
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_autoplay_video
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_carousel_autoplay
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_carousel_max_items
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_carousel_speed
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_playlist_id
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_playlist_max_items
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_thumbnail_title
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_video_description
+    - field.field.paragraph.ln_c_yt_carousel.field_youtube_video_ids
+    - paragraphs.paragraphs_type.ln_c_yt_carousel
+  module:
+    - entity_class_formatter
+id: paragraph.ln_c_yt_carousel.default
+targetEntityType: paragraph
+bundle: ln_c_yt_carousel
+mode: default
+content:
+  field_css_class:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_class_formatter
+    region: content
+  field_youtube_autoplay_video:
+    weight: 4
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_youtube_carousel_autoplay:
+    weight: 8
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_youtube_carousel_max_items:
+    weight: 6
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_youtube_carousel_speed:
+    weight: 7
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_youtube_playlist_id:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_youtube_playlist_max_items:
+    weight: 5
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_youtube_thumbnail_title:
+    weight: 3
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_youtube_video_description:
+    weight: 2
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_youtube_video_ids:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

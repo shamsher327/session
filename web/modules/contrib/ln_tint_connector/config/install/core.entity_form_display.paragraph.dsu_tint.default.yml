@@ -1,0 +1,114 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dsu_tint.field_block_height
+    - field.field.paragraph.dsu_tint.field_data_clickformore
+    - field.field.paragraph.dsu_tint.field_data_columns
+    - field.field.paragraph.dsu_tint.field_data_expand
+    - field.field.paragraph.dsu_tint.field_data_id
+    - field.field.paragraph.dsu_tint.field_data_infinitescroll
+    - field.field.paragraph.dsu_tint.field_data_personalization_id
+    - field.field.paragraph.dsu_tint.field_data_tags
+    - field.field.paragraph.dsu_tint.field_dsu_tint_title_style
+    - field.field.paragraph.dsu_tint.field_headline
+    - field.field.paragraph.dsu_tint.field_intro_text
+    - field.field.paragraph.dsu_tint.field_section_id
+    - paragraphs.paragraphs_type.dsu_tint
+  module:
+    - text
+id: paragraph.dsu_tint.default
+targetEntityType: paragraph
+bundle: dsu_tint
+mode: default
+content:
+  field_block_height:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_data_clickformore:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_data_columns:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_data_expand:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_data_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_data_infinitescroll:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_data_personalization_id:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_data_tags:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dsu_tint_title_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_intro_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_section_id:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

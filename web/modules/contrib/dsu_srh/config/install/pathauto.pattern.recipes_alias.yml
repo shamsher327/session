@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: recipes_alias
+label: 'Recipes Alias'
+type: 'canonical_entities:node'
+pattern: 'recipes/[node:field_recipe_seo_url:value]'
+selection_criteria:
+  74121fe9-07c1-40af-904c-fbc75035e4b6:
+    id: node_type
+    bundles:
+      recipe: recipe
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 74121fe9-07c1-40af-904c-fbc75035e4b6
+selection_logic: and
+weight: -5
+relationships: {  }

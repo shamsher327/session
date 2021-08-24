@@ -1,0 +1,56 @@
+type: layout_columns_1
+component_description: CARD - FULL COLOR BOX IN LAYOUT 100%
+field_column_first:
+  paragraph:
+    item_0:
+      type: ln_c_card
+      field_classy_paragraph_style: card_full_color_box
+      field_button_color:
+        tax_term_name:
+          vid: color
+          name: Sample Color
+          custom_field:
+            field_color_code: '#0045AB'
+            field_font_color: '#FFFFFF'
+      field_css_class: active_class
+      field_card_item:
+        paragraph:
+          item_0:
+            type: ln_c_card_item
+            field_button_color:
+              tax_term_name:
+                vid: color
+                name: Sample Color
+                custom_field:
+                  field_color_code: '#0045AB'
+                  field_font_color: '#FFFFFF'
+            field_card_entity_selector:
+              entity_relation:
+                item_0: teaser
+            teaser_to_get: 7
+          item_1:
+            type: ln_c_card_item
+            field_button_color:
+              tax_term_name:
+                vid: color
+                name: Sample Color
+                custom_field:
+                  field_color_code: '#0045AB'
+                  field_font_color: '#FFFFFF'
+            field_card_entity_selector:
+              entity_relation:
+                item_0: teaser
+            teaser_to_get: 8
+          item_2:
+            type: ln_c_card_item
+            field_button_color:
+              tax_term_name:
+                vid: color
+                name: Sample Color
+                custom_field:
+                  field_color_code: '#0045AB'
+                  field_font_color: '#FFFFFF'
+            field_card_entity_selector:
+              entity_relation:
+                item_0: teaser
+            teaser_to_get: 9

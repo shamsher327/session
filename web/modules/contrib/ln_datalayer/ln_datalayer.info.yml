@@ -1,0 +1,8 @@
+name: 'Lightnest Data Layer'
+description: 'Allows you to configure static dataLayer values.'
+type: module
+package: 'Lightnest'
+dependencies:
+  - advanced_datalayer:advanced_datalayer
+core_version_requirement: ^8 || ^9
+version: 8.x-2.0.0

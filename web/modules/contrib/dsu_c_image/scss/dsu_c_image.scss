@@ -1,0 +1,309 @@
+.paragraph--type--c-image {
+    position: relative;
+    text-align: left;
+    .field--name-field-c-title {
+        position: relative;
+        color: #FFF;
+    }
+    .field--name-field-c-image-subheading {
+        position: relative;
+        color: #FFF;
+        color: #fff;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    .field--name-field-c-image-summary-text {
+        position: relative;
+        color: #FFF;
+        font-size: 14px;
+        color: #fff;
+        p {
+            color: #fff;
+        }
+    }
+    .image-container {
+        position: relative;
+    }
+    .field--type-entity-reference {
+        margin: 0;
+    }
+    .field--name-field-c-image {
+        img {
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            width: 100%;
+        }
+    }
+    .text-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        z-index: 9;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        z-index: 9;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0 30px;
+        h1 {
+            line-height: 55px;
+            font-weight: 800;
+            font-size: 55px;
+        }
+        .field--name-field-c-title {
+            line-height: 55px;
+            font-weight: 800;
+            font-size: 55px;
+        }
+        * {
+            color: #FFF;
+            color: #FFF;
+        }
+    }
+    .vertical_middle {
+        .text-container {
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: auto;
+            display: block;
+            z-index: 9;
+            align-items: flex-start;
+            z-index: 9;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(-50%);
+        }
+    }
+    .vertical_top {
+        .text-container {
+            top: 40px;
+            left: 0;
+            right: 0;
+            bottom: auto;
+        }
+    }
+    .vertical_bottom {
+        .text-container {
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            top: auto;
+        }
+    }
+    .horizontal_position_center {
+        text-align: center;
+        h1 {
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .field--name-field-c-title {
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .field--name-field-c-image-subheading {
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .field--name-field-c-image-summary-text {
+            text-align: center;
+            display: block;
+            width: 100%;
+            text-align: center;
+            p {
+                text-align: center;
+            }
+        }
+    }
+    .horizontal_position_right {
+        text-align: right;
+        h1 {
+            text-align: right;
+            display: block;
+            width: 100%;
+        }
+        .field--name-field-c-title {
+            text-align: right;
+            display: block;
+            width: 100%;
+        }
+        .field--name-field-c-image-subheading {
+            text-align: right;
+            display: block;
+            width: 100%;
+        }
+        .field--name-field-c-image-summary-text {
+            text-align: right;
+            display: block;
+            width: 100%;
+            text-align: right;
+            p {
+                text-align: right;
+            }
+        }
+    }
+    .image_cta_link {
+        margin: 6px 0;
+        padding-left: 0;
+        padding-right: 0;
+        -webkit-transition: -webkit-box-shadow 0.4s;
+        transition: -webkit-box-shadow 0.4s;
+        transition: box-shadow 0.4s;
+        transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+        display: inline-block;
+        padding: 13px 35px;
+        background: #0045AB;
+        border-radius: 22px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        a {
+            text-decoration: none;
+        }
+    }
+    .center-div {
+        /*max-width: 81%;*/
+        margin: 0 auto;
+        display: block;
+    }
+    .horizontal-left {
+        .center-div {
+            text-align: left;
+        }
+    }
+    .horizontal-right {
+        .center-div {
+            text-align: right;
+        }
+    }
+    .horizontal-center {
+        .center-div {
+            text-align: center;
+        }
+    }
+    .vertical-above {
+        .text-container {
+            top: 40px;
+        }
+    }
+    .vertical-below {
+        .text-container {
+            bottom: 40px;
+        }
+    }
+}
+.paragraph--type--c-image.white-text {
+    .text-container {
+        * {
+            color: #FFF;
+            color: #FFF;
+        }
+    }
+    .field--name-field-c-title {
+        color: #FFF;
+    }
+    .field--name-field-c-image-subheading {
+        color: #FFF;
+    }
+    .field--name-field-c-image-summary-text {
+        color: #FFF;
+    }
+}
+.paragraph--type--c-image.dark-text {
+    .field--name-field-c-title {
+        color: #000;
+    }
+    .field--name-field-c-image-subheading {
+        color: #000;
+    }
+    .field--name-field-c-image-summary-text {
+        color: #000;
+    }
+    .text-container {
+        * {
+            color: #000;
+        }
+    }
+}
+.paragraph--type--c-image.horizontal_position_center {
+    .text-container {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .field--name-field-c-image-summary-text {
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            p {
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+        }
+    }
+}
+.paragraph--type--c-image.horizontal_position_right {
+    .text-container {
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        .field--name-field-c-image-summary-text {
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            p {
+                -webkit-box-align: end;
+                -webkit-align-items: flex-end;
+                -ms-flex-align: end;
+                align-items: flex-end;
+            }
+        }
+    }
+}
+.node-dsu-component-page-edit-form {
+    a {
+        line-height: inherit !important;
+    }
+    p {
+        line-height: inherit !important;
+    }
+    .paragraph--type--c-image {
+        .field--name-field-c-image-subheading {
+            margin-left: 0;
+        }
+        .container {
+            max-width: 91%;
+            margin: 0 auto;
+        }
+        .center-div {
+            max-width: 90%;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_teasercycle.field_c_display_options
+    - field.field.paragraph.c_teasercycle.field_c_teasercycle_item
+    - field.field.paragraph.c_teasercycle.field_section_id
+    - paragraphs.paragraphs_type.c_teasercycle
+  module:
+    - options_table
+    - paragraphs
+id: paragraph.c_teasercycle.default
+targetEntityType: paragraph
+bundle: c_teasercycle
+mode: default
+content:
+  field_c_display_options:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_table
+    region: content
+  field_c_teasercycle_item:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_section_id:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

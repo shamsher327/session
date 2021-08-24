@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_classy_paragraph_style
+    - paragraphs.paragraphs_type.c_slider
+id: paragraph.c_slider.field_classy_paragraph_style
+field_name: field_classy_paragraph_style
+entity_type: paragraph
+bundle: c_slider
+label: 'Classy Paragraph Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: classy_paragraphs
+  handler_settings:
+    filter:
+      type: starts_with
+      starts_with: dsu_classy_slider_
+    sort:
+      field: _none
+field_type: entity_reference

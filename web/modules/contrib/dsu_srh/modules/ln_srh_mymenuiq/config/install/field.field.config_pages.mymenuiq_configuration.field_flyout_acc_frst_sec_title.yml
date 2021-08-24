@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_flyout_acc_frst_sec_title
+_core:
+  default_config_hash: emdig3u1e-e37MSWHGYaNG545p7Lgz6frAIGm3Kq_6c
+id: config_pages.mymenuiq_configuration.field_flyout_acc_frst_sec_title
+field_name: field_flyout_acc_frst_sec_title
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'MenuFlyout Accordion First Second Title'
+description: 'Text to appear for Menu Flyout First Accordion Second Title.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'What does the MyMenu IQ™ score mean ?'
+default_value_callback: ''
+settings: {  }
+field_type: string

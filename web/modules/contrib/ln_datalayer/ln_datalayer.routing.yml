@@ -1,0 +1,7 @@
+ln_datalayer.ajaxify_settings:
+  path: '/admin/config/lightnest/ln-datalayer/ajaxify-submit-forms'
+  defaults:
+    _form: '\Drupal\ln_datalayer\Form\AjaxSettingsForm'
+    _title: 'Ajaxify submit form settings'
+  requirements:
+    _permission: 'administer site configuration'

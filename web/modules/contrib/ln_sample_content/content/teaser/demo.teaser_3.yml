@@ -1,0 +1,15 @@
+title: Espresso mocha sugar est
+field_teaser_subtitle: Medium mazagran strong carajillo filter
+body: Espresso mocha sugar est, medium mazagran strong carajillo filter. Cream bar spoon, café au lait filter doppio irish variety. Doppio beans black organic aromatic beans steamed est rich latte.
+field_buton_position: right #or left or center
+field_image:
+  image_name: nido.jpg
+  image_title: Nido
+field_dsu_tags: Sample content #Tax term name
+field_teaser_link:
+  uri: internal:/ # Drupal save "internal:/" when "<front>" is used
+  title: See more
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

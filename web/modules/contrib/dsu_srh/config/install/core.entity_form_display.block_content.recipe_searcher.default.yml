@@ -1,0 +1,58 @@
+status: true
+dependencies:
+  config:
+    - block_content.type.recipe_searcher
+    - field.field.block_content.recipe_searcher.field_searcher_collections
+    - field.field.block_content.recipe_searcher.field_searcher_number_recipes
+    - field.field.block_content.recipe_searcher.field_searcher_show_textbox
+    - field.field.block_content.recipe_searcher.field_searcher_tags
+  module:
+    - paragraphs
+id: block_content.recipe_searcher.default
+targetEntityType: block_content
+bundle: recipe_searcher
+mode: default
+content:
+  field_searcher_collections:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_searcher_number_recipes:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_searcher_show_textbox:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_searcher_tags:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

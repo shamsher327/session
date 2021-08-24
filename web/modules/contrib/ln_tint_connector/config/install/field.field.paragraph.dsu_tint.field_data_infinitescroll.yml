@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_data_infinitescroll
+    - paragraphs.paragraphs_type.dsu_tint
+  module:
+    - options
+id: paragraph.dsu_tint.field_data_infinitescroll
+field_name: field_data_infinitescroll
+entity_type: paragraph
+bundle: dsu_tint
+label: 'Data Infinite Scroll'
+description: 'Select to allow new items to autoload when scrolling in the TINT widget'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'false'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

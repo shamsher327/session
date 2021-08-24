@@ -1,0 +1,72 @@
+<div class="meal-score score-medium" data-score="{{ nutritional_score }}">
+  <div class="tabs">
+    <div class="tabs-content">
+      {% set tab_counter = 1 %}
+      {% for tab_key, tab_value in side_dishes.dishtype %}
+        <div class="tab-content tab-pane fade active in"
+             id="nav-tab-{{ tab_counter }}" role="tabpanel"
+             aria-labelledby="nav-tab-{{ tab_counter }}-tab">
+          <div
+            class="swiper-related-score swiper-see-next swiper-container-initialized swiper-container-horizontal"
+            data-slides-per-view-desktop="3" data-desktop-touch="true">
+            <div class="row swiper-wrapper"
+                 style="transform: translate3d(0px, 0px, 0px);">
+              <div class="wrapper col-12 p-0">
+                <div class="meals-carousel">
+                  {% for key, value in tab_value %}
+                    <div class="">
+                      <div class="item" data-new-score="{{ value.score }}"
+                           data-parent-dish-type="{{ tab_key }}"
+                           data-id="{{ value.nid }}"
+                           data-total-time="{{ value.total_time }}"
+                           data-difficulty-level="{{ value.difficulty_level }}"
+                           data-is-generic="{{ value.is_generic }}">
+                        <span class="score-remove" data-remove-score="" data-category-name =  "{{ value.side_dish_type }}" data-side-dish-name = "{{ value.title }}"></span>
+                        <span class="score-to-add" data-add-score="" data-category-name =  "{{ value.side_dish_type }}" data-side-dish-name = "{{ value.title }}"></span>
+                        <div class="image">
+                          <img data-src="{{ value.image_path_medium }}"
+                               alt="{{ value.title }}" title="{{ value.title }}"
+                               class=""
+                               src="{{ value.image_path }}"
+                               data-was-processed="true">
+                      <span
+                        class="msg-added img-circle"><span>{{ side_dishes.side_dish_added_message }}</span></span>
+                      <span
+                        class="msg-removed img-circle"><span>{{ side_dishes.side_dish_removed_message }}</span></span>
+                      <span class="msg-to-add img-circle"
+                            data-add-score="" data-category-name =  "{{ value.side_dish_type }}" data-side-dish-name = "{{ value.title }}"><span>{{ side_dishes.side_dish_to_add_message }}</span></span>
+                      <span class="msg-to-remove img-circle"
+                            data-remove-score="" data-category-name =  "{{ value.side_dish_type }}" data-side-dish-name = "{{ value.title }}"><span>{{ side_dishes.side_dish_to_remove_messag }}</span></span>
+                    </div>
+                        <div class="name"><a
+                            data-href="{{ value.recipe_path }}"
+                            alt="Ve la receta aqui"
+                            title="Ve la receta aqui"
+                            href="javascript:void(0)">{{ value.title }}</a>
+                        </div>
+                          {% if((value.is_generic is not defined) or (value.is_generic != 1)) %}
+                          <div class="difficulty-duration-wrapper">
+                              <div class="duration-wrapper">
+                                  <span class="duration">{{ value.total_time }} </span>
+                              </div>
+                              <div class="difficulty-wrapper">
+                                  <span class="difficulty">{{ value.difficulty_level }}</span>
+                              </div>
+                          </div>
+                          {% endif %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive"
+                  aria-atomic="true"></span>
+          </div>
+        </div>
+        {% set tab_counter = tab_counter+1 %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+

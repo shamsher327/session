@@ -1,0 +1,5 @@
+services:
+  dsu_srh.commands:
+    class: \Drupal\dsu_srh\Commands\GetRecipes
+    tags:
+      - { name: drush.command }

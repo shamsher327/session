@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_mymenu_iq_finalization_msg
+id: config_pages.mymenuiq_configuration.field_mymenu_iq_finalization_msg
+field_name: field_mymenu_iq_finalization_msg
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Finalization Message'
+description: 'Finalization Message'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Now enjoy your meal!'
+default_value_callback: ''
+settings: {  }
+field_type: string

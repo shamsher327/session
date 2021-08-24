@@ -1,0 +1,31 @@
+ln_bazaarvoice.index:
+  path: '/admin/config/lightnest/ln_bazaarvoice'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'LightNest Bazaarvoice'
+  requirements:
+    _permission: 'administer site configuration'
+
+ln_bazaarvoice.admin_settings_form:
+  path: /admin/config/lightnest/ln_bazaarvoice/settings
+  defaults:
+    _title: Bazaarvoice Settings
+    _form: \Drupal\ln_bazaarvoice\Form\AdminSettingsForm
+  requirements:
+    _permission: 'administer dsu_bazaarvoice'
+
+ln_bazaarvoice_productfeed.admin_settings_form:
+  path: /admin/config/lightnest/ln_bazaarvoice/productfeed
+  defaults:
+    _title: Lightnest Product Feed
+    _form: \Drupal\ln_bazaarvoice\Form\ProductFeedAdminSettingsForm
+  requirements:
+    _permission: 'administer bazaarvoice productfeed'
+
+ln_bazaarvoice_productfeed.public_feed:
+  path: '/bazaarvoicefeed'
+  defaults:
+    _title: Lightnest Product Public Feed
+    _controller: '\Drupal\ln_bazaarvoice\Controller\ProductFeedController::content'
+  requirements:
+    _permission: 'access content'

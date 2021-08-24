@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_menuflyout_disclaimer_text
+_core:
+  default_config_hash: NKqB3k9AW17fc_a5s-EEilEAvosVocMZDll8Oxk-bx8
+id: config_pages.mymenuiq_configuration.field_menuflyout_disclaimer_text
+field_name: field_menuflyout_disclaimer_text
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'MenuFlyout Disclaimer Text'
+description: 'Text to appear for Menu Flyout Disclaimer Text.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'The MyMenu IQ™ score applies to the digital recipe as described on the site. Nutrition composition data for food ingredients and food products is based on Standard Food Composition Databases such as USDA SR28, BLS32 as well as food label data.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

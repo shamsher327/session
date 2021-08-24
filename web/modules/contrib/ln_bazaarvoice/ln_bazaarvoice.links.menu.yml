@@ -1,0 +1,27 @@
+ln_bazaarvoice.index:
+  title: LightNest Bazaarvoice
+  description: Various settings for altering the behavior of Bazaarvoice modules.
+  parent: dsu_c_core.settings
+  route_name: ln_bazaarvoice.index
+  weight: 30
+
+ln_bazaarvoice.admin_settings_form:
+  route_name: ln_bazaarvoice.admin_settings_form
+  title: Bazaarvoice Settings
+  description: 'Configure for Bazaarvoice integration'
+  parent: ln_bazaarvoice.index
+  weight: 1
+
+ln_bazaarvoice_productfeed.admin_settings_form:
+  route_name: ln_bazaarvoice_productfeed.admin_settings_form
+  title: Bazaarvoice External Product Feed Configs
+  description: 'Configure for Bazaarvoice Productfeed'
+  parent: ln_bazaarvoice.index
+  weight: 5
+
+ln_bazaarvoice_productfeed.public_feed:
+  route_name: ln_bazaarvoice_productfeed.public_feed
+  title: Lightnest Product Public Feed
+  description: 'Bazaarvoice Product Public feed'
+  parent: ln_bazaarvoice.index
+  weight: 5

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_extended_card
+label: 'Extended card (4 cards per line)'
+classes: extended-card

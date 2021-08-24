@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ln_shopify module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function ln_shopify_install() {
+  // Update seckit module configuration for shopify component.
+  if ((\Drupal::moduleHandler()->moduleExists('seckit'))) {
+	  $config = \Drupal::service('config.factory')->getEditable('seckit.settings');
+	  $default_src  =  trim($config->get('seckit_xss.csp.default-src')). ' *.my-shopify.com';
+	  $script_src  =  trim($config->get('seckit_xss.csp.script-src')) .' *.shopifycdn.com';
+	  $img_src  =  trim($config->get('seckit_xss.csp.img-src')) .' https://nestle-mvp.myshopify.com https://cdn.shopify.com';
+	  $connect_src = trim($config->get('seckit_xss.csp.connect-src')). ' https://nestle-mvp.myshopify.com https://monorail-edge.shopifysvc.com';
+	  $config->set('seckit_xss.csp.default-src',$default_src);
+	  $config->set('seckit_xss.csp.script-src',$script_src);
+	  $config->set('seckit_xss.csp.img-src',$img_src);
+	  $connect_src  =  $config->set('seckit_xss.csp.connect-src', $connect_src);
+
+	  $config->save(TRUE);
+  }
+}

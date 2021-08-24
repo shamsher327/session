@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Youtube carousel theme implementation to display a list of youtube channel video listing.
+ *
+ * Available variables:
+ *
+ * Current play video variables:
+ * - youtube.videoId: Current video Id.
+ * - youtube.title: Current video title.
+ * - youtube.description:Current video description.
+ *
+ * More video listing:
+ * - content.youtube: This variable returns youtube data.
+ *
+ */
+#}
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
+{% if content.youtube is not empty %}
+<div class="component-paragraph-field">
+  {{ attach_library('ln_c_yt_carousel/youtube_carousel') }}
+      {{ content.youtube }}
+  <div id="page" {{ attributes.addClass(classes) }}>
+    <div class="row">
+      <div class="column small-11 small-centered youtube-slider">
+        <div class="slider slider-single">
+            {% for key, value in content.youtube %}
+              <div id="youtube-block-style">
+                <iframe src="https://www.youtube.com/embed/{{ value.video_id }}" width="100%" frameborder="0" id="video-iframe-style" allowfullscreen></iframe>
+                  {% if paragraph.field_youtube_thumbnail_title.value %}
+                    <h3>{{ value.video_title }}</h3>
+                  {% endif %}
+                  {% if paragraph.field_youtube_video_description.value %}
+                      <div class="youtubedesc">
+                        <div class="expand">
+                          {{ value.description }}
+                        </div>
+                        <div class="slider">
+                          <span id="down">{{ 'More'|t }}</span>
+                          <span id="up">{{ 'Less'|t }}</span>
+                        </div>
+                      </div>
+                  {% endif %}
+              </div>
+            {% endfor %}
+        </div>
+        <div class="slider slider-nav">
+          {% for key, value in content.youtube %}
+            <span style="" id="nav-video-thumbnail">
+              <img src="{{ value.thumbnail }}"/>
+                {% if paragraph.field_youtube_thumbnail_title.value %}
+                  <h3>{{ value.video_title }}</h3>
+                {% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

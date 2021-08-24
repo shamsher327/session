@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: side_image_text_background_1920x795_
+label: 'Side Image Text Background (1920X795)'
+effects:
+  1feee47f-0210-449b-ba9a-963e7b5dfff3:
+    uuid: 1feee47f-0210-449b-ba9a-963e7b5dfff3
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: 795
+      upscale: true

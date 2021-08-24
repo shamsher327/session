@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the Ciam module.
+ */
+
+/**
+ * Implements hook_gigya_global_parameters_alter().
+ */
+function ln_ciam_gigya_global_parameters_alter(array &$gigya_global_parameters) {
+}
+
+/**
+ * Implements hook_gigya_lang_alter().
+ */
+function ln_ciam_gigya_lang_alter(&$lang) {
+}
+
+/**
+ * Implements hook_gigya_raas_settings_alter().
+ */
+function ln_ciam_gigya_raas_settings_alter(array &$raas_login, array &$raas_register) {
+}
+
+/**
+ * Implements hook_gigya_raas_profile_settings_alter().
+ */
+function ln_ciam_gigya_raas_profile_settings_alter(array &$raas_profile) {
+}

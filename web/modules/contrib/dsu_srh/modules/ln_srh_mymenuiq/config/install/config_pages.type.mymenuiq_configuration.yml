@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UQ72A-tNoST6AmbXfAlsd3sUHJggWMD-SM4m3K7lsOk
+id: mymenuiq_configuration
+label: 'MyMenu IQ configuration'
+context:
+  show_warning: true
+  group:
+    language: true
+  fallback:
+    language: ''
+menu:
+  path: /admin/config/lightnest/dsu_srh/mymenu-iq
+  weight: 0
+  description: 'Used to configure recipe'

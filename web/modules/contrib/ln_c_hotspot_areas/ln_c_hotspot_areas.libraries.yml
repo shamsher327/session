@@ -1,0 +1,37 @@
+view:
+  css:
+    theme:
+      css/ln_c_hotspot_areas.view.css: { }
+  js:
+    js/ln_c_hotspot_areas.view.js: { }
+  dependencies:
+    - ln_c_hotspot_areas/tipTip
+    - core/drupal
+
+edit:
+  css:
+    theme:
+      css/ln_c_hotspot_areas.edit.css: { }
+  js:
+    js/ln_c_hotspot_areas.edit.js: { }
+  dependencies:
+    - ln_c_hotspot_areas/jquery.jcrop
+    - ln_c_hotspot_areas/view
+
+tipTip:
+  css:
+    theme:
+      misc/tipTip/tipTip.css: { }
+  js:
+    misc/tipTip/jquery.tipTip.min.js: { }
+  dependencies:
+    - core/jquery
+
+jquery.jcrop:
+  css:
+    theme:
+      misc/jcrop/css/jquery.Jcrop.min.css: { }
+  js:
+    misc/jcrop/js/jquery.Jcrop.js: { }
+  dependencies:
+    - core/jquery

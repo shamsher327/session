@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_parag_rel_recipe_title
+    - paragraphs.paragraphs_type.related_recipes_in_other_languag
+id: paragraph.related_recipes_in_other_languag.field_parag_rel_recipe_title
+field_name: field_parag_rel_recipe_title
+entity_type: paragraph
+bundle: related_recipes_in_other_languag
+label: 'Recipe Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

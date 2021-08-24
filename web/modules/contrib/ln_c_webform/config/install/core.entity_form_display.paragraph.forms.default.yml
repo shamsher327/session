@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.forms.field_css_class
+    - field.field.paragraph.forms.field_section_id
+    - field.field.paragraph.forms.field_webform
+    - paragraphs.paragraphs_type.forms
+  module:
+    - webform
+id: paragraph.forms.default
+targetEntityType: paragraph
+bundle: forms
+mode: default
+content:
+  field_css_class:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_section_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_webform:
+    weight: 0
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

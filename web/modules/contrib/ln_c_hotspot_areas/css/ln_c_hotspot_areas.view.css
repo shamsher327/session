@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+.image-hotspot-areas-wrapper {
+  font-size: 0;
+}
+.image-hotspot-areas-wrapper .image-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+  line-height: 0;
+  display: inline-block;
+}
+.image-hotspot-areas-wrapper .image-wrapper img {
+  padding: 0;
+  margin: 0;
+}
+.image-hotspot-areas-wrapper .hotspot-box {
+  position: absolute;
+}
+.image-hotspot-areas-wrapper .overlay {
+  background: #000000;
+  opacity: 0.3;
+  position: absolute;
+  display: none;
+}
+.image-hotspot-areas-wrapper .labels .label,
+.image-hotspots-tooltip {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+.image-hotspot-areas-wrapper .labels .label {
+  display: inline-block;
+  margin: 0 15px 0 0;
+}
+.image-hotspot-areas-wrapper .label-title {
+  display: inline-block;
+  margin-right: 15px;
+  padding-bottom: 10px;
+}
+.image-hotspot-areas-wrapper .label-title a,
+.image-hotspot-areas-wrapper .label-title span {
+  color: #5093B7;
+  text-decoration: underline;
+  border: none;
+}
+.image-hotspot-areas-wrapper .label-title a:hover,
+.image-hotspot-areas-wrapper .label-title span:hover {
+  color: #1A9385;
+  text-decoration: none;
+  cursor: default;
+}
+#tiptip_holder #tiptip_content {
+  background: none #FFFFFF;
+  border: 1px solid #CCC;
+  border-radius: 6px;
+  text-shadow: none;
+  box-shadow: none;
+  color: #333333;
+  padding: 15px;
+}

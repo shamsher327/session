@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_flyout_bargraph_nutrients
+_core:
+  default_config_hash: AQCxf5xRuzF8tJ6zHlx5sfI2_NBkfDRFtHImKtII7mY
+id: config_pages.mymenuiq_configuration.field_flyout_bargraph_nutrients
+field_name: field_flyout_bargraph_nutrients
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'MenuFlyout BarGraph Nutrients'
+description: 'Configure Nutrients for Menu Flyout Bar Graph . Default values set to protein, carbohydrates, fat and energy.'
+required: false
+translatable: false
+default_value:
+  -
+    value: carbohydrates
+  -
+    value: fat
+  -
+    value: protein
+default_value_callback: ''
+settings: {  }
+field_type: string

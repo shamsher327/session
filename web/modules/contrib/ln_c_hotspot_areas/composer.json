@@ -1,0 +1,9 @@
+{
+  "name": "lightnest/ln_c_hotspot_areas",
+  "description": "Module allows you to create hot areas in an image, and show information on mouse over or click",
+  "type": "drupal-module",
+  "keywords": [
+    "content",
+    "frontend"
+  ]
+}

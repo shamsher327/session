@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the dsu_ghostery module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dsu_ghostery_install() {
+  // Make sure all the JS is loaded before removing external libraries.
+  module_set_weight('dsu_ghostery', 1000);
+
+  $moduleInstaller = \Drupal::service('module_installer');
+
+  // Disbale Gogle Tag since this is managed by Ghostery.
+  if (\Drupal::moduleHandler()->moduleExists('google_tag')) {
+    $moduleInstaller->uninstall(['google_tag']);
+    \Drupal::messenger()
+      ->addMessage(t('Google tag manager module disabled.'));
+  }
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function dsu_ghostery_requirements($phase) {
+  if ($phase == 'runtime') {
+    $config = \Drupal::service('config.factory')->getEditable('dsu_ghostery.settings');
+    $description = [
+      '#type' => 'inline_template',
+      '#template' => '{{ configuration_error_list }}',
+      '#context' => [
+        'configuration_error_list' => [
+          '#theme' => 'item_list',
+          '#items' => $config->get('files'),
+        ],
+      ],
+    ];
+    $requirements['dsu_ghostery'] = [
+      'title' => t('Blocked External JavaScript'),
+      'value' => t('The following external JavaScript files have been disabled'),
+      'description' => $description,
+      'severity' => REQUIREMENT_WARNING,
+    ];
+    return $requirements;
+  }
+}

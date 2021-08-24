@@ -1,0 +1,188 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recipe_steps.field_recipe_step_tips
+    - field.field.paragraph.recipe_steps.field_steps_duration_minutes
+    - field.field.paragraph.recipe_steps.field_steps_id
+    - field.field.paragraph.recipe_steps.field_steps_image
+    - field.field.paragraph.recipe_steps.field_steps_ingredients
+    - field.field.paragraph.recipe_steps.field_steps_is_active
+    - field.field.paragraph.recipe_steps.field_steps_number
+    - field.field.paragraph.recipe_steps.field_steps_speechoutput
+    - field.field.paragraph.recipe_steps.field_steps_steptype
+    - field.field.paragraph.recipe_steps.field_steps_text
+    - field.field.paragraph.recipe_steps.field_steps_text_speechoutput
+    - field.field.paragraph.recipe_steps.field_steps_title
+    - field.field.paragraph.recipe_steps.field_steps_tools
+    - field.field.paragraph.recipe_steps.field_steps_video
+    - field.field.paragraph.recipe_steps.field_steps_workload
+    - paragraphs.paragraphs_type.recipe_steps
+  module:
+    - paragraphs
+    - video_embed_field
+id: paragraph.recipe_steps.default
+targetEntityType: paragraph
+bundle: recipe_steps
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_recipe_step_tips:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: tips
+    third_party_settings: {  }
+    region: content
+  field_steps_duration_minutes:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_id:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_image:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: media_information
+    third_party_settings: {  }
+    region: content
+  field_steps_ingredients:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: recipe_ingredients
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+  field_steps_is_active:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_steps_number:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_speechoutput:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_steptype:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_text_speechoutput:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_steps_tools:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: recipe_tools
+    third_party_settings: {  }
+  field_steps_video:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  field_steps_workload:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

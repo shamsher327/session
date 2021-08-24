@@ -1,0 +1,5 @@
+name: 'Session Limit'
+description: 'Limit simultaneous user sessions.'
+core_version_requirement: ^8 || ^9
+type: module
+configure: session_limit.config_form

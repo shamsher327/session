@@ -35,7 +35,7 @@ book-navigation:
 dialog:
   version: VERSION
   css:
-    component:
+    base:
       css/components/dialog.css: { weight: -10 }
 
 dropbutton:

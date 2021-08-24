@@ -1,0 +1,31 @@
+dsu_srh.index:
+  path: '/admin/config/lightnest/dsu_srh'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Smart Recipe Hub (SRH)'
+  requirements:
+    _permission: 'access administration pages'
+
+dsu_srh.config:
+  path: '/admin/config/lightnest/dsu_srh/config'
+  defaults:
+    _form: '\Drupal\dsu_srh\Form\ConnectForm'
+    _title: 'SRH Connector Configuration'
+  requirements:
+    _permission: 'access administration pages'
+
+dsu_srh.action:
+  path: '/admin/config/lightnest/dsu_srh/importer'
+  defaults:
+    _title: 'Import Recipes from SRH'
+    _form: '\Drupal\dsu_srh\Form\ImporterForm'
+  requirements:
+    _permission: 'access administration pages'
+
+dsu_srh.search:
+  path: '/recipes'
+  defaults:
+    _title: 'Get the recipes'
+    _form: '\Drupal\dsu_srh\Form\RecipeSearch'
+  requirements:
+    _permission: 'access content'

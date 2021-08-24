@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.dsu_ratings_reviews_comment_type
+    - core.entity_view_mode.comment.reply
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_display_name
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_comment
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_images
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_ratings
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_recommend
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_tos
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: comment.dsu_ratings_reviews_comment_type.reply
+targetEntityType: comment
+bundle: dsu_ratings_reviews_comment_type
+mode: reply
+content:
+  field_display_name:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dsu_comment:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dsu_images:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  flag_dsu_ratings_comment_unuseful:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  flag_dsu_ratings_comment_useful:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_dsu_ratings: true
+  field_dsu_recommend: true
+  field_dsu_tos: true
+  langcode: true
+  reply: true
+  search_api_excerpt: true

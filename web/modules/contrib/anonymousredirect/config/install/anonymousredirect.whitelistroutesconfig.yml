@@ -1,0 +1,2 @@
+whitelist_routes: "/user/login\r\n/rest/session/token\r\n/oauth/token\r\n/api/*\r\n"
+url_to_redirect: /user/login

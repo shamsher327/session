@@ -1,0 +1,41 @@
+status: true
+dependencies:
+  config:
+    - block_content.type.recipe_searcher
+    - field.storage.block_content.field_searcher_tags
+    - paragraphs.paragraphs_type.tags_selector
+  module:
+    - entity_reference_revisions
+id: block_content.recipe_searcher.field_searcher_tags
+field_name: field_searcher_tags
+entity_type: block_content
+bundle: recipe_searcher
+label: 'Searcher tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tags_selector: tags_selector
+    target_bundles_drag_drop:
+      tags_selector:
+        enabled: true
+        weight: 6
+      macronutrients:
+        weight: 7
+        enabled: false
+      recipe_ingredients:
+        weight: 8
+        enabled: false
+      recipe_steps:
+        weight: 9
+        enabled: false
+      recipe_tools:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,23 @@
+status: true
+dependencies:
+  config:
+    - block_content.type.recipe_searcher
+    - field.storage.block_content.field_searcher_number_recipes
+id: block_content.recipe_searcher.field_searcher_number_recipes
+field_name: field_searcher_number_recipes
+entity_type: block_content
+bundle: recipe_searcher
+label: 'Number of recipes to show'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 5
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

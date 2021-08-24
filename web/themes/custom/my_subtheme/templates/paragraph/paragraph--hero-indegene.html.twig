@@ -1,0 +1,154 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% block paragraph %}
+    <div class="indegene-hero-component">
+        {% block content %}
+
+            {% set node_id=paragraph.field_cta.uri|split('/')[1] %}
+            {% set component_title=content.field_title.0['#context']['value'] %}
+            {% set image_alignemnt=content.field_alignment_variations.0['#markup'] %}
+            {% set hero_variations=content.field_hero_variations.0['#markup'] %}
+            {% set link_style=content.field_link_style.0['#markup'] %}
+            {% set link_title=content.field_cta.0['#title'] %}
+            {% set link_title=content.field_cta.0['#title'] %}
+            {% set tags=content.field_tags.0['#plain_text'] %}
+            {% set image=content.field_image %}
+            {% if node_id %}
+                {% set link_url=path('entity.node.canonical', {'node': node_id}) %}
+            {% endif %}
+
+            {% if hero_variations == 'hero' %}
+                <section class=" bg-gray-lighter page-section bg-scroll home-slider page-"
+                         style="background-color: #0a4ca4; height: auto; padding-top: 0px; padding-bottom: 0px;">
+                    <div class=" row">
+                        <div class=" col-md-5 slider_leftsection">
+                            <h2 class=" align-left font-alt white hs-line-14 mb-30 fw-800 blue desktop-only"
+                                style="margin-top: 0px;">{{ component_title }}
+                            </h2>
+                        </div>
+
+                        {% if image_alignemnt == 'image_left' %}
+                            <div class=" col-sm-7 desktop-only home-image image-left">
+                                {{ image }}
+                            </div>
+                        {% elseif image_alignemnt == 'image_right' %}
+                            <div class=" col-sm-7 desktop-only home-image image-right">
+                                {{ image }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+                </section>
+
+            {% endif %}
+
+
+            {% if hero_variations == 'carrer' %}
+
+                <section class=" bg-dark page-section bg-scroll"
+                         style="background-color: #f9f9f9; padding-top: 0px; padding-bottom: 0px;" id="career_div">
+                    <div class=" row  homecareer_div">
+                        <div class=" col-sm-6 col-md-6 small-section-2 f-right">
+                            <h3 class=" align-left font-alt black fw-700" style="margin-top: 0px; margin-bottom: 15px;">
+                                {{ component_title }}
+                            </h3>
+                            <a class=" btn btn-mod btn-gray btn-small btn-round" target="_blank"
+                               style="margin-top: 10px; margin-right: 40px;" href="{{ link_url }}"><i
+                                        class="fa fa-caret-right"></i> {{ link_title }}</a>
+                            {{ image }}
+                            {% if link_style == 'button' %}
+                                <button class=" btn btn-mod btn-gray btn-small btn-round" target="_blank"
+                                        style="margin-top: 10px;" href="https://careers.indegene.com/"><i
+                                            class="fa fa-caret-right"></i> Explore exciting opportunities
+                                </button>
+
+                            {% elseif link_style== 'cta' %}
+                                <a class=" btn btn-mod btn-gray btn-small btn-round" target="_blank"
+                                   style="margin-top: 10px;" href="https://careers.indegene.com/"><i
+                                            class="fa fa-caret-right"></i> Explore exciting opportunities</a>
+                            {% endif %}
+                        </div>
+                        <div class=" col-sm-6 col-md-6 hwd_img_2"
+                             style="background-image: url(&quot;https://www.indegene.com/sites/default/files/LandingPage_Careers.jpeg&quot;);">
+                        </div>
+                    </div>
+                </section>
+
+            {% endif %}
+
+            {% if hero_variations == 'Contact us' %}
+                {{ image }}
+                <section class=" bg-dark page-section bg-scroll"
+                         style="background-color: #f9f9f9; padding-top: 0px; padding-bottom: 0px;" id="career_div">
+                    <div class=" row  homecareer_div">
+                        <div class=" col-sm-6 col-md-6 small-section-2 f-right">
+                            <h3 class=" align-left font-alt black fw-700" style="margin-top: 0px; margin-bottom: 15px;">
+                                {{ component_title }}
+                            </h3>
+                            <a class=" btn btn-mod btn-gray btn-small btn-round" target="_blank"
+                               style="margin-top: 10px; margin-right: 40px;" href="{{ link_url }}"><i
+                                        class="fa fa-caret-right"></i> {{ link_title }}</a>
+
+                            {% if link_style == 'button' %}
+                                <button class=" btn btn-mod btn-gray btn-small btn-round" target="_blank"
+                                        style="margin-top: 10px;" href="https://careers.indegene.com/"><i
+                                            class="fa fa-caret-right"></i> Explore exciting opportunities
+                                </button>
+
+                            {% elseif link_style== 'cta' %}
+                                <a class=" btn btn-mod btn-gray btn-small btn-round" target="_blank"
+                                   style="margin-top: 10px;" href="https://careers.indegene.com/"><i
+                                            class="fa fa-caret-right"></i> Explore exciting opportunities</a>
+                            {% endif %}
+                        </div>
+                        <div class=" col-sm-6 col-md-6 hwd_img_2"
+                             style="background-image: url(&quot;https://www.indegene.com/sites/default/files/LandingPage_Careers.jpeg&quot;);">
+                        </div>
+                    </div>
+                </section>
+
+            {% endif %}
+
+
+        {% endblock %}
+    </div>
+{% endblock paragraph %}

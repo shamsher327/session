@@ -1,0 +1,290 @@
+<?php
+
+use Drupal\block_content\BlockContentInterface;
+use Drupal\Core\Config\FileStorage;
+use Drupal\Core\Config\InstallStorage;
+use Drupal\dsu_srh\Commands\GetRecipes;
+use Drupal\dsu_srh\Controller\Importer;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * @file
+ * Hook implementations for the DSU SRH module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function dsu_srh_theme($existing, $type, $theme, $path) {
+  return [
+    'field__field_recipe_images'           => [
+      'template'  => 'field--field-recipe-images',
+      'base hook' => 'field',
+    ],
+    'field__field_para_tool_image'         => [
+      'template'  => 'field--field-recipe-images',
+      'base hook' => 'field',
+    ],
+    'field__field_recipe_ingredient'       => [
+      'template'  => 'field--field-recipe-ingredient',
+      'base hook' => 'field',
+    ],
+    'dsu_srh-recipes-search'               => [
+      'template'  => 'dsu_srh-recipes-search',
+      'variables' => [
+        'variables' => [],
+        'title'     => NULL,
+        'empty'     => NULL,
+      ],
+    ],
+    'node__recipe'                         => [
+      'render element' => 'elements',
+      'template'       => 'node--recipe', //removed the "templates/"
+      'base hook'      => 'node' //this line did the job
+    ],
+    'node__recipe__teaser'                 => [
+      'render element' => 'elements',
+      'template'       => 'node--recipe--teaser', //removed the "templates/"
+      'base hook'      => 'node' //this line did the job
+    ],
+    'paragraph__recipe_steps'              => [
+      'render element' => 'elements',
+      'template'       => 'paragraph--recipe-steps', //removed the "templates/"
+      'base hook'      => 'paragraph' //this line did the job
+    ],
+    'paragraph__macronutrients'            => [
+      'render element' => 'elements',
+      'template'       => 'paragraph--macronutrients',
+      //removed the "templates/"
+      'base hook'      => 'paragraph'
+      //this line did the job
+    ],
+    'paragraph__recipe_ingredients'        => [
+      'render element' => 'elements',
+      'template'       => 'paragraph--recipe-ingredients',
+      //removed the "templates/"
+      'base hook'      => 'paragraph'
+      //this line did the job
+    ],
+    'block__block_content_recipe_searcher' => [
+      'template'  => 'block--block-content-recipe-searcher',
+      //removed the "templates/"
+      'base hook' => 'block',
+      //this line did the job
+      'variables' => [
+        'search_form' => NULL,
+        'pluguin_id'  => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * @param $variables
+ */
+function dsu_srh_preprocess_field__field_recipe_ingredient(&$variables) {
+  /*
+  * First, we pass to javascript app the values we need to calculate the servings
+  */
+  $variables['#attached']['library'][] = 'dsu_srh/servings';
+  $variables['servings_default'] = $variables['element']['#object']->get('field_recipe_number_servings')
+                                     ->getValue()[0]['value'];
+  $variables['#attached']['drupalSettings']['servings_default'] = $variables['element']['#object']->get('field_recipe_number_servings')
+                                                                    ->getValue()[0]['value'];
+
+  $moduleHandler = Drupal::service('module_handler');
+  // It's the Meal planner extension enabled?
+  $variables['servings'] = '4'; // Default value
+  $variables['#attached']['drupalSettings']['servings_user'] = '4';
+  if ($moduleHandler->moduleExists('dsu_mealplanner')) {
+    $isAnon = Drupal::currentUser()->isAnonymous();
+    // Then whe check if we need to change de default value
+    if ($isAnon) {
+      $session = Drupal::service('tempstore.private')->get('dsu_mealplanner');
+      $userpre = $session->get('user_preferences');
+      if (isset($userpre['servings'])) { // In case of anonymous user, with preferences setted
+        $variables['servings'] = $userpre['servings'];
+        $variables['#attached']['drupalSettings']['servings_user'] = $userpre['servings'];
+      }
+    }
+    else { // User is authenticated
+      $user = \Drupal\user\Entity\User::load(Drupal::currentUser()->id());
+      // User have preferences setted in profile
+      if ($user->get('field_servings')->value != NULL) {
+        $variables['servings'] = $user->get('field_servings')->value;
+        $variables['#attached']['drupalSettings']['servings_user'] = $user->get('field_servings')->value;
+      }
+    }
+  }
+}
+
+/*
+* Preprocess field recipe image to improve the responsive experience. The url of the image it's modified, and then the CDN couuld serve us this type of imagees. By this way, we keep the intelligence business in SRH.
+*/
+function dsu_srh_preprocess_field__field_recipe_images(&$variables) {
+  if (isset($variables['element']['0']['#context'])) {
+    $path_image = str_replace('original', 'resized', $variables['element']['0']['#context']['value']);
+    $variables['image_resized_small'] = substr($path_image, 0, -4) . '_720_480' . substr($path_image, -4);
+    $variables['image_resized_large'] = substr($path_image, 0, -4) . '_1024_320' . substr($path_image, -4);
+    $variables['image_resized_medium'] = substr($path_image, 0, -4) . '_1080_850' . substr($path_image, -4);
+    $variables['image_resized_big'] = substr($path_image, 0, -4) . '_1200_800' . substr($path_image, -4);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dsu_srh_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  $content = $variables['elements']['content'];
+  if (isset($content['#block_content'])
+      and $content['#block_content'] instanceof BlockContentInterface) {
+    $block_type_suggestion = 'block__block_content_' . $content['#block_content']->bundle();
+    $suggestions_rev = array_reverse($suggestions); // Taking care of observed duplication of block__block_content
+    $index = array_search('block__block_content', $suggestions_rev);
+    if (is_numeric($index)) {
+      array_splice($suggestions_rev, $index, 0, $block_type_suggestion);
+      $suggestions = array_reverse($suggestions_rev);
+    }
+    else {
+      $suggestions[] = $block_type_suggestion;
+    }
+  }
+}
+
+/**
+ * @param $variables
+ */
+function dsu_srh_preprocess_block(&$variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    if ($variables['elements']['content']['#block_content']->bundle() == 'recipe_searcher') {
+      $options['collection'] = $variables['elements']['content']['#block_content']->get('field_searcher_collections')
+        ->getValue();
+      $options['number'] = $variables['elements']['content']['#block_content']->get('field_searcher_number_recipes')
+        ->getValue();
+      $options['textbox'] = $variables['elements']['content']['#block_content']->get('field_searcher_show_textbox')
+        ->getValue();
+      // Extract and prepare Tags value
+      $tags_para = $variables['elements']['content']['#block_content']->get('field_searcher_tags')
+        ->getValue();
+      if (isset($tags_para)) {
+        foreach ($tags_para as $value) {
+          $p = Paragraph::load($value['target_id']);
+          if (!empty($p->get('field_searcher_tags_title')->getValue())) {
+            $tags[] = [
+              'title' => $p->get('field_searcher_tags_title')
+                           ->getValue()[0]['value'],
+              'tags'  => $p->get('field_searcher_tags')->getValue()[0]['value'],
+            ];
+          }
+        }
+        if (isset($tags)) {
+          $options['tags'] = $tags;
+        }
+      }
+      $options['id'] = $variables['elements']['#derivative_plugin_id'];
+      $modal_form = Drupal::formBuilder()
+        ->getForm('Drupal\dsu_srh\Form\RecipeSearch', $options);
+      $variables['search_form'] = $modal_form;
+      $variables['pluguin_id'] = $options['id'];
+    }
+  }
+}
+
+/**
+ * Implements Hook_install()
+ */
+function dsu_srh_install() {
+  \Drupal::messenger()
+    ->addMessage(t('1 - Congratulations, you are now connected to the Smart Recipe Hub. Depending on your site configuration, the fields of your new content type Recipe may be hidden. Please check the view configuration, and enable all the fields to be able to use them correctly. <a href="structure/types/manage/recipe/display"> Here </a>'), 'status');
+  \Drupal::messenger()
+    ->addMessage(t('2 - On the other hand, visit the configuration page <a href="config/dsu_srh/config"> Here </a> and configure and test your SRH connection'), 'status');
+  \Drupal::messenger()
+    ->addMessage(t('3 - Once you are connected to SRH, please proceed with the importation process before using the search box, <a href="config/dsu_srh/importer"> Here </a>, (will increase the performance).'), 'status');
+}
+
+/**
+ * Imports basic configuration files.
+ *
+ * @param string $config_file
+ *   The config file to import.
+ * @param string $config_module
+ *   The module to search.
+ * @param string $config_directory
+ *   (optional) The config directory to search within.
+ *   Defaults to 'config/install'.
+ */
+function dsu_srh_core_basic_create_config($config_file, $config_module, $config_directory = InstallStorage::CONFIG_INSTALL_DIRECTORY) {
+  \Drupal::configFactory()
+    ->getEditable($config_file)
+    ->setData(dsu_srh_core_read_config($config_file, $config_module, $config_directory))
+    ->save();
+}
+
+/**
+ * Reads a stored config file from a module's config directory.
+ *
+ * @param string $id
+ *   The config ID.
+ * @param string $module
+ *   The module to search.
+ * @param string $config_directory
+ *   (optional) The config directory to search within.
+ *   Defaults to 'config/install'.
+ *
+ * @return array
+ *   The config data.
+ */
+function dsu_srh_core_read_config($id, $module, $config_directory = InstallStorage::CONFIG_INSTALL_DIRECTORY) {
+  // Statically cache all FileStorage objects, keyed by module.
+  static $storage = [];
+
+  if (empty($storage[$module])) {
+    $dir = \Drupal::service('module_handler')->getModule($module)->getPath();
+    $storage[$module] = new FileStorage($dir . '/' . $config_directory);
+  }
+
+  return $storage[$module]->read($id);
+}
+
+/**
+ * Implements hook_cron().
+ */
+function dsu_srh_cron() {
+  // Get all configs of default srh configs.
+  $config = Drupal::service('config.factory')->getEditable('dsu_srh.settings');
+  $use_drupal_cron = $config->get('dsu_srh.dsu_use_drupal_cron');
+  $email_address = $config->get('dsu_srh.dsu_use_drupal_cron_email');
+
+  if ($use_drupal_cron) {
+    $importer = new Importer(Drupal::service('config.factory'), Drupal::service('serialization.json'));
+    $groups = $importer->getAllId();
+    $total_recipes_to_import = count($groups) * $config->get('dsu_srh.dsu_connect_amount');
+    // Send email if synchronization process needs to be started manually.
+    // The number of recipes to synchronize must be limited to avoid time exception.
+    if ($total_recipes_to_import > 40) {
+      $mailManager = Drupal::service('plugin.manager.mail');
+      $mailManager->mail('dsu_srh', 'cron', $email_address, 'en', $params = [], $reply = NULL, $send = TRUE);
+    }
+    else {
+      // Synchronize recipes from Smart Recipe Hub
+      $get_recipes = new GetRecipes();
+      $get_recipes->synchronize();
+    }
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function dsu_srh_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'cron':
+      // Load the site name
+      $config = \Drupal::config('system.site');
+      $site_name = $config->get('name');
+      $message['subject'] = 'New SRH Connector notification for ' . $site_name;
+      $message['body'][] = 'LighNest SRH Connector running on ' . $site_name . ' has detected a big amount of recipes to import. To make sure all of them are properly synchronized a manual import is required. This option is available accessing the connector configuration page in LighNest backend. <br>Thanks.';
+      break;
+  }
+}
+

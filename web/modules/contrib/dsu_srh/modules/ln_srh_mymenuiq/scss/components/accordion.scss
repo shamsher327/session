@@ -1,0 +1,204 @@
+.mg-stagemymenu-override {
+	.mg-accordion {
+		.accordion-group {
+			border-bottom: .125rem solid #ccc;
+			/*padding-bottom: 25px;*/
+			&:first-child {
+				border-top: .125rem solid #ccc;
+			}
+			
+			.panel-title {
+				padding: 0px;
+				margin: 0px;
+				
+				a {
+					color: $dark-gray;
+					font-family: 'MaggiRegular';
+					position: relative;
+					display: flex;
+					align-items: center;
+					text-decoration: none;
+					padding: 20px 0 30px;
+					font-weight: 600;
+					@include breakpoint(col-lg) {
+						font-size: 18px;
+						padding: 20px 0;
+					}
+					
+					&::after {
+						content: " ";
+						width: 10px;
+						height: 10px;
+						border: 1px solid #999;
+						border-width: 0 0 1px 1px;
+						position: absolute;
+						top: 50%;
+						right: 10px;
+						transition: all .3s ease-in-out;
+						transform: translateY(-50%) rotateZ(-225deg);
+					}
+					
+					&.collapsed {
+						&::after {
+							transform: translateY(-50%) rotateZ(-45deg);
+						}
+					}
+					
+					h3 {
+						margin: 0;
+						padding: 0;
+						width: calc(100% - 25px);
+						font-size: 18px;
+						font-weight: 600;
+						color: #333;
+					}
+				}
+			}
+		}
+	}
+}
+.stagemymenu_overlay_accordion1, .stagemymenu_overlay_accordion2 {
+	& > div {
+		margin-bottom: rem-calc(30);
+	}
+	.part-1 {
+		.title {
+			/* @extend %label1; */
+			margin-bottom: rem-calc(10);
+            color: $dark-gray;
+            font-size: 18px;
+            font-family: 'MaggiRegular';
+
+			
+		}
+		.description {
+			/* @extend %bodycopy-small; */
+			color: $medium-gray;
+            font-family: 'MaggiRegular';
+            font-size: 16px;
+			p , div {
+				/* @extend %bodycopy-small; */
+				color: $medium-gray;
+			}
+		}
+		margin-bottom: rem-calc(30);
+	}
+	.part-2 {
+		.heading {
+			/* @extend %label1; */
+			color: $dark-gray;
+			margin-bottom: rem-calc(23);
+			font-weight:600;
+			@include breakpoint(medium) {
+				margin-bottom: rem-calc(26);
+			}
+		}
+		.group {
+			margin-bottom: rem-calc(30);
+			.title {
+				margin-bottom: rem-calc(14);
+				display: flex;
+				align-items: center;
+                color: $dark-gray !important;
+                font-family: 'MaggiRegular';
+                /* @extend %bodycopy-small; */
+                @include breakpoint(col-lg) {
+                    font-size: 16px;
+                }
+				.range-icon {
+					margin-right: rem-calc(16);
+					.balance_improvement{
+						fill:#FF8C28;
+					}
+					.good_balance{
+						fill:#FFEA00;
+					}
+					.great_balance{
+						fill:#97D815;
+					}
+				}
+				.range {
+					// color: map-get($colors, $key: medium-gray );
+					margin-left: rem-calc(5);
+					min-width: rem-calc(70);
+				}
+			}
+			.description {
+				/* @extend %caption-same; */				
+				color: $medium-gray;
+                font-family: 'MaggiLight';
+                @include breakpoint(col-lg) {
+                    font-size: 16px;
+                }
+			}
+		}
+		.graph-section {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem-calc(27);
+			justify-content: space-between;
+			&:last-child {
+				margin-bottom: rem-calc(0);
+			}
+			.name {
+				/* @extend %label2; */
+				font-size:12px;
+				color: $medium-gray;
+				margin-right: rem-calc(10);
+				min-width: rem-calc(90);
+				flex-basis: 20%;
+				@include breakpoint(xlarge) {
+					margin-right: rem-calc(20);
+					width: rem-calc(104);
+					font-size:14px;
+				}
+			}
+			.bar-main {
+				// min-width: rem-calc(141);
+				flex-basis: 44%;
+				background-color: $special-use-light-gray;
+				height: rem-calc(8);
+				border-radius: rem-calc(5);
+				position: relative;
+				margin-right: rem-calc(12);
+				@include breakpoint( medium ) {
+					// width: rem-calc(141);
+					flex-basis: 55%;
+					height: rem-calc(9);
+					margin-right: rem-calc(10);
+				}
+				@include breakpoint( large ) {
+					// width: rem-calc(130);
+				}
+				@include breakpoint( xlarge ) {
+					// width: rem-calc(250);
+					height: rem-calc(8);
+					margin-right: rem-calc(10);
+					
+				}
+				.bar-sub {
+					position: absolute;
+					height: 100%;
+					border-radius: rem-calc(5);
+					left: 0%;
+					top: 0%;
+					right:0%;
+					background-color: $maggi-others !important;
+				}
+			}
+			.units {
+				/* @extend %label3; */
+				color: $dark-gray;
+				font-size:10px;
+				@include breakpoint(col-lg) {
+					font-size:12px;
+				}
+			}
+		}
+		.disclaimer {
+			/* @extend %caption-same; */
+			color: $medium-gray;
+			font-size:12px;
+		}
+	}
+}

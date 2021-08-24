@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ln_c_gridcard_hover_box_2
+label: 'Hover Box 2'
+classes: grid-card-hover-card-profile

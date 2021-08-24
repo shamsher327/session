@@ -1,0 +1,118 @@
+{% if side_dishes_menu.response_code != 200 or side_dishes_menu.side_dish_tabs|length < 0 %}
+    {% set custom_classes = 'no-side-recipes' %}
+{% endif %}
+
+<div id="content" class="{{ custom_classes }}">
+    <div class="stagemymenu_overlay_close"><a href="javascript:void(0)">X</a></div>
+    <div class="mymenuiq-score-info-container-wrapper">
+        <div class="cell primary_part">
+            <div class="mymenu-title">{{ overlay.overlay_heading }}</div>
+
+        </div>
+        <div class="nutritional_container">
+            <div class="circle">
+                {% if nutritional_score > 69 %}
+                    {% set colorCode = '#97D815' %}
+                {% elseif nutritional_score > 44 %}
+                    {% set colorCode = '#F1D100' %}
+                {% else %}
+                    {% set colorCode = '#FF8C28' %}
+                {% endif %}
+                <svg class="progress-ring" data-percent="{{ nutritional_score }}" data-updated-percent="{{ nutritional_score }}" data-after-score-text="{{ seperator_text }} {{ '100'|t }}">
+
+                    <circle
+                            class="progress-ring__base_circle"
+                            stroke="#8e8171"
+                            stroke-width="6"
+                            stroke-dasharray=""
+                            stroke-dashoffset=""
+                            fill="transparent"
+                            r="50"
+                            cx="50%"
+                            cy="50%"/>
+
+                    <circle
+                            class="progress-ring__circle"
+                            stroke="{{ colorCode }}"
+                            stroke-width="6"
+                            stroke-dasharray=""
+                            stroke-dashoffset=""
+                            fill="transparent"
+                            r="50"
+                            cx="50%"
+                            cy="50%"/>
+                </svg>
+                <div class="nutritional_score" data-show-score="">
+                    {{ nutritional_score }}
+                    <span>{{ seperator_text }} {{ '100'|t }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="nutritional_balance">{{ overlay.nutritional_balance }}</div>
+        <div
+                class="nutritional_balance_text">{{ overlay.nutritional_balance_text }}</div>
+        <button id="accordion_button" type="button"
+                class="btn btn-light">{{ overlay.open_tips_button }}</button>
+    </div>
+    {% if side_dishes_menu.response_code == 200 and side_dishes_menu.side_dish_tabs|length > 0 %}
+        <div class="mymenuiq-side-recipes-container-wrapper">
+            {% include "#{ module_path }/templates/mymenuiq-overlay-side-dishes.twig" with side_dishes_menu %}
+        </div>
+    {% endif %}
+</div>
+
+<div class="secondary_part">
+    <div id="close-accordion" class="close-acc show-me">
+        <span class="close-secondary-part">
+            <i class="left-chevron"></i> {{ 'Back'|t}}
+        </span>
+    </div>
+    <div class="secondary_part-content-wrapper">
+        {% include "#{ module_path }/templates/accordion.twig" with
+            {
+                module_path : module_path,
+                componentTitle: '',
+                multipleExpand: 'true',
+                id: 'accordionTemp',
+                animation: 'show',
+                accordion: [
+                {
+                    id: 'accordion1',
+                    title: overlay.accordion_first.title,
+                    type: 'content',
+                    component: {
+                    id: '',
+                    name: 'mymenuiq-overlay-accordion',
+                    overlay: overlay.accordion_first,
+                    accordion_first: 'true'
+                }
+                },
+                {
+                    id: 'accordion2',
+                    title: overlay.accordion_second.title,
+                    type: 'content',
+                    component: {
+                    id: '',
+                    name: 'mymenuiq-overlay-accordion',
+                    overlay: overlay.accordion_second,
+                    accordion_second: 'true'
+                }
+                }
+            ]
+            } only %}
+
+        {% if nutritional_tips.list is defined and nutritional_tips.list|length > 0 %}
+            <div class="nutritional_tips">
+                {% if nutritional_tips.heading is defined and nutritional_tips.heading is not empty %}
+                    <div class="heading"><h3>{{ nutritional_tips.heading }}</h3></div>
+                {% endif %}
+                <ul>
+                    {% for value in nutritional_tips.list %}
+                        <li>{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+</div>

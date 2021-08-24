@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Youtube search custom block.
+ */
+#}
+
+{% set totalpages = youtube_data.metadata.totalResults // maxresults  %}
+{% set endcounter = pagecounter*maxresults %}
+{% set beginingcounter = endcounter-maxresults+1 %}
+<div id="youtube-search-block" class="search">
+    {% if youtube_data.metadata.totalResults > 0 %}
+    <div id="results-summary">
+        <span>{{ 'Displaying ' }} {{ beginingcounter }} {{ '-' }} {{ endcounter }} {{ ' of ' }} {{ youtube_data.metadata.totalResults }} {{ 'results' }}</span>
+    </div>
+
+        {% for key, value in youtube_data|slice(1) %}
+                <div class="video-wrapper">
+                    <a title="{{ value.title }}" href="{{ value.url }}" target="_blank">
+                        <div class="grid-list grid-list-videos-search-results">
+                            <div id="videoImage">
+                                <span class="videoThumbnail"><img src="{{ value.thumbnail }}" alt="{{ value.thumbnail }}"/></span>
+                            </div>
+                            <div id="videoDetails">
+                                <span class="videoTitle">{{ value.title }}</span>
+                                <span class="videoDescription">{{ value.description }}</span>
+                                <span class="videoUrl">{{ value.url }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        {% endfor %}
+    <div class="search-results-buttons">
+        {% if pagecounter > 1 %}
+        <span class="prevbutton">
+            <a class="use-ajax" href="{{ prevpageurl }}">{{ 'Prev' |t }}</a>
+        </span>
+        {% endif %}
+        <span class="current-page-counter">
+            {{ 'Page' |t }} {{ pagecounter }}{{ ' of ' |t }}{{ totalpages }}
+        </span>
+        {% if pagecounter != totalpages %}
+        <span class="nextbutton">
+            <a class="use-ajax" href="{{ nextpageurl }}">{{ 'Next' |t }}</a>
+        </span>
+        {% endif %}
+    </div>
+    {% else %} 
+        <div class="empty-tab">
+            <span class="line"></span>
+            <span id="noresult">{{ 'Unfortunately we have no matches for' |t }} {{ keyword }}</span>
+        </div>
+    {% endif %}
+</div>

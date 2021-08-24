@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_vertical_alignment
+    - paragraphs.paragraphs_type.c_image
+  module:
+    - options
+id: paragraph.c_image.field_text_vertical_alignment
+field_name: field_text_vertical_alignment
+entity_type: paragraph
+bundle: c_image
+label: 'Text Vertical Alignment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

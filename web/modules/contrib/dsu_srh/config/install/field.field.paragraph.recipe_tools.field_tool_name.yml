@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tool_name
+    - paragraphs.paragraphs_type.recipe_tools
+id: paragraph.recipe_tools.field_tool_name
+field_name: field_tool_name
+entity_type: paragraph
+bundle: recipe_tools
+label: 'tool name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,41 @@
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.layout_25_75.field_column_first
+    - field.field.paragraph.layout_25_75.field_column_second
+    - paragraphs.paragraphs_type.layout_25_75
+  module:
+    - paragraphs
+id: paragraph.layout_25_75.default
+targetEntityType: paragraph
+bundle: layout_25_75
+mode: default
+content:
+  field_column_first:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_column_second:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

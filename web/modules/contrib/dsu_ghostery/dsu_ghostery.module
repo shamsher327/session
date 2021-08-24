@@ -1,0 +1,117 @@
+<?php
+
+/**
+ * @file
+ * Module file for DSU Security module.
+ */
+
+use Drupal\dsu_ghostery\Filter\GhosteryMarkupFilter;
+use Drupal\dsu_ghostery\Form\GhosterySettingsForm;
+use Drupal\Core\Asset\AttachedAssetsInterface;
+
+/**
+ * Implements hook_page_alter().
+ */
+function dsu_ghostery_page_attachments(array &$page) {
+
+  $config = \Drupal::service('config.factory')->get('dsu_ghostery.settings');
+  $container_id = $config->get('container_id');
+  $verification_id = $config->get('verification_id');
+  $ghostery_cid = $config->get('ghostery_cid');
+  $ghostery_nid = $config->get('ghostery_nid');
+
+  $complianceObjects = "<script> var __ncp_gtm = { id: '{$container_id}' }; var __ncp_ghostery = { cid: {$ghostery_cid}, nid: {$ghostery_nid} };</script>";
+
+  $page['#attached']['html_head'][] = [
+     [
+       '#type' => 'html_tag',
+       '#tag' => 'script',
+       '#value' => $complianceObjects,
+     ], 'compliance-here',
+  ];
+
+  if ($verification_id !== NULL) {
+    $page['#attached']['html_head'][] = [
+      [
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'google-site-verification',
+          'content' => $verification_id,
+        ],
+      ],
+      'verification_id',
+    ];
+  }
+}
+
+/**
+ * Create html tag and script in html head.
+ *
+ * @param array $page
+ *   Page array.
+ */
+function dsu_ghostery_page_top(&$page) {
+  module_load_include('inc', 'dsu_ghostery', 'includes/scripts');
+  $snippets = dsu_ghostery_snippets();
+  $ghosteryMarkupFilter = new GhosteryMarkupFilter($snippets['script']);
+  $page['dsu_ghostery_tag'] = [
+    '#type' => 'html_tag',
+    '#tag' => 'script',
+    '#value' => $ghosteryMarkupFilter,
+  ];
+
+}
+
+/**
+ * Insert snippet.
+ */
+function dsu_ghostery_insert_snippet() {
+  $satisfied = TRUE;
+  \Drupal::moduleHandler()->alter('dsu_ghostery_insert', $satisfied);
+
+  return $satisfied;
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function dsu_ghostery_js_alter(&$javascript, AttachedAssetsInterface $attachedAssets) {
+
+  $config = \Drupal::service('config.factory')->getEditable('dsu_ghostery.settings');
+  $isBlockUrlsEnabled = $config->get(GhosterySettingsForm::BLOCK_EXTERNAL_URLS_OPTION_KEY);
+  $whitelistedUrlString = $config->get(GhosterySettingsForm::BLOCK_EXTERNAL_URLS_WHITELIST_KEY);
+
+  $whitelistedUrlsArray = isset($whitelistedUrlString) ? preg_split('/$\R?^/m', $whitelistedUrlString) : [];
+
+  if ($isBlockUrlsEnabled) {
+    $files = $config->get('files');
+
+    if (!is_array($files)) {
+      $files = [];
+    }
+
+    foreach ($javascript as $file => $meta) {
+      if ($meta['type'] == 'external') {
+        $matches = FALSE;
+        foreach ($whitelistedUrlsArray as $pattern) {
+          if (!empty($pattern) && preg_match($pattern, $file)) {
+            // Found one match.
+            $matches = TRUE;
+            break;
+          }
+        }
+        // We need this outside the for loop because we need to find out.
+        // If at least one of the whitelist patterns match?
+        if (!$matches) {
+          $key = str_replace([':', '/', '.'], '_', $file);
+          $files[$key] = $file;
+          unset($javascript[$file]);
+        }
+
+      }
+    }
+
+    $config->set('files', $files)->save();
+  }
+}

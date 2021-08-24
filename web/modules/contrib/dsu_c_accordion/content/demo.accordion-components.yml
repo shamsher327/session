@@ -1,0 +1,50 @@
+type: accordion
+component_description: ACCORDION WITH COMPONENTS INSIDE TABS
+field_accordion_item:
+  paragraph:
+    item_0:
+      type: accordion_item
+      field_c_title: Lungo frappuccino sit as barista mocha
+      field_column_first:
+        paragraph:
+          item_0:
+            type: c_document
+            field_document:
+              document_name: sample-document.pdf
+              document_title: Sample Document
+            field_c_image:
+              image_name: pdf-icon.png
+              image_title: pdf icon
+    item_1:
+      type: accordion_item
+      field_c_title: Pumpkin spice caramelization
+      field_column_first:
+        paragraph:
+          item_0:
+            type: c_image
+            field_c_image_subheading: Strong, dripper percolator iced brewed et caramelization mocha redeye
+            field_c_image_summary_text: Macchiato, latte, turkish cinnamon dripper americano strong half and half. Acerbic sugar cultivar est carajillo aftertaste robust.
+            field_button_color:
+              tax_term_name:
+                vid: color
+                name: Sample Color
+                custom_field:
+                  field_color_code: '#0045AB'
+                  field_font_color: '#FFFFFF'
+            field_classy_paragraph_style:
+              target_id: dsu_classy_image_example
+            field_c_link:
+              links:
+                item_0:
+                  uri: https://www.nestle.com
+                  title: Lorem ipsum
+                  options:
+                    attributes:
+                      target: _blank
+            field_horizontal_aligment: center
+            field_position: below
+            field_c_image:
+              image_name: san-pellegrino.jpg
+              image_title: San Pellegrino
+            field_text_horizontal_alignment: position_left
+            field_text_vertical_alignment: top

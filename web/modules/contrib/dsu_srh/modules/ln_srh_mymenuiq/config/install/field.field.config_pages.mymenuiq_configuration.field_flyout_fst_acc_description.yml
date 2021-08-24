@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_flyout_fst_acc_description
+  module:
+    - text
+id: config_pages.mymenuiq_configuration.field_flyout_fst_acc_description
+field_name: field_flyout_fst_acc_description
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'MenuFlyout Accordion Balanced Menu Description'
+description: 'Text to be displayed in accordion description for Balanced Menu.'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>A balanced menu provides a variety of food groups and key nutrients.</p>\r\n\r\n<p>MyMenu IQ™ generates a nutritional score, considering the energy content and the nutrients in the menu, and their contribution towards achieving nutritional recommendations as based on a 2,000 kcal daily diet for an average adult.<br />\r\n&nbsp;<br />\r\nMyMenu IQ™ guides you to select a balanced menu on a scale from 0 to 100, with focus on the main meal.</p>\r\n"
+    format: rich_text
+default_value_callback: ''
+settings: {  }
+field_type: text_long

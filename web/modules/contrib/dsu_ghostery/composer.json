@@ -1,0 +1,11 @@
+{
+  "name": "lightnest/dsu_ghostery",
+  "description": "Adds the configuration pages and functionality required to configure Ghostery.",
+  "type": "drupal-module",
+  "keywords": [
+    "cookie-consent"
+  ],
+  "require": {
+    "drupal/core": "^8 || ^9"
+  }
+}

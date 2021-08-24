@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.mymenuiq_configuration
+    - field.storage.config_pages.field_side_dish_to_add_message
+id: config_pages.mymenuiq_configuration.field_side_dish_to_add_message
+field_name: field_side_dish_to_add_message
+entity_type: config_pages
+bundle: mymenuiq_configuration
+label: 'Side dish to add message'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Add
+default_value_callback: ''
+settings: {  }
+field_type: string

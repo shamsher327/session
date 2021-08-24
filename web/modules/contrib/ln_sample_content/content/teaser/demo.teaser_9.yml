@@ -1,0 +1,15 @@
+title: Privacy Policy
+field_teaser_subtitle: 
+body: 
+field_buton_position:
+field_image:
+  image_name: security.png
+  image_title: security
+field_dsu_tags: Sample content
+field_teaser_link:
+  uri: internal:/ # Drupal save "internal:/" when "<front>" is used
+  title: More
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ln_c_gridcard_rollover
+label: Rollover
+classes: grid-card-rollover

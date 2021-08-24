@@ -1,0 +1,24 @@
+type: c_image
+component_description: IMAGE - HORIZONTAL ALIGNMENT RIGHT / VERTICAL ALIGNMENT BOTTOM WITH CTA BUTTON ABOVE
+field_c_title: Pumpkin spice caramelization
+field_c_image_subheading: Strong, dripper percolator iced brewed et caramelization mocha redeye
+field_c_image_summary_text: Macchiato, latte, turkish cinnamon dripper americano strong half and half. Acerbic sugar cultivar est carajillo aftertaste robust.
+field_button_color:
+  tax_term_name:
+   vid: color
+   name: Sample Color
+   custom_field:
+    field_color_code: '#0045AB'
+    field_font_color: '#FFFFFF'
+field_classy_paragraph_style:
+  target_id:
+field_c_link:
+  uri: http://www.nestle.com
+  title: Button Text
+field_c_image:
+  image_name: san-pellegrino.jpg
+  image_title: San Pellegrino
+field_horizontal_aligment: right
+field_position: above
+field_text_horizontal_alignment: position_right
+field_text_vertical_alignment: bottom

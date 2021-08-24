@@ -1,0 +1,13 @@
+name: External Hreflang
+type: module
+description: Allow adding alternate hreflang for external sites (not languages in Drupal).
+core: 8.x
+package: SEO
+core_version_requirement: ^8 || ^9
+dependencies:
+  - metatag:metatag
+
+# Information added by Drupal.org packaging script on 2019-12-22
+version: '8.x-1.0'
+project: 'external_hreflang'
+datestamp: 1577015594

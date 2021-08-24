@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * Provides install, update, and uninstall functions.
+ */
+
+use Drupal\Core\Language\LanguageInterface;
+
+/**
+ * Uninstall Datalayer module.
+ */
+function ln_datalayer_update_8001(&$sandbox) {
+  // No need more contrib Datalayer module.
+  \Drupal::service('module_installer')->install(['advanced_datalayer']);
+  // Enable base module.
+  \Drupal::service('module_installer')->uninstall(['datalayer']);
+}
+
+/**
+ * Convert datalayer old config data to new structure.
+ */
+function ln_datalayer_update_8102(&$sandbox) {
+  $old_config = \Drupal::service('config.factory')->getEditable('ln_datalayer.settings');
+  $language_manager = \Drupal::service('language_manager');
+  $default_language = $language_manager->getDefaultLanguage(LanguageInterface::LANGCODE_SITE_DEFAULT);
+  $configs_mapping = [
+    'brand' => 'brand',
+    'sub_brand' => 'subBrand',
+    'zone' => 'zone',
+    'country' => 'country',
+    'language' => 'language',
+    'business' => 'business',
+    'siteType' => 'siteType',
+    'technology' => 'technology',
+    'properties' => 'properties',
+    'digi_pi_id' => 'digiPiID',
+    'business_unit' => 'businessUnit',
+    'conversion_page_type' => 'conversionPageType',
+    'property_status' => 'propertyStatus',
+    'go_live_date' => 'goLiveDate',
+    'target_audience' => 'targetAudience',
+    'site_category' => 'siteCategory',
+    'page_subsection' => 'pageSubsection',
+    'advertiser_id' => 'floodlightAdvertiserID',
+    'ecommerce' => 'hasEcommerce',
+    'login' => 'hasLogin',
+    'sign_up' => 'hasSignup',
+    'coupon_print' => 'hasCouponPrint',
+    'checkout' => 'hasCheckout',
+    'video_type' => 'videoType',
+    'count_group_tag_string' => 'countGroupTagString',
+    'sales_group_tag_string' => 'salesGroupTagString',
+    'website_url_' . $default_language->getId() => 'websiteUrl',
+  ];
+
+  $new_tags = [];
+  foreach ($configs_mapping as $old_name => $new_name) {
+    $old_value = $old_config->get($old_name);
+    $new_tags[$new_name] = $old_value;
+    $old_config->clear($old_name);
+  }
+  $new_tags['event'] = 'fireTags';
+  $datalayer_entity_manager = \Drupal::entityTypeManager()->getStorage('advanced_datalayer_defaults');
+  $datalayer_defaults = $datalayer_entity_manager->load('global');
+  $datalayer_defaults->set('tags', $new_tags);
+  $datalayer_defaults->save();
+
+  // Add translations for site URL tag for multilingual sites.
+  $languages = $language_manager->getLanguages();
+  if (count($languages) > 1) {
+    foreach ($languages as $lancode => $language) {
+      if ($lancode != $default_language->getId()) {
+        $old_value = $old_config->get('website_url_' . $lancode);
+        $datalayer_translation = $language_manager->getLanguageConfigOverride($lancode, 'advanced_datalayer.advanced_datalayer_defaults.global');
+        if ($old_value) {
+          $datalayer_translation->set('tags', ['websiteUrl' => $old_value]);
+          $datalayer_translation->save();
+          $old_config->clear('website_url_' . $lancode);
+        }
+      }
+    }
+  }
+  $old_config->save();
+}

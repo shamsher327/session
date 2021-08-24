@@ -1,0 +1,237 @@
+@import "../../../../mixins";
+
+$dsu_c_slider_title_color: #fff !default;
+$dsu_c_slider_title_text_size: 60px !default;
+$dsu_c_slider_description_color: #fff !default;
+$dsu_c_slider_description_text_size: 30px !default;
+$dsu_c_slider_link_color: #fff !default;
+$dsu_c_slider_arrow_color: #fff !default;
+$dsu_c_slider_arrow_size: 36px !default;
+$dsu_c_slider_link_text_size: 30px !default;
+
+.paragraph--type--c-slider {
+    .slick {
+        margin: 0 auto;
+    }
+
+    .slick-list {
+        margin-bottom: 10px;
+        padding: 0 0 30px !important;
+        @include breakpoint(col-lg) {
+            padding: 0 !important;
+        }
+    }
+
+    .slick-arrow {
+        &:focus {
+        outline : auto 1px;
+    }
+        &::before,
+        &::after {
+            color: $dsu_c_slider_arrow_color;
+            font-size: $dsu_c_slider_arrow_size;
+        }
+    }
+}
+
+.paragraph--type--c-slide {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    &.gradient {
+        &:after {
+            content: "";
+            position: absolute;
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #ddd 0%, #555 100%);
+        }
+    }
+
+    .field--name-field-c-image {
+        width: 100%;
+        height: 645px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .fields--wrapper {
+        max-width: 85%;
+        display : flex;
+        flex-direction: column;
+        margin:auto;
+        @include breakpoint(col-lg) {
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            padding: 1.5em 1em;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        .field--name-field-c-title{
+            color : #000;
+            @include breakpoint(col-lg) {
+                color: #fff;
+            }
+            margin-bottom: 15px;
+        }
+
+        .field--name-field-slide-description {
+            color: #000;
+            @include breakpoint(col-lg) {
+                color: #fff;
+            }
+            p {
+                color: #000;
+                @include breakpoint(col-lg) {
+                    color: #fff;
+                }
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 600;
+                padding-bottom: 15px;
+            }
+        }
+
+        &.vertical {
+            &-top{
+                justify-content : flex-start;
+            }
+
+            &-middle{
+                justify-content : center;
+            }
+
+            &-bottom{
+                justify-content : flex-end;
+            }
+        }
+
+        &.horizontal {
+            &-center{
+                align-items: center;
+                text-align: center;
+                .field--name-field-slide-description{
+                    text-align: center;
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+
+            &-left{
+                align-items: center;
+                text-align: center;
+                .field--name-field-slide-description{
+                    text-align: center;
+                    p{
+                        text-align: center;
+                    }
+                }
+                @include breakpoint(col-lg) {
+                    align-items: flex-start;
+                    text-align: left;
+                    .field--name-field-slide-description{
+                        text-align: left;
+                        p{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            &-right{
+                align-items: center;
+                text-align: center;
+                .field--name-field-slide-description{
+                    text-align: center;
+                    p{
+                        text-align: center;
+                    }
+                }
+                @include breakpoint(col-lg) {
+                    align-items: flex-end;
+                    text-align: right;
+                    .field--name-field-slide-description{
+                        text-align: right;
+                        p{
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .field--name-field-c-title {
+        color: inherit;
+        font-size: 34px;
+        font-weight: bold;
+    }
+
+    .field--name-field-slide-description {
+        color: inherit;
+        font-size: 18px;
+    }
+
+    .image_cta_link {
+        color: inherit;
+        font-size: 16px;
+        display: inline-block;
+        margin: 10px 0;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding: 6px 16px;
+        line-height: 1.846;
+        border-radius: 3px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-transform: uppercase;
+        border: none;
+        -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        background-size: 200% 200%;
+        background-position: 50%;
+        color: #fff;
+        background-color: #222222;
+        border-color: transparent;
+    }
+
+    .field--name-field-c-link a {
+        color: #fff;
+    }
+}
+
+@media (min-width: 768px) {
+    .paragraph--type--c-slide .fields--wrapper {
+        padding: 3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .paragraph--type--c-slide .field--name-field-slide-description {
+        font-size: 24px;
+    }
+}

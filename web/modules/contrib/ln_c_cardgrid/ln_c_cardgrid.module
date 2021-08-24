@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * Contains ln_c_card.module.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function ln_c_cardgrid_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__ln_c_cardgrid'                   => [
+      'template'  => 'paragraph--ln-c-cardgrid',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__ln_c_grid_card_item'             => [
+      'template'  => 'paragraph--ln-c-grid-card-item',
+      'base hook' => 'paragraph',
+    ],
+    'node__teaser__ln_c_gridcard_basic_style_1'  => [
+      'template'  => 'node--teaser--ln-c-gridcard-basic-style-1',
+      'base hook' => 'node',
+    ],
+    'node__teaser__ln_c_gridcard_basic_style_2'  => [
+      'template'  => 'node--teaser--ln-c-gridcard-basic-style-2',
+      'base hook' => 'node',
+    ],
+    'node__teaser__ln_c_gridcard_basic_style_3'  => [
+      'template'  => 'node--teaser--ln-c-gridcard-basic-style-3',
+      'base hook' => 'node',
+    ],
+    'node__teaser__ln_c_gridcard_hover_box_1'    => [
+      'template'  => 'node--teaser--ln-c-gridcard-hover-box-1',
+      'base hook' => 'node',
+    ],
+    'node__teaser__ln_c_gridcard_hover_box_2'    => [
+      'template'  => 'node--teaser--ln-c-gridcard-hover-box-2',
+      'base hook' => 'node',
+    ],
+    'node__teaser__ln_c_gridcard_quick_info_box' => [
+      'template'  => 'node--teaser--ln-c-gridcard-quick-info-box',
+      'base hook' => 'node',
+    ],
+    'node__teaser__ln_c_gridcard_rollover'       => [
+      'template'  => 'node--teaser--ln-c-gridcard-rollover',
+      'base hook' => 'node',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ln_c_cardgrid_preprocess_paragraph__ln_c_cardgrid(&$variables) {
+  $variables['#attached']['library'][] = 'ln_c_cardgrid/general';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ln_c_cardgrid_preprocess_paragraph__ln_c_grid_card_item(&$variables) {
+  $parent = $variables['elements']['#paragraph']->getParentEntity();
+  if ($parent->hasField('field_ln_c_card_carousels')) {
+    $card_style = $parent->get('field_ln_c_grid_card_style')->getValue();
+
+    if (isset($variables['content']['field_ln_c_grid_card_teaser'][0]['#view_mode']) && !empty($card_style)) {
+      $variables['content']['field_ln_c_grid_card_teaser'][0]['#view_mode'] = $card_style[0]['target_id'];
+      unset($variables['content']['field_ln_c_grid_card_teaser'][0]['#cache']['keys']);
+      $variables['content']['card_type'] = $card_style[0]['target_id'];
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function ln_c_cardgrid_entity_presave(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'paragraph' && $entity->getType() == 'ln_c_cardgrid') {
+    $tags = ['paragraph:' . $entity->id()];
+    Cache::invalidateTags($tags);
+  }
+}
+
+/**
+ * Implements hook_ln_sample_content().
+ */
+function ln_c_cardgrid_ln_sample_content() {
+  /** @var \Drupal\Core\Extension\ModuleHandlerInterface $module_handler */
+  $module_handler = \Drupal::service('module_handler');
+  /** @var \Drupal\Core\Extension\Extension $module_object */
+  $module_object = $module_handler->getModule(basename(__FILE__, '.module'));
+  $module_name = $module_object->getName();
+
+  $source = drupal_get_path('module', $module_name) . '/content';
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+  $files = $file_system->scanDirectory($source, '/demo.*\.(yml)$/');
+  $yaml_file_path = NULL;
+  foreach ($files as $file) {
+    $yaml_file_path[] = '/content/' . $file->filename;
+  }
+
+  return $yaml_file_path;
+}

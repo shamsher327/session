@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__dsu_product
+label: 'Content: Product'
+tags:
+  title: '[node:title]'
+  schema_product_image: 'a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:33:"[node:field_dsu_image:entity:url]";}'
+  schema_product_type: Product
+  schema_product_name: '[node:title]'
+  schema_product_description: '[node:field_dsu_product_desc]'

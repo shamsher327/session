@@ -1,0 +1,19 @@
+<?php
+
+
+function my_subtheme_preprocess_page(&$variables) {
+
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['#attached']['library'][] = 'my_subtheme/global-styling';
+  }
+}
+
+function my_subtheme_page_attachments(&$attachments) {
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $attachments['#attached']['library'][] = 'my_subtheme/global-styling';
+    $attachments['#attached']['drupalSettings']['my_subtheme']['myvar'] = 'shamsher';
+  }
+
+}
+
+

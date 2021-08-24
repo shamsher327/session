@@ -1,0 +1,202 @@
+.paragraph--type--c-text {
+  padding: 30px 0; }
+.paragraph--type--c-text .field--name-field-c-title {
+  margin-bottom: 10px; }
+.paragraph--type--c-text .field--name-field-sub-heading {
+  margin-bottom: 10px; }
+.paragraph--type--c-text .field--name-field-c-title,
+.paragraph--type--c-text .field--name-field-sub-heading,
+.paragraph--type--c-text .dsu_btn {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+.paragraph--type--c-text .field--name-field-summary-text {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+.paragraph--type--c-text .field--name-field-summary-text p {
+  line-height: 34px;
+  margin-bottom: 10px;
+  padding: 0 15px; }
+.paragraph--type--c-text .text-large-bold-underline {
+  margin: 0 0 8px; }
+.paragraph--type--c-text .text-large-plain {
+  margin: 0 0 26px; }
+.paragraph--type--c-text .horizontal_position_center {
+  text-align: center !important; }
+.paragraph--type--c-text .horizontal_position_center .field--name-field-summary-text {
+  text-align: center; }
+.paragraph--type--c-text .horizontal_position_center .field--name-field-summary-text p {
+  text-align: center !important; }
+.paragraph--type--c-text .horizontal_position_left {
+  text-align: left; }
+.paragraph--type--c-text .horizontal_position_left p {
+  text-align: left !important; }
+.paragraph--type--c-text .horizontal_position_right {
+  text-align: right !important; }
+.paragraph--type--c-text .horizontal_position_right .field--name-field-summary-text {
+  text-align: right !important; }
+.paragraph--type--c-text .horizontal_position_right .field--name-field-summary-text p {
+  text-align: right !important; }
+
+@media only screen and (min-width: 1024px) {
+  .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+    padding: 50px 0; }
+  .paragraph--type--c-text .field--name-field-c-title,
+  .paragraph--type--c-text .field--name-field-sub-heading,
+  .paragraph--type--c-text .field--name-field-summary-text,
+  .paragraph--type--c-text .dsu_btn {
+    max-width: 1170px; } }
+
+@media only screen and (max-width: 1023px) {
+  .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+    padding: 25px 0; }
+  .paragraph--type--c-text .field--name-field-c-title,
+  .paragraph--type--c-text .field--name-field-sub-heading,
+  .paragraph--type--c-text .dsu_btn {
+    max-width: 940px; }
+  .paragraph--type--c-text .field--name-field-summary-text {
+    max-width: 940px;
+    padding: 0 15px 37px; }
+  .dark-bg.paragraph--type--c-text .field--name-field-summary-text {
+    padding: 0 15px 25px; } }
+
+@media only screen and (max-width: 767px) {
+  .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+    padding: 15px 0; }
+  .paragraph--type--c-text .field--name-field-c-title,
+  .paragraph--type--c-text .field--name-field-sub-heading,
+  .paragraph--type--c-text .dsu_btn {
+    max-width: 748px; }
+  .paragraph--type--c-text .field--name-field-summary-text {
+    max-width: 748px;
+    padding: 0 15px 52px; }
+  .dark-bg.paragraph--type--c-text .field--name-field-summary-text {
+    padding: 0 15px 25px; } }
+
+.dark-bg {
+  background: url("../img/content-tail.gif") center top repeat #1d1d1d;
+  color: #fff;
+  text-align: center; }
+
+.field--name-field-components .paragraph--type--c-text.white-text, .field--name-field-components .paragraph--type--c-text.light-text {
+  color: #FFF; }
+.field--name-field-components .paragraph--type--c-text.white-text .field--name-field-c-title, .field--name-field-components .paragraph--type--c-text.white-text .field--name-field-sub-heading, .field--name-field-components .paragraph--type--c-text.white-text .field--name-field-summary-text, .field--name-field-components .paragraph--type--c-text.light-text .field--name-field-c-title, .field--name-field-components .paragraph--type--c-text.light-text .field--name-field-sub-heading, .field--name-field-components .paragraph--type--c-text.light-text .field--name-field-summary-text {
+  color: #FFF; }
+.field--name-field-components .paragraph--type--c-text.white-text p, .field--name-field-components .paragraph--type--c-text.light-text p {
+  color: #FFF; }
+.field--name-field-components .paragraph--type--c-text.white-text strong, .field--name-field-components .paragraph--type--c-text.light-text strong {
+  font-weight: 600;
+  color: #FFF; }
+.field--name-field-components .paragraph--type--c-text.white-text a, .field--name-field-components .paragraph--type--c-text.light-text a {
+  color: #FFF; }
+.field--name-field-components .paragraph--type--c-text.white-text a:hover, .field--name-field-components .paragraph--type--c-text.light-text a:hover {
+  color: #FFF; }
+.field--name-field-components .paragraph--type--c-text.white-text .contextual-links a, .field--name-field-components .paragraph--type--c-text.light-text .contextual-links a {
+  color: initial; }
+
+.light-bg {
+  background: #fff;
+  color: #333;
+  text-align: center; }
+
+.dark-text {
+  color: #333; }
+.dark-text p {
+  color: #777; }
+.dark-text strong {
+  font-weight: 600;
+  color: #333; }
+.dark-text a {
+  color: #333; }
+.dark-text a:hover {
+  color: #333; }
+
+.image-bg {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.light-bg, .dark-bg {
+  overflow: hidden; }
+
+.light-bg .background-image-overlay, .light-bg .field--name-field-background-image {
+  display: none; }
+
+.dark-bg .background-image-overlay, .dark-bg .field--name-field-background-image {
+  display: none; }
+
+.image-bg .background-image-overlay, .image-bg .field--name-field-background-image {
+  display: none; }
+
+.image-bg .background-image-overlay img, .image-bg .field--name-field-background-image img {
+  height: auto;
+  width: 100%; }
+
+.dark-bg a, .image-bg a {
+  color: #fff; }
+
+.dsu_btn {
+  width: 100%;
+  display: block;
+  text-align: center; }
+.dsu_btn.horizontal-right {
+  text-align: right; }
+.dsu_btn.horizontal-left {
+  text-align: left; }
+.dsu_btn.vertical-bottom_center, .dsu_btn.vertical-top_center {
+  text-align: center; }
+
+.node-dsu-component-page-edit-form .field--name-field-components .paragraph--type--c-text a {
+  color: #222222; }
+
+.node-dsu-component-page-edit-form .field--name-field-components .paragraph--type--c-text .field .field--name-field-c-title {
+  font-size: 18px;
+  margin-top: 29px;
+  margin-bottom: 14.5px;
+  text-align: left;
+  padding-left: 10px !important;
+  padding-right: 10px !important; }
+
+.node-dsu-component-page-edit-form .field--name-field-components .paragraph--type--c-text .field .field--name-field-sub-heading {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0;
+  text-align: left;
+  padding-left: 10px !important;
+  padding-right: 10px !important; }
+
+.node-dsu-component-page-edit-form .field--name-field-components .paragraph--type--c-text .field--name-field-summary-text {
+  padding: 0 10px;
+  text-align: left; }
+
+.node-dsu-component-page-edit-form .horizontal_position_center {
+  text-align: center !important; }
+.node-dsu-component-page-edit-form .horizontal_position_center .field--name-field-c-title, .node-dsu-component-page-edit-form .horizontal_position_center .field--name-field-sub-heading {
+  text-align: center !important; }
+.node-dsu-component-page-edit-form .horizontal_position_center .field--name-field-summary-text {
+  text-align: center; }
+.node-dsu-component-page-edit-form .horizontal_position_center .field--name-field-summary-text p {
+  text-align: center !important; }
+
+.node-dsu-component-page-edit-form .horizontal_position_left {
+  text-align: left; }
+.node-dsu-component-page-edit-form .horizontal_position_left .field--name-field-c-title, .node-dsu-component-page-edit-form .horizontal_position_left .field--name-field-sub-heading {
+  text-align: left !important; }
+.node-dsu-component-page-edit-form .horizontal_position_left p {
+  text-align: left !important; }
+
+.node-dsu-component-page-edit-form .horizontal_position_right {
+  text-align: right !important; }
+.node-dsu-component-page-edit-form .horizontal_position_right .field--name-field-c-title, .node-dsu-component-page-edit-form .horizontal_position_right .field--name-field-sub-heading {
+  text-align: right !important; }
+.node-dsu-component-page-edit-form .horizontal_position_right .field--name-field-summary-text {
+  text-align: right !important; }
+.node-dsu-component-page-edit-form .horizontal_position_right .field--name-field-summary-text p {
+  text-align: right !important; }

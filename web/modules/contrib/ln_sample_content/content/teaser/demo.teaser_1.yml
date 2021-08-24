@@ -1,0 +1,15 @@
+title: Steamed bar dripper
+field_teaser_subtitle: Iced as breve, spoon cortado java redeye mocha foam
+body: Steamed bar dripper galão aftertaste shop java. Iced as breve, spoon cortado java redeye mocha foam qui cappuccino latte. Plunger pot viennese lungo milk, aftertaste percolator caramelization medium aged frappuccino.
+field_buton_position: left #or right or center
+field_image:
+  image_name: nan.jpg
+  image_title: NAN
+field_dsu_tags: Sample content #Tax term name
+field_teaser_link:
+  uri: internal:/ # Drupal save "internal:/" when "<front>" is used
+  title: More
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

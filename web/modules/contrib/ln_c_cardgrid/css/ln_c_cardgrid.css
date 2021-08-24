@@ -1,0 +1,894 @@
+.paragraph--type--ln-c-cardgrid .h1, .paragraph--type--ln-c-cardgrid .h2, .paragraph--type--ln-c-cardgrid .h3, .paragraph--type--ln-c-cardgrid .h4, .paragraph--type--ln-c-cardgrid .h5, .paragraph--type--ln-c-cardgrid .h6, .paragraph--type--ln-c-cardgrid h1, .paragraph--type--ln-c-cardgrid h2, .paragraph--type--ln-c-cardgrid h3, .paragraph--type--ln-c-cardgrid h4, .paragraph--type--ln-c-cardgrid h5, .paragraph--type--ln-c-cardgrid h6 {
+  font-weight: 200;
+  line-height: 1.25;
+  margin: 0 0 1rem !important;
+  -webkit-transition: font-size 250ms linear, opacity 250ms linear;
+  transition: font-size 250ms linear, opacity 250ms linear; }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="1"] .field__items > .field__item {
+  min-width: calc(100% / 1); }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="1"][data-card-style="ln_c_gridcard_basic_style_2"] .field__items, .paragraph--type--ln-c-cardgrid [data-card-number-of-columns="1"][data-card-style="ln_c_gridcard_basic_style_3"] .field__items {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="2"] .field__items > .field__item {
+  min-width: calc(100% / 2); }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="2"][data-card-style="ln_c_gridcard_basic_style_2"] .field__items, .paragraph--type--ln-c-cardgrid [data-card-number-of-columns="2"][data-card-style="ln_c_gridcard_basic_style_3"] .field__items {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="3"] .field__items > .field__item {
+  min-width: calc(100% / 3); }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="3"][data-card-style="ln_c_gridcard_basic_style_2"] .field__items, .paragraph--type--ln-c-cardgrid [data-card-number-of-columns="3"][data-card-style="ln_c_gridcard_basic_style_3"] .field__items {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="4"] .field__items > .field__item {
+  min-width: calc(100% / 4); }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="4"][data-card-style="ln_c_gridcard_basic_style_2"] .field__items, .paragraph--type--ln-c-cardgrid [data-card-number-of-columns="4"][data-card-style="ln_c_gridcard_basic_style_3"] .field__items {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="5"] .field__items > .field__item {
+  min-width: calc(100% / 5); }
+
+.paragraph--type--ln-c-cardgrid [data-card-number-of-columns="5"][data-card-style="ln_c_gridcard_basic_style_2"] .field__items, .paragraph--type--ln-c-cardgrid [data-card-number-of-columns="5"][data-card-style="ln_c_gridcard_basic_style_3"] .field__items {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.paragraph--type--ln-c-cardgrid [data-card-style] > .grid-card-title {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_basic_style_1"] .field__items > .field__item {
+  padding: 10px 0; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_basic_style_1"] .field__items > .field__item {
+    padding: 10px 10px; } }
+
+.paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_basic_style_2"] .field__items > .field__item {
+  padding: 10px 30px;
+  margin-bottom: 40px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_basic_style_2"] .field__items > .field__item {
+    padding: 10px 10px;
+    margin-bottom: 0px; } }
+
+.paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_basic_style_3"] .field__items > .field__item {
+  padding: 10px 30px;
+  margin-bottom: 40px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_basic_style_3"] .field__items > .field__item {
+    padding: 10px 10px;
+    margin-bottom: 0px; } }
+
+.paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"] .field__items > .field__item, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"] .field__items > .field__item, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"] .field__items > .field__item, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"] .field__items > .field__item {
+  padding: 0 10px;
+  margin-bottom: 10px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"] .field__items > .field__item:first-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"] .field__items > .field__item:first-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"] .field__items > .field__item:first-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"] .field__items > .field__item:first-child {
+    padding-left: 20px; }
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"] .field__items > .field__item:last-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"] .field__items > .field__item:last-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"] .field__items > .field__item:last-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"] .field__items > .field__item:last-child {
+    padding-right: 20px; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="1"] .field__items > .field__item:first-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="1"] .field__items > .field__item:first-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="1"] .field__items > .field__item:first-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="1"] .field__items > .field__item:first-child {
+    padding-left: 10px; }
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="1"] .field__items > .field__item:last-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="1"] .field__items > .field__item:last-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="1"] .field__items > .field__item:last-child, .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="1"] .field__items > .field__item:last-child {
+    padding-right: 10px; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n) {
+    padding-right: 20px; }
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="2"] .field__items > .field__item:nth-child(2n + 1) {
+    padding-left: 20px; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n) {
+    padding-right: 20px; }
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="3"] .field__items > .field__item:nth-child(3n + 1) {
+    padding-left: 20px; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n) {
+    padding-right: 20px; }
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="4"] .field__items > .field__item:nth-child(4n + 1) {
+    padding-left: 20px; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n) {
+    padding-right: 20px; }
+  .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_1"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_hover_box_2"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_rollover"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n + 1), .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"][data-card-style="ln_c_gridcard_quick_info_box"][data-card-number-of-columns="5"] .field__items > .field__item:nth-child(5n + 1) {
+    padding-left: 20px; } }
+
+  @media (min-width: 560px) {
+    .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="Off"] .field--type-image {
+      margin: 0px; }
+    }
+  @media (min-width: 560px) {
+    .paragraph--type--ln-c-cardgrid > [data-card-allow-spacing="On"] .field--type-image {
+      margin: 0px; }
+    }
+.paragraph--type--ln-c-cardgrid .field__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 100%; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item {
+  height: inherit; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item {
+  height: inherit; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper {
+  height: inherit; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-bottom-wrapper, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-bottom-wrapper > a {
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-decoration: none; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-bottom-wrapper .card-bottom-text, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-bottom-wrapper > a .card-bottom-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-below-image-wrapper, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-below-image-wrapper > a {
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-decoration: none; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-below-image-wrapper .card-title-below-image-text, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-below-image-wrapper > a .card-title-below-image-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-on-image-wrapper, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-on-image-wrapper > a {
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-decoration: none; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-on-image-wrapper .card-title-on-image-text, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-title-on-image-wrapper > a .card-title-on-image-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper > a, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper .hoverBox {
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper:focus-within, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper > a:focus-within, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper .hoverBox:focus-within {
+  overflow: visible; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper .hovercard-overlay, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper > a .hovercard-overlay, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-rollover-wrapper .hoverBox .hovercard-overlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  top: 0px;
+  opacity: 0; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper a,
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper .fullcolor-card,
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper .fullcolor-card .card-content-wrapper {
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /*flex-direction: column;*/
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper:focus-within, .paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper a:focus-within,
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper .fullcolor-card:focus-within,
+.paragraph--type--ln-c-cardgrid .field__items > .field__item .paragraph--type--ln-c-grid-card-item .component-paragraph-field-item > .field__item .card-grid-item-wrapper .card-full-color-wrapper .fullcolor-card .card-content-wrapper:focus-within {
+  overflow: visible; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] img {
+  height: 255px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] img {
+    height: 510px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover img {
+  border: 5px solid #2abc97; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover .card-bottom-text h1, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover .card-bottom-text h2, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover .card-bottom-text h3, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover .card-bottom-text h4, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover .card-bottom-text h5, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover .card-bottom-text h6, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"]:hover .card-bottom-text .card-bottom-text-title {
+  color: #16a87b; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text {
+  background-color: #043225;
+  padding: 30px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text {
+    padding: 50px 45px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text h1, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text h2, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text h3, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text h4, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text h5, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text h6, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text p, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text .card-bottom-text-body, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_1"] .card-bottom-text .card-bottom-text-title {
+  color: #FFF; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .field--type-image {
+  border-radius: 5px;
+  overflow: hidden; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .field--type-image img {
+  height: 190px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"]:hover img {
+  border: 5px solid #2abc97; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"]:hover .card-title-below-image-text h1, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"]:hover .card-title-below-image-text h2, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"]:hover .card-title-below-image-text h3, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"]:hover .card-title-below-image-text h4, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"]:hover .card-title-below-image-text h5, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"]:hover .card-title-below-image-text h6 {
+  color: #16a87b; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text {
+  border-color: #043225;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  padding: 0 10px 0 20px;
+  margin-top: 20px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h1, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h2, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h3, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h4, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h5, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h6, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text p, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text .card-bottom-text-body {
+  color: #000; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h1, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h2, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h3, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h4, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h5, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text h6 {
+  padding: 0; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_2"] .card-title-below-image-text .card-title-on-image-body p:last-child {
+  margin-bottom: 0px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .field--type-image {
+  border-radius: 5px;
+  overflow: hidden; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .field--type-image img {
+  height: 305px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .field--type-image img {
+    height: 395px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"]:hover img {
+  border: 5px solid #2abc97; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text {
+  border-color: #043225;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  padding: 0 10px 0 20px;
+  margin-top: 40px;
+  position: relative; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text .card-text {
+  font-weight: 600; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text .card-title-on-image-title {
+  position: absolute;
+  background: #2abc97;
+  padding: 20px;
+  top: 0px;
+  color: #FFF;
+  width: 75%;
+  border-radius: 6px;
+  opacity: 0.95;
+  min-height: 78px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transform: translateY(-130%);
+  -ms-transform: translateY(-130%);
+  transform: translateY(-130%); }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text .card-text, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text .card-title-on-image-body, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text p {
+  color: #000; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text h1, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text h2, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text h3, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text h4, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text h5, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text h6 {
+  color: #FFF;
+  padding: 0; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_basic_style_3"] .card-title-on-image-text .card-title-on-image-body p:last-child {
+  margin-bottom: 0px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_1"] .hovercard-box .field--type-image {
+  overflow: hidden; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_1"] .hovercard-box .field--type-image img {
+  height: 298px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_1"] .hovercard-box .hovercard-title {
+  padding: 30px;
+  background-color: #043225;
+  color: #FFF;
+  margin: 0px !important;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_1"] .hovercard-box .hovercard-overlay {
+  background: #2abc97;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  padding: 25px 50px;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  text-align: center; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_1"] .hovercard-box .hovercard-overlay * {
+  text-align: center; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_1"] .hovercard-box .hovercard-overlay p:last-child {
+  margin-bottom: 0px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_1"] .hovercard-box:hover .hovercard-overlay {
+  opacity: 1 !important; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box {
+  position: relative; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-card {
+  z-index: 1; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .field--type-image {
+  overflow: hidden; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .field--type-image img {
+  height: 375px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .field--type-image img {
+    height: 528px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-title {
+  width: 75%;
+  min-width: 250px;
+  position: absolute;
+  bottom: 18px;
+  padding: 9px 20px;
+  background-color: #043225;
+  border-radius: 5px;
+  color: #FFF;
+  margin: 0px auto !important;
+  opacity: 0.95;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-height: 75px;
+  line-height: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-title {
+    padding: 13px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-overlay {
+  z-index: 0;
+  background: #2abc97;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  padding: 25px 50px;
+  text-align: center;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  overflow: hidden; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-overlay-title {
+  color: #FFF;
+  margin-bottom: 30px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-overlay-sub-title {
+  font-weight: 600;
+  margin-bottom: 40px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-overlay * {
+  text-align: center; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box .hovercard-overlay p:last-child {
+  margin-bottom: 0px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box:hover .hovercard-title {
+  opacity: 0; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_hover_box_2"] .hovercard-box:hover .hovercard-overlay {
+  z-index: 2;
+  opacity: 0.85 !important;
+  overflow: auto; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .field--type-image {
+  overflow: hidden; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .field--type-image img {
+  height: 370px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .field--type-image img {
+    height: 700px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text {
+  position: absolute;
+  bottom: 0;
+  padding: 30px 20px;
+  background-color: #043225;
+  color: #FFF;
+  margin: 0px !important;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  max-height: 80%;
+  overflow: auto; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text p:last-child {
+  margin-bottom: 0px; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text {
+    padding: 45px 25px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  cursor: pointer; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h1, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h2, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h3, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h4, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h5, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h6 {
+  position: relative;
+  margin-bottom: 0 !important;
+  padding-right: 20px; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h1:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h2:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h3:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h4:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h5:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h6:after {
+  content: "+";
+  font-size: 42px;
+  position: absolute;
+  line-height: 1;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%); 
+}
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h1:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h2:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h3:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h4:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h5:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title h6:after {
+    right: -10px; } }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text-title .card-rollover-title-arrow {
+  font-size: 32px;
+  position: absolute;
+  right: 0; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text a {
+  text-decoration: none !important; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"] .card-rollover-text .card-rollover-text-body {
+  width: 100%;
+  text-decoration: none !important;
+  display: none; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text {
+  /*max-height: 50%;*/ }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text .card-rollover-text-title h1:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text .card-rollover-text-title h2:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text .card-rollover-text-title h3:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text .card-rollover-text-title h4:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text .card-rollover-text-title h5:after, .paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text .card-rollover-text-title h6:after {
+  content: "|";
+  -webkit-transform: rotate(90deg) translateX(-150%);
+  -ms-transform: rotate(90deg) translateX(-150%);
+  transform: rotate(90deg) translateX(-150%);
+  font-size: 26px;
+  font-weight: 600; }
+.paragraph--type--ln-c-cardgrid .field__items > .field__item [data-card="ln_c_gridcard_rollover"].active .card-rollover-text .card-rollover-text-body {
+  display: block; }
+
+.paragraph--type--ln-c-cardgrid .field--type-entity-reference {
+  margin: 0 !important; }
+
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .field--type-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .field--type-image {
+  overflow: hidden;
+  text-align: center; }
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .field--type-image img {
+  max-height: 165px;
+  -o-object-fit: unset;
+  object-fit: unset;
+  width: auto; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .field--type-image img {
+    max-height: 150px; } }
+
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 20px 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  margin-bottom: 25px; }
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image {
+  padding-top: 20px; }
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: inherit;
+  -webkit-align-items: inherit;
+  -ms-flex-align: inherit;
+  align-items: inherit;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 70%;
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+  overflow: auto; }
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body * {
+  text-align: center; }
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    height: 100%; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image {
+    padding-top: 20px; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img {
+    max-height: 150px;
+    height: auto;
+    width: auto; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body {
+    -webkit-box-flex: 3;
+    -webkit-flex-grow: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    height: 100%;
+    padding-left: 20px; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body * {
+    text-align: left; } }
+
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card:hover, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card:hover {
+  border: 5px solid #2abc97; }
+.paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card:hover .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box .field__items .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card:hover .card-content-wrapper {
+  padding: 15px 15px 25px; }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0px; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img {
+    max-height: 165px; } }
+@media (min-width: 768px) and (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img {
+    max-height: 150px; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 70%;
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+    padding-left: 0px; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(4) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body * {
+    text-align: center; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0px; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image > div.field--type-entity-reference {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img {
+    max-height: 165px; } }
+@media (min-width: 768px) and (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-image .field--type-image img,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-image .field--type-image img {
+    max-height: 150px; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 70%;
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+    padding-left: 0px; }
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="4"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *, .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper .fullcolor-card .card-content-wrapper .card-text-body *,
+  .paragraph--type--ln-c-cardgrid.grid-card-full-color-box [data-card-number-of-columns="5"] .field__items > .field__item:first-child:nth-last-child(5) ~ .field__item [data-card="ln_c_gridcard_quick_info_box"] .card-full-color-wrapper a .fullcolor-card .card-content-wrapper .card-text-body * {
+    text-align: center; } }
+
+.paragraph--type--ln-c-grid-card-item .field--type-image img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin: 0;
+  vertical-align: middle; }
+
+.card-font-color-override *, .card-on-hover-font-color-override * {
+  color: inherit; }

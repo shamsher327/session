@@ -1,0 +1,143 @@
+<?php
+
+/**
+ * @file
+ * Contains ln_c_card.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Cache\Cache;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_theme().
+ */
+function ln_c_card_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__ln_c_card' => [
+      'template' => 'paragraph--ln-c-card',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__ln_c_card_item' => [
+      'template' => 'paragraph--ln-c-card-item',
+      'base hook' => 'paragraph',
+    ],
+    'node__teaser__card_full_color_box' => [
+      'template' => 'node--teaser--card-full-color-box',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_rollover' => [
+      'template' => 'node--teaser--card-rollover',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_bottom_text_box' => [
+      'template' => 'node--teaser--card-bottom-text-box',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_extended_card' => [
+      'template' => 'node--teaser--card-extended-card',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_extended_card_title_on_image' => [
+      'template' => 'node--teaser--card-extended-card-title-on-image',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_hover_card_box' => [
+      'template' => 'node--teaser--card-hover-card-box',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_hover_card_micro' => [
+      'template' => 'node--teaser--card-hover-card-micro',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_hover_card_profile' => [
+      'template' => 'node--teaser--card-hover-card-profile',
+      'base hook' => 'node',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ln_c_card_preprocess_paragraph__ln_c_card(&$variables) {
+  $variables['#attached']['library'][] = 'ln_c_card/general';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ln_c_card_preprocess_paragraph__ln_c_card_item(&$variables) {
+  $parent = $variables['elements']['#paragraph']->getParentEntity();
+  if (!is_null($parent) && $parent->hasField('field_card_item')) {
+    $card_style = $parent->get('field_classy_paragraph_style')->getValue();
+   
+    if (isset($variables['content']['field_card_entity_selector'][0]['#view_mode']) && !empty($card_style)) {
+      $variables['content']['field_card_entity_selector'][0]['#view_mode'] = $card_style[0]['target_id'];
+      unset($variables['content']['field_card_entity_selector'][0]['#cache']['keys']);
+      $variables['content']['card_type'] = $card_style[0]['target_id'];
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function ln_c_card_entity_presave(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'paragraph' && $entity->getType() == 'ln_c_card') {
+    $tags = ['paragraph:' . $entity->id()];
+    Cache::invalidateTags($tags);
+  }
+}
+
+/**
+ * Implements hook_ln_sample_content().
+ */
+function ln_c_card_ln_sample_content() {
+    /** @var \Drupal\Core\Extension\ModuleHandlerInterface $module_handler */
+    $module_handler = \Drupal::service('module_handler');
+    /** @var \Drupal\Core\Extension\Extension $module_object */
+    $module_object = $module_handler->getModule(basename(__FILE__, '.module'));
+    $module_name = $module_object->getName();
+
+    $source = drupal_get_path('module', $module_name) . '/content';
+    /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+    $file_system = \Drupal::service('file_system');
+    $files = $file_system->scanDirectory($source, '/demo.*\.(yml)$/');
+    $yaml_file_path = NULL;
+    foreach ($files as $file) {
+        $yaml_file_path[] = '/content/' . $file->filename;
+    }
+
+    return $yaml_file_path;
+}
+
+  /**
+   * Implements hook_preprocess_HOOK().
+   */
+  function ln_c_card_preprocess_node__teaser(&$variables) {
+    $node = $variables['node'];
+    if (!empty($node->get('field_image')->first())) {
+      $field_c_image = $node->get('field_image')
+        ->first()
+        ->get('target_id')
+        ->getString();
+      $entity_image = Media::load($field_c_image);
+      $field_name = ($entity_image->hasField('image'))
+        ? 'image'
+        : (($entity_image->hasField('field_media_image')) ? 'field_media_image' : 'field_media_image');
+      // Check if image or target id is not empty.
+      if (!empty($entity_image->get($field_name)
+        ->first())) {
+        $image_file_id = $entity_image->get($field_name)
+          ->first()
+          ->get('target_id')
+          ->getString();
+        $file = File::load($image_file_id);
+        // Check if get files having object type.
+        $image_uri = is_object($file) ? $file->getFileUri() : '';
+        $variables['content']['field_image_uri'] = $image_uri;
+      }
+    }
+  }

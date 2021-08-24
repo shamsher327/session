@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient_unittype_id
+    - paragraphs.paragraphs_type.recipe_ingredients
+id: paragraph.recipe_ingredients.field_ingredient_unittype_id
+field_name: field_ingredient_unittype_id
+entity_type: paragraph
+bundle: recipe_ingredients
+label: 'ingredient unitType id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

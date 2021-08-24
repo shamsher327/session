@@ -1,0 +1,7 @@
+ln_exporter.admin.form:
+  path: '/admin/config/lightnest/ln-exporter/node-id-exporter'
+  defaults:
+    _form: 'Drupal\ln_exporter\Form\ExporterForm'
+    _title: 'LightNest Node ID Exporter'
+  requirements:
+    _permission: 'configure exporter'

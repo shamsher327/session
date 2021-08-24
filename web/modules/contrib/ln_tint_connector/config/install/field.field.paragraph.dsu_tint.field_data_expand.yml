@@ -1,0 +1,25 @@
+uuid: 499ba282-44e1-4a0c-9ce9-511502aa0139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_data_expand
+    - paragraphs.paragraphs_type.dsu_tint
+  module:
+    - options
+_core:
+  default_config_hash: 35nPdvBT1J7keKAlxYKutx0og9IzOPif_HVTrxL2JkM
+id: paragraph.dsu_tint.field_data_expand
+field_name: field_data_expand
+entity_type: paragraph
+bundle: dsu_tint
+label: 'Data Expand'
+description: 'Select to display all the TINT widgets with full page width (Horizontal Height works inverse of data-expand so if ''data-expand'' is set to ''No'' then only height will change)'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'false'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

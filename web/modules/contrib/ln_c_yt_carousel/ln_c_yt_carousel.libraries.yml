@@ -1,0 +1,10 @@
+youtube_carousel:
+  version: 1.x
+  css:
+    component:
+      css/ln_c_yt_carousel.css: {}
+  js:
+    js/ln_c_yt_carousel.js: {}
+  dependencies:
+  - slick/slick
+  - core/jquery.once

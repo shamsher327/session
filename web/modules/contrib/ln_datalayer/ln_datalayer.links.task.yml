@@ -1,0 +1,5 @@
+ln_datalayer.ajaxify_settings:
+  route_name: ln_datalayer.ajaxify_settings
+  title: Ajaxify Submit Forms
+  weight: 2
+  base_route: ln_datalayer.admin_settings_form

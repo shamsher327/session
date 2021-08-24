@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_steps_steptype
+    - paragraphs.paragraphs_type.recipe_steps
+id: paragraph.recipe_steps.field_steps_steptype
+field_name: field_steps_steptype
+entity_type: paragraph
+bundle: recipe_steps
+label: 'steps steptype'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

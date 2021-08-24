@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Meal
+vid: meal
+description: '1'
+weight: 0

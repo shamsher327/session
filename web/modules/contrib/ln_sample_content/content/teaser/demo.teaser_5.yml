@@ -1,0 +1,15 @@
+title: Breve, strong cup coffee
+field_teaser_subtitle: Whipped latte milk blue mountain dark kopi-luwak
+body: Breve, strong cup coffee percolator robust extra spoon. Whipped latte milk blue mountain dark kopi-luwak crema latte. Seasonal mug, white, cup, cortado body ut extra single origin.
+field_buton_position: left #or right or center
+field_image:
+  image_name: san_pellegrino.jpg
+  image_title: San Pellegrino
+field_dsu_tags: Sample content
+field_teaser_link:
+  uri:
+  title:
+  options:
+    attributes:
+      target:
+field_teaser_video_url:

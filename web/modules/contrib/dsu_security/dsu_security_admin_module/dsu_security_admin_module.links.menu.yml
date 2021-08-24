@@ -1,0 +1,6 @@
+dsu_security_admin_module.auth_redirect_form:
+  title: 'LightNest Enable/Disable auth'
+  route_name: dsu_security_admin_module.auth_redirect_form
+  description: 'A link to enable or disable authentication'
+  parent: dsu_c_core.settings
+  weight: 38

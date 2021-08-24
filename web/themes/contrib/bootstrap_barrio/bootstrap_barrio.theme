@@ -549,7 +549,11 @@ function bootstrap_barrio_theme_suggestions_user_alter(array &$suggestions, arra
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for page template.
+ * Implements hook_theme_suggestions_region_alter() for page template.
+ * Implements hook_theme_suggestions_page_alter() for page template.
+ * Implements hook_theme_suggestions_node_alter() for page template.
+ * Implements hook_theme_suggestions_block_alter() for page template.
+ * Implements hook_theme_suggestions_field_alter() for page template.
  */
 function bootstrap_barrio_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Add a template suggestions for node type.
@@ -559,9 +563,25 @@ function bootstrap_barrio_theme_suggestions_page_alter(array &$suggestions, arra
       $node = Node::load($node);
     }
 
-    $suggestions[] = 'page__node__' . $node->bundle();
+    $suggestions[] = 'page__node__shamsher__' . $node->bundle();
   }
 }
+
+
+function bootstrap_barrio_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // Add a template suggestions for node type.
+  /** @var \Drupal\node\NodeInterface $node */
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+
+    $suggestions[] = 'node__shamsher_node__' . $node->bundle();
+  }
+}
+
+
+
 
 /**
  * Implements hook_theme_HOOK_form_alter() for node add/edit.

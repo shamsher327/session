@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.srh_macronutrients_unittype.field_ingredient_unit_abbrevplur
+    - field.field.paragraph.srh_macronutrients_unittype.field_ingredient_unit_abbrevsing
+    - field.field.paragraph.srh_macronutrients_unittype.field_ingredient_unittype_descri
+    - field.field.paragraph.srh_macronutrients_unittype.field_ingredient_unittype_id
+    - field.field.paragraph.srh_macronutrients_unittype.field_ingredient_unittype_plural
+    - field.field.paragraph.srh_macronutrients_unittype.field_ingredient_unittype_singul
+    - paragraphs.paragraphs_type.srh_macronutrients_unittype
+id: paragraph.srh_macronutrients_unittype.default
+targetEntityType: paragraph
+bundle: srh_macronutrients_unittype
+mode: default
+content:
+  field_ingredient_unit_abbrevplur:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ingredient_unit_abbrevsing:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ingredient_unittype_descri:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ingredient_unittype_id:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ingredient_unittype_plural:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ingredient_unittype_singul:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

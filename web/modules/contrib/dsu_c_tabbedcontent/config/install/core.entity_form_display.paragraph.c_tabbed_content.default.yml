@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_tabbed_content.field_c_tab_item
+    - field.field.paragraph.c_tabbed_content.field_section_id
+    - paragraphs.paragraphs_type.c_tabbed_content
+  module:
+    - paragraphs
+id: paragraph.c_tabbed_content.default
+targetEntityType: paragraph
+bundle: c_tabbed_content
+mode: default
+content:
+  field_c_tab_item:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_section_id:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

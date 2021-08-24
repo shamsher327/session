@@ -3,7 +3,7 @@ indegene-assets:
   header: true
   css:
     theme:
-      assets/css/indegene-custom.css: { }
+      css/indegene-custom.css: { }
   js:
     js/indegene-custom.js: { }
 
@@ -14,4 +14,7 @@ indegene-custom:
     theme:
       css/indegene-custom.css: { }
   js:
-    js/indegene-custom.js: { }
+    js/indegene-custom.js: {  :weight -19, minified: true, type: 'external' }
+    //drupal.org/files/advagg_js/js__B0FBwiP97ZnD38IFraZus4upS4KVkMXI3ou0fJ2ZXGA__pPDESRJz9GHsxqQIwQ_V8xnFYEH5jipG2eicsfrdWCs__YaNGWokqa69Wq8hHbkE322PVJ8I-GmpfBsT8LGsMpcI.js: { type: external }
+  dependency:
+    - indegene/indegene-assets
