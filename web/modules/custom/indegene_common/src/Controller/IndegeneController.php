@@ -64,6 +64,13 @@ class IndegeneController extends ControllerBase {
 
   public function dynamicargs($args) {
 
+
+    $recipient = $args;
+    $params['message'] = 'hello how are you';
+    $params['subject'] = 'Indegene custom subject';
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $result = $mailManager->mail('indegene_common', 'forward_email', $recipient, 'en', $params, NULL, TRUE);
+
     return [
       '#markup' => 'Name ' . $args,
     ];
