@@ -1,0 +1,5 @@
+indegene_common.admin_settings:
+  title: Indegene Custom AMAZON
+  description: 'Configure Indegene API.'
+  route_name: indegene_common.admin_settings
+  parent: system.admin_config_development

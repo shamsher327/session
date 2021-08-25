@@ -1,7 +1,23 @@
 indegene_common.admin_settings:
-  path: '/admin/config/system/kanchna-settings-form'
+  path: '/admin/config/people/kanchna-settings-form'
   defaults:
     _title: 'Indegene Amazon'
     _form: '\Drupal\indegene_common\Form\IndegeneFormClass'
   requirements:
     _permission: 'indegene custom amazon api'
+
+indegene_common.my_page:
+  path: '/indegene'
+  defaults:
+    _controller: '\Drupal\indegene_common\Controller\IndegeneController::myPage'
+    _title: 'My first page in D8'
+  requirements:
+    _permission: 'access content'
+
+indegene_common.dynamicargs:
+  path: '/indegene/{args}'
+  defaults:
+    _controller: '\Drupal\indegene_common\Controller\IndegeneController::dynamicargs'
+    _title: 'My first page in D8'
+  requirements:
+    _permission: 'access content'

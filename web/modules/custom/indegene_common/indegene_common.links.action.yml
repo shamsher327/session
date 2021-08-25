@@ -1,0 +1,11 @@
+indegene_common.link_add:
+  route_name: indegene_common.link_add
+  title: 'Add link'
+  appears_on:
+    - menu_ui.menu_edit
+
+indegene_common.menu_add:
+  route_name: indegene_common.menu_add
+  title: 'Add menu'
+  appears_on:
+    - menu_ui.overview_page

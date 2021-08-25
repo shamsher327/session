@@ -1,0 +1,10 @@
+indegene_common.admin_settings: # The first plugin ID
+  route_name: indegene_common.admin_settings
+  title: 'Settings'
+  base_route: indegene_common.admin_settings
+
+indegene_common.admin_3rd_party: # The second plugin ID
+  route_name: indegene_common.admin_settings
+  title: 'Third party services'
+  base_route: indegene_common.admin_settings
+  weight: 100
