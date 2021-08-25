@@ -1,0 +1,9 @@
+clock:
+  css:
+    theme:
+      css/social_media.css: {}
+  js:
+    js/facebook.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

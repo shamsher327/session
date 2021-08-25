@@ -24,11 +24,13 @@ class HelloBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-
-
     return [
-      '#markup' => $this->t('Hello, World!'),
+      '#theme' => 'indegene_custom_block',
+      '#attached' => [
+        'library' => ['indegene_common/clock'],
+      ],
     ];
+
   }
 
   /**

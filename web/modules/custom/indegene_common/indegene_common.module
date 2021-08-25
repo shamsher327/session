@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function indegene_common_theme($existing, $type, $theme, $path) {
+
+  $items = ['name' => 'shamsher', 'company' => 'indegene'];
+  return [
+    'indegene_custom_block' =>                  // this is the name of the template
+      [
+        'variables' => ['data' => $items],
+      ],
+  ];
+}
