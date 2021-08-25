@@ -1,0 +1,8 @@
+attach-library:
+  js:
+    js/cs.js: {}
+  dependencies:
+    - core/drupal.ajax
+  css:
+    theme:
+      css/cs.css: {}

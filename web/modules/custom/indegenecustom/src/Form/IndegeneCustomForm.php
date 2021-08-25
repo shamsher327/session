@@ -76,6 +76,23 @@ class IndegeneCustomForm extends FormBase
             '#title' => t('web site'),
             '#default_value' => (isset($record['website']) && $_GET['num']) ? $record['website'] : '',
         );
+
+        $vid = 'Technology';
+        $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+        $term_data = [];
+        foreach ($terms as $term) {
+            $term_data[$term->tid] = $term->name;
+        }
+
+        $form['tags'] = array(
+            '#type' => 'select',
+            '#title' => t('Select Technology'),
+            '#multiple' => false,
+            '#options' => $term_data,
+            '#description' => t('Select Technology'),
+            '#default_value' => (isset($record['tags']) && $_GET['num']) ? $record['tags'] : '',
+        );
+
         $form['submit'] = [
             '#type' => 'submit',
             '#value' => 'save',
@@ -83,6 +100,8 @@ class IndegeneCustomForm extends FormBase
         ];
         return $form;
     }
+
+
     /**
      * {@inheritdoc}
      */
@@ -95,10 +114,7 @@ class IndegeneCustomForm extends FormBase
         if (!intval($form_state->getValue('candidate_age'))) {
             $form_state->setErrorByName('candidate_age', $this->t('Age needs to be a number'));
         }
-        /* $number = $form_state->getValue('candidate_age');
-          if(!preg_match('/[^A-Za-z]/', $number)) {
-             $form_state->setErrorByName('candidate_age', $this->t('your age must in numbers'));
-          }*/
+
         if (strlen($form_state->getValue('mobile_number')) < 10) {
             $form_state->setErrorByName('mobile_number', $this->t('your mobile number must in 10 digits'));
         }
@@ -112,12 +128,12 @@ class IndegeneCustomForm extends FormBase
 
         $field = $form_state->getValues();
         $name = $field['candidate_name'];
-        //echo "$name";
         $number = $field['mobile_number'];
         $email = $field['candidate_mail'];
         $age = $field['candidate_age'];
         $gender = $field['candidate_gender'];
         $website = $field['web_site'];
+        $tags = $field['tags'];
         if (isset($_GET['num'])) {
             $field  = array(
                 'name'   => $name,
@@ -126,7 +142,9 @@ class IndegeneCustomForm extends FormBase
                 'age' => $age,
                 'gender' => $gender,
                 'website' => $website,
+                'tags' => $tags,
             );
+
             $query = \Drupal::database();
             $query->update('indegenecustom')
                 ->fields($field)
@@ -142,14 +160,17 @@ class IndegeneCustomForm extends FormBase
                 'age' => $age,
                 'gender' => $gender,
                 'website' => $website,
+                'tags' => $tags,
             );
             $query = \Drupal::database();
             $query->insert('indegenecustom')
                 ->fields($field)
                 ->execute();
             drupal_set_message("succesfully saved");
-            $response = new RedirectResponse("/admin/config/indegenecustom/all/table");
-            $response->send();
+            // $response = new RedirectResponse("/admin/config/indegenecustom/all/table");
+            // $response->send();
+
+            $form_state->setRedirect('indegenecustom.display_table_controller_display');
         }
     }
 }

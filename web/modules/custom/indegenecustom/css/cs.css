@@ -1,0 +1,26 @@
+div#clocktxt {
+    background: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 2.3em;
+}
+div#clocktxt>span{
+    border-radius: 30%;
+}
+
+.hours_span {
+    background: blue;
+    padding: 9px;
+}
+
+.min_span {
+    background: rgb(0, 122, 10);
+    padding: 9px;
+}
+
+
+.second_span {
+    background: rgb(117, 0, 102);
+    padding: 9px;
+}

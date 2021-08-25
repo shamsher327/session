@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_help().
@@ -23,13 +24,18 @@ function indegenecustom_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
-// function indegenecustom_theme() {
-//   // We use a template file to allow for translation of blocks of content.
-//   // Therefore we need to add this content at the theming layer.
-//   return [
-//     'indegenecustom_description' => [
-//       'template' => 'description',
-//       'variables' => [],
-//     ],
-//   ];
-// }
+function indegenecustom_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+    $form['#attached']['library'][] = "indegenecustom/attach-library";
+}
+
+/**
+ * Implements hook_theme().
+ */
+function indegenecustom_theme($existing, $type, $theme, $path) {
+  return [
+    'clock_template' => [
+      'variables' => ['test_var' => NULL],
+    ],
+  ];
+}

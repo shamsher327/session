@@ -38,3 +38,11 @@ indegenecustom.delete_form:
     _title: 'DeleteForm'
   requirements:
     _access: 'TRUE'
+
+indegenecustom.import_excel:
+  path: '/admin/config/indegenecustom/form/import'
+  defaults:
+    _title: 'Upload sheet'
+    _form: '\Drupal\indegenecustom\Form\ImportexcelForm'
+  requirements:
+    _permission: 'Import form'

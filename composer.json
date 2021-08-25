@@ -47,6 +47,7 @@
         "drupal/webform": "^6.0",
         "drush/drush": "^9.5",
         "kint-php/kint": "^3.3",
+        "phpoffice/phpspreadsheet": "^1.18",
         "rusticisoftware/tincan": "~1.0"
     },
     "conflict": {

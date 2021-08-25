@@ -4,6 +4,7 @@ namespace Drupal\indegenecustom\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Database\Database;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Url;
 
 /**
@@ -38,55 +39,72 @@ class DisplayTableController extends ControllerBase
    */
   public function display()
   {
-    /**return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: display with parameter(s): $name'),
-    ];*/
 
-    //create table header
+    $link_header = [];
+
+    $addnew = Url::fromUserInput('/admin/config/indegenecustom/form/indegenecustom');
+    $importnew = Url::fromUserInput('/admin/config/indegenecustom/form/import');
+
+    $rows1[0] =  [
+      \Drupal::l('Add New', $addnew),
+      \Drupal::l('Import Data in Csv', $importnew),
+
+    ];
+
+    $form['add_new'] = [
+      '#type' => 'table',
+      '#header' => $link_header,
+      '#rows' => $rows1,
+      '#empty' => t('No users found'),
+    ];
+
     $header_table = array(
       'id' =>    t('SrNo'),
       'name' => t('Name'),
       'mobilenumber' => t('MobileNumber'),
-      //'email'=>t('Email'),
+      'email'=>t('Email'),
       'age' => t('Age'),
       'gender' => t('Gender'),
-      //'website' => t('Web site'),
+      'tags' => t('Technology'),
+      'website' => t('Web site'),
       'opt' => t('operations'),
       'opt1' => t('operations'),
     );
 
-    //select records from table
+
     $query = \Drupal::database()->select('indegenecustom', 'm');
-    $query->fields('m', ['id', 'name', 'mobilenumber', 'email', 'age', 'gender', 'website' ] );
+    $query->fields('m', ['id', 'name', 'mobilenumber', 'email', 'age', 'gender','tags', 'website' ] );
     $results = $query->execute()->fetchAll();
     $rows = array();
     foreach ($results as $data) {
       $delete = Url::fromUserInput('/admin/config/indegenecustom/form/delete/' . $data->id);
       $edit   = Url::fromUserInput('/admin/config/indegenecustom/form/indegenecustom?num=' . $data->id);
 
-      //print the data from table
+      $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($data->tags);
+      $tag_name = isset($terms->name->value) ? $terms->name->value : ''  ;
+
+
       $rows[] = array(
         'id' => $data->id,
         'name' => $data->name,
         'mobilenumber' => $data->mobilenumber,
-        //'email' => $data->email,
+        'email' => $data->email,
         'age' => $data->age,
         'gender' => $data->gender,
-        //'website' => $data->website,
-
+        'tags' => $tag_name,
+        'website' => $data->website,
         \Drupal::l('Delete', $delete),
         \Drupal::l('Edit', $edit),
       );
     }
-    //display data in site
     $form['table'] = [
       '#type' => 'table',
       '#header' => $header_table,
       '#rows' => $rows,
       '#empty' => t('No users found'),
     ];
-          //  echo '<pre>';print_r($form['table']);exit;
+
+
     return $form;
   }
 }

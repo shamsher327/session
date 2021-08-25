@@ -3,3 +3,5 @@ type: module
 package: indegene
 description: Indegene Custom Module
 core: 8.x
+dependencies:
+  - block
