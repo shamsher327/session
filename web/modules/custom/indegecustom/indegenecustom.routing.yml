@@ -1,0 +1,40 @@
+indegenecustom.content:
+  path: "/hello"
+  defaults:
+    _controller: '\Drupal\indegenecustom\Controller\CustomController::content'
+    _title: "Drupal 8 Custom Module Routing"
+  requirements:
+    _permission: 'access content'
+
+indegenecustom.indegenecustom_controller_display:
+  path: '/admin/config/indegenecustom'
+  defaults:
+    _controller: '\Drupal\indegenecustom\Controller\CustomController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+
+indegenecustom.indegenecustom_form:
+  path: '/admin/config/indegenecustom/form/indegenecustom'
+  defaults:
+    _form: '\Drupal\indegenecustom\Form\IndegeneCustomForm'
+    _title: 'indegenecustomForm'
+  requirements:
+    _access: 'TRUE'
+
+indegenecustom.display_table_controller_display:
+  path: '/admin/config/indegenecustom/all/table'
+  defaults:
+    _controller: '\Drupal\indegenecustom\Controller\DisplayTableController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+indegenecustom.delete_form:
+  path: '/admin/config/indegenecustom/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\indegenecustom\Form\DeleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'

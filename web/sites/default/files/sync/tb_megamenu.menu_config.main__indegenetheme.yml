@@ -1,0 +1,13 @@
+uuid: 8ceaefc3-a345-45a7-85a5-96a73e84207b
+langcode: en
+status: true
+dependencies:
+  menu:
+    - main
+  theme:
+    - indegenetheme
+id: main__indegenetheme
+menu: main
+theme: indegenetheme
+block_config: '{"animation":"none","duration":400,"delay":200,"style":"","auto-arrow":"1","always-show-submenu":"1","number-columns":2}'
+menu_config: '{"standard.front_page":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":"Home"}},"menu_link_content:0681572d-e710-458d-a9ca-4e5735830d88":{"rows_content":[[{"col_content":[{"type":"menu_item","plugin_id":"menu_link_content:96aa3c9f-6a2d-4cce-9c88-2a43d148e93d","tb_item_config":[],"weight":"1"},{"type":"menu_item","plugin_id":"menu_link_content:3f8a4f0a-47a5-4701-b9d4-04f66454b8da","tb_item_config":[],"weight":"1"}],"col_config":[]}]],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":"Capabilities"}},"menu_link_content:96aa3c9f-6a2d-4cce-9c88-2a43d148e93d":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":"Agile Operations"}},"menu_link_content:3f8a4f0a-47a5-4701-b9d4-04f66454b8da":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":"Co-commercialization"}},"views_view:views.about_us_page.page_1":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":"About Us"}},"menu_link_content:b87d15ae-2bb2-462e-96e0-94885b6c7303":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":"COntact Us"}}}'

@@ -7,6 +7,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  blog: 0
   breakpoint: 0
   ckeditor: 0
   color: 0
@@ -36,6 +37,7 @@ module:
   history: 0
   image: 0
   image_slider: 0
+  indegenecustom: 0
   language: 0
   link: 0
   media: 0
@@ -47,6 +49,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  quick_node_clone: 0
   quickedit: 0
   rdf: 0
   search: 0
@@ -100,6 +103,7 @@ theme:
   bootstrap_barrio_subtheme: 0
   bootstrap4: 0
   indegenetheme: 0
+  my_subtheme: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -460,9 +460,10 @@ display:
         description: 'About Us description'
         expanded: false
         parent: ''
-        weight: 1
+        weight: -46
         context: '0'
         menu_name: main
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

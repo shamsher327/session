@@ -9,7 +9,7 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:standard.front_page'
-name: 'Home Page TYpe'
+name: 'Para Page Type'
 type: home_page_type
 description: ''
 help: ''

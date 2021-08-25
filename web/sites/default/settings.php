@@ -863,7 +863,7 @@ if (version_compare(DRUPAL::VERSION, "9.0.0", '>=') &&
   empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = 'sites/default/files/sync';
 }$databases['default']['default'] = array (
-  'database' => 'session',
+  'database' => 'session2',
   'username' => 'root',
   'password' => '',
   'prefix' => '',

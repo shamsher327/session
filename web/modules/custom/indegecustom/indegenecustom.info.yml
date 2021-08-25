@@ -1,0 +1,5 @@
+name: Indegene Custom Module By Srishty
+type: module
+package: indegene
+description: Indegene Custom Module
+core: 8.x
