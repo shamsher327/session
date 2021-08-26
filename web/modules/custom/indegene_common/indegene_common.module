@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
 /**
  * Implements hook_theme().
  */
@@ -28,3 +31,32 @@ function indegene_common_mail($key, &$message, $params) {
       break;
   }
 }
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function indegene_common_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+
+  if ($form_id == 'comment_comment_form') {
+
+
+
+    $form['indegene_amazon_seceret_id'] = [
+      '#type' => 'textfield',
+      '#title' => t('Indegene seceret id'),
+      '#descriptions' => 'this is secret id',
+      '#required' => TRUE,
+    ];
+
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'mymodule_form_submit';
+      }
+    }
+  }
+
+
+}
+

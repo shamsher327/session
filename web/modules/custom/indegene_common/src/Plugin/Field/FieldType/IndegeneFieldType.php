@@ -5,6 +5,7 @@ namespace Drupal\indegene_common\Plugin\Field\FieldType;
 
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\TypedData\DataDefinition;
 
 /**
  * Provides a field type of baz.
@@ -13,10 +14,12 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
  *   id = "indegene_field_type",
  *   label = @Translation("Indegene Field"),
  *   default_formatter = "indegene_formatter",
+ *   category = "Indegene",
  *   default_widget = "indegene_widget",
  * )
  */
 class IndegeneFieldType extends FieldItemBase {
+
   /**
    * {@inheritdoc}
    */
@@ -33,6 +36,24 @@ class IndegeneFieldType extends FieldItemBase {
         ],
       ],
     ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
+    $properties['value'] = DataDefinition::create('string')
+      ->setLabel(t('Indegene custom field value'));
+    return $properties;
+  }
+
+
+  /**
+   * {@inheritdoc}
+   */
+  public function isEmpty() {
+    $value = $this->get('value')->getValue();
+    return $value === NULL || $value === '';
   }
 
 }

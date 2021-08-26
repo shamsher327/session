@@ -49,7 +49,7 @@
         "drupal/views_slideshow": "^4.8",
         "drupal/viewsreference": "^1.7",
         "drupal/webform": "^6.0",
-        "drush/drush": "^10.6",
+        "drush/drush": "^9.0",
         "rusticisoftware/tincan": "~1.0"
     },
     "conflict": {

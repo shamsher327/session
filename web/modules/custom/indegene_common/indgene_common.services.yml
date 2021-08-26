@@ -1,0 +1,5 @@
+services:
+  indegene_common.commands:
+    class: \Drupal\indegene_common\Commands\IndegeneDrushCommands
+    tags:
+      - { name: drush.command }
