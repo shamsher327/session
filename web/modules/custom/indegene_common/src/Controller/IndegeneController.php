@@ -53,6 +53,9 @@ class IndegeneController extends ControllerBase {
     $node->save();
 
 
+    $user=getUser();
+
+
     $language = Drupal::languageManager()->getLanguage('en');
     $url = Url::fromRoute('<front>', [], ['language' => $language]);
     $response = new RedirectResponse($url->toString());

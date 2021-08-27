@@ -21,3 +21,19 @@ indegene_common.dynamicargs:
     _title: 'My first page in D8'
   requirements:
     _permission: 'access content'
+
+
+indegene_common.get_latest_nodes:
+  path: 'api/rest-endpoint/latest'
+  defaults:
+    _controller: '\Drupal\indegene_common\Controller\CustomRestController::getLatestNodes'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+
+indegene_common.fileupload:
+  path: 'fileupload'
+  defaults: { _controller: '\Drupal\indegene_common\Controller\FileUploadController::create' }
+  methods:  [POST]
+  requirements:
+    _custom_access: '\Drupal\modulename\Controller\FileUploadController::access'

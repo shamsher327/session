@@ -39,17 +39,23 @@ function indegene_common_mail($key, &$message, $params) {
 function indegene_common_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 
 
+  if ($form_id == 'webform_submission_contact_test_form') {
+
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'webform_data_form_submit';
+      }
+    }
+  }
+
+
   if ($form_id == 'comment_comment_form') {
-
-
-
     $form['indegene_amazon_seceret_id'] = [
       '#type' => 'textfield',
       '#title' => t('Indegene seceret id'),
       '#descriptions' => 'this is secret id',
       '#required' => TRUE,
     ];
-
     foreach (array_keys($form['actions']) as $action) {
       if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
         $form['actions'][$action]['#submit'][] = 'mymodule_form_submit';
@@ -57,6 +63,82 @@ function indegene_common_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
     }
   }
 
+}
 
+
+function webform_data_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  $name = $form_state->getValues()['name'];
+  $email = $form_state->getValues()['email'];
+
+
+
+
+  //Creating a httpClient Object.
+  $client = \Drupal::httpClient();
+  //Some Data
+  $json_data = ['name' => $name, 'email' => $email];
+  //Sending POST Request with $json_data to example.com
+  $request = $client->post('http://example.com', [
+    'json' => [$json_data,],
+  ]);
+  //Getting Response after JSON Decode.
+  $response = json_decode($request->getBody());
+
+
+}
+
+
+/**
+ * Implements hook_token_info().
+ */
+function indegene_common_token_info() {
+  $tokendata['ingene-role-names'] = [
+    'name' => t('User role names'),
+    'description' => t('The role names the user account is a member of as comma separated list.'),
+    'ingene-needs-data' => 'user',
+  ];
+
+
+  return [
+    'tokens' => ['user' => $tokendata],
+  ];
+}
+
+
+/**
+ * Implements hook_tokens().
+ */
+function indegene_common_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  if ($type == 'my_token_group') {
+
+    foreach ($tokens as $name => $original) {
+      // Find the desired token by name.
+      // [my_token_group:my_token]
+      switch ($name) {
+        case 'ingene-role-names':
+          $names = 'shamsher';
+          $replacements[$original] = 'shamsher';
+          break;
+      }
+    }
+  }
+  return $replacements;
+}
+
+
+/**
+ * Implements hook_tokens_alter().
+ */
+function indegene_common_tokens_alter(array &$replacements, array $context, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+
+}
+
+
+function getUser() {
+  $current_user = \Drupal::currentUser();
+  $user = \Drupal\user\Entity\User::load($current_user->id());
+  return $user;
 }
 

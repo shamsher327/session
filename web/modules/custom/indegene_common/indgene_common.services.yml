@@ -3,3 +3,7 @@ services:
     class: \Drupal\indegene_common\Commands\IndegeneDrushCommands
     tags:
       - { name: drush.command }
+  indegene_common.route_subscriber:
+    class: Drupal\indegene_common\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -41,6 +41,8 @@ class HelloBlock extends BlockBase {
 
     $config = $this->getConfiguration();
 
+    $user=getUser();
+
     $form['hello_block_name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Who'),
