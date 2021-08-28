@@ -10,3 +10,7 @@ services:
       - '@config.factory'
       - '@serialization.json'
       - '@dsu_srh.importer'
+  twig_word_count_extension.twig_extension:
+    class: Drupal\twig_word_count_extension\TwigExtension\TwigWordCountExtension
+    tags:
+      - { name: twig.extension }
